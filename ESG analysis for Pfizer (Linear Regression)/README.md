@@ -1,3 +1,4 @@
+![Algorithm schema](./images/schema.jpg)
 ## Data Cleansing
 - Use SIC Code (2834 & 2836) to filter biopharmaceutical companies
 - Choose needed variables
