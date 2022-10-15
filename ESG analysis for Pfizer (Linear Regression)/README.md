@@ -1,5 +1,5 @@
 <div align = center><img src="./Images/Pfizer.jpg" width = "500" height = "300" />
-<div align = center><img src="./Images/ESG.jpg" width = "500" height = "300" />
+<img src="./Images/ESG.jpg" width = "500" height = "300" />
 
 <div aligh = left>
 
