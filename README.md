@@ -3,7 +3,7 @@
 This portfolio holds the below projects. 
 Each project has individual folder for data, codes, and key takeaways.
 ## Table of Contents
-* [ESG analysis for Pfizer (Exploratory Data Analysis and Linear Regression)](#ESG-analysis-for-Pfizer-(Linear-Regression))
+* [ESG analysis for Pfizer (Exploratory Data Analysis and Linear Regression)](#ESG-analysis-for-Pfizer(Linear-Regression))
 
 Tool: Python
 * identify Pfizer company's position in the pharmaceutical industry
