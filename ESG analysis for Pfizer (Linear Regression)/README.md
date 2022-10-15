@@ -23,7 +23,7 @@ The project shows that Pfizer has a strong foundation, including tremendous asse
 <a id = "ch2"></a>
 ## Data Collection
 Data is the U.S. stock market S&P 1500 firms’ dataset from 2016 to 2018, covering 326 industries. The data includes 4518 rows and 20 variables.
-[Dictionary](#Dictionary) explains the variables’ definitions.
+[Dictionary](#Dictionary) in [Data](#Data) explains the variables’ definitions.
 
 Three data frames
 1. Biopharmaceutical companies: show the difference between Pfizer and other companies in the industry
