@@ -1,5 +1,10 @@
-![Pfizer](./Images/Pfizer.jpg)
-![ESG](./Images/ESG.jpg)
+<div align = center><img src="./Images/Pfizer.jpg" width = "500" height = "300" />
+<div align = center><img src="./Images/ESG.jpg" width = "500" height = "300" />
+
+<div aligh = left>
+
+#Introduction
+
 ## Data Cleansing
 - Use SIC Code (2834 & 2836) to filter biopharmaceutical companies
 - Choose needed variables
