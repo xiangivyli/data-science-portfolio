@@ -1,11 +1,22 @@
-<div align = center><img src="./Images/Pfizer.jpg" width = "500" height = "300" />
-<img src="./Images/ESG.jpg" width = "500" height = "300" />
+<img src="./Images/Pfizer.jpg" align = "left" width = "500" height = "300" />
+Pfizer is one of the biggest multinational biopharmaceutical companies and medicine suppliers with a robust research capacity (MarketLine, 2021). Its revenue dramatically increased to over 24 billion U.S dollars with the Covid-19 vaccine in the Third Quarter of 2021(Statista, 2021). 
 
-<div aligh = left>
-Environmental, social and governance (ESG) score in today’s markets evaluates the sustainable effort of companies, representing the deduction of footprint and organising eco-friendly activities, maintaining the relationship with humans, and testing the transparency of management structure. As for Pfizer, this company is one of the biggest multinational biopharmaceutical companies and medicine suppliers with a robust research capacity (MarketLine, 2021). Its revenue dramatically increased to over 24 billion U.S dollars with the Covid-19 vaccine in the Third Quarter of 2021(Statista, 2021). 
+<img src="./Images/ESG.jpg" align = "right" width = "500" height = "400" />
+Environmental, social and governance (ESG) score in today’s markets evaluates the sustainable effort of companies, representing the deduction of footprint and organising eco-friendly activities, maintaining the relationship with humans, and testing the transparency of management structure. 
 
+# Table of Contents
+1. [Chapter 1 - Project Overview](#ch1)
+1. [Chapter 2 - EDA and linear regression](#ch2)
+1. [Chapter 3 - Step 1: Data Gathering](#ch3)
+1. [Chapter 4 - Step 2: Head and describe](#ch4)
+1. [Chapter 5 - Step 3: Target distribution](#ch5)
+1. [Chapter 6 - Step 4: Feature distribution](#ch6)
 
-##Introduction
+1. [References](#ch90)
+
+<a id = "ch1"></a>
+# Project Overview
+
 
 ## Data Cleansing
 - Use SIC Code (2834 & 2836) to filter biopharmaceutical companies
