@@ -18,7 +18,7 @@ Environmental, social and governance (ESG) score in today’s markets evaluates 
 # Project Overview
 This empirical analysis attempts to identify Pfizer company’s position in the pharmaceutical industry and then visualise the trend of business aspects in Pfizer from 2016 to 2018. The analysis involves descriptive statistics and multiple regression; the process includes data cleaning, modelling, visualisation, and combining statistics to detect the rationality of the equation. 
 
-The project shows that Pfizer has a strong foundation, including tremendous assets and sufficient employees; conversely, it is on a middle-level of the biopharmaceutical companies regarding return on assets and Tobin’s Q ratio, which means Pfizer needs to focus on arousing development potential. Moreover, the regression model indicates that the ESG score can efficiently promote total assets; the relationship is that total assets increase by e^5.2366 million U.S. dollars when environmental and governance disclosure scores increase by one unit. 
+The project shows that Pfizer has a strong foundation, including tremendous assets and sufficient employees; conversely, it is on a middle-level of the biopharmaceutical companies regarding return on assets and Tobin’s Q ratio, which means Pfizer needs to focus on arousing development potential. Moreover, the regression model indicates that the ESG score can efficiently promote total assets; the relationship is that total assets increase by e<sup>5.2366 million U.S. dollars when environmental and governance disclosure scores increase by one unit. 
 
 ## Data Cleansing
 - Use SIC Code (2834 & 2836) to filter biopharmaceutical companies
