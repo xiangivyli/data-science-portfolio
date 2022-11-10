@@ -6,19 +6,26 @@ Environmental, social and governance (ESG) score in today’s markets evaluates 
 
 # Table of Contents
 1. [Chapter 1 - Project Overview](#ch1)
-1. [Chapter 2 - Step 1: Data Collection](#ch2)
-1. [Chapter 3 - Step 2: Data Gathering](#ch3)
-1. [Chapter 4 - Step 3: Head and describe](#ch4)
-1. [Chapter 5 - Step 4: Target distribution](#ch5)
-1. [Chapter 6 - Step 5: Feature distribution](#ch6)
+1. [Chapter 2 - Data Cleansing](#ch2)
+1. [Chapter 3 - Descriptive Analysis](#ch3)
+1. [Chapter 4 - Linear Regression](#ch4)
 
 1. [References](#ch90)
 
 <a id = "ch1"></a>
 ## Project Overview
-This empirical analysis attempts to identify Pfizer company’s position in the pharmaceutical industry and then visualise the trend of business aspects in Pfizer from 2016 to 2018. The analysis involves descriptive statistics and multiple regression; the process includes data cleaning, modelling, visualisation, and combining statistics to detect the rationality of the equation. 
+This empirical analysis has two objectives.
+
+Firstly, it attempts to identify Pfizer company’s position in the pharmaceutical industry and then visualise the trend of business aspects in Pfizer from 2016 to 2018. 
+
+Secondly, given that the threat of climate change has triggered a wider concern of the company's corporate social responsibility. The analysis applied linear regression to disclose the relationship between total assets and ESG scores.
+
+The process includes data cleansing, modelling, visualisation, and combining statistics to detect the rationality of the equation. 
 
 The project shows that Pfizer has a strong foundation, including tremendous assets and sufficient employees; conversely, it is on a middle-level of the biopharmaceutical companies regarding return on assets and Tobin’s Q ratio, which means Pfizer needs to focus on arousing development potential. Moreover, the regression model indicates that the ESG score can efficiently promote total assets; the relationship is that total assets increase by e<sup>5.2366</sup> million U.S. dollars when environmental and governance disclosure scores increase by one unit. 
+
+The dataset and corresponding dictionary can be found in the Data folder.
+The dataset contains all S&P 1500 companies listed in the US stock market over three years 2016 - 2018.
 
 <a id = "ch2"></a>
 ## Data Collection
