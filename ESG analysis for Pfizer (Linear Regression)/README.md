@@ -6,22 +6,78 @@ Environmental, social and governance (ESG) score in today’s markets evaluates 
 
 # Table of Contents
 1. [Chapter 1 - Project Overview](#ch1)
-1. [Chapter 2 - Step 1: Data Collection](#ch2)
-1. [Chapter 3 - Step 2: Data Gathering](#ch3)
-1. [Chapter 4 - Step 3: Head and describe](#ch4)
-1. [Chapter 5 - Step 4: Target distribution](#ch5)
-1. [Chapter 6 - Step 5: Feature distribution](#ch6)
+1. [Chapter 2 - Data Cleansing](#ch2)
+1. [Chapter 3 - Descriptive Analysis](#ch3)
+1. [Chapter 4 - Linear Regression](#ch4)
+1. [Chapter 5 - Model Validation](#ch5)
+1. [Chapter 5 - Discussion](#ch6)
 
 1. [References](#ch90)
 
 <a id = "ch1"></a>
 ## Project Overview
-This empirical analysis attempts to identify Pfizer company’s position in the pharmaceutical industry and then visualise the trend of business aspects in Pfizer from 2016 to 2018. The analysis involves descriptive statistics and multiple regression; the process includes data cleaning, modelling, visualisation, and combining statistics to detect the rationality of the equation. 
+### Objects
+
+This empirical analysis has two objectives.
+
+Firstly, it attempts to identify Pfizer company’s position in the pharmaceutical industry and then visualise the trend of business aspects in Pfizer from 2016 to 2018. 
+
+Secondly, given that the ESG scores (Environmental, Social, Governance Scores) have triggered a wider concern of the company's corporate social responsibility. The analysis applied linear regression to disclose the relationship between total assets and ESG scores.
+
+### Brief
+
+The process includes data cleansing, modelling, visualisation, and combining statistics to detect the rationality of the equation. 
 
 The project shows that Pfizer has a strong foundation, including tremendous assets and sufficient employees; conversely, it is on a middle-level of the biopharmaceutical companies regarding return on assets and Tobin’s Q ratio, which means Pfizer needs to focus on arousing development potential. Moreover, the regression model indicates that the ESG score can efficiently promote total assets; the relationship is that total assets increase by e<sup>5.2366</sup> million U.S. dollars when environmental and governance disclosure scores increase by one unit. 
 
+### Dataset
+
+The dataset and corresponding dictionary can be found in the Data folder.
+The dataset contains all S&P 1500 companies listed in the US stock market over three years 2016 - 2018.
+
+### Features for each company:
+
+- Ticker
+- Name
+- Year
+- ISIN Number
+- SIC Code
+- GICS Industry
+- Country or Territory of Domicile
+- Number of Employees
+- Total Assets
+- R&D Expense
+- R&D Expense Adjusted
+- Operating Expenses R&D
+- Cash and Cash Equivalients
+- Environmental Disclosure Score
+- Social Disclosure Score
+- Social Disclosure Score
+- Governance Disclosure Score
+- Tobin's Q Ratio
+- Return on Assets
+- Return on Common Equity
+- Gross Margin
+
 <a id = "ch2"></a>
-## Data Collection
+## Data Cleansing
+### Import data
+```
+# Importing all livraries that I will use
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.formula.api as smf
+import statsmodels.api as sm
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+from statsmodels.formula.api import ols
+
+# Creating a dataframe and importing data
+df = pd.read_csv("./S&P1500_Raw Dataset_Data Analytics in Business Assignment_2021.csv")
+df.count()
+```
+
 Data is the U.S. stock market S&P 1500 firms’ dataset from 2016 to 2018, covering 326 industries. The data includes 4518 rows and 20 variables.
 [Dictionary](#Dictionary) in [Data](#Data) explains the variables’ definitions.
 
