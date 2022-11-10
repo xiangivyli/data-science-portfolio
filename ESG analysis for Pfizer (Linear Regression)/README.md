@@ -9,7 +9,8 @@ Environmental, social and governance (ESG) score in today’s markets evaluates 
 1. [Chapter 2 - Data Cleansing](#ch2)
 1. [Chapter 3 - Descriptive Analysis](#ch3)
 1. [Chapter 4 - Linear Regression](#ch4)
-1. [Chapter 5 - Discussion](#ch5)
+1. [Chapter 5 - Model Validation](#ch5)
+1. [Chapter 5 - Discussion](#ch6)
 
 1. [References](#ch90)
 
