@@ -24,7 +24,7 @@ Firstly, it attempts to identify Pfizer company’s position in the pharmaceutic
 
 Secondly, given that the ESG scores (Environmental, Social, Governance Scores) have triggered a wider concern of the company's corporate social responsibility. The analysis applied linear regression to disclose the relationship between total assets and ESG scores.
 
-### Results
+### Brief
 
 The process includes data cleansing, modelling, visualisation, and combining statistics to detect the rationality of the equation. 
 
@@ -62,6 +62,21 @@ The dataset contains all S&P 1500 companies listed in the US stock market over t
 <a id = "ch2"></a>
 ## Data Cleansing
 ### Import data
+```
+# Importing all livraries that I will use
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.formula.api as smf
+import statsmodels.api as sm
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+from statsmodels.formula.api import ols
+
+# Creating a dataframe and importing data
+df = pd.read_csv("./S&P1500_Raw Dataset_Data Analytics in Business Assignment_2021.csv")
+df.count()
+```
 
 Data is the U.S. stock market S&P 1500 firms’ dataset from 2016 to 2018, covering 326 industries. The data includes 4518 rows and 20 variables.
 [Dictionary](#Dictionary) in [Data](#Data) explains the variables’ definitions.
