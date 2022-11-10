@@ -21,7 +21,7 @@ This empirical analysis has two objectives.
 
 Firstly, it attempts to identify Pfizer company’s position in the pharmaceutical industry and then visualise the trend of business aspects in Pfizer from 2016 to 2018. 
 
-Secondly, given that the threat of climate change has triggered a wider concern of the company's corporate social responsibility. The analysis applied linear regression to disclose the relationship between total assets and ESG scores.
+Secondly, given that the ESG scores (Environmental, Social, Governance Scores) have triggered a wider concern of the company's corporate social responsibility. The analysis applied linear regression to disclose the relationship between total assets and ESG scores.
 
 ### Results
 
