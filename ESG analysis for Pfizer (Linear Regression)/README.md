@@ -77,7 +77,7 @@ from statsmodels.formula.api import ols
 df = pd.read_csv("./S&P1500_Raw Dataset_Data Analytics in Business Assignment_2021.csv")
 df.count()
 ```
-![Data Count](/Images/data.cleansing.df.count.png)
+![Data Variables and Count]<img src="./Images/data.cleansing.df.count.png">
 
 Data is the U.S. stock market S&P 1500 firms’ dataset from 2016 to 2018, covering 326 industries. The data includes 4518 rows and 20 variables.
 [Dictionary](#Dictionary) in [Data](#Data) explains the variables’ definitions.
