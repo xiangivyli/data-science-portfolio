@@ -6,11 +6,11 @@ Environmental, social and governance (ESG) score in today’s markets evaluates 
 
 # Table of Contents
 1. [Chapter 1 - Project Overview](#ch1)
-1. [Chapter 2 - Data Cleansing](#ch2)
-1. [Chapter 3 - Descriptive Analysis](#ch3)
-1. [Chapter 4 - Linear Regression](#ch4)
-1. [Chapter 5 - Model Validation](#ch5)
-1. [Chapter 5 - Discussion](#ch6)
+1. [Chapter 2 - Data Gathering](#ch2)
+1. [Chapter 3 - Biopharmaceutical Industry](#ch3)
+1. [Chapter 4 - Development of Pfizer](#ch4)
+1. [Chapter 5 - Relationship between total asset and ESG score](#ch5)
+1. [Chapter 6 - Discussion](#ch6)
 
 1. [References](#ch90)
 
@@ -77,17 +77,21 @@ from statsmodels.formula.api import ols
 df = pd.read_csv("./S&P1500_Raw Dataset_Data Analytics in Business Assignment_2021.csv")
 df.count()
 ```
-![Data Variables and Count]<img src="./Images/data.cleansing.df.count.png">
+<img src="./Images/data.cleansing.df.count.png">
 
-Data is the U.S. stock market S&P 1500 firms’ dataset from 2016 to 2018, covering 326 industries. The data includes 4518 rows and 20 variables.
+```
+# Checking the number of variables
+df.shape[1]
+
+#Checking how many industries are involved
+len(df["SIC Code"}.unique())
+```
+
+Data covers 326 industries. The data includes 4518 rows and 20 variables.
 [Dictionary](#Dictionary) in [Data](#Data) explains the variables’ definitions.
 
-Three data frames
-1. Biopharmaceutical companies: show the difference between Pfizer and other companies in the industry
-
-2. Pfizer from 2016 to 2018: show the development trends
-
-3. All data: establish a regression model (Total asset & ESG)
+### Biopharmaceutical Company
+Using SIC Code of 2834 or 2836 to narrow down the range of companies.
 
 
 ## Descriptive Analysis
