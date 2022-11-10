@@ -15,7 +15,7 @@ Environmental, social and governance (ESG) score in today’s markets evaluates 
 1. [References](#ch90)
 
 <a id = "ch1"></a>
-## Project Overview
+## Chapter 1 Project Overview
 ### Objects
 
 This empirical analysis has two objectives.
@@ -60,7 +60,7 @@ The dataset contains all S&P 1500 companies listed in the US stock market over t
 - Gross Margin
 
 <a id = "ch2"></a>
-## Data Cleansing
+## Chapter 2 Data Gathering
 ### Import data
 ```
 # Importing all libraries that I will use in the project
@@ -91,7 +91,7 @@ Data covers 326 industries. The data includes 4518 rows and 20 variables. Most a
 
 [Dictionary](#Dictionary) in [Data](#Data) explains the variables’ definitions.
 
-### Biopharmaceutical Company
+### Chapter 3 Biopharmaceutical Company
 Using SIC Code of 2834 or 2836 to narrow down the range of companies.
 
 
