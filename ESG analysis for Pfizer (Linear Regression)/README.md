@@ -91,8 +91,10 @@ Data covers 326 industries. The data includes 4518 rows and 20 variables. Most a
 
 [Dictionary](#Dictionary) in [Data](#Data) explains the variables’ definitions.
 
-### Chapter 3 Biopharmaceutical Company
+## Chapter 3 Biopharmaceutical Company
 Using SIC Code of 2834 or 2836 to narrow down the range of companies.
+
+Continuing...
 
 
 ## Descriptive Analysis
