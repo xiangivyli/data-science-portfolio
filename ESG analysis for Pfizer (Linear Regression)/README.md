@@ -87,7 +87,8 @@ df.shape[1]
 len(df["SIC Code"}.unique())
 ```
 
-Data covers 326 industries. The data includes 4518 rows and 20 variables.
+Data covers 326 industries. The data includes 4518 rows and 20 variables. Most are quantitative results and collect financial information like total assets, return on assets, and so on; it also includes behaviour scores from external institutions like environmental disclosure score, social disclosure score and governance disclosure score.
+
 [Dictionary](#Dictionary) in [Data](#Data) explains the variables’ definitions.
 
 ### Biopharmaceutical Company
