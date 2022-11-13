@@ -204,7 +204,7 @@ sns.histplot(model.resid)
 fig4c = sns.histplot(model.resid).get_figure()
 ```
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.plot.png" width = 600>
+    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.plot.png" width = 800>
 </p>
 
 ```
