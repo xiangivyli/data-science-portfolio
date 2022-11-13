@@ -2,7 +2,7 @@
 Pfizer is one of the biggest multinational biopharmaceutical companies and medicine suppliers with a robust research capacity (MarketLine, 2021). Its revenue dramatically increased to over 24 billion U.S dollars with the Covid-19 vaccine in the Third Quarter of 2021(Statista, 2021). 
 
 <img src="./Images/ESG.jpg" align = "right" width = "500"/>
-Environmental, social and governance (ESG) scores in today’s markets evaluates the sustainable effort of companies, representing the deduction of footprint and organising eco-friendly activities, maintaining the relationship with humans, and testing the transparency of management structure. ESG scores have triggered a wider concern of the company's corporate social responsibility.
+Environmental, social and governance (ESG) scores in today’s markets evaluate the sustainable effort of companies, representing the deduction of footprint and organising eco-friendly activities, maintaining the relationship with humans, and testing the transparency of management structure. ESG scores have triggered a wider concern of the company's corporate social responsibility.
 
 # Table of Contents
 1. [Chapter 1 - Project Overview](#ch1)
@@ -96,7 +96,7 @@ df.count()
 df.shape[1]
 
 #Checking how many industries are involved
-len(df["SIC Code"}.unique())
+len(df["SIC Code"].unique())
 ```
 
 Data covers 326 industries. The data includes 4518 rows and 20 variables. Most are quantitative results and collect financial information like total assets, return on assets, and so on; it also includes behaviour scores from external institutions like environmental disclosure score, social disclosure score and governance disclosure score.
