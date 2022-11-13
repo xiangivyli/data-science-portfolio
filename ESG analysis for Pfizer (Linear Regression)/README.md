@@ -11,9 +11,16 @@ Environmental, social and governance (ESG) score in today’s markets evaluates 
 1. [Chapter 4 - Development of Pfizer](#ch4)
 1. [Chapter 5 - Relationship between total asset and ESG score](#ch5)
 1. [Chapter 6 - Evaluation of model](#ch6)
-1. [Chapter 7 - Discussion](#ch7)
+1. [Chapter 7 - Conclusion and discussion](#ch7)
 
 1. [References](#ch90)
+
+The complete codes are in the [ESG_analysis_for_Pfizer.ipynb](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/ESG_analysis_for_Pfizer.ipynb)
+<a id = "ch1"></a>. 
+
+[Dictionary](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Data/Dictionary.csv) in [Data](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Data/SP1500_Raw%20Dataset_Data%20Analytics%20in%20Business%20Assignment_2021.csv) explains the variables’ definitions.
+
+The README file mainly lists results and insights from data.
 
 <a id = "ch1"></a>
 ## Chapter 1 Project Overview
@@ -81,7 +88,7 @@ df = pd.read_csv("./S&P1500_Raw Dataset_Data Analytics in Business Assignment_20
 df.count()
 ```
 <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/data.gathering.df.count.png" width = "500"/>
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/data.gathering.df.count.png" width = "300"/>
 </p>
 
 ```
@@ -93,8 +100,6 @@ len(df["SIC Code"}.unique())
 ```
 
 Data covers 326 industries. The data includes 4518 rows and 20 variables. Most are quantitative results and collect financial information like total assets, return on assets, and so on; it also includes behaviour scores from external institutions like environmental disclosure score, social disclosure score and governance disclosure score.
-
-[Dictionary](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Data/Dictionary.csv) in [Data](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Data/SP1500_Raw%20Dataset_Data%20Analytics%20in%20Business%20Assignment_2021.csv) explains the variables’ definitions.
 
 <a id = "ch3"></a>
 ## Chapter 3 Biopharmaceutical Company
@@ -121,7 +126,7 @@ Table 1 shows the descriptive statistics of biopharmaceutical companies with cho
 Pfizer is an American corporation, and its headquarter locates in the U.S. as well. Pfizer is generally higher than the average level except for Tobin's Q ratio evaluation; the median value of the cohort is 7.33, while Pfizer only scored 1.94. The data of Pfizer is near teh maximum value in employees and total assets aspects.
 
 <p align = "center">
-   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.landscape.table.png" height = "800"/>
+   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.landscape.table.png" height = "500"/>
 </p>
 
 Figure 1 uses 4 bar plots covering (a) total assets; (b) the number of employees per year; (c) return on assets; (d) Tobin's Q Ratio and give ranking information about the position of Pfizer in the cohort. Pfizer ranks among the highest according to total assets and has sufficient employees; the number is lower than Johnson & Johnson with over 120,000 employees. Regarding prospects relevant indicators (Return on Assets and Tobin's Q Ratio), Pfizer does not have strengths over other companies; it is the fourth bottom of the cohort comparing Tobin's Q Ratio.
@@ -147,7 +152,7 @@ The chapter is to achieve the second objective - visulalise the trend of busines
 Figure 2, with time-series line graph, demonstrates Pfizer's financial aspects. Firstly, the change of total assets from 2016 to 2018 has shown that Pfizer did not have excellent performance in 2018; the assets dropped from over 170,000 million U.S. dollars to below 160,000 million U.S. dollars while the number of employees experienced a slight decrease then increased to around 92,000 in 2018. Then using return on assets and Tobin's Q ratio as indicators of company development prospects demonstrates Pfizer tried to increase the influence and management of the company. However, Pfizer has not performed well with middle-level ranking results in Figure 1. Similarly, Pfizer continued to invest R&D and disclosure more environmental information.
 
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/pfizer.trend.plot.jpg">
+    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/Pfizer.trend.plot.png" width = 500>
 </p>
 
 <a id = "ch5"></a>
@@ -164,25 +169,63 @@ Figure 3 visualises the scatterplots of environmental, social, governance disclo
     <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/relationship.plot.jpg" width = 500>
 </p>
 
+Table 2 presents the results of the regression. Of note, the social score variable is excluded in the equation because, in the first attempt, the *P*-value of the social disclosure score is 0.302, which means the relationship is not significant. Hence, the result only includes two indepdent variables: environmental and governance disclosure scores.
+
+In equation (1), t-1 means lagging scores by one year. The coefficients are 0.0306 and 0.0550, *P*-values are less than 0.05, which means the relationship is significant. For every one unit increase in environmental and governance disclosure scores last year, total assets will increase by e<sup>5.2366</sup> million U.S. dollars this year. The direct impact is significantly positive.
+    
 <p align = "center">
     <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/regression.table.png" width = 500>
 </p>
 
-## Descriptive Analysis
-- Count the number of companies
-- Depict the locations of Pharmaceuticals in the world
-- Find companies in Ireland
-- Check the location of Pfizer 
-- Compare total assets, employees, return on assets and Tobin's Q Ratio among Pharmaceuticals
-- Describe the developing trend of Pfizer (assets, employees and so on)
+<a id = "ch6"></a>
+## Chapter 6 Evaluation of model
+The chapter is to prove the rationality of the model.
 
-## Predictive Analysis
-- Lag ESG scores as the delayed impact 
-- Delete outliers
-- Log total assets
-- Regression 
-- Residual plot 
-- Histogram plot
-- Test multicollinearity
+1. The distribution of residuals
+2. The histogram of ln(total assets)
+3. Test multicollinearity with the VIF values
+
+The figures show (1) the distribution of residuals is average in the left residual plots; similarly, the histogram is well-shaped and symmetric. The three graphs indicate that the errors are normally distributed, and heteroscedasticity is not a violation. (2) Multicollinearity is not a problem when the VIF values are around 2.2 in the VIF table.
+
+```
+# Use residual plot to check the assumption of Nonnormality of Residuals
+figure4a = sns.residplot(x = "ENVIRON_DISCLOSURE_SCORE_Lagged",
+                         y = "Log_BS_TOT_ASSET", data = df_no_outliers, color = "green").get_figure()
+
+figure4b = sns.residplot(x = "GOVNCE_DISCLOSURE_SCORE_Lagged",
+                         y = "Log_BS_TOT_ASSET", data = df_no_outliers, color = "blue").get_figure()
+```
+```
+# Test for any values of the explanatory variables, the dependent variable is normally distributed
+model = smf.ols(formula = "Log_BS_TOT_ASSET~DISCLOSURE_SCORE_Lagged + GOVNCE_DISCLOSURE_SCORE_Lagged", data = df_no_outliers).fit()
+    
+sns.histplot(model.resid)
+
+fig4c = sns.histplot(model.resid).get_figure()
+```
+<p align = "center">
+    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.plot.jpg" width = 500>
+</p>
+
+```
+vif = [variance_inflation_factor(exog = X.values, exog_idx = i) for i in range(X.shape[1])]
+
+vif_table = pd.DataFrame({"coef_name":X.columns, "vif_values":np.around(vif, 3)})
+print(vif_table)
+```
+<p align = "center">
+    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.table.png" width = 500>
+</p>
+    
+<a id = "ch7"></a>
+## Chapter 7 Conclustion and discussion
+Figures 1, 2 and Table 1 proved that Pfizer still occupied the leading position in the biopharmaceutical industry after comparing total assets and the number of employees with other biopharmaceutical companies but lacked strong growth potential when ranking return on assets and Tobin’s Q ratio. According to MarketLine (2021, p.72), ‘Robust research and development capabilities, operational performance and business performance of innovative health segment are the company’s major strengths, whereas revenue remains the cause for concern.’ Corresponding with the trend in Figure 1a, Pfizer has reported a decrease in sales data because investors waited for strategic mergers and acquisitions (M&A) (Jared S, 2018). In that case, managers in Pfizer need to consider how they deal with urgent situations and increase assets.
+
+At the same time, equation (1) and Table 2 have presented the positive mathematical relationship between environmental disclosure score, governance disclosure score, and total assets. The ESG score is involved in the S&P 1500 and has become an important indicator to evaluate companies and provide sustainable perspectives for investors (Huang and Shell, 2021). Most research has shown that the ESG score positively impacts companies’ finance (Qiu et al., 2016); however, the EGS score does not always promote financial performance in a specific context. For example, the relationship between ESG score and financial performance is negative in Latin America because of geographic factors (Duque-Grisales and Aguilera-Caracuel, 2019). The association features change with external factors. For example, the social disclosure score is a positive factor for market value (Qiu et al., 2016), while this essay’s modelling does not demonstrate the relationship. Another case is that environmental disclosure score contributes most to improving credit rating (Zanin, 2021). Although the association features are slightly different, the positive relationship that the model has mentioned is still rational considering the influence of changes in various contexts.
+
+Additionally, the ESG score is lower than average in the biopharmaceutical industry. The outlook of the whole biopharmaceutical industry should change. For example, the insurance industry has a higher score over average because of the positive role of connecting employees and corporations (Banham, 2021). Unexpectedly, many biopharmaceutical companies have relatively lower ESG scores (Cooke, J. R. 2020). The reason is that pharmaceutical companies are profit dominated (Canfield, 2020) rather than ethical standards. In that case, the public expects the pharmaceutical industry to develop in ESG relevant direction that can help improve the population health (Desmyter, 2020). Win-win results and joint development are general trends, so decision-makers in Pfizer should value the importance of ESG in the operational strategies. However, Pfizer has realised the significant position of ESG score. In Pfizer’s annual review in 2020, it is easy to find that Pfizer had underlined the ESG section in the report. In the chapter, Pfizer addressed ESG relevant indicators and set goals for further sustainable development (Performance | Pfizer 2020 Annual Review, 2021). Pfizer’s behaviour is consistent with the importance of ESG development that the model suggests.
+
+As for the model, it is valid after avoiding bias and other possible violations technologically. I have to admit that I have changed dependent variables several times when I put other financial variables on the scatterplots, like return on assets, Tobin’s Q ratio. These dots have formed a ‘fan’ shape or different centralised shapes. Finally, I chose ln (total assets) as the dependent variable. P-value and other statistical indicators have shown the relationship are significant. However, there are still issues that need to discuss. The first point is that I worried about the representative of the samples; firstly, rows including missing values account for around 30%, although I try to limit the number of variables to get more examples. Because firm size is one factor that can influence ESG score (Drempetic et al., 2019; Tamimi & Sebastianelli, 2017), the management of small companies can not provide sufficient data. In conclusion, there is a possibility that I deleted smaller companies when removing missing values. Thus it is a possible cause of bias. The second point is that the S&P 1500 did not include Roche, one big competitor for Pfizer. So it is another reason why there is a chance that the model can not match the actual situation very well. Therefore, the model is appropriate because I have used data analytics technology to optimise the data, although biases still exist in the dataset.
+
 
 
