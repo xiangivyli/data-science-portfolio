@@ -204,7 +204,16 @@ sns.histplot(model.resid)
 fig4c = sns.histplot(model.resid).get_figure()
 ```
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.plot.jpg" width = 400>
+    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.plot.jpg" width = 500>
 </p>
 
+```
+vif = [variance_inflation_factor(exog = X.values, exog_idx = i) for i in range(X.shape[1])]
+
+vif_table = pd.DataFrame({"coef_name":X.columns, "vif_values":np.around(vif, 3)})
+print(vif_table)
+```
+<p align = "center">
+    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.table.png" width = 500>
+</p>
 
