@@ -20,9 +20,9 @@ Environmental, social and governance (ESG) score in today’s markets evaluates 
 
 This empirical analysis has two objectives.
 
-Firstly, it attempts to identify Pfizer company’s position in the pharmaceutical industry and then visualise the trend of business aspects in Pfizer from 2016 to 2018. 
+- It attempts to identify Pfizer company’s position in the pharmaceutical industry and then visualise the trend of business aspects in Pfizer from 2016 to 2018. 
 
-Secondly, given that the ESG scores (Environmental, Social, Governance Scores) have triggered a wider concern of the company's corporate social responsibility. The analysis applied linear regression to disclose the relationship between total assets and ESG scores.
+- Given that the ESG scores have triggered a wider concern of the company's corporate social responsibility. The analysis applied linear regression to disclose the relationship between total assets and ESG scores.
 
 ### Brief
 
@@ -89,13 +89,37 @@ len(df["SIC Code"}.unique())
 
 Data covers 326 industries. The data includes 4518 rows and 20 variables. Most are quantitative results and collect financial information like total assets, return on assets, and so on; it also includes behaviour scores from external institutions like environmental disclosure score, social disclosure score and governance disclosure score.
 
-[Dictionary](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Data/Dictionary.xlsx) in [Data](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Data/SP1500_Raw%20Dataset_Data%20Analytics%20in%20Business%20Assignment_2021.csv) explains the variables’ definitions.
+[Dictionary](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Data/Dictionary.csv) in [Data](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Data/SP1500_Raw%20Dataset_Data%20Analytics%20in%20Business%20Assignment_2021.csv) explains the variables’ definitions.
 
 <a id = "ch3"></a>
 ## Chapter 3 Biopharmaceutical Company
-Using SIC Code of 2834 or 2836 to narrow down the range of companies.
+The chapter is to achieve the first objective - identify Pfizer's position in the pharmaceutical industry.
 
-Continuing...
+1. Using SIC Code of 2834 or 2836 to narrow down the range of companies (SIC Code 2843 - Pharmaceutical, SIC Code 2836 Biological Products).
+2. Identify the analysis variables
+    - name
+    - year
+    - country or territory of domicile
+    - total assets
+    - the number of employees
+    - return in assets
+    - R&D expense adjusted
+    - environmental score
+    - Tobin's Q ratio
+    - return on assets
+3. Drop NaN values to guarantee the rationality of results and figures
+4. Calculate mean, median, maximum and minimum values 
+5. Visulalise these metrics for comparison
+
+Table 1 shows the descriptive statistics of biopharmaceutical companies with chosen variables and puts Pfizer's data aside to locate its performance level. There are 21 biopharmaceutical companies, like AbbVie, Amgen, and so on. Two companies are in Ireleand (Endo Internation PLC and Perrigo Co PLC), and the headquarters of 19 companies are in America.
+
+Pfizer is an American corporation, and its headquarter locates in the U.S. as well. Pfizer is generally higher than the average level except for Tobin's Q ratio evaluation; the median value of the cohort is 7.33, while Pfizer only scored 1.94. The data of Pfizer is near teh maximum value in employees and total assets aspects.
+
+[Table 1 Overview of biopharmaceutical companies and Pfizer. The descriptive statistics for biopharmaceutical companies and Pfizer with 56 and 3 obervations, repectively]
+
+<image src=
+
+
 
 
 ## Descriptive Analysis
