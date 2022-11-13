@@ -236,5 +236,8 @@ The analysis can give Pfizer and other companies some ideas regarding their deve
     <image src= "https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/questionnaire.part2.png" width = 500>
 </p>
 
+<a id = "ch90"></a>
+## References
+
 
 
