@@ -85,7 +85,7 @@ df = pd.read_csv("./S&P1500_Raw Dataset_Data Analytics in Business Assignment_20
 df.count()
 ```
 <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/data.gathering.df.count.png" width = "450"/>
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/data.gathering.df.count.png" width = "400"/>
 </p>
 
 ```
