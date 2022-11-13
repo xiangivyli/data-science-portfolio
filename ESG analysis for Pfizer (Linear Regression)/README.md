@@ -103,10 +103,10 @@ Data covers 326 industries. The data includes 4518 rows and 20 variables. Most a
 
 <a id = "ch3"></a>
 ## Chapter 3 Biopharmaceutical Company
-The chapter is to achieve the first objective - identify Pfizer's position in the pharmaceutical industry.
+The chapter is to achieve the first objective - identify Pfizer's position in the biopharmaceutical industry.
 
-1. Using SIC Code of 2834 or 2836 to narrow down the range of companies (SIC Code 2843 - Pharmaceutical, SIC Code 2836 Biological Products).
-2. Identify the analysis variables
+1. Use SIC Code of 2834 or 2836 to narrow down the range of companies (SIC Code 2843 - Pharmaceutical, SIC Code 2836 - Biological Products).
+2. Identify metrics
     - name
     - year
     - country or territory of domicile
@@ -123,16 +123,16 @@ The chapter is to achieve the first objective - identify Pfizer's position in th
 
 Table 1 shows the descriptive statistics of biopharmaceutical companies with chosen variables and puts Pfizer's data aside to locate its performance level. There are 21 biopharmaceutical companies, like AbbVie, Amgen, and so on. Two companies are in Ireleand (Endo Internation PLC and Perrigo Co PLC), and the headquarters of 19 companies are in America.
 
-Pfizer is an American corporation, and its headquarter locates in the U.S. as well. Pfizer is generally higher than the average level except for Tobin's Q ratio evaluation; the median value of the cohort is 7.33, while Pfizer only scored 1.94. The data of Pfizer is near teh maximum value in employees and total assets aspects.
+Pfizer is an American corporation, and its headquarter locates in the U.S. as well. Pfizer is generally higher than the average level except for Tobin's Q ratio evaluation; the median value of the cohort is 7.33, while Pfizer only scored 1.94. The data of Pfizer is near the maximum value in employees and total assets aspects.
 
 <p align = "center">
    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.landscape.table.png" height = "500"/>
 </p>
 
-Figure 1 uses 4 bar plots covering (a) total assets; (b) the number of employees per year; (c) return on assets; (d) Tobin's Q Ratio and give ranking information about the position of Pfizer in the cohort. Pfizer ranks among the highest according to total assets and has sufficient employees; the number is lower than Johnson & Johnson with over 120,000 employees. Regarding prospects relevant indicators (Return on Assets and Tobin's Q Ratio), Pfizer does not have strengths over other companies; it is the fourth bottom of the cohort comparing Tobin's Q Ratio.
+Figure 1 uses 4 bar plots covering (a) total assets; (b) the number of employees per year; (c) return on assets; (d) Tobin's Q Ratio and gives ranking information about the position of Pfizer in the cohort. Pfizer ranks among the highest according to total assets and has sufficient employees; the number is lower than Johnson & Johnson with over 120,000 employees. Regarding prospects relevant indicators (Return on Assets and Tobin's Q Ratio), Pfizer does not have strengths over other companies; it is the fourth bottom of the cohort comparing Tobin's Q Ratio.
 
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.comparison.plot.jpg" width = "500"/>
+    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.comparison.plot.png" width = "500"/>
 </p>
 
 <a id = "ch4"></a>
@@ -141,13 +141,13 @@ The chapter is to achieve the second objective - visulalise the trend of busines
 
 1. Creat a new dataframe for Pfizer
 2. Indentify the analysis variables
- - total assets
- - the number of employees
- - return on assets
- - Tobin's Q Ratio
- - R&D Expense Adjusted
- - Environmental disclosure score
-3. Use line chart to describe the developing trend of Pfizer from 2016 - 2018
+   - total assets
+   - the number of employees
+   - return on assets
+   - Tobin's Q Ratio
+   - R&D Expense Adjusted
+   - Environmental disclosure score
+3. Use line charts to describe the developing trend of Pfizer from 2016 - 2018
 
 Figure 2, with time-series line graph, demonstrates Pfizer's financial aspects. Firstly, the change of total assets from 2016 to 2018 has shown that Pfizer did not have excellent performance in 2018; the assets dropped from over 170,000 million U.S. dollars to below 160,000 million U.S. dollars while the number of employees experienced a slight decrease then increased to around 92,000 in 2018. Then using return on assets and Tobin's Q ratio as indicators of company development prospects demonstrates Pfizer tried to increase the influence and management of the company. However, Pfizer has not performed well with middle-level ranking results in Figure 1. Similarly, Pfizer continued to invest R&D and disclosure more environmental information.
 
@@ -159,11 +159,11 @@ Figure 2, with time-series line graph, demonstrates Pfizer's financial aspects. 
 ## Chapter 5 Relationship between total asset and ESG score
 The chapter is to achieve the last objective - apply linear regression to disclose the relationship (total assets & ESG scores).
     
-1. Drop NaN values and outliers of independent variables (3-sigma method)
+1. Drop NaN values and outliers of independent variables (3-sigma method) - get 1,965 efficient rows
 2. Lag ESG scores to the next year (the effect of scores need time)
 3. Log total assets (the distribution is skewed)
 
-Figure 3 visualises the scatterplots of environmental, social, governance disclosure scores V.S. the ln(total assets), respectively. Generally, teh contribution of variables is average, and it is easy to observe a positive relationship between independent and dependent variables. The scatterplots can expect teh coefficients are positive in the equation. Consequently, the least square generates the parameters and other indexes to quantity the relationships.
+Figure 3 visualises the scatterplots of environmental, social, governance disclosure scores V.S. the ln(total assets), respectively. Generally, the contribution of variables is average, and it is easy to observe a positive relationship between independent and dependent variables. The scatterplots can expect the coefficients are positive in the equation. Consequently, the least square generates the parameters and other indexes to quantity the relationships.
     
 <p align = "center">
     <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/relationship.plot.jpg" width = 500>
