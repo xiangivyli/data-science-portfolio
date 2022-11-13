@@ -130,7 +130,7 @@ Figure 1 uses 4 bar plots covering (a) total assets; (b) the number of employees
     <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.comparison.plot.jpg" width = "500"/>
 </p>
 
-<a id = "ch1"></a>
+<a id = "ch4"></a>
 ##Chapter 4 Development of Pfizer
 The chapter is to achieve the second objective - visulalise the trend of business aspects in Pfizer from 2016 to 2018.
 
