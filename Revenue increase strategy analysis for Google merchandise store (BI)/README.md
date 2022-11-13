@@ -6,6 +6,8 @@
 # Table of Content
 1. [Chapter 1 - Project Overview](#ch1)
 2. [Chapter 2 - Web Metrics](#ch2)
+3. [Chapter 3 - Persona of customers](#ch3)
+4. [Chapter 4 - The performance of products](#ch4)
 
 
 
@@ -55,6 +57,24 @@ Five hypotheses are listed below to solve five questions and achieve five OKRs.
 3. Consumers often use mobile phones to complete a purchase.
 4. Returning users contribute more to the revenue.
 5. Consumers often leave after they have added products to their carts.
+   
+<a id = "ch3"></a>
+## Chapter 3 Persona of customers
+The first analysis depicts the current customer; a persona can form a coherent picture of consumers with better clarity and completeness (Sinha, 2003; Spiliotopoulos et al., 2020). Table 2 indicates that the United States has contributed the most users and revenue; the interesting point is that India has the second most users, but the payment is not high enough. 
+
+Figure 2 below illustrates that the 18-24 and 25-34 groups use google merchandise store more, and the male uses the online store slightly more frequently than females. Men purchase more than women in the store violates the public consensus that women drive most of total purchasing (Nelson, 2020). It may be caused by the attraction of the Google brand for men. The first hypothesis should be changed because young men intend to purchase Google-branded products more. It is worth noting that the demographic data are only available for about half of the total users (the right corner of the graphs has annotated the number). 
+
+<p align = "center">
+  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/3.Country_distribution_for_users_and_revenue.png" width = 400>
+    </p>
+
+<a id = "ch4"></a>
+## Chapter 4 The performance of products
+The product performance reflects customers’ mindsets or insights (Charm, 2020). Table 3 below presents the six most famous products: hoodies, T-shirts, jackets, polo, and backpack. From the data, it is easy to see that 5/6 belongs to clothing and one in the backpack, and the price did not change a lot, but the quantity has added a lot. For example, the sales volumes of Google Black Cloud Zip Hoodie and Google Unisex Eco Tee Black products have over doubled compared to the same quarter last year, and there are two new items which did not come into markets in the first quarter of 2021 have become popular too, they are both jackets. The ranking of popular products shows that consumers may pursue practical fashion and brand satisfaction simultaneously and supports the second hypothesis.
+
+<p align = "center">
+  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/4.The_performance_of_products.png" width = 400>
+    </p>
 
    
    
