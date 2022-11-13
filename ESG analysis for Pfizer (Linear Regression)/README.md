@@ -22,6 +22,7 @@ The complete codes are in the [ESG_analysis_for_Pfizer.ipynb](https://github.com
 
 The README file mainly lists results and insights from data.
 
+<a id = "ch1"></a>
 ## Chapter 1 Project Overview
 ### Objects
 
@@ -176,21 +177,34 @@ In equation (1), t-1 means lagging scores by one year. The coefficients are 0.03
     <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/regression.table.png" width = 500>
 </p>
 
-## Descriptive Analysis
-- Count the number of companies
-- Depict the locations of Pharmaceuticals in the world
-- Find companies in Ireland
-- Check the location of Pfizer 
-- Compare total assets, employees, return on assets and Tobin's Q Ratio among Pharmaceuticals
-- Describe the developing trend of Pfizer (assets, employees and so on)
+<a id = "ch6"></a>
+## Chapter 6 Evaluation of model
+The chapter is to prove the rationality of the model.
 
-## Predictive Analysis
-- Lag ESG scores as the delayed impact 
-- Delete outliers
-- Log total assets
-- Regression 
-- Residual plot 
-- Histogram plot
-- Test multicollinearity
+1. The distribution of residuals
+2. The histogram of ln(total assets)
+3. Test multicollinearity with the VIF values
+
+The figures show (1) the distribution of residuals is average in the left residual plots; similarly, the histogram is well-shaped and symmetric. The three graphs indicate that the errors are normally distributed, and heteroscedasticity is not a violation. (2) Multicollinearity is not a problem when the VIF values are around 2.2 in the VIF table.
+
+```
+# Use residual plot to check the assumption of Nonnormality of Residuals
+figure4a = sns.residplot(x = "ENVIRON_DISCLOSURE_SCORE_Lagged",
+                         y = "Log_BS_TOT_ASSET", data = df_no_outliers, color = "green").get_figure()
+
+figure4b = sns.residplot(x = "GOVNCE_DISCLOSURE_SCORE_Lagged",
+                         y = "Log_BS_TOT_ASSET", data = df_no_outliers, color = "blue").get_figure()
+```
+```
+# Test for any values of the explanatory variables, the dependent variable is normally distributed
+model = smf.ols(formula = "Log_BS_TOT_ASSET~DISCLOSURE_SCORE_Lagged + GOVNCE_DISCLOSURE_SCORE_Lagged", data = df_no_outliers).fit()
+    
+sns.histplot(model.resid)
+
+fig4c = sns.histplot(model.resid).get_figure()
+```
+<p align = "center">
+    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.plot.jpg" width = 400>
+</p>
 
 
