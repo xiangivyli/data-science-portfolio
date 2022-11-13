@@ -258,7 +258,7 @@ The analysis can give Pfizer and other companies some ideas regarding their deve
 - Statista. (2021, November 25). Pfizer’s quarterly revenue 2010–2021. https://www.statista.com/statistics/254351/quarterly-revenue-of-pfizer-since-2006/ 
 - SIC Code 2834 - Pharmaceutical preparations. (2021, May 7). SIC & NAICS Codes, Company Search, Business Lists - SICCODE.Com. https://siccode.com/sic-code/2834/pharmaceutical-preparations 
 - SIC Code 2836 - Biological products exc. diagnostic. (2021, May 7). SIC & NAICS Codes, Company Search, Business Lists - SICCODE.Com. https://siccode.com/sic-code/2836/biological-products 
-- Tamimi, N., & Sebastianelli, R. (2017). Transparency among S&P 500 companies: an analysis of ESG disclosure scores. Management Decision, 55(8), 1660–1680. https://doi.org/10.1108/md-01-2017- 0018 
+- Tamimi, N., & Sebastianelli, R. (2017). Transparency among S&P 500 companies: an analysis of ESG disclosure scores. Management Decision, 55(8), 1660–1680. https://doi.org/10.1108/md-01-2017-0018 
 - Zanin, L. (2021). Estimating the effects of ESG scores on corporate credit ratings using multivariate ordinal logit regression. Empirical Economics. https://doi.org/10.1007/s00181-021-02121-4
 
 
