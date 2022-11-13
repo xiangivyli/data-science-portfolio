@@ -77,7 +77,7 @@ from statsmodels.formula.api import ols
 df = pd.read_csv("./S&P1500_Raw Dataset_Data Analytics in Business Assignment_2021.csv")
 df.count()
 ```
-<img src="./Images/data.cleansing.df.count.png" align = "left" width = "500" height = "300" />
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/data.gathering.df.count.png" align = "left" width = "500" height = "300" />
 
 ```
 # Checking the number of variables
