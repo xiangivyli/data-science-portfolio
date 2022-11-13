@@ -244,14 +244,14 @@ The analysis can give Pfizer and other companies some ideas regarding their deve
 
 <a id = "ch90"></a>
 ## References
-- Banham, R. (2021) ‘Ranking U.S. Insurers: How They Score on ESG Performance’, Carrier Management, 8(1), pp. 26–28. Available at: https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=149033527&site=ehost-live (Accessed: 10 January 2022). 
-- Cooke, J. R. (2020) ‘Biopharma ESG Rankings Are Hamstrung by Drug Pricing, Litigation’, Bloomberg.com, p. N.PAG. Available at: https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=144504021&site=ehost-live (Accessed: 10 January 2022). 
+- Banham, R. (2021) ‘Ranking U.S. Insurers: How They Score on ESG Performance’, Carrier Management, 8(1), pp. 26–28. Available at: https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=149033527&site=ehost-live. 
+- Cooke, J. R. (2020) ‘Biopharma ESG Rankings Are Hamstrung by Drug Pricing, Litigation’, Bloomberg.com, p. N.PAG. Available at: https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=144504021&site=ehost-live. 
 - Desmyter, S. (2020, December 23). The ESG case for the Oxford/AstraZeneca vaccine. Financial Times. https://www.ft.com/content/0ad28950-cf97-4ae9-8b08-18fdc9ffbeb1 
 - Drempetic, S., Klein, C., & Zwergel, B. (2019). The Influence of Firm Size on the ESG Score: Corporate Sustainability Ratings Under Review. Journal of Business Ethics, 167(2), 333–360. https://doi.org/10.1007/s10551-019-04164-1 
 - Duque-Grisales, E., & Aguilera-Caracuel, J. (2019). Environmental, Social and Governance (ESG) Scores and Financial Performance of Multilatinas: Moderating Effects of Geographic International Diversification and Financial Slack. Journal of Business Ethics, 168(2), 315–334. https://doi.org/10.1007/s10551-019-04177-w
 - Dyllick, T., & Hockerts, K. (2002). Beyond the business case for corporate sustainability. Business Strategy and the Environment, 11(2), 130–141. https://doi.org/10.1002/bse.323 
-- Hopkins, J. S. (2018) ‘Pfizer Sales Disappoint as Investors Wait for Strategic M&A’, Bloomberg.com, p. N.PAG. Available at: https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=140678121&site=ehost-live (Accessed: 12 January 2022). 
-- Huang, N. S. and Shell, A. (2021) ‘Introducing the Kiplinger ESG 20. (cover story)’, Kiplinger’s Personal Finance, 75(11), pp. 18–30. Available at: https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=152570248&site=ehost-live (Accessed: 9 January 2022). 
+- Hopkins, J. S. (2018) ‘Pfizer Sales Disappoint as Investors Wait for Strategic M&A’, Bloomberg.com, p. N.PAG. Available at: https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=140678121&site=ehost-live. 
+- Huang, N. S. and Shell, A. (2021) ‘Introducing the Kiplinger ESG 20. (cover story)’, Kiplinger’s Personal Finance, 75(11), pp. 18–30. Available at: https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=152570248&site=ehost-live. 
 - MarketLine Company Profile: Pfizer Inc. (2021). In Pfizer Inc. MarketLine Company Profile (pp. 1–88) 
 - Performance | Pfizer 2020 Annual Review. (2021). Pfizer 2020 Annual Review. https://annualreview.pfizer.com/performance#esg-signpost 
 - Qiu, Y., Shaukat, A., & Tharyan, R. (2016). Environmental and social disclosures: Link with corporate financial performance. The British Accounting Review, 48(1), 102–116. https://doi.org/10.1016/j.bar.2014.10.007 
