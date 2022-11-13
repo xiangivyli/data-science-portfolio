@@ -22,6 +22,10 @@
 ### Background Information
 Google merchandise store is an online platform that sells google-branded products. The Google Analytics platform (a web analytics tool that stores historical marketing data and tracks the customer's real-time status) shows that in December 2017 and April 2018, the sales performance reached the highest peak – $578,246 and $585,960. But after June 2018, the trend showed a considerable decline until the lowest point ($3,269 in November 2018). The significant decrease should be that the European Commission took a hard line on antitrust behaviour and fined Google €2.42 billion in June 2017 and €4.34 billion in July 2018, respectively (European Commission, 2017, 2018). The situation lasted for two years, and the revenue started to increase in December 2020, but the peak value was much lower than before. To help the Google merchandise store recreate its historical prospects, this report uses the google analytics platform to define customers' personas and provide feasible strategies to increase revenue.
 
+<p align = "center">
+  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/The_trend_of_revenue.png" width = 100%>
+    </p>
+
 ### Dataset
 Data comes from Demo Account (54516992) – UA – Google Merchandise Store (UA-54516992-1) - 1 Master View (92320289). 
 
