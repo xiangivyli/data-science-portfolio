@@ -2,7 +2,7 @@
 Pfizer is one of the biggest multinational biopharmaceutical companies and medicine suppliers with a robust research capacity (MarketLine, 2021). Its revenue dramatically increased to over 24 billion U.S dollars with the Covid-19 vaccine in the Third Quarter of 2021(Statista, 2021). 
 
 <img src="./Images/ESG.jpg" align = "right" width = "500"/>
-Environmental, social and governance (ESG) score in today’s markets evaluates the sustainable effort of companies, representing the deduction of footprint and organising eco-friendly activities, maintaining the relationship with humans, and testing the transparency of management structure. 
+Environmental, social and governance (ESG) scores in today’s markets evaluate the sustainable effort of companies, representing the deduction of footprint and organising eco-friendly activities, maintaining the relationship with humans, and testing the transparency of management structure. ESG scores have triggered a wider concern of the company's corporate social responsibility.
 
 # Table of Contents
 1. [Chapter 1 - Project Overview](#ch1)
@@ -28,11 +28,11 @@ The README file mainly lists results and insights from data.
 
 This empirical analysis has 3 objectives.
 
-- It attempts to identify Pfizer company’s position in the pharmaceutical industry.
+- Identify Pfizer company’s position in the pharmaceutical industry.
 
 - Visualise the trend of business aspects in Pfizer from 2016 to 2018. 
 
-- Given that the ESG scores have triggered a wider concern of the company's corporate social responsibility. The analysis applied linear regression to disclose the relationship between total assets and ESG scores.
+- Apply linear regression to disclose the relationship between total assets and ESG scores.
 
 ### Brief
 
@@ -96,7 +96,7 @@ df.count()
 df.shape[1]
 
 #Checking how many industries are involved
-len(df["SIC Code"}.unique())
+len(df["SIC Code"].unique())
 ```
 
 Data covers 326 industries. The data includes 4518 rows and 20 variables. Most are quantitative results and collect financial information like total assets, return on assets, and so on; it also includes behaviour scores from external institutions like environmental disclosure score, social disclosure score and governance disclosure score.
@@ -225,7 +225,19 @@ At the same time, equation (1) and Table 2 have presented the positive mathemati
 
 Additionally, the ESG score is lower than average in the biopharmaceutical industry. The outlook of the whole biopharmaceutical industry should change. For example, the insurance industry has a higher score over average because of the positive role of connecting employees and corporations (Banham, 2021). Unexpectedly, many biopharmaceutical companies have relatively lower ESG scores (Cooke, J. R. 2020). The reason is that pharmaceutical companies are profit dominated (Canfield, 2020) rather than ethical standards. In that case, the public expects the pharmaceutical industry to develop in ESG relevant direction that can help improve the population health (Desmyter, 2020). Win-win results and joint development are general trends, so decision-makers in Pfizer should value the importance of ESG in the operational strategies. However, Pfizer has realised the significant position of ESG score. In Pfizer’s annual review in 2020, it is easy to find that Pfizer had underlined the ESG section in the report. In the chapter, Pfizer addressed ESG relevant indicators and set goals for further sustainable development (Performance | Pfizer 2020 Annual Review, 2021). Pfizer’s behaviour is consistent with the importance of ESG development that the model suggests.
 
-As for the model, it is valid after avoiding bias and other possible violations technologically. I have to admit that I have changed dependent variables several times when I put other financial variables on the scatterplots, like return on assets, Tobin’s Q ratio. These dots have formed a ‘fan’ shape or different centralised shapes. Finally, I chose ln (total assets) as the dependent variable. P-value and other statistical indicators have shown the relationship are significant. However, there are still issues that need to discuss. The first point is that I worried about the representative of the samples; firstly, rows including missing values account for around 30%, although I try to limit the number of variables to get more examples. Because firm size is one factor that can influence ESG score (Drempetic et al., 2019; Tamimi & Sebastianelli, 2017), the management of small companies can not provide sufficient data. In conclusion, there is a possibility that I deleted smaller companies when removing missing values. Thus it is a possible cause of bias. The second point is that the S&P 1500 did not include Roche, one big competitor for Pfizer. So it is another reason why there is a chance that the model can not match the actual situation very well. Therefore, the model is appropriate because I have used data analytics technology to optimise the data, although biases still exist in the dataset.
+As for the model, it is valid after avoiding bias and other possible violations technologically.P-value and other statistical indicators have shown the relationship are significant. However, there are still issues that need to discuss. The first point is that the representative of the samples; firstly, rows including missing values account for around 30%, although the analysis limited the number of variables to get more examples. Because firm size is one factor that can influence ESG score (Drempetic et al., 2019; Tamimi & Sebastianelli, 2017), the management of small companies can not provide sufficient data. In conclusion, there is a possibility that the analysis deleted smaller companies when removing missing values. Thus it is a possible cause of bias. The second point is that the S&P 1500 did not include Roche, one big competitor for Pfizer. So it is another reason why there is a chance that the model can not match the actual situation very well.
+    
+The analysis can give Pfizer and other companies some ideas regarding their development direction. For example, Pfizer can identify detailed stakeholders of environmental, governance relevant topics. Well-designed surveys can identify these issues and collect the reflection of customers. The figure below lists five questions that can appear in a questionnarie, such as rating Pfizer;s behaviour regarding environmental protection. This kind of information can help Pfizer evaluate its position and weigh the rationality of next steps.
+    
+<p align = "center">
+    <image src= "https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/questionnaire.part1.png" width = 500>
+</p>
+<p align = "center">    
+    <image src= "https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/questionnaire.part2.png" width = 500>
+</p>
+
+<a id = "ch90"></a>
+## References
 
 
 
