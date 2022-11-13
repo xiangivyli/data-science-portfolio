@@ -115,9 +115,7 @@ Table 1 shows the descriptive statistics of biopharmaceutical companies with cho
 
 Pfizer is an American corporation, and its headquarter locates in the U.S. as well. Pfizer is generally higher than the average level except for Tobin's Q ratio evaluation; the median value of the cohort is 7.33, while Pfizer only scored 1.94. The data of Pfizer is near teh maximum value in employees and total assets aspects.
 
-[Table 1 Overview of biopharmaceutical companies and Pfizer. The descriptive statistics for biopharmaceutical companies and Pfizer with 56 and 3 obervations, repectively]
-
-<image src=
+<image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.landscape.table.png" align = "center"/>
 
 
 
