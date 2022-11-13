@@ -10,7 +10,8 @@ Environmental, social and governance (ESG) score in today’s markets evaluates 
 1. [Chapter 3 - Biopharmaceutical Industry](#ch3)
 1. [Chapter 4 - Development of Pfizer](#ch4)
 1. [Chapter 5 - Relationship between total asset and ESG score](#ch5)
-1. [Chapter 6 - Discussion](#ch6)
+1. [Chapter 6 - Evaluation of model](#ch6)
+1. [Chapter 7 - Discussion](#ch7)
 
 1. [References](#ch90)
 
