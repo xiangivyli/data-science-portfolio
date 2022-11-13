@@ -244,6 +244,21 @@ The analysis can give Pfizer and other companies some ideas regarding their deve
 
 <a id = "ch90"></a>
 ## References
-
+- Banham, R. (2021) ‘Ranking U.S. Insurers: How They Score on ESG Performance’, Carrier Management, 8(1), pp. 26–28. Available at: https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=149033527&site=ehost-live (Accessed: 10 January 2022). 
+- Cooke, J. R. (2020) ‘Biopharma ESG Rankings Are Hamstrung by Drug Pricing, Litigation’, Bloomberg.com, p. N.PAG. Available at: https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=144504021&site=ehost-live (Accessed: 10 January 2022). 
+- Desmyter, S. (2020, December 23). The ESG case for the Oxford/AstraZeneca vaccine. Financial Times. https://www.ft.com/content/0ad28950-cf97-4ae9-8b08-18fdc9ffbeb1 
+- Drempetic, S., Klein, C., & Zwergel, B. (2019). The Influence of Firm Size on the ESG Score: Corporate Sustainability Ratings Under Review. Journal of Business Ethics, 167(2), 333–360. https://doi.org/10.1007/s10551-019-04164-1 
+- Duque-Grisales, E., & Aguilera-Caracuel, J. (2019). Environmental, Social and Governance (ESG) Scores and Financial Performance of Multilatinas: Moderating Effects of Geographic International Diversification and Financial Slack. Journal of Business Ethics, 168(2), 315–334. https://doi.org/10.1007/s10551-019-04177-w
+- Dyllick, T., & Hockerts, K. (2002). Beyond the business case for corporate sustainability. Business Strategy and the Environment, 11(2), 130–141. https://doi.org/10.1002/bse.323 
+- Hopkins, J. S. (2018) ‘Pfizer Sales Disappoint as Investors Wait for Strategic M&A’, Bloomberg.com, p. N.PAG. Available at: https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=140678121&site=ehost-live (Accessed: 12 January 2022). 
+- Huang, N. S. and Shell, A. (2021) ‘Introducing the Kiplinger ESG 20. (cover story)’, Kiplinger’s Personal Finance, 75(11), pp. 18–30. Available at: https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=152570248&site=ehost-live (Accessed: 9 January 2022). 
+- MarketLine Company Profile: Pfizer Inc. (2021). In Pfizer Inc. MarketLine Company Profile (pp. 1–88) 
+- Performance | Pfizer 2020 Annual Review. (2021). Pfizer 2020 Annual Review. https://annualreview.pfizer.com/performance#esg-signpost 
+- Qiu, Y., Shaukat, A., & Tharyan, R. (2016). Environmental and social disclosures: Link with corporate financial performance. The British Accounting Review, 48(1), 102–116. https://doi.org/10.1016/j.bar.2014.10.007 
+- Statista. (2021, November 25). Pfizer’s quarterly revenue 2010–2021. https://www.statista.com/statistics/254351/quarterly-revenue-of-pfizer-since-2006/ 
+- SIC Code 2834 - Pharmaceutical preparations. (2021, May 7). SIC & NAICS Codes, Company Search, Business Lists - SICCODE.Com. https://siccode.com/sic-code/2834/pharmaceutical-preparations 
+- SIC Code 2836 - Biological products exc. diagnostic. (2021, May 7). SIC & NAICS Codes, Company Search, Business Lists - SICCODE.Com. https://siccode.com/sic-code/2836/biological-products 
+- Tamimi, N., & Sebastianelli, R. (2017). Transparency among S&P 500 companies: an analysis of ESG disclosure scores. Management Decision, 55(8), 1660–1680. https://doi.org/10.1108/md-01-2017- 0018 
+- Zanin, L. (2021). Estimating the effects of ESG scores on corporate credit ratings using multivariate ordinal logit regression. Empirical Economics. https://doi.org/10.1007/s00181-021-02121-4
 
 
