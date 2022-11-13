@@ -11,7 +11,7 @@ Tool: Python
 * visualise the development of Pfizer from 2016 to 2018
 * linear regression between ESG score and total assets
 
-* [Revenue increase strategy analysis for Google merchandise store]
+* [Revenue increase strategy analysis for Google merchandise store](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI))
 
 Tool: Google Analytics
 * map the persona of customers
