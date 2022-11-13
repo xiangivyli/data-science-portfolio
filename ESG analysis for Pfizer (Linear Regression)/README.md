@@ -159,11 +159,11 @@ Figure 2, with time-series line graph, demonstrates Pfizer's financial aspects. 
 ## Chapter 5 Relationship between total asset and ESG score
 The chapter is to achieve the last objective - apply linear regression to disclose the relationship (total assets & ESG scores).
     
-1. Drop NaN values and outliers of independent variables (3-sigma method)
+1. Drop NaN values and outliers of independent variables (3-sigma method) - get 1,965 efficient rows
 2. Lag ESG scores to the next year (the effect of scores need time)
 3. Log total assets (the distribution is skewed)
 
-Figure 3 visualises the scatterplots of environmental, social, governance disclosure scores V.S. the ln(total assets), respectively. Generally, teh contribution of variables is average, and it is easy to observe a positive relationship between independent and dependent variables. The scatterplots can expect teh coefficients are positive in the equation. Consequently, the least square generates the parameters and other indexes to quantity the relationships.
+Figure 3 visualises the scatterplots of environmental, social, governance disclosure scores V.S. the ln(total assets), respectively. Generally, the contribution of variables is average, and it is easy to observe a positive relationship between independent and dependent variables. The scatterplots can expect the coefficients are positive in the equation. Consequently, the least square generates the parameters and other indexes to quantity the relationships.
     
 <p align = "center">
     <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/relationship.plot.jpg" width = 500>
