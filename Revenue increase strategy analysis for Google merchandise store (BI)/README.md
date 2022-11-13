@@ -12,7 +12,8 @@
 6. [Chapter 6 - Comparison between new and returning users](#ch6)
 7. [Chapter 7 - The buyer's journey](#ch7)
 8. [Chapter 8 - Recommendations](#ch8)
-9. [Chapter 9 - Discussion](#ch9)
+9. [Chapter 9 - Discussion and conclusion](#ch9)
+10. [References](#ch90)
 
 
 
@@ -121,5 +122,35 @@ Action 3: optimise the layout and design of the websites. The duration of browsi
 Action 4: add convenience for customers. A study proves that the quality of online stores influences consumers’ purchase decisions and consumers are more likely to purchase in a well-designed store (Liang & Lai, 2002). Website convenience decides the success of an online store (Salehi et al., 2012). Webmasters can simplify the payment process and establish a feedback circle. The billing and shipping information can be stored in the store, and consumers do not have to input the data every time. 
 
 <a id = "ch9"></a>
-## Chapter 9 Discussion
-Google Analytics provides informative metrics and data that can help make decisions about business activity by measuring performance and finding trends. This essay uses the most common KPIs to support the achievement of OKRs, which can lead to revenue increases. However, there are lots of spaces to explore. For example, relevant metrics such as campaigns, product coupons, active visitors, etc can also be analysed. Meanwhile, data analysis perspectives can be added with more dimensions, like exploring the percentage of converters in new and returning users. These analyses can provide more ideas. In addition, it is essential to consider the limitations of Google analytics. One issue is that analysts cannot access external environments like competitors’ data, and it will cause a loss of meaning comparison. Another problem is that Google Analytics does not include cost information, and this issue will influence decisions. For example, the top-selling products have low profits because the production cost is high. Google Analytics itself has two problems to overcome. One is that historical errors need to be fixed; otherwise, wrong data can be involved in the analysis and influence results. Another is privacy questions because data is open to the public, and Google needs to ensure it can protect data. Finally, the learning cost is high because the number of metrics is high in this platform, and it is not convenient to find wanted metrics. To optimise the process of data visualisation, these graphs can be put together in the Google data studio (an online data visualisation platform) when finding metrics in Google Analytics is energy-consuming. The is a dashboard that extracts revenue-relevant information and puts it together.
+## Chapter 9 Discussion and conclusion
+### Future work
+Google Analytics provides informative metrics and data that can help make decisions about business activity by measuring performance and finding trends. This report uses the most common KPIs to support the achievement of OKRs, which can lead to revenue increases. However, there are lots of spaces to explore. For example, relevant metrics such as campaigns, product coupons, active visitors, etc can also be analysed. Meanwhile, data analysis perspectives can be added with more dimensions, like exploring the percentage of converters in new and returning users. These analyses can provide more ideas. 
+
+### Limitations
+One issue is that analysts cannot access external environments like competitors’ data, and it will cause a loss of meaning comparison. Another problem is that Google Analytics does not include cost information, and this issue will influence decisions. For example, the top-selling products have low profits because the production cost is high. Google Analytics itself has two problems to overcome. One is that historical errors need to be fixed; otherwise, wrong data can be involved in the analysis and influence results. Another is privacy questions because data is open to the public, and Google needs to ensure it can protect data. Finally, the learning cost is high because the number of metrics is high in this platform, and it is not convenient to find wanted metrics. To optimise the process of data visualisation, these graphs can be put together in the Google data studio (an online data visualisation platform) when finding metrics in Google Analytics is energy-consuming. The figure below is a dashboard that extracts revenue-relevant information and puts it together.
+  
+### Conclusion
+This report began by identifying the aim of increasing revenue for the Google merchandise store. The analysis generated five sub-questions corresponding with five OKRs supported by KPIs to achieve the goal. The main directions are the persona of customers, the performance of products, the segmentation of customers and the workflow. According to data analysis on Google Analytics, this report found that young men are significant customers, clothes are popular items, returning users contribute more to revenue than new users, and customers may give up purchasing after adding products to their carts. Based on these results, this report suggested that stakeholders (managers and practitioners) segment customers and expand markets by attracting potential customers and increasing customers’ experience online (interface optimisation and process simplification). Google Analytics, as a web analytics tool, has shown a strong power in data analytics. Although it also has limitations, it can supplement the defects of traditional methods and provide a refreshed perspective.
+
+  
+<p align = "center">
+  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/Google_Data_Studio.png" width = 500>
+    </p>
+
+<a id = "ch90"></a>
+## References
+- Ball, E. (2018). Understanding the Sales Funnel. Point of Beginning, 43 (8), 15–18.
+- Charm, T. (2020, July 24). Understanding and shaping consumer behaviour in the next normal. McKinsey & Company. https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/understanding-and-shaping-consumer-behavior-in-the-next-normal
+- Clifton, B. (2012). Advanced Web Metrics with Google Analytics (3rd ed.). Sybex.
+- Ehrenthal, J., Honhon, D., & van Woensel, T. (2014). Demand seasonality in retail inventory management. European Journal of Operational Research, 238(2), 527–539. https://doi.org/10.1016/j.ejor.2014.03.030
+- European Commission. (2017). Antitrust: Commission fines Google €2.42 billion for abusing dominance as search engine by giving illegal advantage to own comparison shopping service. European Union. https://ec.europa.eu/commission/presscorner/detail/en/IP_17_1784
+- European Commission. (2018). Antitrust: Commission fines Google €4.34 billion for illegal practices regarding Android mobile devices to strengthen dominance of Google’s search engine. European Union. https://ec.europa.eu/commission/presscorner/detail/en/IP_18_4581
+- Holtzblatt, K., & Beyer, H. (2016). Contextual Design: Design for Life (Interactive Technologies) (2nd ed.). Morgan Kaufmann.
+- India placed 72nd on global list with average monthly wage of Rs 32,800: Report. (2020, August 28). The Economic Times. https://economictimes.indiatimes.com/news/economy/indicators/india-placed-72nd-on-global-list-with-average-monthly-wage-of-rs-32800-report/articleshow/77806437.cms?from=mdr
+- Jiang, Y., Shang, J., & Liu, Y. (2010). Maximizing customer satisfaction through an online recommendation system: A novel associative classification model. Decision Support Systems, 48(3), 470–479. https://doi.org/10.1016/j.dss.2009.06.006
+- Liang, T. P., & Lai, H. J. (2002). Effect of store design on consumer purchases: an empirical study of on-line bookstores. Information & Management, 39(6), 431–444. https://doi.org/10.1016/s0378-7206(01)00129-x
+- Morgan, D., & Chavez, A. (2021). Sales Funnels Are Marketing Fire. SDM: Security Distributing & Marketing, 51 (4), 26–27.
+- Nelson, A. (2020, February 6). Women Drive Majority of Consumer Purchasing and It’s Time to Meet Their Needs. Inc.Com. https://www.inc.com/amy-nelson/women-drive-majority-of-consumer-purchasing-its-time-to-meet-their-needs.html
+- Rutherford, Z. (n.d.). Online Shopping for Men: 10 Items They Can’t Resist. SaleHoo. https://www.salehoo.com/blog/online-shopping-for-men-10-items-they-cant-resist
+- Sinha, R. (2003, April). Persona development for information-rich domains. In CHI'03 extended abstracts on Human factors in computing systems (pp. 830-831).
+- Spiliotopoulos, D., Margaris, D., & Vassilakis, C. (2020). Data-Assisted Persona Construction Using Social Media Data. Big Data and Cognitive Computing, 4(3), 21. https://doi.org/10.3390/bdcc4030021
