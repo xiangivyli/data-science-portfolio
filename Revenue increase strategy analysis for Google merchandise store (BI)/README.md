@@ -13,8 +13,6 @@
 7. [Chapter 7 - The buyer's journey](#ch7)
 8. [Chapter 8 - Recommendations](#ch8)
 9. [Chapter 9 - Discussion and conclusion](#ch9)
-
-
 10.[References](#ch90)
 
 
