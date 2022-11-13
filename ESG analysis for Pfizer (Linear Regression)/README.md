@@ -103,10 +103,10 @@ Data covers 326 industries. The data includes 4518 rows and 20 variables. Most a
 
 <a id = "ch3"></a>
 ## Chapter 3 Biopharmaceutical Company
-The chapter is to achieve the first objective - identify Pfizer's position in the pharmaceutical industry.
+The chapter is to achieve the first objective - identify Pfizer's position in the biopharmaceutical industry.
 
-1. Using SIC Code of 2834 or 2836 to narrow down the range of companies (SIC Code 2843 - Pharmaceutical, SIC Code 2836 Biological Products).
-2. Identify the analysis variables
+1. Use SIC Code of 2834 or 2836 to narrow down the range of companies (SIC Code 2843 - Pharmaceutical, SIC Code 2836 - Biological Products).
+2. Identify metrics
     - name
     - year
     - country or territory of domicile
@@ -123,7 +123,7 @@ The chapter is to achieve the first objective - identify Pfizer's position in th
 
 Table 1 shows the descriptive statistics of biopharmaceutical companies with chosen variables and puts Pfizer's data aside to locate its performance level. There are 21 biopharmaceutical companies, like AbbVie, Amgen, and so on. Two companies are in Ireleand (Endo Internation PLC and Perrigo Co PLC), and the headquarters of 19 companies are in America.
 
-Pfizer is an American corporation, and its headquarter locates in the U.S. as well. Pfizer is generally higher than the average level except for Tobin's Q ratio evaluation; the median value of the cohort is 7.33, while Pfizer only scored 1.94. The data of Pfizer is near teh maximum value in employees and total assets aspects.
+Pfizer is an American corporation, and its headquarter locates in the U.S. as well. Pfizer is generally higher than the average level except for Tobin's Q ratio evaluation; the median value of the cohort is 7.33, while Pfizer only scored 1.94. The data of Pfizer is near the maximum value in employees and total assets aspects.
 
 <p align = "center">
    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.landscape.table.png" height = "500"/>
@@ -132,7 +132,7 @@ Pfizer is an American corporation, and its headquarter locates in the U.S. as we
 Figure 1 uses 4 bar plots covering (a) total assets; (b) the number of employees per year; (c) return on assets; (d) Tobin's Q Ratio and give ranking information about the position of Pfizer in the cohort. Pfizer ranks among the highest according to total assets and has sufficient employees; the number is lower than Johnson & Johnson with over 120,000 employees. Regarding prospects relevant indicators (Return on Assets and Tobin's Q Ratio), Pfizer does not have strengths over other companies; it is the fourth bottom of the cohort comparing Tobin's Q Ratio.
 
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.comparison.plot.jpg" width = "500"/>
+    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.comparison.plot.png" width = "500"/>
 </p>
 
 <a id = "ch4"></a>
