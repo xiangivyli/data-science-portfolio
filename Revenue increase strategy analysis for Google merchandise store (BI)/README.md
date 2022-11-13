@@ -9,7 +9,10 @@
 3. [Chapter 3 - Persona of customers](#ch3)
 4. [Chapter 4 - The performance of products](#ch4)
 5. [Chapter 5 - The pattern of activity](#ch5)
-6. 
+6. [Chapter 6 - Comparison between new and returning users](#ch6)
+7. [Chapter 7 - The buyer's journey](#ch7)
+8. [Chapter 8 - Recommendations](#ch8)
+9. [Chapter 9 - Discussion](#ch9)
 
 
 
@@ -88,6 +91,35 @@ The pie charts in figure 3 below compare the number of users and revenue in diff
 <p align = "center">
   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/6.The_ranking_of_active_pages.png" width = 400>
     </p>
+
+<a id = "ch6"></a>
+## Chapter 6 Comparison between new and returning users
+Understanding users’ behaviour is the premise of optimising designs or workflow; in other words, user-centred design needs an in-depth understanding of users (Holtzblatt & Beyer, 2016). Pages/session and avg. session duration are two indicators of engagement; the two indicators show to what extent users are willing to explore the content on the website. As figure 5 shows, returning users will read more pages each session, spend more time, and have a lower bounce rate than new users. The results indicate that returning users engage in the Google merchandise store more actively than new users. Naturally, returning users contribute more to the revenue, have higher e-commerce conversion rates, and have higher average order value. 
   
+<p align = "center">
+  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/7.new_users_and_returning_users.png" width = 400>
+    </p>
    
- 
+<a id = "ch7"></a>
+## Chapter 7 The buyer's journey
+A funnel diagram helps structure purchasing processes and discover where potential customers are missed (Ball, 2018; Morgan & Chavez, 2021). From this data on the chart, it can be seen that the most significant loss (red bar) happened during the conversion from cart to billing and shipping; only 35.07% of visitors came into the next steps. 18.3% of total visitors complete purchasing process. It is worth considering visitors’ experience when they add products to their carts and what factors cause some to give up purchasing. As long as the journey is guaranteed to be complete, Google merchandise store can achieve its revenue increase goal.
+  
+<p align = "center">
+  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/8.The_funnel_visualisation_of_online_payment_activities.png" width = 400>
+    </p>
+
+<a id = "ch8"></a>
+## Chapter 8 Recommendations
+Staff in the Google merchandise store can be classified into five types: the webmaster, the content creator, the e-commerce manager, the marketers, and the social media manager (Clifton, 2012). Previous data analysis may help these stakeholders to understand the current problems or potential possibilities for increasing revenue.
+
+Action 1: segment products and advertising to meet young men’s needs. Customers’ persona has shown that most users are 18–34-year-old men in the United States. The e-commerce managers should adjust the allocation of marketing resources can mainly focus on young men; the marketers investigate items most young men like. Camping backpacks, toolboxes, earphones, and other products are listed in one study (Rutherford, n.d.). Social media managers can use tags that young men often use in virtual advertising campaigns to attract target customers. 
+
+Action 2: exploit potential customers, such as Indian consumers. The second most users are in India means this group is large enough to have substantial potential purchases. The managers can consider launching some high-quality-price ratio products if the purchase restrictions are relatively low income in India compared to high-price products (India Placed 72nd on Global List with Average Monthly Wage of Rs 32,800: Report, 2020).
+
+Action 3: optimise the layout and design of the websites. The duration of browsing the website is short (the new users spend two minutes, and the returning users spend four minutes each session); in that case, the content creators need to think of how to ensure visitors can find the products they want. The content creator can add apparent tags and eye-catching product pictures to attract consumers and provide informative content. By suggesting similar or relevant products when customers browse (Jiang et al., 2010), customers can easily find items and directly increase customer satisfaction and purchase records.
+
+Action 4: add convenience for customers. A study proves that the quality of online stores influences consumers’ purchase decisions and consumers are more likely to purchase in a well-designed store (Liang & Lai, 2002). Website convenience decides the success of an online store (Salehi et al., 2012). Webmasters can simplify the payment process and establish a feedback circle. The billing and shipping information can be stored in the store, and consumers do not have to input the data every time. 
+
+<a id = "ch9"></a>
+## Chapter 9 Discussion
+Google Analytics provides informative metrics and data that can help make decisions about business activity by measuring performance and finding trends. This essay uses the most common KPIs to support the achievement of OKRs, which can lead to revenue increases. However, there are lots of spaces to explore. For example, relevant metrics such as campaigns, product coupons, active visitors, etc can also be analysed. Meanwhile, data analysis perspectives can be added with more dimensions, like exploring the percentage of converters in new and returning users. These analyses can provide more ideas. In addition, it is essential to consider the limitations of Google analytics. One issue is that analysts cannot access external environments like competitors’ data, and it will cause a loss of meaning comparison. Another problem is that Google Analytics does not include cost information, and this issue will influence decisions. For example, the top-selling products have low profits because the production cost is high. Google Analytics itself has two problems to overcome. One is that historical errors need to be fixed; otherwise, wrong data can be involved in the analysis and influence results. Another is privacy questions because data is open to the public, and Google needs to ensure it can protect data. Finally, the learning cost is high because the number of metrics is high in this platform, and it is not convenient to find wanted metrics. To optimise the process of data visualisation, these graphs can be put together in the Google data studio (an online data visualisation platform) when finding metrics in Google Analytics is energy-consuming. The is a dashboard that extracts revenue-relevant information and puts it together.
