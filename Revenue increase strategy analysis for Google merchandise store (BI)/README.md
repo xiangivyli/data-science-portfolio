@@ -54,6 +54,7 @@ Understanding consumers’ activities is the first step for web analysis. As fig
 3. Identify the pattern of activity of customers, such as the length of durations, used devices, and channels. 
 4. Explore the different performance patterns between new users and returning users.
 5. Identify barriers during online activities, such as the stages where visitors are likely to give up making payments.  
+
 Each OKR needs corresponding key performance indicators (KPIs). Table 1 shows what KPIs are measured and the definitions of KPIs.
 
  <p align = "center">
