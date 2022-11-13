@@ -41,7 +41,7 @@ The time range is the first quarter in 2022; the objective of comparison in the 
 <a id = "ch2"></a>
 ## Chapter 2 Web Metrics
 ### The percentage of conversions
-Understanding consumers’ activities are the first step for web analysis. As figure 1 shows, total visitors represent visitors who have entered the website; potential conversions mean visitors are likely to shop for products. Most visitors leave the website without further exploration, which are bounded visits; the left visitors may add items to carts, but only 1 – 3 % of total visitors will pay for products. This small part can be counted as conversions.
+Understanding consumers’ activities is the first step for web analysis. As figure 1 shows, total visitors represent visitors who have entered the website; potential conversions mean visitors are likely to shop for products. Most visitors leave the website without further exploration, which are bounded visits; the left visitors may add items to carts, but only 1 – 3 % of total visitors will pay for products. This small part can be counted as conversions.
 
 <p align = "center">
   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/1.The_classification_of_web_users.png" width = 400>
