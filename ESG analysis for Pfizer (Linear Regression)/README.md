@@ -19,9 +19,11 @@ Environmental, social and governance (ESG) score in today’s markets evaluates 
 ## Chapter 1 Project Overview
 ### Objects
 
-This empirical analysis has two objectives.
+This empirical analysis has 3 objectives.
 
-- It attempts to identify Pfizer company’s position in the pharmaceutical industry and then visualise the trend of business aspects in Pfizer from 2016 to 2018. 
+- It attempts to identify Pfizer company’s position in the pharmaceutical industry.
+
+- Visualise the trend of business aspects in Pfizer from 2016 to 2018. 
 
 - Given that the ESG scores have triggered a wider concern of the company's corporate social responsibility. The analysis applied linear regression to disclose the relationship between total assets and ESG scores.
 
@@ -128,6 +130,25 @@ Figure 1 uses 4 bar plots covering (a) total assets; (b) the number of employees
     <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.comparison.plot.jpg" width = "500"/>
 </p>
 
+<a id = "ch1"></a>
+##Chapter 4 Development of Pfizer
+The chapter is to achieve the second objective - visulalise the trend of business aspects in Pfizer from 2016 to 2018.
+
+1. Creat a new dataframe for Pfizer
+2. Indentify the analysis variables
+ - total assets
+ - the number of employees
+ - return on assets
+ - Tobin's Q Ratio
+ - R&D Expense Adjusted
+ - Environmental disclosure score
+3. Use line chart to describe the developing trend of Pfizer from 2016 - 2018
+
+Figure 2, with time-series line graph, demonstrates Pfizer's financial aspects. Firstly, the change of total assets from 2016 to 2018 has shown that Pfizer did not have excellent performance in 2018; the assets dropped from over 170,000 million U.S. dollars to below 160,000 million U.S. dollars while the number of employees experienced a slight decrease then increased to around 92,000 in 2018. Then using return on assets and Tobin's Q ratio as indicators of company development prospects demonstrates Pfizer tried to increase the influence and management of the company. However, Pfizer has not performed well with middle-level ranking results in Figure 1. Similarly, Pfizer continued to invest R&D and disclosure more environmental information.
+
+<p align = "center">
+    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/pfizer.trend.plot.jpg">
+</p>
 
 
 ## Descriptive Analysis
