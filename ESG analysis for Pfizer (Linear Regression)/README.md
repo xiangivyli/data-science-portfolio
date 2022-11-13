@@ -168,6 +168,10 @@ Figure 3 visualises the scatterplots of environmental, social, governance disclo
     <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/relationship.plot.jpg" width = 500>
 </p>
 
+Table 2 presents the results of the regression. Of note, the social score variable is excluded in the equation because, in the first attempt, the *P*-value of the social disclosure score is 0.302, which means the relationship is not significant. Hence, the result only includes two indepdent variables: environmental and governance disclosure scores.
+
+In equation (1), t-1 means lagging scores by one year. The coefficients are 0.0306 and 0.0550, *P*-values are less than 0.05, which means the relationship is significant. For every one unit increase in environmental and governance disclosure scores last year, total assets will increase by e<sup>5.2366</sup> million U.S. dollars this year. The direct impact is significantly positive.
+    
 <p align = "center">
     <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/regression.table.png" width = 500>
 </p>
