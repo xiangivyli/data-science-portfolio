@@ -230,10 +230,10 @@ As for the model, it is valid after avoiding bias and other possible violations 
 The analysis can give Pfizer and other companies some ideas regarding their development direction. For example, Pfizer can identify detailed stakeholders of environmental, governance relevant topics. Well-designed surveys can identify these issues and collect the reflection of customers. The figure below lists five questions that can appear in a questionnarie, such as rating Pfizer;s behaviour regarding environmental protection. This kind of information can help Pfizer evaluate its position and weigh the rationality of next steps.
     
 <p align = "center">
-    <image scr = "https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/questionnaire.part1.png" width = 500>
+    <image src= "https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/questionnaire.part1.png" width = 500>
 </p>
 <p align = "center">    
-    <image scr = "https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/questionnaire.part2.png" width = 500>
+    <image src= "https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/questionnaire.part2.png" width = 500>
 </p>
 
 
