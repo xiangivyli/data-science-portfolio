@@ -13,7 +13,9 @@
 7. [Chapter 7 - The buyer's journey](#ch7)
 8. [Chapter 8 - Recommendations](#ch8)
 9. [Chapter 9 - Discussion and conclusion](#ch9)
-10.[References](#ch10)
+
+
+10.[References](#ch90)
 
 
 
@@ -137,7 +139,7 @@ This report began by identifying the aim of increasing revenue for the Google me
   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/Google_Data_Studio.png" width = 500>
     </p>
 
-<a id = "ch10"></a>
+<a id = "ch90"></a>
 ## References
 - Ball, E. (2018). Understanding the Sales Funnel. Point of Beginning, 43 (8), 15–18.
 - Charm, T. (2020, July 24). Understanding and shaping consumer behaviour in the next normal. McKinsey & Company. https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/understanding-and-shaping-consumer-behavior-in-the-next-normal
