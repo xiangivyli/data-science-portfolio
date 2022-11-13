@@ -73,7 +73,7 @@ The dataset contains all S&P 1500 companies listed in the US stock market over t
 ## Chapter 2 Data Gathering
 ### Import data
 ```
-# Importing all libraries that I will use in the project
+# Import all libraries that I will use in the project
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -83,7 +83,7 @@ import statsmodels.api as sm
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from statsmodels.formula.api import ols
 
-# Creating a dataframe and importing data
+# Create a dataframe and importing data
 df = pd.read_csv("./S&P1500_Raw Dataset_Data Analytics in Business Assignment_2021.csv")
 df.count()
 ```
@@ -92,10 +92,10 @@ df.count()
 </p>
 
 ```
-# Checking the number of variables
+# Check the number of variables
 df.shape[1]
 
-#Checking how many industries are involved
+#Check how many industries are involved
 len(df["SIC Code"].unique())
 ```
 
