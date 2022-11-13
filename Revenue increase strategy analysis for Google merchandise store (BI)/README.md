@@ -84,7 +84,7 @@ Figure 2 below illustrates that the 18-24 and 25-34 groups use google merchandis
 The product performance reflects customers’ mindsets or insights (Charm, 2020). Table 3 below presents the six most famous products: hoodies, T-shirts, jackets, polo, and backpack. From the data, it is easy to see that 5/6 belongs to clothing and one in the backpack, and the price did not change a lot, but the quantity has added a lot. For example, the sales volumes of Google Black Cloud Zip Hoodie and Google Unisex Eco Tee Black products have over doubled compared to the same quarter last year, and there are two new items which did not come into markets in the first quarter of 2021 have become popular too, they are both jackets. The ranking of popular products shows that consumers may pursue practical fashion and brand satisfaction simultaneously and supports the second hypothesis.
 
 <p align = "center">
-  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/4.The_performance_of_products.png" width = 400>
+  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/4.The_performance_of_products.png" width = 600>
     </p>
 
 <a id = "ch5"></a>
