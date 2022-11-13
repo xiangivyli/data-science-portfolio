@@ -166,7 +166,7 @@ The chapter is to achieve the last objective - apply linear regression to disclo
 Figure 3 visualises the scatterplots of environmental, social, governance disclosure scores V.S. the ln(total assets), respectively. Generally, the contribution of variables is average, and it is easy to observe a positive relationship between independent and dependent variables. The scatterplots can expect the coefficients are positive in the equation. Consequently, the least square generates the parameters and other indexes to quantity the relationships.
     
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/relationship.plot.jpg" width = 500>
+    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/regression.plot.png" width = 500>
 </p>
 
 Table 2 presents the results of the regression. Of note, the social score variable is excluded in the equation because, in the first attempt, the *P*-value of the social disclosure score is 0.302, which means the relationship is not significant. Hence, the result only includes two indepdent variables: environmental and governance disclosure scores.
@@ -204,7 +204,7 @@ sns.histplot(model.resid)
 fig4c = sns.histplot(model.resid).get_figure()
 ```
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.plot.jpg" width = 500>
+    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.plot.png" width = 500>
 </p>
 
 ```
