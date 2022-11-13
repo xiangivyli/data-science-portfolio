@@ -88,7 +88,7 @@ df = pd.read_csv("./S&P1500_Raw Dataset_Data Analytics in Business Assignment_20
 df.count()
 ```
 <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/data.gathering.df.count.png" width = "400"/>
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/data.gathering.df.count.png" width = "300"/>
 </p>
 
 ```
@@ -126,7 +126,7 @@ Table 1 shows the descriptive statistics of biopharmaceutical companies with cho
 Pfizer is an American corporation, and its headquarter locates in the U.S. as well. Pfizer is generally higher than the average level except for Tobin's Q ratio evaluation; the median value of the cohort is 7.33, while Pfizer only scored 1.94. The data of Pfizer is near teh maximum value in employees and total assets aspects.
 
 <p align = "center">
-   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.landscape.table.png" height = "600"/>
+   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.landscape.table.png" height = "500"/>
 </p>
 
 Figure 1 uses 4 bar plots covering (a) total assets; (b) the number of employees per year; (c) return on assets; (d) Tobin's Q Ratio and give ranking information about the position of Pfizer in the cohort. Pfizer ranks among the highest according to total assets and has sufficient employees; the number is lower than Johnson & Johnson with over 120,000 employees. Regarding prospects relevant indicators (Return on Assets and Tobin's Q Ratio), Pfizer does not have strengths over other companies; it is the fourth bottom of the cohort comparing Tobin's Q Ratio.
