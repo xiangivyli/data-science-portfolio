@@ -8,6 +8,8 @@
 2. [Chapter 2 - Web Metrics](#ch2)
 3. [Chapter 3 - Persona of customers](#ch3)
 4. [Chapter 4 - The performance of products](#ch4)
+5. [Chapter 5 - The pattern of activity](#ch5)
+6. 
 
 
 
@@ -76,6 +78,16 @@ The product performance reflects customers’ mindsets or insights (Charm, 2020)
   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/4.The_performance_of_products.png" width = 400>
     </p>
 
-   
+<a id = "ch5"></a>
+## Chapter 5 The pattern of activity
+The pie charts in figure 3 below compare the number of users and revenue in different traffic channels. What stands out in the four charts is that direct channel dominates the media. Comparing users and revenue in 2021 and 2022 shows that the paid search method has increased and contributed to the total revenue. What is interesting about the data is that although display methods brought 7.6% of the actual users, this group has no purchase activities. It seems that Google has invested in paid search and display advertising. Unfortunately, display advertising did not convert this group of users into expected revenue. Figure 4 provides an overview of purchasing devices, and the desktop was the primary tool for users rather than mobile phones, as the fourth hypothesis mentioned. Table 4 lists the most active pages, except for the home page and basket page, the fourth and fifth dynamic pages are about men's products. This phenomenon corresponds to the high percentage of men in users. 
+  
+<p align = "center">
+  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/5.The_distribution_of_traffic_channels_and_devices.png" width = 400>
+    </p>
+<p align = "center">
+  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/6.The_ranking_of_active_pages.png" width = 400>
+    </p>
+  
    
  
