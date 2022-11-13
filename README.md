@@ -10,3 +10,11 @@ Tool: Python
 * identify Pfizer company's position in the pharmaceutical industry
 * visualise the development of Pfizer from 2016 to 2018
 * linear regression between ESG score and total assets
+
+* [Revenue increase strategy analysis for Google merchandise store]
+
+Tool: Google Analytics
+* map the persona of customers
+* identify the performance of products
+* identify the pattern of activity
+* the funnel diagrams shows the buyer's journey
