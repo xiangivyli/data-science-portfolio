@@ -95,7 +95,7 @@ df.count()
 # Check the number of variables
 df.shape[1]
 
-#Check how many industries are involved
+# Check how many industries are involved
 len(df["SIC Code"].unique())
 ```
 
