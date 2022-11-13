@@ -1,7 +1,7 @@
 <img src="./Images/Pfizer.jpg" align = "left" width = "500"/>
 Pfizer is one of the biggest multinational biopharmaceutical companies and medicine suppliers with a robust research capacity (MarketLine, 2021). Its revenue dramatically increased to over 24 billion U.S dollars with the Covid-19 vaccine in the Third Quarter of 2021(Statista, 2021). 
 
-<img src="./Images/ESG.jpg" align = "right" width = "400"/>
+<img src="./Images/ESG.jpg" align = "right" width = "500"/>
 Environmental, social and governance (ESG) score in today’s markets evaluates the sustainable effort of companies, representing the deduction of footprint and organising eco-friendly activities, maintaining the relationship with humans, and testing the transparency of management structure. 
 
 # Table of Contents
