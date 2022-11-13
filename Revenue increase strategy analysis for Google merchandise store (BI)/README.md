@@ -108,7 +108,7 @@ Understanding users’ behaviour is the premise of optimising designs or workflo
    
 <a id = "ch7"></a>
 ## Chapter 7 The buyer's journey
-A funnel diagram helps structure purchasing processes and discover where potential customers are missed (Ball, 2018; Morgan & Chavez, 2021). From this data on the chart, it can be seen that the most significant loss (red bar) happened during the conversion from cart to billing and shipping; only 35.07% of visitors came into the next steps. 18.3% of total visitors complete purchasing process. It is worth considering visitors’ experience when they add products to their carts and what factors cause some to give up purchasing. As long as the journey is guaranteed to be complete, Google merchandise store can achieve its revenue increase goal.
+A funnel diagram helps structure purchasing processes and discover where potential customers are missed (Ball, 2018; Morgan & Chavez, 2021). From this data on the chart, it can be seen that the most significant loss (red bar) happened during the conversion from cart to billing and shipping; only 35.07% of visitors came into the next steps. 18.13% of total visitors complete purchasing process. It is worth considering visitors’ experience when they add products to their carts and what factors cause some to give up purchasing. As long as the journey is guaranteed to be complete, Google merchandise store can achieve its revenue increase goal.
   
 <p align = "center">
   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/8.The_funnel_visualisation_of_online_payment_activities.png" width = 700>
