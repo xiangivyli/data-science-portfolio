@@ -58,7 +58,7 @@ Understanding consumers’ activities is the first step for web analysis. As fig
 Each OKR needs corresponding key performance indicators (KPIs). Table 1 shows what KPIs are measured and the definitions of KPIs.
 
  <p align = "center">
-   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/2.OKRs_and_KPIs.png" width = 400>
+   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/2.OKRs_and_KPIs.png" width = 450>
  </p>
    
 ### Hypotheses
@@ -76,7 +76,7 @@ The first analysis depicts the current customer; a persona can form a coherent p
 Figure 2 below illustrates that the 18-24 and 25-34 groups use google merchandise store more, and the male uses the online store slightly more frequently than females. Men purchase more than women in the store violates the public consensus that women drive most of total purchasing (Nelson, 2020). It may be caused by the attraction of the Google brand for men. The first hypothesis should be changed because young men intend to purchase Google-branded products more. It is worth noting that the demographic data are only available for about half of the total users (the right corner of the graphs has annotated the number). 
 
 <p align = "center">
-  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/3.Country_distribution_for_users_and_revenue.png" width = 400>
+  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/3.Country_distribution_for_users_and_revenue.png" width = 500>
     </p>
 
 <a id = "ch4"></a>
