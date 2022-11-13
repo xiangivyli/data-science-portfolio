@@ -131,7 +131,7 @@ Figure 1 uses 4 bar plots covering (a) total assets; (b) the number of employees
 </p>
 
 <a id = "ch4"></a>
-##Chapter 4 Development of Pfizer
+## Chapter 4 Development of Pfizer
 The chapter is to achieve the second objective - visulalise the trend of business aspects in Pfizer from 2016 to 2018.
 
 1. Creat a new dataframe for Pfizer
