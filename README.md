@@ -22,3 +22,5 @@ Objectives:
   - identify the performance of products
   - identify the pattern of activity
   - the funnel diagrams shows the buyer's journey
+  
+ ### [Lloyds Bank Customer Profiling and Predictive Model (BI & Logistic Regression)
