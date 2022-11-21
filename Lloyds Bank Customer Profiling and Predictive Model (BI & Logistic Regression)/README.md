@@ -1,5 +1,5 @@
 <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Lloyds%20Bank%20Customer%20Profiling/Images/Lloyds_Banking_Group_logo.png">
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Lloyds%20Bank%20Customer%20Profiling%20and%20Predictive%20Model%20(BI%20%26%20Logistic%20Regression)/Images/Lloyds_Banking_Group_logo.png">
 </p>
 
 
