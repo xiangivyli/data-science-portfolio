@@ -1,3 +1,9 @@
+<p align = "center">
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Lloyds%20Bank%20Customer%20Profiling/Images/Lloyds_Banking_Group_logo.png">
+</p>
+
+
+
 # Table of Contents
 1. [Chapter 1 - Challenge Overview](#ch1)
 
