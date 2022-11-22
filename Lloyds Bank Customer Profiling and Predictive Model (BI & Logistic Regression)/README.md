@@ -44,4 +44,9 @@ The dataset contains 18,324 customers with 31 columns who:
 
 ### Insights
  
- 
+ - The total loan is 176 million dollars.
+ - 14418 customers have paid back while 3906 have not.
+ - The customers who borrow loans mainly live on the east coast of the U.S.
+ - Income increases with employee length, and the higher income group is likely to pay back.
+ - Customers who rent their home struggle to pay back.
+ - More than half of customers apply for a loan to consolidate debt; the 2nd purpose is to support credit cards.
