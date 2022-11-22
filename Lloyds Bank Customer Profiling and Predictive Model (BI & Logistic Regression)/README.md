@@ -39,7 +39,7 @@ The dataset contains 18,324 customers with 31 columns who:
  ### Dashboard
  
  <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Lloyds%20Bank%20Customer%20Profiling%20and%20Predictive%20Model%20(BI%20%26%20Logistic%20Regression)/Images/Lloyds%20Bank%20Customer%20Cover%20Photo.png">
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Lloyds%20Bank%20Customer%20Profiling%20and%20Predictive%20Model%20(BI%20%26%20Logistic%20Regression)/Images/Lloyds_Bank%20Customer_Persona.png">
 </p>
 
 ### Insights
