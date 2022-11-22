@@ -34,5 +34,14 @@ The dataset contains 18,324 customers with 31 columns who:
  ## Chapter 2 Data Strategy
  ### Methodology
  This chapter use Power BI to depict features of customers, like the geographical features, the current distribution of loan status, the distribution of purposes, then explore the relationship between loan status and employment length, income and home ownership.
+ Note: the analysis adds a small dataset including U.S. state and territory two-letter abbreviation corresponding full name.
+ 
+ ### Dashboard
+ 
+ <p align = "center">
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Lloyds%20Bank%20Customer%20Profiling%20and%20Predictive%20Model%20(BI%20%26%20Logistic%20Regression)/Images/Lloyds%20Bank%20Customer%20Cover%20Photo.png">
+</p>
+
+### Insights
  
  
