@@ -16,7 +16,9 @@ Lloyds Banking Group is launching a new loans product. Prior to the launch I can
  - **Task 2 Data Science**: To use the historical data to design a process which predicts the likelihood of a new customer not paying back their loan
 
 ### Dataset
-The dataset and corresponding dictionary can be found in the Data folder. The dataset contains 18,324 customers who: 
+The dataset and corresponding dictionary can be found in the Data folder. 
+Note: the dataset is based on the American credit risk problem.
+The dataset contains 18,324 customers with 31 columns who: 
  - Previously held a loan
  - The status of that loan - did the customer pay back the loan or not:
      - Customers who paid back are categorised as 'Fully Paid'
@@ -26,8 +28,11 @@ The dataset and corresponding dictionary can be found in the Data folder. The da
      - home_ownership: RENT, OWN, MORTGAGE, OTHER
      - purpose: a category provided by the borrower for the loan request
      - etc.
- Note: the dataset is based on the American credit risk problem.
+ 
  
  <a id = "ch2"></a>
  ## Chapter 2 Data Strategy
- ### Methodology: 
+ ### Methodology
+ This chapter use Power BI to depict features of customers, like the geographical features, the current distribution of loan status, the distribution of purposes, then explore the relationship between loan status and employment length, income and home ownership.
+ 
+ 
