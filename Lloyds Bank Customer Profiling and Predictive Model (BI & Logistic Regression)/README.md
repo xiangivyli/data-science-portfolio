@@ -33,7 +33,7 @@ The dataset contains 18,324 customers with 31 columns who:
  <a id = "ch2"></a>
  ## Chapter 2 Data Strategy
  ### Methodology
- This chapter use Power BI to depict features of customers, like the geographical features, the current distribution of loan status, the distribution of purposes, then explore the relationship between loan status and employment length, income and home ownership.
+ This chapter used Power BI to depict features of customers, like the geographical features, the current distribution of loan status, the distribution of purposes, then explore the relationship between loan status and employment length, income and home ownership.
  Note: the analysis adds a small dataset including U.S. state and territory two-letter abbreviation corresponding full name.
  
  ### Dashboard
