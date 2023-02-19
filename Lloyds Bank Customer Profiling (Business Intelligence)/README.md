@@ -12,8 +12,7 @@
 <a id = "ch1"></a>
 ## Chapter 1 Challenge Overview
 Lloyds Banking Group is launching a new loans product. Prior to the launch I can use historical customer data to:
- - **Task 1 Data Stategy**: Understand and summarise the different behaviours or attributes between customers who paid back their loan and customers who did not
- - **Task 2 Data Science**: To use the historical data to design a process which predicts the likelihood of a new customer not paying back their loan
+ - **Understand and summarise the different behaviours or attributes between customers who paid back their loan and customers who did not**
 
 ### Dataset
 The dataset and corresponding dictionary can be found in the Data folder. 
