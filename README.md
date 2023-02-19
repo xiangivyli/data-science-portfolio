@@ -23,7 +23,7 @@ Objectives:
   - identify the pattern of activity
   - the funnel diagrams shows the buyer's journey
   
- ### [Lloyds Bank Customer Profiling and Predictive Model (Business Intelligence)](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Lloyds%20Bank%20Customer%20Profiling%20and%20Predictive%20Model%20(BI%20%26%20Logistic%20Regression))
+ ### [Lloyds Bank Customer Profiling (Business Intelligence)](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Lloyds%20Bank%20Customer%20Profiling%20and%20Predictive%20Model%20(BI%20%26%20Logistic%20Regression))
  
 Tools: Power BI
 
