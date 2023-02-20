@@ -18,4 +18,6 @@ BT group is investigating why some customers stop using BT services (churn),
 <a id = "ch2"></a>
 ## Chapter 2 Data Validation
 BT provided 7,043 rows of data containing customers attributes and whether they left the company or not.
-
+<p align = "center">
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/Data%20Snapshot.jpg">
+</p>
