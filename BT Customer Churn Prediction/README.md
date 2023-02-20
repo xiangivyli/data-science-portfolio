@@ -27,10 +27,10 @@ BT provided 7,043 rows (customers) and 21 columns (features). The "Churn" column
 <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/Data%20Snapshot.jpg">
 </p>
 The dataset includes information about:
-- Customers who left within the last month - the column is called Churn
-- Services that each customer has signed up for - phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
-- Customer account information - how long they've been a customer, contract, payment method, paperless billing, monthly charges, and total charges
-- Demographic info about customers - gender, if they have partners and dependents
+ - Customers who left within the last month - the column is called Churn
+ - Services that each customer has signed up for - phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
+ - Customer account information - how long they've been a customer, contract, payment method, paperless billing, monthly charges, and total charges
+ - Demographic info about customers - gender, if they have partners and dependents
 
 You can find the dataset and dictionary on my [GitHub](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/BT%20Customer%20Churn%20Prediction/Data)
 
