@@ -12,7 +12,12 @@
 The event is that Dig Data cooperated with BT Group to provide an opportunity to experience the "real world" business problem.
 
 ### Background Information
-BT group is investigating why some customers stop using BT services (churn), 
+BT group is investigating why some customers stop using BT services (churn), including:
+- Build a model that predicts which customers are highly likely to leave 
+- Interpret the model to understand what influences the customers' decision to leave
+- Make recommendations to the business:
+  - How to engage the customers to stay with BT?
+  - How to retain more customers?
 
 
 <a id = "ch2"></a>
