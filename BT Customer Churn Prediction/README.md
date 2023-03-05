@@ -83,3 +83,5 @@ The purpose of this project is to identify key features, I extracted coefficient
 <p align = "center'>
 <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/Coefficients.png">
 </p>                                                                                                                                         
+
+From the bar plot, it is easy to say that the tenure has a negative relationship with churn, it means if customers sign contracts longer, they are less likely to leave BT service.                                                                                                                           
