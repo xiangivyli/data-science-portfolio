@@ -35,3 +35,20 @@ The dataset includes information about:
 
 You can find the dataset and dictionary on my [GitHub](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/BT%20Customer%20Churn%20Prediction/Data)
 
+Steps to adjust dataset:
+
+- delete customerID, the feature is unuseful
+- delete null values, TotalCharges column has missing values
+- adjust datatype, TotalCharges should be numeric rather than object
+- merge some categories, InternetService has 'No' and 'No internet service', they should be merged together, others do the same
+
+Steps to adjust dataset for preparing model:
+
+- convert 'yes' to 1, 'no' to 0
+- convert 'Female' to 1, 'male' to 0
+- generate dummy variables for categorical feature ('InternetService', 'Contract', 'PaymentMethod')
+- scaling continuous values to avoid bias ('tenure', 'MonthlyCharges', 'TotalCharges')
+
+After the data validation and preparation, the dataset contains **7,032 rows and 27 columns** without missing data.
+
+
