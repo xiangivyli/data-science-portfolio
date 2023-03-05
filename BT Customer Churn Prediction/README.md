@@ -9,7 +9,7 @@
 
 <a id = "ch1"></a>
 ## Chapter 1 Project Overview
-The event is that Dig Data cooperated with BT Group to provide an opportunity to experience the "real world" business problem.
+The event is that Dig Data cooperated with BT Group to provide an opportunity to experience the "real world" business problem. Logistic regression is popular in business environment as there are many binary values (is spam email or not, cancel contract or not, promotion or not and so on). In this project, I am going to use logistic regression model to predict customer churn and identify the key features.
 
 ### Background Information
 BT group is investigating why some customers stop using BT services (churn), including:
@@ -34,4 +34,21 @@ The dataset includes information about:
 - Demographic info about customers - gender, if they have partners and dependents
 
 You can find the dataset and dictionary on my [GitHub](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/BT%20Customer%20Churn%20Prediction/Data)
+
+Steps to adjust dataset:
+
+- delete customerID, the feature is unuseful
+- delete null values, TotalCharges column has missing values
+- adjust datatype, TotalCharges should be numeric rather than object
+- merge some categories, InternetService has 'No' and 'No internet service', they should be merged together, others do the same
+
+Steps to adjust dataset for preparing model:
+
+- convert 'yes' to 1, 'no' to 0
+- convert 'Female' to 1, 'male' to 0
+- generate dummy variables for categorical feature ('InternetService', 'Contract', 'PaymentMethod')
+- scaling continuous values to avoid bias ('tenure', 'MonthlyCharges', 'TotalCharges')
+
+After the data validation and preparation, the dataset contains **7,032 rows and 27 columns** without missing data.
+
 
