@@ -9,7 +9,7 @@
 
 <a id = "ch1"></a>
 ## Chapter 1 Project Overview
-The event is that Dig Data cooperated with BT Group to provide an opportunity to experience the "real world" business problem.
+The event is that Dig Data cooperated with BT Group to provide an opportunity to experience the "real world" business problem. Logistic regression is popular in business environment as there are many binary values (is spam email or not, cancel contract or not, promotion or not and so on). In this project, I am going to use logistic regression model to predict customer churn and identify the key features.
 
 ### Background Information
 BT group is investigating why some customers stop using BT services (churn), including:
