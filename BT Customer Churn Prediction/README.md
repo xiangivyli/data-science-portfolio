@@ -96,4 +96,6 @@ For marketing team, I have several advices:
 - Provide bonus for longer contract
 - Add online security and phone service for each customer
 - Enhance tech support service
-- Use the model to analyse customers who may leave, then connect these customers for feedback
+
+Furthermore, the current status of "0" (not churn) does not mean they will stay with BT forever
+- Use the model to analyse customers who may leave (high probability), then connect these customers for feedback
