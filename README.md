@@ -34,6 +34,7 @@ Objectives:
  ### [BT Customer Churn Prediction](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/BT%20Customer%20Churn%20Prediction)
  
  Tool: Python
- Objectives:
+
+Objectives:
    - build a logistic regression model 
    - identify which feature will influence customer churn
