@@ -7,6 +7,7 @@
 1. [Chapter 1 - Project Overview](#ch1)
 2. [Chapter 2 - Data Validation](#ch2)
 3. [Chapter 3 - Logistic Regression](#ch3)
+4. [Chapter 4 - Feature Importance](#ch4)
 
 <a id = "ch1"></a>
 ## Chapter 1 Project Overview
@@ -58,10 +59,24 @@ After the data validation and preparation, the dataset contains **7,032 rows and
 Step 1 split data: split dataset into training dataset and test dataset, I use 8:2 ratio to split it.
 Step 2 modelling: define a function in which generate the model and calculate confusion matrix, accuracy, f1-score, coefficients and corresponding probability.
 
-The result is <p align = "center">
+The result is AUC=0.85
+
+<p align = "center">
 <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/ROC.png">
 </p>
 
 ### SMOTE Optimisation
 
+As the number of 0 value is much less than 1 value in our dataset (imbalanced), the accuracy is not able to reflect if the model is good. Therefore, I used Synthetic Minority Over-sampling Technique (SMOTE) to oversampling the 0 value to make the number of 0 value equal to another one.
+
+The optimised result is AUC=0.86
+<p align = "center">
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/ROC-SMOTE.png">
+</p>
+
+
+<a id = "ch4"></a>
+## Chapter 4 Feature Importance
+
+The purpose of this project is to identify key features, I extracted coefficients for each feature and mapped them in a bar plot.
 
