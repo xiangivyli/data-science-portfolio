@@ -7,6 +7,7 @@
 1. [Chapter 1 - Project Overview](#ch1)
 2. [Chapter 2 - Data Validation](#ch2)
 3. [Chapter 3 - Logistic Regression](#ch3)
+4. [Chapter 4 - Feature Importance](#ch4)
 
 <a id = "ch1"></a>
 ## Chapter 1 Project Overview
@@ -72,4 +73,10 @@ The optimised result is AUC=0.86
 <p align = "center">
 <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/ROC-SMOTE.png">
 </p>
+
+
+<a id = "ch4"></a>
+## Chapter 4 Feature Importance
+
+The purpose of this project is to identify key features, I extracted coefficients for each feature and mapped them in a bar plot.
 
