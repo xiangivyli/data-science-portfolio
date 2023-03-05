@@ -8,6 +8,7 @@
 2. [Chapter 2 - Data Validation](#ch2)
 3. [Chapter 3 - Logistic Regression](#ch3)
 4. [Chapter 4 - Feature Importance](#ch4)
+5. [Chapter 5 - Recommendation](ch5)
 
 <a id = "ch1"></a>
 ## Chapter 1 Project Overview
@@ -84,4 +85,15 @@ The purpose of this project is to identify key features, I extracted coefficient
 <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/Coefficients.png#enroll-beta">
 </p>                                                                                                                                         
 
-From the bar plot, it is easy to say that the tenure has a negative relationship with churn, it means if customers sign contracts longer, they are less likely to leave BT service.                                                                                                                           
+From the bar plot, it is easy to say that the tenure has a negative relationship with churn, it means if customers sign contracts longer, they are less likely to leave BT service. Meanwhile, total charge pushes customers to leave. Other features also play role on churn, like customers who are loyal prefer no internet service and two year contract rather than monthly contract.
+
+
+<a id = "ch5"></a>
+## Chapter 5 Recommendation
+
+For marketing team, I have several advices:
+
+- Provide bonus for longer contract
+- Add online security and phone service for each customer
+- Enhance tech support service
+- Use the model to analyse customers who may leave, then connect these customers for feedback
