@@ -80,3 +80,6 @@ The optimised result is AUC=0.86
 
 The purpose of this project is to identify key features, I extracted coefficients for each feature and mapped them in a bar plot.
 
+<p aligh = "center'>
+            <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/Coefficients.png">
+                                                                                                                                              </p>
