@@ -25,8 +25,15 @@ Objectives:
   
  ### [Lloyds Bank Customer Profiling (Business Intelligence)](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Lloyds%20Bank%20Customer%20Profiling%20(Business%20Intelligence))
  
-Tools: Power BI
+Tool: Power BI
 
 Objectives:
   - map the persona of customers 
   - analysis the features of customers based on the loan status variable
+  
+ ### [BT Customer Churn Prediction](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/BT%20Customer%20Churn%20Prediction)
+ 
+ Tool: Python
+ Objectives:
+   - build a logistic regression model 
+   - identify which feature will influence customer churn
