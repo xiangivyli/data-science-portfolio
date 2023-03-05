@@ -57,8 +57,8 @@ After the data validation and preparation, the dataset contains **7,032 rows and
 <a id = "ch3"></a>
 ## Chapter 3 Logistic Regression
 
-Step 1 split data: split dataset into training dataset and test dataset, I use 8:2 ratio to split it.
-Step 2 modelling: define a function in which generate the model and calculate confusion matrix, accuracy, f1-score, coefficients and corresponding probability.
+Step 1 split data: split the dataset into a training dataset and a test dataset, I use an 8:2 ratio to split it.
+Step 2 modelling: define a function which generates the model and calculates confusion matrix, accuracy, f1-score, coefficients and corresponding probability.
 
 The result is AUC=0.85
 
@@ -85,15 +85,15 @@ The purpose of this project is to identify key features, I extracted coefficient
 <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/Coefficients.png#enroll-beta">
 </p>                                                                                                                                         
 
-From the bar plot, it is easy to say that the tenure has a negative relationship with churn, it means if customers sign contracts longer, they are less likely to leave BT service. Meanwhile, total charge pushes customers to leave. Other features also play role on churn, like customers who are loyal prefer no internet service and two year contract rather than monthly contract.
+From the bar plot, it is easy to say that tenure has a negative relationship with churn, which means if customers sign contracts longer, they are less likely to leave BT service. Meanwhile, the total charge pushes customers to leave. Other features also play a role in churn, like customers who are loyal prefer no internet service and a two-year contract rather than a monthly contract.
 
 
 <a id = "ch5"></a>
 ## Chapter 5 Recommendation
 
-For marketing team, I have several advices:
+For the marketing team, I have several pieces of advice:
 
-- Provide bonus for longer contract
+- Provide a bonus for a longer contract
 - Add online security and phone service for each customer
 - Enhance tech support service
 
