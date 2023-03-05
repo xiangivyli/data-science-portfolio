@@ -6,6 +6,7 @@
 # Table of Contents
 1. [Chapter 1 - Project Overview](#ch1)
 2. [Chapter 2 - Data Validation](#ch2)
+3. [Chapter 3 - Logistic Regression](#ch3)
 
 <a id = "ch1"></a>
 ## Chapter 1 Project Overview
@@ -50,5 +51,17 @@ Steps to adjust dataset for preparing model:
 - scaling continuous values to avoid bias ('tenure', 'MonthlyCharges', 'TotalCharges')
 
 After the data validation and preparation, the dataset contains **7,032 rows and 27 columns** without missing data.
+
+<a id = "ch3"></a>
+## Chapter 3 Logistic Regression
+
+Step 1 split data: split dataset into training dataset and test dataset, I use 8:2 ratio to split it.
+Step 2 modelling: define a function in which generate the model and calculate confusion matrix, accuracy, f1-score, coefficients and corresponding probability.
+
+The result is <p align = "center">
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/ROC.png">
+</p>
+
+### SMOTE Optimisation
 
 
