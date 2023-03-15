@@ -44,6 +44,6 @@ Objectives:
  Tool: MySQL
  
 Objectives:
-    - identify how diseases begin and progress
-    - integration of genetics and healthcare data
-    - research-ready, well-curated and well-documented data
+   - identify how diseases begin and progress
+   - integration of genetics and healthcare data
+   - research-ready, well-curated and well-documented data
