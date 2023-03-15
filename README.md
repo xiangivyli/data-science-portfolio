@@ -38,3 +38,12 @@ Objectives:
 Objectives:
    - build a logistic regression model 
    - identify which feature will influence customer churn
+
+ ### [Data Platform Design for healthcare Research (Database)](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database))
+ 
+ Tool: MySQL
+ 
+Objectives:
+    - identify how diseases begin and progress
+    - integration of genetics and healthcare data
+    - research-ready, well-curated and well-documented data
