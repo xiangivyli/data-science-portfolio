@@ -21,3 +21,14 @@ There are several objectives:
  - integration of genetics and healthcare data
  - easily monitor and maintain in the future work
  - predicted outcome: research-ready, well-curated and well-documentaed data
+
+<a id = "ch2"></a>
+## Chapter 2 Design of Schema
+Tables in schema are divided into two parts:
+ - Clinical data
+ - Genetic data
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/Image/Schema%20mindmap.png">
+            </p>
+            
+As the mindmap shows, clinical data comes from NHS and genetic data comes genetic detection organisation. The clinical data involves patient general information, and admission and treatment reccords. The genetic data involves detailed mutated genes and frequency and other parameters.
