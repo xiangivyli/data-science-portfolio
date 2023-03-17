@@ -72,4 +72,19 @@ I use drawSQL to generate [SQL](https://github.com/xiangivyli/Data-Science-Porfo
 
 <a id = "ch3"></a>
 ## Chapter 3 Data Privacy and Security
-The preparation of database has finished, before populating the database, it is essential to talk about etical considerations as the data is confirmly connected to patient privacy. 
+The preparation of database has finished, before populating the database, it is essential to talk about etical considerations as the data is confirmly connected to patient privacy. Patients may suffer potential harm when their data is used for research purposes like revealing sensitive information. NHS currently has [information governance](https://www.england.nhs.uk/ig/about/) which protects patients. "Secondary use" must only use data that will not identify individuals.
+
+The pre-requisite includes:
+ - Obtain the appropriate consent from patients
+ - de-indentify the data to protect patient privacy
+ - ensure data is only used for approved purposes
+
+Relevant technology includes:
+ - Data anonymisation
+ - Data encryption
+ - Data access control
+ - Data masking
+ - so on
+
+<a id = "ch4"></a>
+## Chapter 4 Extract, Transform, and Load (ETL)
