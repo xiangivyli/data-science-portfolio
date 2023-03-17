@@ -22,8 +22,21 @@ There are several objectives:
  - easily monitor and maintain in the future work
  - predicted outcome: research-ready, well-curated and well-documentaed data
 
+Potential audience:
+ - Researchers (bioinformatics scientists, surgeon, oncologists, etc)
+ - Managers in NHS
+ - Public
+ - Funding Organisations
+ - Government Health Sectors
+
+Potential stakeholders
+ - IT (database establishment and maintain)
+ - Public (disease trend)
+ - Researchers (needed data)
+
 <a id = "ch2"></a>
 ## Chapter 2 Design of Schema
+### Step 1: Initial mindmap 
 Tables in schema are divided into two parts:
  - Clinical data
  - Genetic data
@@ -32,3 +45,24 @@ Tables in schema are divided into two parts:
             </p>
             
 As the mindmap shows, clinical data comes from NHS and genetic data comes genetic detection organisation. The clinical data involves patient general information, and admission and treatment reccords. The genetic data involves detailed mutated genes and frequency and other parameters.
+
+### Step 2: Use [drawSQL](https://drawsql.app/) to map it
+8 Tables for clinical data:
+ - Patient
+ - Primary care
+ - City
+ - Country
+ - Admission record
+ - Treatment
+ - Medication
+ - Surgery
+
+4 Tables for genetic data:
+ - Sample
+ - Detection Organisation
+ - Genetic Info
+ - Gene
+
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/Image/Schema%20design.png">
+  </p>
