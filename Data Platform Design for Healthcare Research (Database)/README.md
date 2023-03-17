@@ -66,3 +66,6 @@ As the mindmap shows, clinical data comes from NHS and genetic data comes geneti
 <p align = "center">
   <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/Image/Schema%20design.png">
   </p>
+
+### Step 3: Import SQL into MySQL
+I use drawSQL to generate [SQL](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/dataplatform_for_healthcare_research.sql) 
