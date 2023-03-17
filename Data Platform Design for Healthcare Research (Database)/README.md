@@ -88,3 +88,26 @@ Relevant technology includes:
 
 <a id = "ch4"></a>
 ## Chapter 4 Extract, Transform, and Load (ETL)
+The data comes from two sources: Electronic Health Records (EHRs) and genetic detection organisations. 
+There are several steps to do it:
+ - obtain **permission** from administrators and patients
+ - establish the **relationships** between EHR and the database (needed data)
+ - **extract** data from EHRs (APIs, SQL)
+ - **transform**: revise the message formats and map coding systems (Apache Spark)
+ - **load**: import data and ensure the data is complete and accurate 
+
+<a id = "ch5"></a>
+## Chapter 5 Monitor and Maintain
+When data is generated with time and simulated in the database, the ETL process should be implemented periodically.
+**Set up scheduled ingestion of data from the EHR databases to an analytical database (Airflow)**
+ - at the correct time
+ - with a specific interval
+ - in the right order
+
+<a id = "ch6"></a>
+## Chapter 6 Future Work
+Coming back the original purposes, the database is for healthcare researchers, considering the security and management of database, maybe it is a good idea to set a separate database for data analysis or views in MySQL for researchers.
+
+Last but not least, the update for the database is a iterated process. Getting feedback from researchers or NHS managers, adding or deleting columns will be followed in the future.
+
+
