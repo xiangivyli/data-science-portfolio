@@ -30,7 +30,7 @@ Potential audience:
  - Government Health Sectors
 
 Potential stakeholders
- - IT (database establishment and maintain)
+ - IT (database establishment and maintenance)
  - Public (disease trend)
  - Researchers (needed data)
 
@@ -44,7 +44,7 @@ Tables in schema are divided into two parts:
   <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/Image/Schema%20mindmap.png">
             </p>
             
-As the mindmap shows, clinical data comes from NHS and genetic data comes genetic detection organisation. The clinical data involves patient general information, and admission and treatment reccords. The genetic data involves detailed mutated genes and frequency and other parameters.
+As the mindmap shows, clinical data comes from NHS and genetic data comes from genetic detection organisation. The clinical data involves patient general information, and admission and treatment reccords. The genetic data involves detailed mutated genes and frequency and other parameters.
 
 ### Step 2: Use [drawSQL](https://drawsql.app/) to map it
 8 Tables for clinical data:
@@ -68,11 +68,11 @@ As the mindmap shows, clinical data comes from NHS and genetic data comes geneti
   </p>
 
 ### Step 3: Import SQL into MySQL
-I use drawSQL to generate [SQL](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/dataplatform_for_healthcare_research.sql), then use MySQL to run it.
+I use drawSQL to generate [SQL queries](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/dataplatform_for_healthcare_research.sql), and then use MySQL to run it.
 
 <a id = "ch3"></a>
 ## Chapter 3 Data Privacy and Security
-The preparation of database has finished, before populating the database, it is essential to talk about etical considerations as the data is confirmly connected to patient privacy. Patients may suffer potential harm when their data is used for research purposes like revealing sensitive information. NHS currently has [information governance](https://www.england.nhs.uk/ig/about/) which protects patients. "Secondary use" must only use data that will not identify individuals.
+The preparation of the database has finished, before populating the database, it is essential to talk about etical considerations as the data is connected to patient privacy. Patients may suffer potential harm when their data is used for research purposes like revealing sensitive information. NHS currently has [information governance](https://www.england.nhs.uk/ig/about/) which protects patients. "Secondary use" must only use data that will not identify individuals.
 
 The pre-requisite includes:
  - Obtain the appropriate consent from patients
@@ -106,9 +106,9 @@ When data is generated with time and simulated in the database, the ETL process 
 
 <a id = "ch6"></a>
 ## Chapter 6 Future Work
-Coming back the original purposes, the database is for healthcare researchers, considering the security and management of database, maybe it is a good idea to set a separate database for data analysis or views in MySQL for researchers.
+Coming back to the original purposes, the database is for healthcare researchers, considering the security and management of the database, maybe it is a good idea to set a separate database for data analysis or views in MySQL for researchers.
 
-Last but not least, the update for the database is a iterated process. Getting feedback from researchers or NHS managers, adding or deleting columns will be followed in the future.
+Last but not least, the update for the database is an iterated process. Getting feedback from researchers or NHS managers, adding or deleting columns will be followed in the future.
 
 The slides I presented [here](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/0317Data%20Platform%20Design%20for%20healthcare%20research.pptx). Feel free to comment it. 
 
