@@ -69,7 +69,7 @@ FROM university_professors;
 INSERT INTO organisations
 SELECT DISTINCT organization,
                 organization_sector
-FROM university_professors; 
+FROM university_professors;
 
 INSERT INTO affiliations
 SELECT DISTINCT firstname,
@@ -79,7 +79,7 @@ SELECT DISTINCT firstname,
 FROM university_professors; 
 
 /*Step 3, Drop the old table */
---DROP TABLE university_professors;
+DROP TABLE university_professors;
 
 
 /*Step 4, foreign key, build relationship */
@@ -103,27 +103,26 @@ UPDATE affiliations
 SET professor_id = professors.id
 FROM affiliations
 JOIN professors ON affiliations.firstname = professors.firstname
-                AND affiliations.familyname = professors.familyname;
+                AND affiliations.lastname = professors.lastname;
 
 -- 4b4.Drop firstname and family name because there has been ids
 ALTER TABLE affiliations
 DROP COLUMN firstname;
 
 ALTER TABLE affiliations
-DROP COLUMN familyname;
+DROP COLUMN lastname;
 
 -- 4b4.1:N from organisations to affiliations (ON DELETE NO ACTION)
 ALTER TABLE affiliations
-ADD CONSTRAINT fk_affiliations_orgaisations FOREIGN KEY (organisation) 
-    REFERENCES organisations(organisation_id) ON DELETE NO ACTION;
+ADD CONSTRAINT fk_affiliations_organisations FOREIGN KEY (organisation) 
+    REFERENCES organisations(organisation) ON DELETE NO ACTION;
 
 
 /*Step 5, Check constraints with metadata (INFORMATION_SCHEMA*/
 
 -- Identify the correct constraint name
 SELECT constraint_name, table_name, constraint_type
-FROM INFORMATION_SCHEMA.table_constraints
-WHERE constraint_type = 'FOREIGN KEY';
+FROM INFORMATION_SCHEMA.table_constraints;
 
 -- Check the referential integrity 
 DELETE FROM professors
