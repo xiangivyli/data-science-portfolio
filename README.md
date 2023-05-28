@@ -48,7 +48,7 @@ Objectives:
    - integration of genetics and healthcare data
    - research-ready, well-curated and well-documented data
 
-### [Denomalisation (SQL Server)](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Denomalisation%20(SQL%20Server))
+### [Nomalisation (SQL Server)](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Denomalisation%20(SQL%20Server))
 
 Tool: SQL Server
 
