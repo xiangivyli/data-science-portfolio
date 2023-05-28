@@ -47,3 +47,12 @@ Objectives:
    - identify how diseases begin and progress
    - integration of genetics and healthcare data
    - research-ready, well-curated and well-documented data
+
+### [Denomalisation (SQL Server)](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Denomalisation%20(SQL%20Server))
+
+Tool: SQL Server
+
+Objectives:
+  - Split a table into fact table and demension tables
+  - Set datatype, primary key, foreign key and referential integrity
+ 
