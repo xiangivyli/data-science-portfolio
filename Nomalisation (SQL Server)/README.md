@@ -4,6 +4,7 @@
 2. [Chapter 2 - Import data](#chr2)
 3. [Chapter 3 - Create tables and populate them](#ch3)
 4. [Chapter 4 - Set constraints and relationship](#ch4)
+5. [Chapter 5 - Final two tips](#ch5)
 
 
 <a id = "ch1"></a>
@@ -120,7 +121,9 @@ ADD CONSTRAINT fk_affiliations_organisations FOREIGN KEY (organisation)
   <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/9.%20Final%20diagram.png">
   </p>
 
-**The final two tips**
+<a id = "ch5"></a>
+## Chapter 5 Final Two tips
+
 ### Tip 1 Referential Integrity: ON DELETE NO ACTION
 To keep data consistency, there are some options for referenced table when a row is deleted. The project chose NO ACTION, it prevents the deletion of rows if it is referenced.
 Test it with 
