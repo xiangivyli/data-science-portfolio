@@ -1,7 +1,4 @@
 
-
-
-
 # Table of Content
 1. [Chapter 1 - Project Overview](#chr1)
 2. [Chapter 2 - Import data](#chr2)
@@ -18,5 +15,88 @@ This project mainly focuses on logic and techniques.
 
 <a id = "ch2"></a>
 ## Chapter 2 Import data
+
+SQL Server 2019 Import and Export Data Wizard imported Excel table into my SQL Server Database. Then, have a look at the original table.
+
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/10.%20Original%20table.png">
+  </p>
+  
+ It has 8 attributes:
+  - firstname
+  - lastname
+  - university
+  - university_shortname
+  - university_city
+  - function
+  - organization
+  - organization_sector
+
+<a id = "ch3"></a>
+## Chapter 3 Create tables and populate them
+
+This database mainly records what role professors play in each organisation, a professor can have different functions in an organisation, and professors and organisations have their own dimension tables.
+
+It has 1 fact table and 3 dimension tables
+ - affiliations (fact table)
+ - professors (dimension table)
+ - organisations (dimension table)
+ - universities (dimension table)
+
+There are 3 things to consider when create tables
+ - datatype 
+ - nullable 
+ - primary key
+
+### datatype
+Most attributes are varchar(), the maximum should be decided by the maximum length of the current role but should leave some space. The column university_shortname should follow the fixed format and use char(3).
+
+### nullable
+Most attributes should not be null except function attribute.
+
+### primary key
+For affiliations and professors, the primary key can be surrogate keys considering they need to combine at least two columns. For organisations and universities, the names of organisations and universities are good choices to identify each row.
+
+
+**With CREATE, VARCHAR(), PRIMARY KEY, the four empty tables are created in SQL Server.**
+
+**With INSERT INTO, SELECT DISTINCT columns FROM the original table, they are populated.**
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/3.%20Created%20tables.png">
+  </p>
+
+<a id = "ch4"></a>
+## Chapter 4 Set constraints and relationships
+
+The final relationships should be 
+ - M:1 relationship from professors to universities with university_shortname column
+ - N:M relationship from professors to organisations with affiliations table
+   - 1:N relationship from professors to affiliations with professor_id column
+   - 1:M relationship from organisations to affiliations with orgnaisation column
+
+The key part of this chapter is to talk about how to achieve the connection between organisations and professors with affiliations. Because a professor can have many functions in an organisation while an organisation can have many professors, there is a many-to-many relationship. A method is to use an intermediate table to become the bridge.
+
+### Step 1 Add a professor_id as the foreign key to affiliations for convenience 
+```ruby
+ALTER TABLE affiliations
+ADD professor_id INT,
+    CONSTRAINT fk_affiliations_professors FOREIGN KEY (professor_id)
+	REFERENCES professors(id) ON DELETE NO ACTION;
+  ```
+### Step 2 Populate professor_id using professors table
+```ruby
+UPDATE affiliations
+SET professor_id = professors.id
+FROM affiliations
+JOIN professors ON affiliations.firstname = professors.firstname
+                AND affiliations.lastname = professors.lastname;
+                ```
+
+
+
+
+
+
+
 
 
