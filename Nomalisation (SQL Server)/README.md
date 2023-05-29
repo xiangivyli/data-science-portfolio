@@ -65,6 +65,14 @@ For affiliations and professors, the primary key can be surrogate keys consideri
   <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/3.%20Created%20tables.png">
   </p>
 
+<a id = "ch4"></a>
+## Chapter 4 Set constraints and relationships
+
+The final relationships should be 
+ - M:1 relationship from professors to universities with university_shortname column
+ - N:M relationship from professors to organisations with affiliations table
+   - 1:N relationship from professors to affiliations with professor_id column
+   - 1:M relationship from organisations to affiliations with orgnaisation column
 
 
 
