@@ -74,8 +74,23 @@ The final relationships should be
    - 1:N relationship from professors to affiliations with professor_id column
    - 1:M relationship from organisations to affiliations with orgnaisation column
 
+The key part of this chapter is to talk about how to achieve the connection between organisations and professors with affiliations. Because a professor can have many functions in an organisation while an organisation can have many professors, there is a many-to-many relationship. A method is to use an intermediate table to become the bridge.
 
-
+### Step 1 Add a professor_id as the foreign key to affiliations for convenience 
+```ruby
+ALTER TABLE affiliations
+ADD professor_id INT,
+    CONSTRAINT fk_affiliations_professors FOREIGN KEY (professor_id)
+	REFERENCES professors(id) ON DELETE NO ACTION;
+  ```
+### Step 2 Populate professor_id using professors table
+```ruby
+UPDATE affiliations
+SET professor_id = professors.id
+FROM affiliations
+JOIN professors ON affiliations.firstname = professors.firstname
+                AND affiliations.lastname = professors.lastname;
+                ```
 
 
 
