@@ -21,7 +21,7 @@ BEGIN
     CREATE TABLE universities (
          university_shortname CHAR(3) NOT NULL,
          university VARCHAR(20) NOT NULL,
-         university_city VARCHAR(20) NOT NULL
+         university_city VARCHAR(20) NOT NULL,
 		 CONSTRAINT PK_universities PRIMARY KEY (university_shortname)
 );
 END
