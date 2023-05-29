@@ -59,6 +59,7 @@ For affiliations and professors, the primary key can be surrogate keys consideri
 
 
 **With CREATE, VARCHAR(), PRIMARY KEY, the four empty tables are created in SQL Server.**
+
 **With INSERT INTO, SELECT DISTINCT columns FROM the original table, they are populated.**
 <p align = "center">
   <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/3.%20Created%20tables.png">
