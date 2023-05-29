@@ -76,13 +76,17 @@ The final relationships should be
 
 The key part of this chapter is to talk about how to achieve the connection between organisations and professors with affiliations. Because a professor can have many functions in an organisation while an organisation can have many professors, there is a many-to-many relationship. A method is to use an intermediate table to become the bridge.
 
-### Step 1 Add a professor_id as the foreign key to affiliations for convenience 
+### Step 1 Add a professor_id as the foreign key from professors to affiliations for convenience 
 ```ruby
 ALTER TABLE affiliations
 ADD professor_id INT,
     CONSTRAINT fk_affiliations_professors FOREIGN KEY (professor_id)
 	REFERENCES professors(id) ON DELETE NO ACTION;
-  ```
+```
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/5.%20Add%20professor%20id.png">
+  </p>
+  
 ### Step 2 Populate professor_id using professors table
 ```ruby
 UPDATE affiliations
@@ -90,10 +94,55 @@ SET professor_id = professors.id
 FROM affiliations
 JOIN professors ON affiliations.firstname = professors.firstname
                 AND affiliations.lastname = professors.lastname;
-                ```
+```
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/6.%20Populate%20affiliations.png">
+  </p>
 
 
+### Step 3 Drop firstname and lastname 
+```ruby
+ALTER TABLE affiliations
+DROP COLUMN firstname;
 
+ALTER TABLE affiliations
+DROP COLUMN lastname;
+```
+### Step 4 1:M relationship from organisations to affiliations
+```ruby
+ALTER TABLE affiliations
+ADD CONSTRAINT fk_affiliations_organisations FOREIGN KEY (organisation) 
+    REFERENCES organisations(organisation) ON DELETE NO ACTION;
+```
+
+**The final diagram** shows the complete database
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/9.%20Final%20diagram.png">
+  </p>
+
+**The final two tips**
+### Tip 1 Referential Integrity: ON DELETE NO ACTION
+To keep data consistency, there are some options for referenced table when a row is deleted. The project chose NO ACTION, it prevents the deletion of rows if it is referenced.
+Test it with 
+```ruby
+DELETE FROM professors
+WHERE firstname = 'Alain';
+```
+And the error is 
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/8.%20Referencial%20intergrity.png">
+  </p>
+
+### Tip 2 INFORMATION_SCHEMA
+The INFORMATION_SCHEMA can check tables, columns, constraints and other metadata.
+```ruby
+SELECT constraint_name, table_name, constraint_type
+FROM INFORMATION_SCHEMA.table_constraints;
+```
+The constraints will be extracted in a table, super convenient, right?
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/7.%20Constraints.png">
+  </p>
 
 
 
