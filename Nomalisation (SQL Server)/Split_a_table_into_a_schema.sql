@@ -105,7 +105,7 @@ FROM affiliations
 JOIN professors ON affiliations.firstname = professors.firstname
                 AND affiliations.lastname = professors.lastname;
 
--- 4b4.Drop firstname and family name because there has been ids to identify professors
+-- 4b4.Drop firstname and last name because there has been ids to identify professors
 ALTER TABLE affiliations
 DROP COLUMN firstname;
 
