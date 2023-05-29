@@ -53,7 +53,7 @@ There are 3 things to consider when create tables
 Most attributes are varchar(), the maximum should be decided by the maximum length of the current record but should leave some space. The column university_shortname should follow the fixed format and use char(3).
 
 ### nullable
-Most attributes should not be null except function attribute.
+Most attributes should not be null except [function] attribute.
 
 ### primary key
 For affiliations and professors, the primary key can be surrogate keys considering they need to combine at least two columns. For organisations and universities, the names of organisations and universities are good choices to identify each row.
