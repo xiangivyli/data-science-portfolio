@@ -1,7 +1,4 @@
 
-
-
-
 # Table of Content
 1. [Chapter 1 - Project Overview](#chr1)
 2. [Chapter 2 - Import data](#chr2)
@@ -19,4 +16,19 @@ This project mainly focuses on logic and techniques.
 <a id = "ch2"></a>
 ## Chapter 2 Import data
 
+SQL Server 2019 Import and Export Data Wizard imported Excel table into my SQL Server Database. Then, have a look at the original table.
+
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/10.%20Original%20table.png">
+  </p>
+  
+ It has 8 attributes:
+  - firstname
+  - lastname
+  - university
+  - university_shortname
+  - university_city
+  - function
+  - organization
+  - organization_sector
 
