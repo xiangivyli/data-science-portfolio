@@ -105,7 +105,7 @@ FROM affiliations
 JOIN professors ON affiliations.firstname = professors.firstname
                 AND affiliations.lastname = professors.lastname;
 
--- 4b4.Drop firstname and family name because there has been ids
+-- 4b4.Drop firstname and family name because there has been ids to identify professors
 ALTER TABLE affiliations
 DROP COLUMN firstname;
 
@@ -116,6 +116,10 @@ DROP COLUMN lastname;
 ALTER TABLE affiliations
 ADD CONSTRAINT fk_affiliations_organisations FOREIGN KEY (organisation) 
     REFERENCES organisations(organisation) ON DELETE NO ACTION;
+
+-- 4b5. Add surrogate key as primary key
+ALTER TABLE affiliations
+ADD combine_id INT IDENTITY(1,1) CONSTRAINT PK_affiliations PRIMARY KEY;
 
 
 /*Step 5, Check constraints with metadata (INFORMATION_SCHEMA*/
