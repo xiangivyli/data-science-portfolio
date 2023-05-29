@@ -130,7 +130,7 @@ WHERE firstname = 'Alain';
 ```
 And the error is 
 <p align = "center">
-  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/8.%20Referencial%20intergrity.png">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/8.%20Referential%20Intergrity.png">
   </p>
 
 ### Tip 2 INFORMATION_SCHEMA
