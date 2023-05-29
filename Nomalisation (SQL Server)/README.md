@@ -50,7 +50,7 @@ There are 3 things to consider when create tables
  - primary key
 
 ### datatype
-Most attributes are varchar(), the maximum should be decided by the maximum length of the current role but should leave some space. The column university_shortname should follow the fixed format and use char(3).
+Most attributes are varchar(), the maximum should be decided by the maximum length of the current record but should leave some space. The column university_shortname should follow the fixed format and use char(3).
 
 ### nullable
 Most attributes should not be null except function attribute.
