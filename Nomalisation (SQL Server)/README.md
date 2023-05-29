@@ -32,3 +32,46 @@ SQL Server 2019 Import and Export Data Wizard imported Excel table into my SQL S
   - organization
   - organization_sector
 
+<a id = "ch3"></a>
+## Chapter 3 Create tables and populate them
+
+This database mainly records what role professors play in each organisation, a professor can have different functions in an organisation, and professors and organisations have their own dimension tables.
+
+It has 1 fact table and 3 dimension tables
+ - affiliations (fact table)
+ - professors (dimension table)
+ - organisations (dimension table)
+ - universities (dimension table)
+
+There are 3 things to consider when create tables
+ - datatype 
+ - nullable 
+ - primary key
+
+### datatype
+Most attributes are varchar(), the maximum should be decided by the maximum length of the current role but should leave some space. The column university_shortname should follow the fixed format and use char(3).
+
+### nullable
+Most attributes should not be null except function attribute.
+
+### primary key
+For affiliations and professors, the primary key can be surrogate keys considering they need to combine at least two columns. For organisations and universities, the names of organisations and universities are good choices to identify each row.
+
+With CREATE, VARCHAR(), PRIMARY KEY, the four empty tables are created in SQL Server.
+With INSERT INTO, SELECT DISTINCT columns FROM the original table, they are populated.
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/3.%20Created%20tables.png">
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
