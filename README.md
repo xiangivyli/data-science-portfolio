@@ -55,4 +55,12 @@ Tool: SQL Server
 Objectives:
   - Split a table into fact table and demension tables
   - Set datatype, primary key, foreign key and referential integrity
+
+### [Education-Focused Analysis (Power BI and Python)](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python))
+
+Tool: Python and Power BI
+
+Objectives:
+  - Prepare a cleansed dataset for analysis
+  - A logical story to explain why the mix and weighting of assessment types changed the final result
  
