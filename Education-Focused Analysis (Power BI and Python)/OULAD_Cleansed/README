@@ -1,0 +1,8 @@
+Data Cleansing:
+1. courses.csv keep module BBB;
+2. assessments.csv keep module BBB;
+3. vle.csv keep module BBB and valid week_from, week_to (remove blanks);
+4. studentInfo.csv keep module BBB;
+5. studentRegistration.csv keep module BBB;
+6. studentAssessment.csv merge() adds code_module from assessments.csv, then keep module BBB;
+7. studentVle.csv Python filters module BBB and aggragates sum_clicks together for the same code_module, same code_presentation, same id_student, same id_site and same date (reason 1: can not distinguish records which are only different in sum_click; reason 2: save memory)
