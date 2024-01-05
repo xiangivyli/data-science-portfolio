@@ -4,6 +4,8 @@ I used **Power BI** and **Python** to explore the reasons
 
 The task shows my **Exploratory Data Analysis (EDA), Data Engineering, Data Visualisation, and Story Telling** skills.
 
+The **published Dashboard** link is https://www.novypro.com/project/education-focused-analysis-how-assessment-types-shape-the-final-result
+
 Documents:
 1. [Task Log](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/OULAD_BBB_Work_Log_Xiang_Li.xlsx)
 2. [Presentation](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/OULAD_BBB_2014J_Result_Xiang_Li.pptx)
