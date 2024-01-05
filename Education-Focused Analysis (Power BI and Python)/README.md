@@ -11,3 +11,30 @@ Documents:
 4. [Raw Data](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/OULAD_raw)
 5. [Cleansed Data](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/OULAD_Cleansed)
 6. [Python Transformation Code](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/OULAD_Python_Transformation)
+
+The **Data Modelling** Part is
+<p align = "center">
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/Report%20Pages/Power%20BI%20Data%20Modelling.png">
+</p>
+
+Page 1 **Overview of module BBB**
+<p align = "center">
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/Report%20Pages/report%201%20Overview.png">
+</p>
+
+Page 2 **Student Persona**
+<p align = "center">
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/Report%20Pages/report%202%20Persona.png">
+</p>
+
+Page 3 **Final Result**
+<p align = "center">
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/Report%20Pages/report%203%20Final%20Results.png">
+</p>
+
+Page 4 **Relationship**
+<p align = "center">
+<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/Report%20Pages/report%204%20Relation.png">
+</p>
+
+
