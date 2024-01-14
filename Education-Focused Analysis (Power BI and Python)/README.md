@@ -14,6 +14,23 @@ Documents:
 5. [Cleansed Data](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/OULAD_Cleansed)
 6. [Python Transformation Code](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/OULAD_Python_Transformation)
 
+The **Data Validation** is
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/Report%20Pages/Data%20Validation.png"
+    >
+  </p>
+
+The **Data Engineering** Part is
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/Report%20Pages/Data%20Cleansing.png"
+    >
+  </p>
+
+<p align = "center">
+  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/Report%20Pages/Changes%20of%20cleansed%20dataset.png"
+    >
+  </p>
+    
 The **Data Modelling** Part is
 <p align = "center">
 <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python)/Report%20Pages/Power%20BI%20Data%20Modelling.png">
