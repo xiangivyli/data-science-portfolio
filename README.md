@@ -2,7 +2,8 @@
 
 This portfolio holds the below projects. 
 
-Each project has an individual folder for data, codes, and key takeaways.
+Each project has an individual folder for data, codes, and key takeaways. 
+Some projects may cover multiple technical aspects, like data dashboarding containing the data engineering process.
 # Table of Contents
 
 ## Part A Data Engineering
