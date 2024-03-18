@@ -36,7 +36,7 @@ Objectives:
   - visualise the development of Pfizer from 2016 to 2018
   - linear regression between ESG score and total assets
  
-### [BT Customer Churn Prediction (Python and Power BI])(https://xiangivyli.com/blog/bt-customer-churn-prediction/)
+### [BT Customer Churn Prediction (Python and Power BI])](https://xiangivyli.com/blog/bt-customer-churn-prediction/)
  
 Tool: Python and Power BI
 
