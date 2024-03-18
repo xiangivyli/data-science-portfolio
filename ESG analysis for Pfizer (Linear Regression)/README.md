@@ -202,7 +202,7 @@ model = smf.ols(formula = "Log_BS_TOT_ASSET~DISCLOSURE_SCORE_Lagged + GOVNCE_DIS
 sns.histplot(model.resid)
 
 fig4c = sns.histplot(model.resid).get_figure()
-```
+```python
 <p align = "center">
     <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.plot.png" width = 800>
 </p>
