@@ -8,7 +8,7 @@ Some projects may cover multiple technical aspects, like data dashboarding conta
 
 ## Part A Data Engineering
 
-### [Data Platform Design for Healthcare Research (Database)](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database))
+### [Data Platform Design for Healthcare Research (Database)](https://xiangivyli.com/blog/data-platform-design-for-healthcare-research-mysql/)
  
 Tool: MySQL
  
@@ -17,7 +17,7 @@ Objectives:
    - integration of genetics and healthcare data
    - research-ready, well-curated and well-documented data
 
-### [Nomalisation (SQL Server)](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Nomalisation%20(SQL%20Server))
+### [Nomalisation (SQL Server)](https://xiangivyli.com/blog/normalisation-for-professors-in-organisations-with-sql-server/)
 
 Tool: SQL Server
 
@@ -27,7 +27,7 @@ Objectives:
 
 ## Part B Exploratory Data Analysis and Data Modelling
 
-### [ESG analysis for Pfizer (Exploratory Data Analysis and Linear Regression)](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression))
+### [ESG analysis for Pfizer (Exploratory Data Analysis and Linear Regression)](https://xiangivyli.com/blog/esg-pfizer/)
 
 Tool: Python
 
@@ -36,7 +36,7 @@ Objectives:
   - visualise the development of Pfizer from 2016 to 2018
   - linear regression between ESG score and total assets
  
-### [BT Customer Churn Prediction (Python and Power BI](https://xiangivyli.com/blog/bt-customer-churn-prediction/)
+### [BT Customer Churn Prediction (Python and Power BI])(https://xiangivyli.com/blog/bt-customer-churn-prediction/)
  
 Tool: Python and Power BI
 
@@ -44,7 +44,7 @@ Objectives:
    - build a logistic regression model 
    - identify which feature will influence customer churn
 
-### [Revenue increase strategy analysis for Google merchandise store (Business Intelligence)](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI))
+### [Revenue increase strategy analysis for Google merchandise store (Business Intelligence)](https://xiangivyli.com/blog/revenue-google-store/)
 
 Tool: Google Analytics
 
@@ -64,7 +64,7 @@ Objectives:
   - map the persona of customers 
   - analysis the features of customers based on the loan status variable
 
-### [Education-Focused Analysis (Power BI and Python)](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Education-Focused%20Analysis%20(Power%20BI%20and%20Python))
+### [Education-Focused Analysis (Power BI and Python)](https://xiangivyli.com/blog/education-focused-analysis-assessment-types-final-results)
 
 Tool: Python and Power BI
 
