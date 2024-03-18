@@ -91,7 +91,7 @@ df.count()
 <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/data.gathering.df.count.png" width = "300"/>
 </p>
 
-```
+```python
 # Check the number of variables
 df.shape[1]
 
@@ -187,7 +187,7 @@ The chapter is to prove the rationality of the model.
 
 The figures show (1) the distribution of residuals is average in the left residual plots; similarly, the histogram is well-shaped and symmetric. The three graphs indicate that the errors are normally distributed, and heteroscedasticity is not a violation. (2) Multicollinearity is not a problem when the VIF values are around 2.2 in the VIF table.
 
-```
+```python
 # Use residual plot to check the assumption of Nonnormality of Residuals
 figure4a = sns.residplot(x = "ENVIRON_DISCLOSURE_SCORE_Lagged",
                          y = "Log_BS_TOT_ASSET", data = df_no_outliers, color = "green").get_figure()
@@ -207,7 +207,7 @@ fig4c = sns.histplot(model.resid).get_figure()
     <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.plot.png" width = 800>
 </p>
 
-```
+```python
 vif = [variance_inflation_factor(exog = X.values, exog_idx = i) for i in range(X.shape[1])]
 
 vif_table = pd.DataFrame({"coef_name":X.columns, "vif_values":np.around(vif, 3)})
