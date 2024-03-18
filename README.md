@@ -71,4 +71,13 @@ Tool: Python and Power BI
 Objectives:
   - Prepare a cleansed dataset for analysis
   - A logical story to explain why the mix and weighting of assessment types changed the final result
+
+### [A self-service platform for GDP, Life Satisfaction and Education Level](https://xiangivyli.com/blog/an-information-retrieval-platform-for-gdp-satisfaction-education/)
+
+Tool: Tableau
+
+Objectives:
+  - Provide users a platform to retrieve information about **GDP**, **Life Satisfaction**, and **Education Level** for countries in different year
+  - Give a general idea about this information for regions
+  - Check the relationship between **education level** and **GDP per capita**
  
