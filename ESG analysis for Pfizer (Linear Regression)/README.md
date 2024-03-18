@@ -195,13 +195,15 @@ figure4a = sns.residplot(x = "ENVIRON_DISCLOSURE_SCORE_Lagged",
 figure4b = sns.residplot(x = "GOVNCE_DISCLOSURE_SCORE_Lagged",
                          y = "Log_BS_TOT_ASSET", data = df_no_outliers, color = "blue").get_figure()
 ```
-```
+
+```python
 # Test for any values of the explanatory variables, the dependent variable is normally distributed
 model = smf.ols(formula = "Log_BS_TOT_ASSET~DISCLOSURE_SCORE_Lagged + GOVNCE_DISCLOSURE_SCORE_Lagged", data = df_no_outliers).fit()
     
 sns.histplot(model.resid)
 
 fig4c = sns.histplot(model.resid).get_figure()
+
 ```python
 <p align = "center">
     <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.plot.png" width = 800>
