@@ -72,7 +72,7 @@ The dataset contains all S&P 1500 companies listed in the US stock market over t
 <a id = "ch2"></a>
 ## Chapter 2 Data Gathering
 ### Import data
-```
+```python
 # Import all libraries that I will use in the project
 import pandas as pd
 import numpy as np
