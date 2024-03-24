@@ -1,5 +1,5 @@
 <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/BT%20Logo.jpg">
+<img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_b_bt_customer_churn_prediction_ml/Image/BT%20Logo.jpg">
 </p>
 
 
@@ -27,7 +27,7 @@ BT group is investigating why some customers stop using BT services (churn), inc
 ## Chapter 2 Data Validation
 BT provided 7,043 rows (customers) and 21 columns (features). The "Churn" columns is the target, showing whether the customer left the company (Churn = 'Yes') or not (Churn = 'No').
 <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/Data%20Snapshot.jpg">
+<img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_b_bt_customer_churn_prediction_ml/Image/Data%20Snapshot.jpg">
 </p>
 The dataset includes information about:
 
@@ -36,7 +36,7 @@ The dataset includes information about:
 - Customer account information - how long they've been a customer, contract, payment method, paperless billing, monthly charges, and total charges
 - Demographic info about customers - gender, if they have partners and dependents
 
-You can find the dataset and dictionary on my [GitHub](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/BT%20Customer%20Churn%20Prediction/Data)
+You can find the dataset and dictionary on my [GitHub](https://github.com/xiangivyli/data-science-portfolio/tree/main/part_b_bt_customer_churn_prediction_ml/Data)
 
 Steps to adjust dataset:
 
@@ -63,7 +63,7 @@ Step 2 modelling: define a function which generates the model and calculates con
 The result is AUC=0.85
 
 <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/ROC.png">
+<img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_b_bt_customer_churn_prediction_ml/Image/ROC.png">
 </p>
 
 ### SMOTE Optimisation
@@ -72,7 +72,7 @@ As the number of 0 value is much less than 1 value in our dataset (imbalanced), 
 
 The optimised result is AUC=0.86
 <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/ROC-SMOTE.png">
+<img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_b_bt_customer_churn_prediction_ml/Image/ROC-SMOTE.png">
 </p>
 
 
@@ -82,7 +82,7 @@ The optimised result is AUC=0.86
 The purpose of this project is to identify key features, I extracted coefficients for each feature and mapped them in a bar plot.
 
 <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/BT%20Customer%20Churn%20Prediction/Image/Coefficients.png#enroll-beta">
+<img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_b_bt_customer_churn_prediction_ml/Image/Coefficients.png">
 </p>                                                                                                                                         
 
 From the bar plot, it is easy to say that tenure has a negative relationship with churn, which means if customers sign contracts longer, they are less likely to leave BT service. Meanwhile, the total charge pushes customers to leave. Other features also play a role in churn, like customers who are loyal prefer no internet service and a two-year contract rather than a monthly contract.
