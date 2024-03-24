@@ -110,5 +110,5 @@ Coming back to the original purposes, the database is for healthcare researchers
 
 Last but not least, the update for the database is an iterated process. Getting feedback from researchers or NHS managers, adding or deleting columns will be followed in the future.
 
-The slides I presented [here](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/0317Data%20Platform%20Design%20for%20healthcare%20research.pptx). Feel free to comment it. 
+The slides I presented [here](https://github.com/xiangivyli/data-science-portfolio/blob/main/part_a_database_design_healthcare_research/0317Data%20Platform%20Design%20for%20healthcare%20research.pptx). Feel free to comment it. 
 
