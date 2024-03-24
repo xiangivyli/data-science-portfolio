@@ -18,7 +18,7 @@ Environmental, social and governance (ESG) scores in today’s markets evaluate 
 The complete codes are in the [ESG_analysis_for_Pfizer.ipynb](./ESG_analysis_for_Pfizer.ipynb)
 <a id = "ch1"></a>. 
 
-[Dictionary](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Data/Dictionary.csv) in [Data](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Data/SP1500_Raw%20Dataset_Data%20Analytics%20in%20Business%20Assignment_2021.csv) explains the variables’ definitions.
+[Dictionary](./Data/Dictionary.csv) in [Data](./Data/SP1500_Raw%20Dataset_Data%20Analytics%20in%20Business%20Assignment_2021.csv) explains the variables’ definitions.
 
 The README file mainly lists results and insights from data.
 
@@ -88,7 +88,7 @@ df = pd.read_csv("./S&P1500_Raw Dataset_Data Analytics in Business Assignment_20
 df.count()
 ```
 <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/data.gathering.df.count.png" width = "300"/>
+<img src="./Images/data.gathering.df.count.png" width = "300"/>
 </p>
 
 ```python
@@ -126,13 +126,13 @@ Table 1 shows the descriptive statistics of biopharmaceutical companies with cho
 Pfizer is an American corporation, and its headquarter locates in the U.S. as well. Pfizer is generally higher than the average level except for Tobin's Q ratio evaluation; the median value of the cohort is 7.33, while Pfizer only scored 1.94. The data of Pfizer is near the maximum value in employees and total assets aspects.
 
 <p align = "center">
-   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.landscape.table.png" height = "500"/>
+   <image src="./Images/biopharmaceutical.industry.landscape.table.png" height = "500"/>
 </p>
 
 Figure 1 uses 4 bar plots covering (a) total assets; (b) the number of employees per year; (c) return on assets; (d) Tobin's Q Ratio and gives ranking information about the position of Pfizer in the cohort. Pfizer ranks among the highest according to total assets and has sufficient employees; the number is lower than Johnson & Johnson with over 120,000 employees. Regarding prospects relevant indicators (Return on Assets and Tobin's Q Ratio), Pfizer does not have strengths over other companies; it is the fourth bottom of the cohort comparing Tobin's Q Ratio.
 
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/biopharmaceutical.industry.comparison.plot.png" width = "500"/>
+    <image src="./Images/biopharmaceutical.industry.comparison.plot.png" width = "500"/>
 </p>
 
 <a id = "ch4"></a>
@@ -152,7 +152,7 @@ The chapter is to achieve the second objective - visulalise the trend of busines
 Figure 2, with time-series line graph, demonstrates Pfizer's financial aspects. Firstly, the change of total assets from 2016 to 2018 has shown that Pfizer did not have excellent performance in 2018; the assets dropped from over 170,000 million U.S. dollars to below 160,000 million U.S. dollars while the number of employees experienced a slight decrease then increased to around 92,000 in 2018. Then using return on assets and Tobin's Q ratio as indicators of company development prospects demonstrates Pfizer tried to increase the influence and management of the company. However, Pfizer has not performed well with middle-level ranking results in Figure 1. Similarly, Pfizer continued to invest R&D and disclosure more environmental information.
 
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/Pfizer.trend.plot.png" width = 500>
+    <image src="./Images/Pfizer.trend.plot.png" width = 500>
 </p>
 
 <a id = "ch5"></a>
@@ -166,7 +166,7 @@ The chapter is to achieve the last objective - apply linear regression to disclo
 Figure 3 visualises the scatterplots of environmental, social, governance disclosure scores V.S. the ln(total assets), respectively. Generally, the contribution of variables is average, and it is easy to observe a positive relationship between independent and dependent variables. The scatterplots can expect the coefficients are positive in the equation. Consequently, the least square generates the parameters and other indexes to quantity the relationships.
     
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/regression.plot.png" width = 800>
+    <image src="./Images/regression.plot.png" width = 800>
 </p>
 
 Table 2 presents the results of the regression. Of note, the social score variable is excluded in the equation because, in the first attempt, the *P*-value of the social disclosure score is 0.302, which means the relationship is not significant. Hence, the result only includes two indepdent variables: environmental and governance disclosure scores.
@@ -174,7 +174,7 @@ Table 2 presents the results of the regression. Of note, the social score variab
 In equation (1), t-1 means lagging scores by one year. The coefficients are 0.0306 and 0.0550, *P*-values are less than 0.05, which means the relationship is significant. For every one unit increase in environmental and governance disclosure scores last year, total assets will increase by e<sup>5.2366</sup> million U.S. dollars this year. The direct impact is significantly positive.
     
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/regression.table.png" width = 500>
+    <image src="./Images/regression.table.png" width = 500>
 </p>
 
 <a id = "ch6"></a>
@@ -206,7 +206,7 @@ fig4c = sns.histplot(model.resid).get_figure()
 ```
 
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.plot.png" width = 800>
+    <image src="./Images/evaluation.plot.png" width = 800>
 </p>
 
 ```python
@@ -216,7 +216,7 @@ vif_table = pd.DataFrame({"coef_name":X.columns, "vif_values":np.around(vif, 3)}
 print(vif_table)
 ```
 <p align = "center">
-    <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/evaluation.table.png" width = 500>
+    <image src="./Images/evaluation.table.png" width = 500>
 </p>
     
 <a id = "ch7"></a>
@@ -238,10 +238,10 @@ As for the model, it is valid after avoiding bias and other possible violations 
 The analysis can give Pfizer and other companies some ideas regarding their development direction. For example, Pfizer can identify detailed stakeholders of environmental, governance relevant topics. Well-designed surveys can identify these issues and collect the reflection of customers. The figure below lists five questions that can appear in a questionnarie, such as rating Pfizer;s behaviour regarding environmental protection. This kind of information can help Pfizer evaluate its position and weigh the rationality of next steps.
     
 <p align = "center">
-    <image src= "https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/questionnaire.part1.png" width = 500>
+    <image src= "./Images/questionnaire.part1.png" width = 500>
 </p>
 <p align = "center">    
-    <image src= "https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Images/questionnaire.part2.png" width = 500>
+    <image src= "./Images/questionnaire.part2.png" width = 500>
 </p>
 
 <a id = "ch90"></a>
