@@ -20,7 +20,7 @@ This project mainly focuses on logic and techniques.
 SQL Server 2019 Import and Export Data Wizard imported Excel table into my SQL Server Database. Then, have a look at the original table.
 
 <p align = "center">
-  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/10.%20Original%20table.png">
+  <img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_a_normalisation_sql_server/Image/10.%20Original%20table.png">
   </p>
   
  It has 8 attributes:
@@ -63,7 +63,7 @@ For affiliations and professors, the primary key can be surrogate keys consideri
 
 **With INSERT INTO, SELECT DISTINCT columns FROM the original table, they are populated.**
 <p align = "center">
-  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/3.%20Created%20tables.png">
+  <img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_a_normalisation_sql_server/Image/3.%20Created%20tables.png">
   </p>
 
 <a id = "ch4"></a>
@@ -85,7 +85,7 @@ ADD professor_id INT,
 	REFERENCES professors(id) ON DELETE NO ACTION;
 ```
 <p align = "center">
-  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/5.%20Add%20professor%20id.png">
+  <img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_a_normalisation_sql_server/Image/5.%20Add%20professor%20id.png">
   </p>
   
 ### Step 2 Populate professor_id using professors table
@@ -97,7 +97,7 @@ JOIN professors ON affiliations.firstname = professors.firstname
                 AND affiliations.lastname = professors.lastname;
 ```
 <p align = "center">
-  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/6.%20Populate%20affiliations.png">
+  <img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_a_normalisation_sql_server/Image/6.%20Populate%20affiliations.png">
   </p>
 
 
@@ -118,7 +118,7 @@ ADD CONSTRAINT fk_affiliations_organisations FOREIGN KEY (organisation)
 
 **The final diagram** shows the complete database
 <p align = "center">
-  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/9.%20Final%20diagram.png">
+  <img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_a_normalisation_sql_server/Image/9.%20Final%20diagram.png">
   </p>
 
 <a id = "ch5"></a>
@@ -133,7 +133,7 @@ WHERE firstname = 'Alain';
 ```
 And the error is 
 <p align = "center">
-  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/8.%20Referential%20Intergrity.png">
+  <img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_a_normalisation_sql_server/Image/8.%20Referential%20Intergrity.png">
   </p>
 
 ### Tip 2 INFORMATION_SCHEMA
@@ -144,7 +144,7 @@ FROM INFORMATION_SCHEMA.table_constraints;
 ```
 The constraints will be extracted in a table, super convenient, right?
 <p align = "center">
-  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Nomalisation%20(SQL%20Server)/Image/7.%20Constraints.png">
+  <img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_a_normalisation_sql_server/Image/7.%20Constraints.png">
   </p>
 
 
