@@ -1,5 +1,5 @@
 <p align = "center">
-  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/Image/EER%20Diagram%20MySQL.png">
+  <img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_a_database_design_healthcare_research/Image/EER%20Diagram%20MySQL.png">
   </p>
 
 # Table of Content
@@ -41,7 +41,7 @@ Tables in schema are divided into two parts:
  - Clinical data
  - Genetic data
 <p align = "center">
-  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/Image/Schema%20mindmap.png">
+  <img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_a_database_design_healthcare_research/Image/Schema%20mindmap.png">
             </p>
             
 As the mindmap shows, clinical data comes from NHS and genetic data comes from genetic detection organisation. The clinical data involves patient general information, and admission and treatment reccords. The genetic data involves detailed mutated genes and frequency and other parameters.
@@ -64,7 +64,7 @@ As the mindmap shows, clinical data comes from NHS and genetic data comes from g
  - Gene
 
 <p align = "center">
-  <img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/Image/Schema%20design.png">
+  <img src="https://github.com/xiangivyli/data-science-portfolio/blob/main/part_a_database_design_healthcare_research/Image/Schema%20design.png">
   </p>
 
 ### Step 3: Import SQL into MySQL
