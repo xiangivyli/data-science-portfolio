@@ -15,7 +15,7 @@ Environmental, social and governance (ESG) scores in today’s markets evaluate 
 
 1. [References](#ch90)
 
-The complete codes are in the [ESG_analysis_for_Pfizer.ipynb](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/ESG_analysis_for_Pfizer.ipynb)
+The complete codes are in the [ESG_analysis_for_Pfizer.ipynb](./ESG_analysis_for_Pfizer.ipynb)
 <a id = "ch1"></a>. 
 
 [Dictionary](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Data/Dictionary.csv) in [Data](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/ESG%20analysis%20for%20Pfizer%20(Linear%20Regression)/Data/SP1500_Raw%20Dataset_Data%20Analytics%20in%20Business%20Assignment_2021.csv) explains the variables’ definitions.
