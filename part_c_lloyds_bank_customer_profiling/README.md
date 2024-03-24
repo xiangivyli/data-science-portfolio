@@ -1,5 +1,5 @@
 <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Lloyds%20Bank%20Customer%20Profiling%20(Business%20Intelligence)/Images/Lloyds_Banking_Group_logo.png">
+<img src="./Images/Lloyds_Banking_Group_logo.png">
 </p>
 
 
@@ -38,7 +38,7 @@ The dataset contains 18,324 customers with 31 columns who:
  ### Dashboard
  
  <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Lloyds%20Bank%20Customer%20Profiling%20(Business%20Intelligence)/Images/Lloyds_Bank%20Customer_Persona.png">
+<img src="./Images/Lloyds_Bank%20Customer_Persona.png">
 </p>
 
 ### Insights
