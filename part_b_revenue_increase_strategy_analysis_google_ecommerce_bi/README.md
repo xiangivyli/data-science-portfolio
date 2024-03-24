@@ -1,5 +1,5 @@
 <p align = "center">
-<img src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/Google%20Merchandise%20Store.png">
+<img src="./Images/Google%20Merchandise%20Store.png">
 </p>
 
 
@@ -23,7 +23,7 @@
 Google merchandise store is an online platform that sells google-branded products. The Google Analytics platform (a web analytics tool that stores historical marketing data and tracks the customer's real-time status) shows that in December 2017 and April 2018, the sales performance reached the highest peak – $578,246 and $585,960. But after June 2018, the trend showed a considerable decline until the lowest point ($3,269 in November 2018). The significant decrease should be that the European Commission took a hard line on antitrust behaviour and fined Google €2.42 billion in June 2017 and €4.34 billion in July 2018, respectively (European Commission, 2017, 2018). The situation lasted for two years, and the revenue started to increase in December 2020, but the peak value was much lower than before. To help the Google merchandise store recreate its historical prospects, this report uses the google analytics platform to define customers' personas and provide feasible strategies to increase revenue.
 
 <p align = "center">
-  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/The_trend_of_revenue.png" width = 100%>
+  <image src="./Images/The_trend_of_revenue.png" width = 100%>
     </p>
 
 ### Dataset
@@ -44,7 +44,7 @@ The time range is the first quarter in 2022; the objective of comparison in the 
 Understanding consumers’ activities is the first step for web analysis. As figure 1 shows, total visitors represent visitors who have entered the website; potential conversions mean visitors are likely to shop for products. Most visitors leave the website without further exploration, which are bounded visits; the left visitors may add items to carts, but only 1 – 3 % of total visitors will pay for products. This small part can be counted as conversions.
 
 <p align = "center">
-  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/1.The_classification_of_web_users.png" width = 400>
+  <image src="./Images/1.The_classification_of_web_users.png" width = 400>
 </p>   
 
 ### Objectives and key results (OKRs)
@@ -58,7 +58,7 @@ Understanding consumers’ activities is the first step for web analysis. As fig
 Each OKR needs corresponding key performance indicators (KPIs). Table 1 shows what KPIs are measured and the definitions of KPIs.
 
  <p align = "center">
-   <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/2.OKRs_and_KPIs.png" width = 450>
+   <image src="./Images/2.OKRs_and_KPIs.png" width = 450>
  </p>
    
 ### Hypotheses
@@ -76,7 +76,7 @@ The first analysis depicts the current customer; a persona can form a coherent p
 Figure 2 below illustrates that the 18-24 and 25-34 groups use google merchandise store more, and the male uses the online store slightly more frequently than females. Men purchase more than women in the store violates the public consensus that women drive most of total purchasing (Nelson, 2020). It may be caused by the attraction of the Google brand for men. The first hypothesis should be changed because young men intend to purchase Google-branded products more. It is worth noting that the demographic data are only available for about half of the total users (the upper right corner of the graphs has annotated the number). 
 
 <p align = "center">
-  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/3.Country_distribution_for_users_and_revenue.png" width = 700>
+  <image src="./Images/3.Country_distribution_for_users_and_revenue.png" width = 700>
     </p>
 
 <a id = "ch4"></a>
@@ -84,7 +84,7 @@ Figure 2 below illustrates that the 18-24 and 25-34 groups use google merchandis
 The product performance reflects customers’ mindsets or insights (Charm, 2020). Table 3 below presents the six most famous products: hoodies, T-shirts, jackets, polo, and backpack. From the data, it is easy to see that 5/6 belongs to clothing and one in the backpack, and the price did not change a lot, but the quantity has added a lot. For example, the sales volumes of Google Black Cloud Zip Hoodie and Google Unisex Eco Tee Black products have over doubled compared to the same quarter last year, and there are two new items which did not come into markets in the first quarter of 2021 have become popular too, they are both jackets. The ranking of popular products shows that consumers may pursue practical fashion and brand satisfaction simultaneously and supports the second hypothesis.
 
 <p align = "center">
-  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/4.The_performance_of_products.png" width = 600>
+  <image src="./Images/4.The_performance_of_products.png" width = 600>
     </p>
 
 <a id = "ch5"></a>
@@ -92,10 +92,10 @@ The product performance reflects customers’ mindsets or insights (Charm, 2020)
 The pie charts in figure 3 below compare the number of users and revenue in different traffic channels. What stands out in the four charts is that direct channel dominates the media. Comparing users and revenue in 2021 and 2022 shows that the paid search method has increased and contributed to the total revenue. What is interesting about the data is that although display methods brought 7.6% of the actual users, this group has no purchase activities. It seems that Google has invested in paid search and display advertising. Unfortunately, display advertising did not convert this group of users into expected revenue. Figure 4 provides an overview of purchasing devices, and the desktop was the primary tool for users rather than mobile phones, as the fourth hypothesis mentioned. Table 4 lists the most active pages, except for the home page and basket page, the fourth and fifth dynamic pages are about men's products. This phenomenon corresponds to the high percentage of men in users. 
   
 <p align = "center">
-  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/5.The_distribution_of_traffic_channels_and_devices.png" width = 600>
+  <image src="./Images/5.The_distribution_of_traffic_channels_and_devices.png" width = 600>
     </p>
 <p align = "center">
-  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/6.The_ranking_of_active_pages.png" width = 600>
+  <image src="./Images/6.The_ranking_of_active_pages.png" width = 600>
     </p>
 
 <a id = "ch6"></a>
@@ -103,7 +103,7 @@ The pie charts in figure 3 below compare the number of users and revenue in diff
 Understanding users’ behaviour is the premise of optimising designs or workflow; in other words, user-centred design needs an in-depth understanding of users (Holtzblatt & Beyer, 2016). Pages/session and avg. session duration are two indicators of engagement; the two indicators show to what extent users are willing to explore the content on the website. As figure 5 shows, returning users will read more pages each session, spend more time, and have a lower bounce rate than new users. The results indicate that returning users engage in the Google merchandise store more actively than new users. Naturally, returning users contribute more to the revenue, have higher e-commerce conversion rates, and have higher average order value. 
   
 <p align = "center">
-  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/7.new_users_and_returning_users.png" width = 600>
+  <image src="./Images/7.new_users_and_returning_users.png" width = 600>
     </p>
    
 <a id = "ch7"></a>
@@ -111,7 +111,7 @@ Understanding users’ behaviour is the premise of optimising designs or workflo
 A funnel diagram helps structure purchasing processes and discover where potential customers are missed (Ball, 2018; Morgan & Chavez, 2021). From this data on the chart, it can be seen that the most significant loss (red bar) happened during the conversion from cart to billing and shipping; only 35.07% of visitors came into the next steps. 18.13% of total visitors complete purchasing process. It is worth considering visitors’ experience when they add products to their carts and what factors cause some to give up purchasing. As long as the journey is guaranteed to be complete, Google merchandise store can achieve its revenue increase goal.
   
 <p align = "center">
-  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/8.The_funnel_visualisation_of_online_payment_activities.png" width = 700>
+  <image src="./Images/8.The_funnel_visualisation_of_online_payment_activities.png" width = 700>
     </p>
 
 <a id = "ch8"></a>
@@ -139,7 +139,7 @@ This report began by identifying the aim of increasing revenue for the Google me
 
   
 <p align = "center">
-  <image src="https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Revenue%20increase%20strategy%20analysis%20for%20Google%20merchandise%20store%20(BI)/Images/Google_Data_Studio.png" width = 500>
+  <image src="./Images/Google_Data_Studio.png" width = 500>
     </p>
 
 <a id = "ch90"></a>
