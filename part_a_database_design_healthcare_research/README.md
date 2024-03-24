@@ -68,7 +68,7 @@ As the mindmap shows, clinical data comes from NHS and genetic data comes from g
   </p>
 
 ### Step 3: Import SQL into MySQL
-I use drawSQL to generate [SQL queries](https://github.com/xiangivyli/Data-Science-Porfolio/blob/main/Data%20Platform%20Design%20for%20Healthcare%20Research%20(Database)/dataplatform_for_healthcare_research.sql), and then use MySQL to run it.
+I use drawSQL to generate [SQL queries](https://github.com/xiangivyli/data-science-portfolio/blob/main/part_a_database_design_healthcare_research/dataplatform_for_healthcare_research.sql), and then use MySQL to run it.
 
 <a id = "ch3"></a>
 ## Chapter 3 Data Privacy and Security
