@@ -37,8 +37,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   job_posting_linkedin:
-    # Applies to all files under models/example/
     staging:
-      materialized:view
+      materialized='view'
     marts:
-      materialized:table
+      materialized='table'
