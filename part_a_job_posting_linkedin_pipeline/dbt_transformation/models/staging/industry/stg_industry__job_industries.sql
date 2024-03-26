@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('staging_skills', 'job_skills') }}
+    select * from {{ source('industry', 'job_industries') }}
 
 ),
 
@@ -10,7 +10,7 @@ renamed as (
 
     select
         job_id,
-        skill_abr
+        industry_id
 
     from source
 

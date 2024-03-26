@@ -2,25 +2,25 @@
 version: 2
 
 sources:
-  - name: staging_company_info
+  - name: company_info
     database: cedar-style-412618
-    schema: job_posting_linkedin
+    schema: job_postings_linkedin
 
     tables:
        - name: companies
-       - name: employee_count
+       - name: employee
        
 
-  - name: staging_industry
+  - name: industry
     database: cedar-style-412618
-    schema: job_posting_linkedin 
+    schema: job_postings_linkedin 
      
     tables:
        - name: job_industries
 
-  - name: staging_skills
+  - name: skills
     database: cedar-style-412618
-    schema: job_posting_linkedin 
+    schema: job_postings_linkedin 
      
     tables:
        - name: job_skills

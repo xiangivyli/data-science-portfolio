@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('staging_company_info', 'employee_count') }}
+    select * from {{ source('company_info', 'employee') }}
 
 ),
 
@@ -12,7 +12,7 @@ renamed as (
         company_id,
         employee_count,
         follower_count,
-        time_recorded
+        time_recorded,
         ROW_NUMBER() OVER (PARTITION BY company_id ORDER BY time_recorded DESC) as rank
     from source
 
@@ -20,4 +20,4 @@ renamed as (
 
 select * 
 from renamed
-where rank = 1;
+where rank = 1
