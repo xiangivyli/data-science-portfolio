@@ -1,8 +1,3 @@
-{{
-    config(
-        materialized='view'
-    )
-}}
 
 with company as (
     select *
@@ -14,9 +9,11 @@ employee as (
     from {{ ref('stg_company_info__employee_count') }}
 )
 
-
-
-select * from companies
+select company.*,
+        employee.employee_count,
+        employee.follower_count
+from company
 left join employee
 on company.company_id = employee.company_id
+
 
