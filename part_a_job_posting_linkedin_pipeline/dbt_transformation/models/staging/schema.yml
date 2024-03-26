@@ -24,6 +24,13 @@ sources:
      
     tables:
        - name: job_skills
+
+  - name: fact
+    database: cedar-style-412618
+    schema: job_postings_linkedin 
+     
+    tables:
+       - name: job_postings
     
 
 
