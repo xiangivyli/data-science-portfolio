@@ -1,30 +1,34 @@
 import pyspark
 from pyspark.sql import SparkSession
-from pyspark.sql.types import StructType, StructField, IntegerType, FloatType, StringType, TimestampType, DoubleType, LongType
-from pyspark.sql.functions import col, from_unixtime, floor
-
 from pyspark.conf import SparkConf
 from pyspark.context import SparkContext
+
+from pyspark.sql.types import StructType, StructField, IntegerType, FloatType, StringType, TimestampType, DoubleType, LongType
+from pyspark.sql.functions import col, from_unixtime, floor
 
 def repartition_parquet_convert(input_path, output_path):
     """
     Read a CSV file from `input_path`, repartition then convert it to parquet file, and store it in GCS
     """
-    credentials_location = './gcp/airflow-gcp-bigquery.json'
+    credentials_location = '/home/xiangivyli/.gc/google_credential_spark.json'
 
 
-    # Configure the connection to gcs
+    # First, stop the existing Spark session if it's running
+    if 'spark' in locals():
+        spark.stop()
+    
+    
     conf = SparkConf() \
         .setMaster('local[*]') \
-        .setAppName('RepartitionParquetApp') \
-        .set("spark.jars", "./lib/gcs-connector-hadoop3-2.2.5.jar") \
+        .setAppName('RepartitionApp') \
+        .set("spark.jars", "/home/xiangivyli/lib/gcs-connector-hadoop3-2.2.5.jar") \
         .set("spark.hadoop.google.cloud.auth.service.account.enable", "true") \
         .set("spark.hadoop.google.cloud.auth.service.account.json.keyfile", credentials_location)
 
     sc = SparkContext(conf=conf)
-
+    
     hadoop_conf = sc._jsc.hadoopConfiguration()
-
+    
     hadoop_conf.set("fs.AbstractFileSystem.gs.impl",  "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS")
     hadoop_conf.set("fs.gs.impl", "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem")
     hadoop_conf.set("fs.gs.auth.service.account.json.keyfile", credentials_location)
@@ -34,7 +38,6 @@ def repartition_parquet_convert(input_path, output_path):
     # Create or get a Spark session
     spark = SparkSession.builder \
         .config(conf=sc.getConf()) \
-        .config("spark.sql.parquet.int96RebaseModeInWrite", "LEGACY") \
         .getOrCreate()
 
     # Repartition and save it to parquet file in gcs
@@ -68,14 +71,14 @@ def repartition_parquet_convert(input_path, output_path):
         StructField("currency", StringType(), True),
         StructField("compensation_type", StringType(), True),
         StructField("scraped", IntegerType(), True)
-])
+    ])
     # 2. read the dataset from the given path
     df_posting = spark.read \
-    .option("header", "true") \
-    .option("escape", "\"") \
-    .option("multiline", "true") \
-    .schema(job_postings_schema) \
-    .csv(input_path)
+        .option("header", "true") \
+        .option("escape", "\"") \
+        .option("multiline", "true") \
+        .schema(job_postings_schema) \
+        .csv(input_path)
 
      # 3. Define a list of your timestamp columns
     timestamp_columns = ["original_listed_time", "expiry", "closed_time", "listed_time"]
@@ -87,15 +90,15 @@ def repartition_parquet_convert(input_path, output_path):
             column_name,
             (col(column_name) / 1000).cast("timestamp"))
         
-    df_posting = df_posting.repartition(10).write.parquet(output_path, mode="overwrite")
+    df_posting.repartition(10).write.parquet(output_path, mode="overwrite")
     
     # Stop the Spark session
     spark.stop()
 
 
 if __name__ == "__main__":
-    input_dataset_path = "gs://de-zoomcamp-xiangivyli/final_project/raw/job_postings.csv"
-    output_dataset_path = "gs://de-zoomcamp-xiangivyli/final_project/pq-linkedin-job-postings/job_posting_pq/"
+    input_dataset_path ="gs://de-zoomcamp-xiangivyli/final_project/raw/job_postings.csv"
+    output_dataset_path = "gs://de-zoomcamp-xiangivyli/final_project/test/job_posting_pq/"
 
 
     repartition_parquet_convert(input_dataset_path, output_dataset_path)
