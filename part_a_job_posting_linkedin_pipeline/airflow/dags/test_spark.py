@@ -1,8 +1,7 @@
 from airflow import DAG
-from airflow.operators.bash import BashOperator
+from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from datetime import datetime
-import glob
-from pathlib import Path
+
 
 # Define your DAG
 with DAG(
@@ -12,11 +11,17 @@ with DAG(
     catchup=False,
     tags=['test'],
 ) as dag:
-
+    
     # Define the Spark job submission task
-    submit_job = BashOperator(
+    submit_job=SparkSubmitOperator(
         task_id='submit_job',
-        bash_command="python /home/xiangivyli/data-science-portfolio/part_a_job_posting_linkedin_pipeline/airflow/include/pyspark_script.py",
-        dag=dag,
-        env={'PATH': '/bin:/usr/bin:/usr/local/bin'}
+        application='/usr/local/airflow/include/test_spark_local.py',
+        conn_id='spark_default',
+        total_executor_cores='1',
+        executor_cores='1',
+        executor_memory='2g',
+        num_executors='1',
+        driver_memory='2g',
+        verbose=False,
+        env_vars={'PATH': '/bin:/usr/bin:/usr/local/bin'}
     )

@@ -10,7 +10,7 @@ def repartition_parquet_convert(input_path, output_path):
     """
     Read a CSV file from `input_path`, repartition then convert it to parquet file, and store it in GCS
     """
-    credentials_location = '/home/xiangivyli/.gc/google_credential_spark.json'
+    credentials_location = '/usr/local/airflow/include/.gc/airflow-gcp-bigquery.json'
 
 
     # First, stop the existing Spark session if it's running
@@ -21,7 +21,7 @@ def repartition_parquet_convert(input_path, output_path):
     conf = SparkConf() \
         .setMaster('local[*]') \
         .setAppName('RepartitionApp') \
-        .set("spark.jars", "/home/xiangivyli/lib/gcs-connector-hadoop3-2.2.5.jar") \
+        .set("spark.jars", "/usr/local/airflow/include/lib/gcs-connector-hadoop3-2.2.5.jar") \
         .set("spark.hadoop.google.cloud.auth.service.account.enable", "true") \
         .set("spark.hadoop.google.cloud.auth.service.account.json.keyfile", credentials_location)
 
