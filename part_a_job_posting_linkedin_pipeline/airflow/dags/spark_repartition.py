@@ -2,9 +2,11 @@ from airflow import DAG
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from datetime import datetime
 
-with DAG('sppark_submit_job',
+with DAG('spark_submit_job',
         start_date=datetime(2024, 3, 29),
-        schedule_interval='@daily') as dag:
+        schedule=None,
+        catchup=False,
+        tags=['step2_csv_to__partitioned_parquet_gcs']) as dag:
     
     submit_job = SparkSubmitOperator(
         task_id='submit_job',
