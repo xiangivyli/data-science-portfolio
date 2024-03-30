@@ -7,11 +7,11 @@ from pathlib import Path
 
 # Define your DAG
 with DAG(
-    'csv_to_gcs',
-    start_date=datetime(2024, 3, 29),
+    'data_raw_parquet_gcs',
+    start_date=datetime(2024, 3, 30),
     schedule_interval=None,
     catchup=False,
-    tags=['step1_csv_to_gcs'],
+    tags=['parquet_gcs'],
 ) as dag:
 
     # List all CSV files
