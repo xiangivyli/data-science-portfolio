@@ -9881,3 +9881,10 @@ SyntaxError: invalid syntax
 [2024-03-31T19:10:16.230+0000] {logging_mixin.py:188} INFO - [2024-03-31T19:10:16.229+0000] {dag.py:3047} INFO - Sync 1 DAGs
 [2024-03-31T19:10:16.255+0000] {logging_mixin.py:188} INFO - [2024-03-31T19:10:16.254+0000] {dag.py:3834} INFO - Setting next_dagrun for data_parquet_gcs to None, run_after=None
 [2024-03-31T19:10:16.284+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/dataset_prepare_gcs.py took 0.143 seconds
+[2024-03-31T19:10:46.438+0000] {processor.py:161} INFO - Started process (PID=632) to work on /usr/local/airflow/dags/dataset_prepare_gcs.py
+[2024-03-31T19:10:46.441+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/dataset_prepare_gcs.py for tasks to queue
+[2024-03-31T19:10:46.444+0000] {logging_mixin.py:188} INFO - [2024-03-31T19:10:46.444+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/dataset_prepare_gcs.py
+[2024-03-31T19:10:46.456+0000] {processor.py:840} INFO - DAG(s) 'data_parquet_gcs' retrieved from /usr/local/airflow/dags/dataset_prepare_gcs.py
+[2024-03-31T19:10:46.491+0000] {logging_mixin.py:188} INFO - [2024-03-31T19:10:46.490+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-31T19:10:46.508+0000] {logging_mixin.py:188} INFO - [2024-03-31T19:10:46.508+0000] {dag.py:3834} INFO - Setting next_dagrun for data_parquet_gcs to None, run_after=None
+[2024-03-31T19:10:46.532+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/dataset_prepare_gcs.py took 0.099 seconds
