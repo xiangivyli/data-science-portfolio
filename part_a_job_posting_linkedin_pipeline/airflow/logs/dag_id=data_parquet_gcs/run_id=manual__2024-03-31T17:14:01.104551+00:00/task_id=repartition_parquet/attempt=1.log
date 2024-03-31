@@ -1,0 +1,2084 @@
+[2024-03-31T17:14:02.484+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_parquet_gcs.repartition_parquet manual__2024-03-31T17:14:01.104551+00:00 [queued]>
+[2024-03-31T17:14:02.496+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_parquet_gcs.repartition_parquet manual__2024-03-31T17:14:01.104551+00:00 [queued]>
+[2024-03-31T17:14:02.496+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-31T17:14:02.513+0000] {taskinstance.py:2217} INFO - Executing <Task(SparkSubmitOperator): repartition_parquet> on 2024-03-31 17:14:01.104551+00:00
+[2024-03-31T17:14:02.522+0000] {standard_task_runner.py:60} INFO - Started process 182 to run task
+[2024-03-31T17:14:02.530+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'data_parquet_gcs', 'repartition_parquet', 'manual__2024-03-31T17:14:01.104551+00:00', '--job-id', '80', '--raw', '--subdir', 'DAGS_FOLDER/dataset_prepare_gcs.py', '--cfg-path', '/tmp/tmp46s9cyaw']
+[2024-03-31T17:14:02.535+0000] {standard_task_runner.py:88} INFO - Job 80: Subtask repartition_parquet
+[2024-03-31T17:14:02.627+0000] {task_command.py:423} INFO - Running <TaskInstance: data_parquet_gcs.repartition_parquet manual__2024-03-31T17:14:01.104551+00:00 [running]> on host d1dbed01df62
+[2024-03-31T17:14:02.782+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='data_parquet_gcs' AIRFLOW_CTX_TASK_ID='repartition_parquet' AIRFLOW_CTX_EXECUTION_DATE='2024-03-31T17:14:01.104551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-31T17:14:01.104551+00:00'
+[2024-03-31T17:14:02.825+0000] {base.py:83} INFO - Using connection ID 'spark_default' for task execution.
+[2024-03-31T17:14:02.827+0000] {spark_submit.py:340} INFO - Spark-Submit cmd: spark-submit --master spark://master:4503 --num-executors 1 --total-executor-cores 1 --executor-memory 2g --driver-memory 2g --name arrow-spark /usr/local/airflow/include/spark_repartition_parquet.py
+[2024-03-31T17:14:07.434+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO SparkContext: Running Spark version 3.5.1
+[2024-03-31T17:14:07.439+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO SparkContext: OS info Linux, 5.15.0-1053-gcp, amd64
+[2024-03-31T17:14:07.440+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO SparkContext: Java version 11.0.22
+[2024-03-31T17:14:07.558+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-03-31T17:14:07.749+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO ResourceUtils: ==============================================================
+[2024-03-31T17:14:07.751+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2024-03-31T17:14:07.752+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO ResourceUtils: ==============================================================
+[2024-03-31T17:14:07.754+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO SparkContext: Submitted application: repartition_spark
+[2024-03-31T17:14:07.801+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2024-03-31T17:14:07.822+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO ResourceProfile: Limiting resource is cpu
+[2024-03-31T17:14:07.824+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2024-03-31T17:14:07.930+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO SecurityManager: Changing view acls to: astro
+[2024-03-31T17:14:07.932+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO SecurityManager: Changing modify acls to: astro
+[2024-03-31T17:14:07.934+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO SecurityManager: Changing view acls groups to:
+[2024-03-31T17:14:07.935+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO SecurityManager: Changing modify acls groups to:
+[2024-03-31T17:14:07.936+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: astro; groups with view permissions: EMPTY; users with modify permissions: astro; groups with modify permissions: EMPTY
+[2024-03-31T17:14:08.440+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:08 INFO Utils: Successfully started service 'sparkDriver' on port 42035.
+[2024-03-31T17:14:08.480+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:08 INFO SparkEnv: Registering MapOutputTracker
+[2024-03-31T17:14:08.532+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:08 INFO SparkEnv: Registering BlockManagerMaster
+[2024-03-31T17:14:08.558+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:08 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2024-03-31T17:14:08.560+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:08 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2024-03-31T17:14:08.566+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:08 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2024-03-31T17:14:08.609+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:08 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-24da089f-6d51-47c0-86ff-ca0fdfe03cd6
+[2024-03-31T17:14:08.630+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:08 INFO MemoryStore: MemoryStore started with capacity 1048.8 MiB
+[2024-03-31T17:14:08.657+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:08 INFO SparkEnv: Registering OutputCommitCoordinator
+[2024-03-31T17:14:08.902+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:08 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2024-03-31T17:14:08.992+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:08 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2024-03-31T17:14:09.192+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:09 INFO Executor: Starting executor ID driver on host d1dbed01df62
+[2024-03-31T17:14:09.194+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:09 INFO Executor: OS info Linux, 5.15.0-1053-gcp, amd64
+[2024-03-31T17:14:09.195+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:09 INFO Executor: Java version 11.0.22
+[2024-03-31T17:14:09.207+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:09 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2024-03-31T17:14:09.208+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:09 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@3e96ae66 for default.
+[2024-03-31T17:14:09.251+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:09 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34421.
+[2024-03-31T17:14:09.252+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:09 INFO NettyBlockTransferService: Server created on d1dbed01df62:34421
+[2024-03-31T17:14:09.256+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:09 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2024-03-31T17:14:09.266+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, d1dbed01df62, 34421, None)
+[2024-03-31T17:14:09.272+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:09 INFO BlockManagerMasterEndpoint: Registering block manager d1dbed01df62:34421 with 1048.8 MiB RAM, BlockManagerId(driver, d1dbed01df62, 34421, None)
+[2024-03-31T17:14:09.276+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, d1dbed01df62, 34421, None)
+[2024-03-31T17:14:09.279+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:09 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, d1dbed01df62, 34421, None)
+[2024-03-31T17:14:10.039+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:10 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2024-03-31T17:14:10.053+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:10 INFO SharedState: Warehouse path is 'file:/usr/local/airflow/spark-warehouse'.
+[2024-03-31T17:14:11.683+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:11 INFO InMemoryFileIndex: It took 66 ms to list leaf files for 1 paths.
+[2024-03-31T17:14:14.042+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:14 INFO FileSourceStrategy: Pushed Filters:
+[2024-03-31T17:14:14.069+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:14 INFO FileSourceStrategy: Post-Scan Filters:
+[2024-03-31T17:14:14.224+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:14 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[2024-03-31T17:14:15.361+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:15 INFO CodeGenerator: Code generated in 520.050634 ms
+[2024-03-31T17:14:15.447+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:15 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 200.1 KiB, free 1048.6 MiB)
+[2024-03-31T17:14:15.566+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:15 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 1048.6 MiB)
+[2024-03-31T17:14:15.572+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:15 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on d1dbed01df62:34421 (size: 34.4 KiB, free: 1048.8 MiB)
+[2024-03-31T17:14:15.580+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:15 INFO SparkContext: Created broadcast 0 from parquet at NativeMethodAccessorImpl.java:0
+[2024-03-31T17:14:15.624+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:15 INFO FileSourceScanExec: Planning scan with bin packing, max size: 34759886 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-03-31T17:14:15.813+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:15 INFO DAGScheduler: Registering RDD 4 (parquet at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+[2024-03-31T17:14:15.828+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:15 INFO DAGScheduler: Got map stage job 0 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-03-31T17:14:15.829+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:15 INFO DAGScheduler: Final stage: ShuffleMapStage 0 (parquet at NativeMethodAccessorImpl.java:0)
+[2024-03-31T17:14:15.830+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:15 INFO DAGScheduler: Parents of final stage: List()
+[2024-03-31T17:14:15.835+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:15 INFO DAGScheduler: Missing parents: List()
+[2024-03-31T17:14:15.843+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:15 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[4] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-03-31T17:14:16.125+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:16 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 34.0 KiB, free 1048.5 MiB)
+[2024-03-31T17:14:16.129+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:16 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 13.3 KiB, free 1048.5 MiB)
+[2024-03-31T17:14:16.131+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:16 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on d1dbed01df62:34421 (size: 13.3 KiB, free: 1048.8 MiB)
+[2024-03-31T17:14:16.132+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:16 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+[2024-03-31T17:14:16.154+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:16 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[4] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-03-31T17:14:16.156+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:16 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+[2024-03-31T17:14:16.234+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:16 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (d1dbed01df62, executor driver, partition 0, PROCESS_LOCAL, 8229 bytes)
+[2024-03-31T17:14:16.263+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:16 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+[2024-03-31T17:14:16.666+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:16 INFO CodeGenerator: Code generated in 114.639054 ms
+[2024-03-31T17:14:16.702+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:16 INFO FileScanRDD: Reading File path: file:///usr/local/airflow/include/dataset/raw/job_postings.csv, range: 0-134845243, partition values: [empty row]
+[2024-03-31T17:14:16.812+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:16 INFO CodeGenerator: Code generated in 62.075493 ms
+[2024-03-31T17:14:22.849+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:22 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1882 bytes result sent to driver
+[2024-03-31T17:14:22.866+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:22 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 6648 ms on d1dbed01df62 (executor driver) (1/1)
+[2024-03-31T17:14:22.873+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:22 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2024-03-31T17:14:22.893+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:22 INFO DAGScheduler: ShuffleMapStage 0 (parquet at NativeMethodAccessorImpl.java:0) finished in 7.027 s
+[2024-03-31T17:14:22.894+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:22 INFO DAGScheduler: looking for newly runnable stages
+[2024-03-31T17:14:22.896+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:22 INFO DAGScheduler: running: Set()
+[2024-03-31T17:14:22.897+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:22 INFO DAGScheduler: waiting: Set()
+[2024-03-31T17:14:22.898+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:22 INFO DAGScheduler: failed: Set()
+[2024-03-31T17:14:23.041+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ParquetUtils: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:23.078+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:23.078+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:23.080+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:23.081+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:23.081+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:23.083+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:23.134+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+[2024-03-31T17:14:23.139+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO DAGScheduler: Got job 1 (parquet at NativeMethodAccessorImpl.java:0) with 10 output partitions
+[2024-03-31T17:14:23.140+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO DAGScheduler: Final stage: ResultStage 2 (parquet at NativeMethodAccessorImpl.java:0)
+[2024-03-31T17:14:23.140+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+[2024-03-31T17:14:23.142+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO DAGScheduler: Missing parents: List()
+[2024-03-31T17:14:23.147+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[6] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-03-31T17:14:23.229+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 214.0 KiB, free 1048.3 MiB)
+[2024-03-31T17:14:23.232+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 76.7 KiB, free 1048.2 MiB)
+[2024-03-31T17:14:23.234+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on d1dbed01df62:34421 (size: 76.7 KiB, free: 1048.7 MiB)
+[2024-03-31T17:14:23.236+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1585
+[2024-03-31T17:14:23.239+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO DAGScheduler: Submitting 10 missing tasks from ResultStage 2 (MapPartitionsRDD[6] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+[2024-03-31T17:14:23.240+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO TaskSchedulerImpl: Adding task set 2.0 with 10 tasks resource profile 0
+[2024-03-31T17:14:23.249+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 1) (d1dbed01df62, executor driver, partition 0, NODE_LOCAL, 7615 bytes)
+[2024-03-31T17:14:23.250+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 2) (d1dbed01df62, executor driver, partition 1, NODE_LOCAL, 7615 bytes)
+[2024-03-31T17:14:23.251+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO TaskSetManager: Starting task 2.0 in stage 2.0 (TID 3) (d1dbed01df62, executor driver, partition 2, NODE_LOCAL, 7615 bytes)
+[2024-03-31T17:14:23.252+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO TaskSetManager: Starting task 3.0 in stage 2.0 (TID 4) (d1dbed01df62, executor driver, partition 3, NODE_LOCAL, 7615 bytes)
+[2024-03-31T17:14:23.255+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO Executor: Running task 0.0 in stage 2.0 (TID 1)
+[2024-03-31T17:14:23.281+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO Executor: Running task 1.0 in stage 2.0 (TID 2)
+[2024-03-31T17:14:23.285+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO Executor: Running task 3.0 in stage 2.0 (TID 4)
+[2024-03-31T17:14:23.292+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO Executor: Running task 2.0 in stage 2.0 (TID 3)
+[2024-03-31T17:14:23.570+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO BlockManagerInfo: Removed broadcast_1_piece0 on d1dbed01df62:34421 in memory (size: 13.3 KiB, free: 1048.7 MiB)
+[2024-03-31T17:14:23.584+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ShuffleBlockFetcherIterator: Getting 1 (8.6 MiB) non-empty blocks including 1 (8.6 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2024-03-31T17:14:23.584+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ShuffleBlockFetcherIterator: Getting 1 (8.6 MiB) non-empty blocks including 1 (8.6 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2024-03-31T17:14:23.585+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 15 ms
+[2024-03-31T17:14:23.585+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 15 ms
+[2024-03-31T17:14:23.588+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ShuffleBlockFetcherIterator: Getting 1 (7.8 MiB) non-empty blocks including 1 (7.8 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2024-03-31T17:14:23.589+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 25 ms
+[2024-03-31T17:14:23.591+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ShuffleBlockFetcherIterator: Getting 1 (8.6 MiB) non-empty blocks including 1 (8.6 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2024-03-31T17:14:23.591+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 22 ms
+[2024-03-31T17:14:23.595+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:23.595+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:23.596+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:23.597+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:23.597+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:23.600+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:23.600+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:23.606+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:23.607+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:23.607+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:23.607+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:23.607+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:23.608+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:23.608+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:23.608+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:23.608+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:23.609+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:23.609+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:23.609+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:23.609+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:23.610+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:23.610+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:23.610+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:23.610+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:23.621+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:23.622+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:23.623+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:23.623+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:23.625+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:23.626+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:23.627+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:23.627+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:23.667+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ParquetOutputFormat: ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+[2024-03-31T17:14:23.668+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ParquetOutputFormat: ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+[2024-03-31T17:14:23.672+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ParquetOutputFormat: ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+[2024-03-31T17:14:23.674+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ParquetOutputFormat: ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+[2024-03-31T17:14:23.727+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+[2024-03-31T17:14:23.728+0000] {spark_submit.py:491} INFO - {
+[2024-03-31T17:14:23.728+0000] {spark_submit.py:491} INFO - "type" : "struct",
+[2024-03-31T17:14:23.728+0000] {spark_submit.py:491} INFO - "fields" : [ {
+[2024-03-31T17:14:23.728+0000] {spark_submit.py:491} INFO - "name" : "job_id",
+[2024-03-31T17:14:23.729+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.729+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.729+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.729+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.730+0000] {spark_submit.py:491} INFO - "name" : "company_id",
+[2024-03-31T17:14:23.730+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.730+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.730+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.731+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.731+0000] {spark_submit.py:491} INFO - "name" : "title",
+[2024-03-31T17:14:23.731+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.731+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.732+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.732+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.732+0000] {spark_submit.py:491} INFO - "name" : "description",
+[2024-03-31T17:14:23.732+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.733+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.733+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.733+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.733+0000] {spark_submit.py:491} INFO - "name" : "max_salary",
+[2024-03-31T17:14:23.733+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:23.734+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.734+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.734+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.734+0000] {spark_submit.py:491} INFO - "name" : "med_salary",
+[2024-03-31T17:14:23.735+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:23.735+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.735+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.735+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.735+0000] {spark_submit.py:491} INFO - "name" : "min_salary",
+[2024-03-31T17:14:23.736+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:23.736+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.736+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.736+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.736+0000] {spark_submit.py:491} INFO - "name" : "pay_period",
+[2024-03-31T17:14:23.737+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.737+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.737+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.737+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.738+0000] {spark_submit.py:491} INFO - "name" : "formatted_work_type",
+[2024-03-31T17:14:23.738+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.738+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.738+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.738+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.739+0000] {spark_submit.py:491} INFO - "name" : "location",
+[2024-03-31T17:14:23.739+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.739+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.739+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.739+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.740+0000] {spark_submit.py:491} INFO - "name" : "applies",
+[2024-03-31T17:14:23.740+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.740+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.740+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.740+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.741+0000] {spark_submit.py:491} INFO - "name" : "original_listed_time",
+[2024-03-31T17:14:23.741+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.741+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.742+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.743+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.743+0000] {spark_submit.py:491} INFO - "name" : "remote_allowed",
+[2024-03-31T17:14:23.743+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.743+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.744+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.744+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.744+0000] {spark_submit.py:491} INFO - "name" : "views",
+[2024-03-31T17:14:23.744+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.745+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.745+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.745+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.746+0000] {spark_submit.py:491} INFO - "name" : "job_posting_url",
+[2024-03-31T17:14:23.746+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.746+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.746+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.747+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.747+0000] {spark_submit.py:491} INFO - "name" : "application_url",
+[2024-03-31T17:14:23.747+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.747+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.747+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.748+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.748+0000] {spark_submit.py:491} INFO - "name" : "application_type",
+[2024-03-31T17:14:23.748+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.748+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.748+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.748+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.749+0000] {spark_submit.py:491} INFO - "name" : "expiry",
+[2024-03-31T17:14:23.749+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.749+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.749+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.749+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.749+0000] {spark_submit.py:491} INFO - "name" : "closed_time",
+[2024-03-31T17:14:23.749+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.750+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.750+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.750+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.751+0000] {spark_submit.py:491} INFO - "name" : "formatted_experience_level",
+[2024-03-31T17:14:23.751+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.751+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.751+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.752+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.752+0000] {spark_submit.py:491} INFO - "name" : "skills_desc",
+[2024-03-31T17:14:23.752+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.752+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.752+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.753+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.753+0000] {spark_submit.py:491} INFO - "name" : "listed_time",
+[2024-03-31T17:14:23.753+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.753+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.753+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.754+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.754+0000] {spark_submit.py:491} INFO - "name" : "posting_domain",
+[2024-03-31T17:14:23.754+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.754+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.754+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.755+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.755+0000] {spark_submit.py:491} INFO - "name" : "sponsored",
+[2024-03-31T17:14:23.755+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.755+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.755+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.756+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.756+0000] {spark_submit.py:491} INFO - "name" : "work_type",
+[2024-03-31T17:14:23.756+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.756+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.757+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.757+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.757+0000] {spark_submit.py:491} INFO - "name" : "currency",
+[2024-03-31T17:14:23.757+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.757+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.757+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.757+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.758+0000] {spark_submit.py:491} INFO - "name" : "compensation_type",
+[2024-03-31T17:14:23.758+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.758+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.758+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.759+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.759+0000] {spark_submit.py:491} INFO - "name" : "scraped",
+[2024-03-31T17:14:23.759+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.759+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.759+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.760+0000] {spark_submit.py:491} INFO - } ]
+[2024-03-31T17:14:23.760+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:23.760+0000] {spark_submit.py:491} INFO - and corresponding Parquet message type:
+[2024-03-31T17:14:23.760+0000] {spark_submit.py:491} INFO - message spark_schema {
+[2024-03-31T17:14:23.760+0000] {spark_submit.py:491} INFO - optional binary job_id (STRING);
+[2024-03-31T17:14:23.760+0000] {spark_submit.py:491} INFO - optional binary company_id (STRING);
+[2024-03-31T17:14:23.760+0000] {spark_submit.py:491} INFO - optional binary title (STRING);
+[2024-03-31T17:14:23.760+0000] {spark_submit.py:491} INFO - optional binary description (STRING);
+[2024-03-31T17:14:23.761+0000] {spark_submit.py:491} INFO - optional float max_salary;
+[2024-03-31T17:14:23.761+0000] {spark_submit.py:491} INFO - optional float med_salary;
+[2024-03-31T17:14:23.761+0000] {spark_submit.py:491} INFO - optional float min_salary;
+[2024-03-31T17:14:23.761+0000] {spark_submit.py:491} INFO - optional binary pay_period (STRING);
+[2024-03-31T17:14:23.761+0000] {spark_submit.py:491} INFO - optional binary formatted_work_type (STRING);
+[2024-03-31T17:14:23.761+0000] {spark_submit.py:491} INFO - optional binary location (STRING);
+[2024-03-31T17:14:23.761+0000] {spark_submit.py:491} INFO - optional int32 applies;
+[2024-03-31T17:14:23.761+0000] {spark_submit.py:491} INFO - optional int96 original_listed_time;
+[2024-03-31T17:14:23.761+0000] {spark_submit.py:491} INFO - optional binary remote_allowed (STRING);
+[2024-03-31T17:14:23.762+0000] {spark_submit.py:491} INFO - optional int32 views;
+[2024-03-31T17:14:23.762+0000] {spark_submit.py:491} INFO - optional binary job_posting_url (STRING);
+[2024-03-31T17:14:23.762+0000] {spark_submit.py:491} INFO - optional binary application_url (STRING);
+[2024-03-31T17:14:23.762+0000] {spark_submit.py:491} INFO - optional binary application_type (STRING);
+[2024-03-31T17:14:23.762+0000] {spark_submit.py:491} INFO - optional int96 expiry;
+[2024-03-31T17:14:23.762+0000] {spark_submit.py:491} INFO - optional int96 closed_time;
+[2024-03-31T17:14:23.762+0000] {spark_submit.py:491} INFO - optional binary formatted_experience_level (STRING);
+[2024-03-31T17:14:23.762+0000] {spark_submit.py:491} INFO - optional binary skills_desc (STRING);
+[2024-03-31T17:14:23.763+0000] {spark_submit.py:491} INFO - optional int96 listed_time;
+[2024-03-31T17:14:23.763+0000] {spark_submit.py:491} INFO - optional binary posting_domain (STRING);
+[2024-03-31T17:14:23.763+0000] {spark_submit.py:491} INFO - optional int32 sponsored;
+[2024-03-31T17:14:23.763+0000] {spark_submit.py:491} INFO - optional binary work_type (STRING);
+[2024-03-31T17:14:23.763+0000] {spark_submit.py:491} INFO - optional binary currency (STRING);
+[2024-03-31T17:14:23.763+0000] {spark_submit.py:491} INFO - optional binary compensation_type (STRING);
+[2024-03-31T17:14:23.763+0000] {spark_submit.py:491} INFO - optional int32 scraped;
+[2024-03-31T17:14:23.764+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:23.764+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:23.764+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:23.764+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+[2024-03-31T17:14:23.765+0000] {spark_submit.py:491} INFO - {
+[2024-03-31T17:14:23.765+0000] {spark_submit.py:491} INFO - "type" : "struct",
+[2024-03-31T17:14:23.765+0000] {spark_submit.py:491} INFO - "fields" : [ {
+[2024-03-31T17:14:23.766+0000] {spark_submit.py:491} INFO - "name" : "job_id",
+[2024-03-31T17:14:23.766+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.766+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.766+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.766+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.767+0000] {spark_submit.py:491} INFO - "name" : "company_id",
+[2024-03-31T17:14:23.767+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.767+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.767+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.768+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.768+0000] {spark_submit.py:491} INFO - "name" : "title",
+[2024-03-31T17:14:23.768+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.776+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.776+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.776+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.777+0000] {spark_submit.py:491} INFO - "name" : "description",
+[2024-03-31T17:14:23.777+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.777+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.777+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.777+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.778+0000] {spark_submit.py:491} INFO - "name" : "max_salary",
+[2024-03-31T17:14:23.778+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:23.778+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.778+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.778+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.778+0000] {spark_submit.py:491} INFO - "name" : "med_salary",
+[2024-03-31T17:14:23.778+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:23.779+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.779+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.779+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.781+0000] {spark_submit.py:491} INFO - "name" : "min_salary",
+[2024-03-31T17:14:23.781+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:23.782+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.782+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.783+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.783+0000] {spark_submit.py:491} INFO - "name" : "pay_period",
+[2024-03-31T17:14:23.783+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.784+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.784+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.785+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.785+0000] {spark_submit.py:491} INFO - "name" : "formatted_work_type",
+[2024-03-31T17:14:23.785+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.786+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.786+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.786+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.786+0000] {spark_submit.py:491} INFO - "name" : "location",
+[2024-03-31T17:14:23.787+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.787+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.787+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.787+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.788+0000] {spark_submit.py:491} INFO - "name" : "applies",
+[2024-03-31T17:14:23.788+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.788+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.789+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.789+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.789+0000] {spark_submit.py:491} INFO - "name" : "original_listed_time",
+[2024-03-31T17:14:23.789+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.789+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.789+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.790+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.790+0000] {spark_submit.py:491} INFO - "name" : "remote_allowed",
+[2024-03-31T17:14:23.790+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.790+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.791+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.791+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.791+0000] {spark_submit.py:491} INFO - "name" : "views",
+[2024-03-31T17:14:23.791+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.792+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.792+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.792+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.792+0000] {spark_submit.py:491} INFO - "name" : "job_posting_url",
+[2024-03-31T17:14:23.792+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.793+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.793+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.793+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.793+0000] {spark_submit.py:491} INFO - "name" : "application_url",
+[2024-03-31T17:14:23.793+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.794+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.794+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.794+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.794+0000] {spark_submit.py:491} INFO - "name" : "application_type",
+[2024-03-31T17:14:23.795+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.795+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.795+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.795+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.795+0000] {spark_submit.py:491} INFO - "name" : "expiry",
+[2024-03-31T17:14:23.796+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.796+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.796+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.796+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.796+0000] {spark_submit.py:491} INFO - "name" : "closed_time",
+[2024-03-31T17:14:23.797+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.797+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.797+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.797+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.798+0000] {spark_submit.py:491} INFO - "name" : "formatted_experience_level",
+[2024-03-31T17:14:23.798+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.798+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.798+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.798+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.799+0000] {spark_submit.py:491} INFO - "name" : "skills_desc",
+[2024-03-31T17:14:23.799+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.799+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.800+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.800+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.800+0000] {spark_submit.py:491} INFO - "name" : "listed_time",
+[2024-03-31T17:14:23.800+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.801+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.801+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.801+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.801+0000] {spark_submit.py:491} INFO - "name" : "posting_domain",
+[2024-03-31T17:14:23.801+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.802+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.802+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.802+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.802+0000] {spark_submit.py:491} INFO - "name" : "sponsored",
+[2024-03-31T17:14:23.802+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.803+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.803+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.803+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.803+0000] {spark_submit.py:491} INFO - "name" : "work_type",
+[2024-03-31T17:14:23.803+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.803+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.804+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.804+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.804+0000] {spark_submit.py:491} INFO - "name" : "currency",
+[2024-03-31T17:14:23.804+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.804+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.804+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.804+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.804+0000] {spark_submit.py:491} INFO - "name" : "compensation_type",
+[2024-03-31T17:14:23.805+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.805+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.805+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.805+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.805+0000] {spark_submit.py:491} INFO - "name" : "scraped",
+[2024-03-31T17:14:23.805+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.805+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.805+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.806+0000] {spark_submit.py:491} INFO - } ]
+[2024-03-31T17:14:23.806+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:23.806+0000] {spark_submit.py:491} INFO - and corresponding Parquet message type:
+[2024-03-31T17:14:23.806+0000] {spark_submit.py:491} INFO - message spark_schema {
+[2024-03-31T17:14:23.806+0000] {spark_submit.py:491} INFO - optional binary job_id (STRING);
+[2024-03-31T17:14:23.806+0000] {spark_submit.py:491} INFO - optional binary company_id (STRING);
+[2024-03-31T17:14:23.806+0000] {spark_submit.py:491} INFO - optional binary title (STRING);
+[2024-03-31T17:14:23.806+0000] {spark_submit.py:491} INFO - optional binary description (STRING);
+[2024-03-31T17:14:23.807+0000] {spark_submit.py:491} INFO - optional float max_salary;
+[2024-03-31T17:14:23.807+0000] {spark_submit.py:491} INFO - optional float med_salary;
+[2024-03-31T17:14:23.807+0000] {spark_submit.py:491} INFO - optional float min_salary;
+[2024-03-31T17:14:23.807+0000] {spark_submit.py:491} INFO - optional binary pay_period (STRING);
+[2024-03-31T17:14:23.807+0000] {spark_submit.py:491} INFO - optional binary formatted_work_type (STRING);
+[2024-03-31T17:14:23.807+0000] {spark_submit.py:491} INFO - optional binary location (STRING);
+[2024-03-31T17:14:23.808+0000] {spark_submit.py:491} INFO - optional int32 applies;
+[2024-03-31T17:14:23.808+0000] {spark_submit.py:491} INFO - optional int96 original_listed_time;
+[2024-03-31T17:14:23.808+0000] {spark_submit.py:491} INFO - optional binary remote_allowed (STRING);
+[2024-03-31T17:14:23.808+0000] {spark_submit.py:491} INFO - optional int32 views;
+[2024-03-31T17:14:23.808+0000] {spark_submit.py:491} INFO - optional binary job_posting_url (STRING);
+[2024-03-31T17:14:23.809+0000] {spark_submit.py:491} INFO - optional binary application_url (STRING);
+[2024-03-31T17:14:23.809+0000] {spark_submit.py:491} INFO - optional binary application_type (STRING);
+[2024-03-31T17:14:23.809+0000] {spark_submit.py:491} INFO - optional int96 expiry;
+[2024-03-31T17:14:23.809+0000] {spark_submit.py:491} INFO - optional int96 closed_time;
+[2024-03-31T17:14:23.810+0000] {spark_submit.py:491} INFO - optional binary formatted_experience_level (STRING);
+[2024-03-31T17:14:23.810+0000] {spark_submit.py:491} INFO - optional binary skills_desc (STRING);
+[2024-03-31T17:14:23.810+0000] {spark_submit.py:491} INFO - optional int96 listed_time;
+[2024-03-31T17:14:23.810+0000] {spark_submit.py:491} INFO - optional binary posting_domain (STRING);
+[2024-03-31T17:14:23.810+0000] {spark_submit.py:491} INFO - optional int32 sponsored;
+[2024-03-31T17:14:23.811+0000] {spark_submit.py:491} INFO - optional binary work_type (STRING);
+[2024-03-31T17:14:23.811+0000] {spark_submit.py:491} INFO - optional binary currency (STRING);
+[2024-03-31T17:14:23.811+0000] {spark_submit.py:491} INFO - optional binary compensation_type (STRING);
+[2024-03-31T17:14:23.811+0000] {spark_submit.py:491} INFO - optional int32 scraped;
+[2024-03-31T17:14:23.811+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:23.811+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:23.812+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:23.812+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+[2024-03-31T17:14:23.812+0000] {spark_submit.py:491} INFO - {
+[2024-03-31T17:14:23.812+0000] {spark_submit.py:491} INFO - "type" : "struct",
+[2024-03-31T17:14:23.812+0000] {spark_submit.py:491} INFO - "fields" : [ {
+[2024-03-31T17:14:23.812+0000] {spark_submit.py:491} INFO - "name" : "job_id",
+[2024-03-31T17:14:23.812+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.813+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.813+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.813+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.813+0000] {spark_submit.py:491} INFO - "name" : "company_id",
+[2024-03-31T17:14:23.813+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.814+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.814+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.814+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.814+0000] {spark_submit.py:491} INFO - "name" : "title",
+[2024-03-31T17:14:23.814+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.815+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.815+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.815+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.815+0000] {spark_submit.py:491} INFO - "name" : "description",
+[2024-03-31T17:14:23.817+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.817+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.817+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.817+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.817+0000] {spark_submit.py:491} INFO - "name" : "max_salary",
+[2024-03-31T17:14:23.818+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:23.818+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.818+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.818+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.818+0000] {spark_submit.py:491} INFO - "name" : "med_salary",
+[2024-03-31T17:14:23.818+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:23.818+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.819+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.819+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.819+0000] {spark_submit.py:491} INFO - "name" : "min_salary",
+[2024-03-31T17:14:23.819+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:23.819+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.819+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.819+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.820+0000] {spark_submit.py:491} INFO - "name" : "pay_period",
+[2024-03-31T17:14:23.820+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.820+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.820+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.820+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.820+0000] {spark_submit.py:491} INFO - "name" : "formatted_work_type",
+[2024-03-31T17:14:23.820+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.820+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.821+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.821+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.821+0000] {spark_submit.py:491} INFO - "name" : "location",
+[2024-03-31T17:14:23.821+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.821+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.821+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.821+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.821+0000] {spark_submit.py:491} INFO - "name" : "applies",
+[2024-03-31T17:14:23.822+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.822+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.822+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.822+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.822+0000] {spark_submit.py:491} INFO - "name" : "original_listed_time",
+[2024-03-31T17:14:23.822+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.822+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.822+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.823+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.823+0000] {spark_submit.py:491} INFO - "name" : "remote_allowed",
+[2024-03-31T17:14:23.823+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.823+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.823+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.823+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.824+0000] {spark_submit.py:491} INFO - "name" : "views",
+[2024-03-31T17:14:23.824+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.824+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.824+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.824+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.824+0000] {spark_submit.py:491} INFO - "name" : "job_posting_url",
+[2024-03-31T17:14:23.825+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.825+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.825+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.825+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.825+0000] {spark_submit.py:491} INFO - "name" : "application_url",
+[2024-03-31T17:14:23.825+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.825+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.825+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.826+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.826+0000] {spark_submit.py:491} INFO - "name" : "application_type",
+[2024-03-31T17:14:23.826+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.826+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.826+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.826+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.826+0000] {spark_submit.py:491} INFO - "name" : "expiry",
+[2024-03-31T17:14:23.826+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.827+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.827+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.827+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.827+0000] {spark_submit.py:491} INFO - "name" : "closed_time",
+[2024-03-31T17:14:23.827+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.827+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.828+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.828+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.828+0000] {spark_submit.py:491} INFO - "name" : "formatted_experience_level",
+[2024-03-31T17:14:23.828+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.828+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.828+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.828+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.829+0000] {spark_submit.py:491} INFO - "name" : "skills_desc",
+[2024-03-31T17:14:23.829+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.829+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.829+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.830+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.830+0000] {spark_submit.py:491} INFO - "name" : "listed_time",
+[2024-03-31T17:14:23.830+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.830+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.830+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.831+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.831+0000] {spark_submit.py:491} INFO - "name" : "posting_domain",
+[2024-03-31T17:14:23.831+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.831+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.831+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.831+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.831+0000] {spark_submit.py:491} INFO - "name" : "sponsored",
+[2024-03-31T17:14:23.832+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.832+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.832+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.832+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.832+0000] {spark_submit.py:491} INFO - "name" : "work_type",
+[2024-03-31T17:14:23.832+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.832+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.833+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.833+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.833+0000] {spark_submit.py:491} INFO - "name" : "currency",
+[2024-03-31T17:14:23.833+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.833+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.833+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.833+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.833+0000] {spark_submit.py:491} INFO - "name" : "compensation_type",
+[2024-03-31T17:14:23.834+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.834+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.834+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.834+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.834+0000] {spark_submit.py:491} INFO - "name" : "scraped",
+[2024-03-31T17:14:23.834+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.834+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.835+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.835+0000] {spark_submit.py:491} INFO - } ]
+[2024-03-31T17:14:23.835+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:23.835+0000] {spark_submit.py:491} INFO - and corresponding Parquet message type:
+[2024-03-31T17:14:23.835+0000] {spark_submit.py:491} INFO - message spark_schema {
+[2024-03-31T17:14:23.835+0000] {spark_submit.py:491} INFO - optional binary job_id (STRING);
+[2024-03-31T17:14:23.835+0000] {spark_submit.py:491} INFO - optional binary company_id (STRING);
+[2024-03-31T17:14:23.836+0000] {spark_submit.py:491} INFO - optional binary title (STRING);
+[2024-03-31T17:14:23.836+0000] {spark_submit.py:491} INFO - optional binary description (STRING);
+[2024-03-31T17:14:23.836+0000] {spark_submit.py:491} INFO - optional float max_salary;
+[2024-03-31T17:14:23.836+0000] {spark_submit.py:491} INFO - optional float med_salary;
+[2024-03-31T17:14:23.836+0000] {spark_submit.py:491} INFO - optional float min_salary;
+[2024-03-31T17:14:23.836+0000] {spark_submit.py:491} INFO - optional binary pay_period (STRING);
+[2024-03-31T17:14:23.836+0000] {spark_submit.py:491} INFO - optional binary formatted_work_type (STRING);
+[2024-03-31T17:14:23.837+0000] {spark_submit.py:491} INFO - optional binary location (STRING);
+[2024-03-31T17:14:23.837+0000] {spark_submit.py:491} INFO - optional int32 applies;
+[2024-03-31T17:14:23.837+0000] {spark_submit.py:491} INFO - optional int96 original_listed_time;
+[2024-03-31T17:14:23.837+0000] {spark_submit.py:491} INFO - optional binary remote_allowed (STRING);
+[2024-03-31T17:14:23.837+0000] {spark_submit.py:491} INFO - optional int32 views;
+[2024-03-31T17:14:23.837+0000] {spark_submit.py:491} INFO - optional binary job_posting_url (STRING);
+[2024-03-31T17:14:23.837+0000] {spark_submit.py:491} INFO - optional binary application_url (STRING);
+[2024-03-31T17:14:23.837+0000] {spark_submit.py:491} INFO - optional binary application_type (STRING);
+[2024-03-31T17:14:23.838+0000] {spark_submit.py:491} INFO - optional int96 expiry;
+[2024-03-31T17:14:23.838+0000] {spark_submit.py:491} INFO - optional int96 closed_time;
+[2024-03-31T17:14:23.838+0000] {spark_submit.py:491} INFO - optional binary formatted_experience_level (STRING);
+[2024-03-31T17:14:23.838+0000] {spark_submit.py:491} INFO - optional binary skills_desc (STRING);
+[2024-03-31T17:14:23.838+0000] {spark_submit.py:491} INFO - optional int96 listed_time;
+[2024-03-31T17:14:23.838+0000] {spark_submit.py:491} INFO - optional binary posting_domain (STRING);
+[2024-03-31T17:14:23.838+0000] {spark_submit.py:491} INFO - optional int32 sponsored;
+[2024-03-31T17:14:23.838+0000] {spark_submit.py:491} INFO - optional binary work_type (STRING);
+[2024-03-31T17:14:23.839+0000] {spark_submit.py:491} INFO - optional binary currency (STRING);
+[2024-03-31T17:14:23.839+0000] {spark_submit.py:491} INFO - optional binary compensation_type (STRING);
+[2024-03-31T17:14:23.839+0000] {spark_submit.py:491} INFO - optional int32 scraped;
+[2024-03-31T17:14:23.839+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:23.839+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:23.839+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:23.840+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+[2024-03-31T17:14:23.840+0000] {spark_submit.py:491} INFO - {
+[2024-03-31T17:14:23.840+0000] {spark_submit.py:491} INFO - "type" : "struct",
+[2024-03-31T17:14:23.840+0000] {spark_submit.py:491} INFO - "fields" : [ {
+[2024-03-31T17:14:23.841+0000] {spark_submit.py:491} INFO - "name" : "job_id",
+[2024-03-31T17:14:23.841+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.841+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.841+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.841+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.842+0000] {spark_submit.py:491} INFO - "name" : "company_id",
+[2024-03-31T17:14:23.842+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.842+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.842+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.842+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.843+0000] {spark_submit.py:491} INFO - "name" : "title",
+[2024-03-31T17:14:23.843+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.843+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.843+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.844+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.844+0000] {spark_submit.py:491} INFO - "name" : "description",
+[2024-03-31T17:14:23.844+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.844+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.844+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.844+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.844+0000] {spark_submit.py:491} INFO - "name" : "max_salary",
+[2024-03-31T17:14:23.844+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:23.845+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.845+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.845+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.845+0000] {spark_submit.py:491} INFO - "name" : "med_salary",
+[2024-03-31T17:14:23.845+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:23.845+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.845+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.845+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.846+0000] {spark_submit.py:491} INFO - "name" : "min_salary",
+[2024-03-31T17:14:23.846+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:23.846+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.846+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.846+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.846+0000] {spark_submit.py:491} INFO - "name" : "pay_period",
+[2024-03-31T17:14:23.846+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.846+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.847+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.847+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.847+0000] {spark_submit.py:491} INFO - "name" : "formatted_work_type",
+[2024-03-31T17:14:23.847+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.847+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.847+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.847+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.848+0000] {spark_submit.py:491} INFO - "name" : "location",
+[2024-03-31T17:14:23.848+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.848+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.848+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.848+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.848+0000] {spark_submit.py:491} INFO - "name" : "applies",
+[2024-03-31T17:14:23.848+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.848+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.849+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.849+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.849+0000] {spark_submit.py:491} INFO - "name" : "original_listed_time",
+[2024-03-31T17:14:23.849+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.849+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.849+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.849+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.849+0000] {spark_submit.py:491} INFO - "name" : "remote_allowed",
+[2024-03-31T17:14:23.850+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.850+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.850+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.850+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.850+0000] {spark_submit.py:491} INFO - "name" : "views",
+[2024-03-31T17:14:23.850+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.851+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.851+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.851+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.851+0000] {spark_submit.py:491} INFO - "name" : "job_posting_url",
+[2024-03-31T17:14:23.851+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.851+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.852+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.852+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.852+0000] {spark_submit.py:491} INFO - "name" : "application_url",
+[2024-03-31T17:14:23.852+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.853+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.853+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.853+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.853+0000] {spark_submit.py:491} INFO - "name" : "application_type",
+[2024-03-31T17:14:23.854+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.854+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.854+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.854+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.854+0000] {spark_submit.py:491} INFO - "name" : "expiry",
+[2024-03-31T17:14:23.855+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.855+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.855+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.855+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.856+0000] {spark_submit.py:491} INFO - "name" : "closed_time",
+[2024-03-31T17:14:23.856+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.856+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.856+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.857+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.857+0000] {spark_submit.py:491} INFO - "name" : "formatted_experience_level",
+[2024-03-31T17:14:23.857+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.857+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.858+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.858+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.858+0000] {spark_submit.py:491} INFO - "name" : "skills_desc",
+[2024-03-31T17:14:23.858+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.859+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.859+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.859+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.859+0000] {spark_submit.py:491} INFO - "name" : "listed_time",
+[2024-03-31T17:14:23.860+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:23.860+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.860+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.860+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.861+0000] {spark_submit.py:491} INFO - "name" : "posting_domain",
+[2024-03-31T17:14:23.861+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.861+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.861+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.861+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.862+0000] {spark_submit.py:491} INFO - "name" : "sponsored",
+[2024-03-31T17:14:23.862+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.862+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.862+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.863+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.863+0000] {spark_submit.py:491} INFO - "name" : "work_type",
+[2024-03-31T17:14:23.863+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.863+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.863+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.864+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.864+0000] {spark_submit.py:491} INFO - "name" : "currency",
+[2024-03-31T17:14:23.864+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.864+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.865+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.865+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.865+0000] {spark_submit.py:491} INFO - "name" : "compensation_type",
+[2024-03-31T17:14:23.865+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:23.865+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.866+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.866+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:23.866+0000] {spark_submit.py:491} INFO - "name" : "scraped",
+[2024-03-31T17:14:23.866+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:23.867+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:23.867+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:23.867+0000] {spark_submit.py:491} INFO - } ]
+[2024-03-31T17:14:23.867+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:23.868+0000] {spark_submit.py:491} INFO - and corresponding Parquet message type:
+[2024-03-31T17:14:23.868+0000] {spark_submit.py:491} INFO - message spark_schema {
+[2024-03-31T17:14:23.868+0000] {spark_submit.py:491} INFO - optional binary job_id (STRING);
+[2024-03-31T17:14:23.868+0000] {spark_submit.py:491} INFO - optional binary company_id (STRING);
+[2024-03-31T17:14:23.869+0000] {spark_submit.py:491} INFO - optional binary title (STRING);
+[2024-03-31T17:14:23.869+0000] {spark_submit.py:491} INFO - optional binary description (STRING);
+[2024-03-31T17:14:23.869+0000] {spark_submit.py:491} INFO - optional float max_salary;
+[2024-03-31T17:14:23.869+0000] {spark_submit.py:491} INFO - optional float med_salary;
+[2024-03-31T17:14:23.869+0000] {spark_submit.py:491} INFO - optional float min_salary;
+[2024-03-31T17:14:23.870+0000] {spark_submit.py:491} INFO - optional binary pay_period (STRING);
+[2024-03-31T17:14:23.870+0000] {spark_submit.py:491} INFO - optional binary formatted_work_type (STRING);
+[2024-03-31T17:14:23.870+0000] {spark_submit.py:491} INFO - optional binary location (STRING);
+[2024-03-31T17:14:23.870+0000] {spark_submit.py:491} INFO - optional int32 applies;
+[2024-03-31T17:14:23.871+0000] {spark_submit.py:491} INFO - optional int96 original_listed_time;
+[2024-03-31T17:14:23.871+0000] {spark_submit.py:491} INFO - optional binary remote_allowed (STRING);
+[2024-03-31T17:14:23.871+0000] {spark_submit.py:491} INFO - optional int32 views;
+[2024-03-31T17:14:23.871+0000] {spark_submit.py:491} INFO - optional binary job_posting_url (STRING);
+[2024-03-31T17:14:23.871+0000] {spark_submit.py:491} INFO - optional binary application_url (STRING);
+[2024-03-31T17:14:23.872+0000] {spark_submit.py:491} INFO - optional binary application_type (STRING);
+[2024-03-31T17:14:23.872+0000] {spark_submit.py:491} INFO - optional int96 expiry;
+[2024-03-31T17:14:23.872+0000] {spark_submit.py:491} INFO - optional int96 closed_time;
+[2024-03-31T17:14:23.872+0000] {spark_submit.py:491} INFO - optional binary formatted_experience_level (STRING);
+[2024-03-31T17:14:23.873+0000] {spark_submit.py:491} INFO - optional binary skills_desc (STRING);
+[2024-03-31T17:14:23.873+0000] {spark_submit.py:491} INFO - optional int96 listed_time;
+[2024-03-31T17:14:23.873+0000] {spark_submit.py:491} INFO - optional binary posting_domain (STRING);
+[2024-03-31T17:14:23.873+0000] {spark_submit.py:491} INFO - optional int32 sponsored;
+[2024-03-31T17:14:23.874+0000] {spark_submit.py:491} INFO - optional binary work_type (STRING);
+[2024-03-31T17:14:23.874+0000] {spark_submit.py:491} INFO - optional binary currency (STRING);
+[2024-03-31T17:14:23.874+0000] {spark_submit.py:491} INFO - optional binary compensation_type (STRING);
+[2024-03-31T17:14:23.874+0000] {spark_submit.py:491} INFO - optional int32 scraped;
+[2024-03-31T17:14:23.874+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:23.875+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:23.875+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:23.875+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO CodecPool: Got brand-new compressor [.snappy]
+[2024-03-31T17:14:23.875+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO CodecPool: Got brand-new compressor [.snappy]
+[2024-03-31T17:14:23.876+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO CodecPool: Got brand-new compressor [.snappy]
+[2024-03-31T17:14:23.876+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:23 INFO CodecPool: Got brand-new compressor [.snappy]
+[2024-03-31T17:14:25.791+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: Saved output of task 'attempt_202403311714234872998186149406800_0002_m_000003_4' to file:/usr/local/airflow/include/dataset/parquet/job_postings/_temporary/0/task_202403311714234872998186149406800_0002_m_000003
+[2024-03-31T17:14:25.792+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO SparkHadoopMapRedUtil: attempt_202403311714234872998186149406800_0002_m_000003_4: Committed. Elapsed time: 2 ms.
+[2024-03-31T17:14:25.795+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: Saved output of task 'attempt_202403311714234872998186149406800_0002_m_000000_1' to file:/usr/local/airflow/include/dataset/parquet/job_postings/_temporary/0/task_202403311714234872998186149406800_0002_m_000000
+[2024-03-31T17:14:25.797+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO SparkHadoopMapRedUtil: attempt_202403311714234872998186149406800_0002_m_000000_1: Committed. Elapsed time: 6 ms.
+[2024-03-31T17:14:25.797+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: Saved output of task 'attempt_202403311714234872998186149406800_0002_m_000001_2' to file:/usr/local/airflow/include/dataset/parquet/job_postings/_temporary/0/task_202403311714234872998186149406800_0002_m_000001
+[2024-03-31T17:14:25.798+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO SparkHadoopMapRedUtil: attempt_202403311714234872998186149406800_0002_m_000001_2: Committed. Elapsed time: 2 ms.
+[2024-03-31T17:14:25.798+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: Saved output of task 'attempt_202403311714234872998186149406800_0002_m_000002_3' to file:/usr/local/airflow/include/dataset/parquet/job_postings/_temporary/0/task_202403311714234872998186149406800_0002_m_000002
+[2024-03-31T17:14:25.799+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO SparkHadoopMapRedUtil: attempt_202403311714234872998186149406800_0002_m_000002_3: Committed. Elapsed time: 3 ms.
+[2024-03-31T17:14:25.819+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO Executor: Finished task 0.0 in stage 2.0 (TID 1). 4783 bytes result sent to driver
+[2024-03-31T17:14:25.828+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO TaskSetManager: Starting task 4.0 in stage 2.0 (TID 5) (d1dbed01df62, executor driver, partition 4, NODE_LOCAL, 7615 bytes)
+[2024-03-31T17:14:25.829+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO Executor: Running task 4.0 in stage 2.0 (TID 5)
+[2024-03-31T17:14:25.830+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO Executor: Finished task 2.0 in stage 2.0 (TID 3). 4826 bytes result sent to driver
+[2024-03-31T17:14:25.832+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO Executor: Finished task 1.0 in stage 2.0 (TID 2). 4826 bytes result sent to driver
+[2024-03-31T17:14:25.833+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO Executor: Finished task 3.0 in stage 2.0 (TID 4). 4826 bytes result sent to driver
+[2024-03-31T17:14:25.857+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 1) in 2587 ms on d1dbed01df62 (executor driver) (1/10)
+[2024-03-31T17:14:25.860+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO ShuffleBlockFetcherIterator: Getting 1 (8.6 MiB) non-empty blocks including 1 (8.6 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2024-03-31T17:14:25.862+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO TaskSetManager: Starting task 5.0 in stage 2.0 (TID 6) (d1dbed01df62, executor driver, partition 5, NODE_LOCAL, 7615 bytes)
+[2024-03-31T17:14:25.863+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO Executor: Running task 5.0 in stage 2.0 (TID 6)
+[2024-03-31T17:14:25.873+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO TaskSetManager: Starting task 6.0 in stage 2.0 (TID 7) (d1dbed01df62, executor driver, partition 6, NODE_LOCAL, 7615 bytes)
+[2024-03-31T17:14:25.874+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO Executor: Running task 6.0 in stage 2.0 (TID 7)
+[2024-03-31T17:14:25.875+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO TaskSetManager: Starting task 7.0 in stage 2.0 (TID 8) (d1dbed01df62, executor driver, partition 7, NODE_LOCAL, 7615 bytes)
+[2024-03-31T17:14:25.881+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO TaskSetManager: Finished task 3.0 in stage 2.0 (TID 4) in 2630 ms on d1dbed01df62 (executor driver) (2/10)
+[2024-03-31T17:14:25.882+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 22 ms
+[2024-03-31T17:14:25.885+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:25.885+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:25.886+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:25.886+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 2) in 2636 ms on d1dbed01df62 (executor driver) (3/10)
+[2024-03-31T17:14:25.887+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:25.887+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:25.887+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:25.888+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:25.889+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:25.892+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO ParquetOutputFormat: ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+[2024-03-31T17:14:25.897+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO TaskSetManager: Finished task 2.0 in stage 2.0 (TID 3) in 2645 ms on d1dbed01df62 (executor driver) (4/10)
+[2024-03-31T17:14:25.903+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO Executor: Running task 7.0 in stage 2.0 (TID 8)
+[2024-03-31T17:14:25.962+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+[2024-03-31T17:14:25.962+0000] {spark_submit.py:491} INFO - {
+[2024-03-31T17:14:25.963+0000] {spark_submit.py:491} INFO - "type" : "struct",
+[2024-03-31T17:14:25.963+0000] {spark_submit.py:491} INFO - "fields" : [ {
+[2024-03-31T17:14:25.963+0000] {spark_submit.py:491} INFO - "name" : "job_id",
+[2024-03-31T17:14:25.963+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:25.964+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.964+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.964+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.964+0000] {spark_submit.py:491} INFO - "name" : "company_id",
+[2024-03-31T17:14:25.965+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:25.965+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.965+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.965+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.966+0000] {spark_submit.py:491} INFO - "name" : "title",
+[2024-03-31T17:14:25.966+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:25.966+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.966+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.967+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.967+0000] {spark_submit.py:491} INFO - "name" : "description",
+[2024-03-31T17:14:25.967+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:25.967+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.968+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.968+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.968+0000] {spark_submit.py:491} INFO - "name" : "max_salary",
+[2024-03-31T17:14:25.968+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:25.969+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.969+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.969+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.969+0000] {spark_submit.py:491} INFO - "name" : "med_salary",
+[2024-03-31T17:14:25.970+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:25.970+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.970+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.970+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.971+0000] {spark_submit.py:491} INFO - "name" : "min_salary",
+[2024-03-31T17:14:25.971+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:25.971+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.976+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.976+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.976+0000] {spark_submit.py:491} INFO - "name" : "pay_period",
+[2024-03-31T17:14:25.976+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:25.977+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.977+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.977+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.977+0000] {spark_submit.py:491} INFO - "name" : "formatted_work_type",
+[2024-03-31T17:14:25.978+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:25.978+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.978+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.978+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.979+0000] {spark_submit.py:491} INFO - "name" : "location",
+[2024-03-31T17:14:25.979+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:25.979+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.980+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.980+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.980+0000] {spark_submit.py:491} INFO - "name" : "applies",
+[2024-03-31T17:14:25.980+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:25.980+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.981+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.981+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.996+0000] {spark_submit.py:491} INFO - "name" : "original_listed_time",
+[2024-03-31T17:14:25.996+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:25.997+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.997+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.997+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.997+0000] {spark_submit.py:491} INFO - "name" : "remote_allowed",
+[2024-03-31T17:14:25.997+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:25.998+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.998+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.998+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.998+0000] {spark_submit.py:491} INFO - "name" : "views",
+[2024-03-31T17:14:25.998+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:25.999+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:25.999+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:25.999+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:25.999+0000] {spark_submit.py:491} INFO - "name" : "job_posting_url",
+[2024-03-31T17:14:25.999+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.000+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.000+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.000+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.000+0000] {spark_submit.py:491} INFO - "name" : "application_url",
+[2024-03-31T17:14:26.001+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.001+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.004+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.004+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.004+0000] {spark_submit.py:491} INFO - "name" : "application_type",
+[2024-03-31T17:14:26.004+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.005+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.005+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.005+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.005+0000] {spark_submit.py:491} INFO - "name" : "expiry",
+[2024-03-31T17:14:26.006+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.006+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.006+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.007+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.007+0000] {spark_submit.py:491} INFO - "name" : "closed_time",
+[2024-03-31T17:14:26.007+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.012+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.012+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.012+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.012+0000] {spark_submit.py:491} INFO - "name" : "formatted_experience_level",
+[2024-03-31T17:14:26.013+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.013+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.013+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.013+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.013+0000] {spark_submit.py:491} INFO - "name" : "skills_desc",
+[2024-03-31T17:14:26.014+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.014+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.014+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.014+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.015+0000] {spark_submit.py:491} INFO - "name" : "listed_time",
+[2024-03-31T17:14:26.015+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.015+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.015+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.016+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.016+0000] {spark_submit.py:491} INFO - "name" : "posting_domain",
+[2024-03-31T17:14:26.016+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.016+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.017+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.017+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.017+0000] {spark_submit.py:491} INFO - "name" : "sponsored",
+[2024-03-31T17:14:26.017+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.018+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.018+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.018+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.018+0000] {spark_submit.py:491} INFO - "name" : "work_type",
+[2024-03-31T17:14:26.018+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.019+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.019+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.023+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.024+0000] {spark_submit.py:491} INFO - "name" : "currency",
+[2024-03-31T17:14:26.024+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.024+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.024+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.025+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.025+0000] {spark_submit.py:491} INFO - "name" : "compensation_type",
+[2024-03-31T17:14:26.025+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.026+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.026+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.026+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.027+0000] {spark_submit.py:491} INFO - "name" : "scraped",
+[2024-03-31T17:14:26.027+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.027+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.027+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.027+0000] {spark_submit.py:491} INFO - } ]
+[2024-03-31T17:14:26.028+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:26.028+0000] {spark_submit.py:491} INFO - and corresponding Parquet message type:
+[2024-03-31T17:14:26.028+0000] {spark_submit.py:491} INFO - message spark_schema {
+[2024-03-31T17:14:26.028+0000] {spark_submit.py:491} INFO - optional binary job_id (STRING);
+[2024-03-31T17:14:26.028+0000] {spark_submit.py:491} INFO - optional binary company_id (STRING);
+[2024-03-31T17:14:26.029+0000] {spark_submit.py:491} INFO - optional binary title (STRING);
+[2024-03-31T17:14:26.029+0000] {spark_submit.py:491} INFO - optional binary description (STRING);
+[2024-03-31T17:14:26.029+0000] {spark_submit.py:491} INFO - optional float max_salary;
+[2024-03-31T17:14:26.029+0000] {spark_submit.py:491} INFO - optional float med_salary;
+[2024-03-31T17:14:26.030+0000] {spark_submit.py:491} INFO - optional float min_salary;
+[2024-03-31T17:14:26.030+0000] {spark_submit.py:491} INFO - optional binary pay_period (STRING);
+[2024-03-31T17:14:26.030+0000] {spark_submit.py:491} INFO - optional binary formatted_work_type (STRING);
+[2024-03-31T17:14:26.030+0000] {spark_submit.py:491} INFO - optional binary location (STRING);
+[2024-03-31T17:14:26.030+0000] {spark_submit.py:491} INFO - optional int32 applies;
+[2024-03-31T17:14:26.031+0000] {spark_submit.py:491} INFO - optional int96 original_listed_time;
+[2024-03-31T17:14:26.031+0000] {spark_submit.py:491} INFO - optional binary remote_allowed (STRING);
+[2024-03-31T17:14:26.031+0000] {spark_submit.py:491} INFO - optional int32 views;
+[2024-03-31T17:14:26.031+0000] {spark_submit.py:491} INFO - optional binary job_posting_url (STRING);
+[2024-03-31T17:14:26.033+0000] {spark_submit.py:491} INFO - optional binary application_url (STRING);
+[2024-03-31T17:14:26.033+0000] {spark_submit.py:491} INFO - optional binary application_type (STRING);
+[2024-03-31T17:14:26.033+0000] {spark_submit.py:491} INFO - optional int96 expiry;
+[2024-03-31T17:14:26.034+0000] {spark_submit.py:491} INFO - optional int96 closed_time;
+[2024-03-31T17:14:26.034+0000] {spark_submit.py:491} INFO - optional binary formatted_experience_level (STRING);
+[2024-03-31T17:14:26.034+0000] {spark_submit.py:491} INFO - optional binary skills_desc (STRING);
+[2024-03-31T17:14:26.034+0000] {spark_submit.py:491} INFO - optional int96 listed_time;
+[2024-03-31T17:14:26.034+0000] {spark_submit.py:491} INFO - optional binary posting_domain (STRING);
+[2024-03-31T17:14:26.034+0000] {spark_submit.py:491} INFO - optional int32 sponsored;
+[2024-03-31T17:14:26.035+0000] {spark_submit.py:491} INFO - optional binary work_type (STRING);
+[2024-03-31T17:14:26.035+0000] {spark_submit.py:491} INFO - optional binary currency (STRING);
+[2024-03-31T17:14:26.035+0000] {spark_submit.py:491} INFO - optional binary compensation_type (STRING);
+[2024-03-31T17:14:26.035+0000] {spark_submit.py:491} INFO - optional int32 scraped;
+[2024-03-31T17:14:26.036+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:26.036+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:26.036+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:26.042+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO ShuffleBlockFetcherIterator: Getting 1 (8.6 MiB) non-empty blocks including 1 (8.6 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2024-03-31T17:14:26.043+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 7 ms
+[2024-03-31T17:14:26.043+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:26.046+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:26.046+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:26.047+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:26.047+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:26.047+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:26.048+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:26.048+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:26.048+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO ShuffleBlockFetcherIterator: Getting 1 (8.6 MiB) non-empty blocks including 1 (8.6 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2024-03-31T17:14:26.048+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+[2024-03-31T17:14:26.049+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:26.049+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:26.049+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:26.049+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:26.050+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:26.050+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:26.050+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:26.050+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:25 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:26.051+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ShuffleBlockFetcherIterator: Getting 1 (7.8 MiB) non-empty blocks including 1 (7.8 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2024-03-31T17:14:26.051+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+[2024-03-31T17:14:26.051+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:26.051+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:26.052+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:26.052+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:26.052+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:26.052+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ParquetOutputFormat: ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+[2024-03-31T17:14:26.053+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:26.053+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:26.054+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:26.054+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ParquetOutputFormat: ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+[2024-03-31T17:14:26.054+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+[2024-03-31T17:14:26.054+0000] {spark_submit.py:491} INFO - {
+[2024-03-31T17:14:26.055+0000] {spark_submit.py:491} INFO - "type" : "struct",
+[2024-03-31T17:14:26.055+0000] {spark_submit.py:491} INFO - "fields" : [ {
+[2024-03-31T17:14:26.055+0000] {spark_submit.py:491} INFO - "name" : "job_id",
+[2024-03-31T17:14:26.058+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.059+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.059+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.060+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.060+0000] {spark_submit.py:491} INFO - "name" : "company_id",
+[2024-03-31T17:14:26.060+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.060+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.060+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.060+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.061+0000] {spark_submit.py:491} INFO - "name" : "title",
+[2024-03-31T17:14:26.061+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.061+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.061+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.061+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.061+0000] {spark_submit.py:491} INFO - "name" : "description",
+[2024-03-31T17:14:26.062+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.062+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.062+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.062+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.062+0000] {spark_submit.py:491} INFO - "name" : "max_salary",
+[2024-03-31T17:14:26.062+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.063+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.063+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.063+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.063+0000] {spark_submit.py:491} INFO - "name" : "med_salary",
+[2024-03-31T17:14:26.063+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.063+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.064+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.064+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.064+0000] {spark_submit.py:491} INFO - "name" : "min_salary",
+[2024-03-31T17:14:26.064+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.065+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.065+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.065+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.066+0000] {spark_submit.py:491} INFO - "name" : "pay_period",
+[2024-03-31T17:14:26.066+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.066+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.067+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.068+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.069+0000] {spark_submit.py:491} INFO - "name" : "formatted_work_type",
+[2024-03-31T17:14:26.069+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.069+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.069+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.070+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.070+0000] {spark_submit.py:491} INFO - "name" : "location",
+[2024-03-31T17:14:26.070+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.070+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.071+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.071+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.071+0000] {spark_submit.py:491} INFO - "name" : "applies",
+[2024-03-31T17:14:26.071+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.072+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.072+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.072+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.072+0000] {spark_submit.py:491} INFO - "name" : "original_listed_time",
+[2024-03-31T17:14:26.073+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.073+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.073+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.073+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.074+0000] {spark_submit.py:491} INFO - "name" : "remote_allowed",
+[2024-03-31T17:14:26.074+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.074+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.074+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.074+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.075+0000] {spark_submit.py:491} INFO - "name" : "views",
+[2024-03-31T17:14:26.075+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.075+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.076+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.077+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.077+0000] {spark_submit.py:491} INFO - "name" : "job_posting_url",
+[2024-03-31T17:14:26.077+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.077+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.078+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.078+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.078+0000] {spark_submit.py:491} INFO - "name" : "application_url",
+[2024-03-31T17:14:26.078+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.079+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.079+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.080+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.080+0000] {spark_submit.py:491} INFO - "name" : "application_type",
+[2024-03-31T17:14:26.080+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.081+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.081+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.081+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.081+0000] {spark_submit.py:491} INFO - "name" : "expiry",
+[2024-03-31T17:14:26.082+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.082+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.082+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.082+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.083+0000] {spark_submit.py:491} INFO - "name" : "closed_time",
+[2024-03-31T17:14:26.083+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.083+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.084+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.084+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.084+0000] {spark_submit.py:491} INFO - "name" : "formatted_experience_level",
+[2024-03-31T17:14:26.084+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.085+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.085+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.085+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.085+0000] {spark_submit.py:491} INFO - "name" : "skills_desc",
+[2024-03-31T17:14:26.086+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.086+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.086+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.086+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.087+0000] {spark_submit.py:491} INFO - "name" : "listed_time",
+[2024-03-31T17:14:26.087+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.087+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.087+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.088+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.088+0000] {spark_submit.py:491} INFO - "name" : "posting_domain",
+[2024-03-31T17:14:26.088+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.088+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.088+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.089+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.089+0000] {spark_submit.py:491} INFO - "name" : "sponsored",
+[2024-03-31T17:14:26.089+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.089+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.090+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.090+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.090+0000] {spark_submit.py:491} INFO - "name" : "work_type",
+[2024-03-31T17:14:26.090+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.091+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.091+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.091+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.091+0000] {spark_submit.py:491} INFO - "name" : "currency",
+[2024-03-31T17:14:26.092+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.092+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.092+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.092+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.092+0000] {spark_submit.py:491} INFO - "name" : "compensation_type",
+[2024-03-31T17:14:26.093+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.093+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.093+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.093+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.094+0000] {spark_submit.py:491} INFO - "name" : "scraped",
+[2024-03-31T17:14:26.094+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.094+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.094+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.094+0000] {spark_submit.py:491} INFO - } ]
+[2024-03-31T17:14:26.095+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:26.095+0000] {spark_submit.py:491} INFO - and corresponding Parquet message type:
+[2024-03-31T17:14:26.095+0000] {spark_submit.py:491} INFO - message spark_schema {
+[2024-03-31T17:14:26.095+0000] {spark_submit.py:491} INFO - optional binary job_id (STRING);
+[2024-03-31T17:14:26.096+0000] {spark_submit.py:491} INFO - optional binary company_id (STRING);
+[2024-03-31T17:14:26.096+0000] {spark_submit.py:491} INFO - optional binary title (STRING);
+[2024-03-31T17:14:26.096+0000] {spark_submit.py:491} INFO - optional binary description (STRING);
+[2024-03-31T17:14:26.096+0000] {spark_submit.py:491} INFO - optional float max_salary;
+[2024-03-31T17:14:26.097+0000] {spark_submit.py:491} INFO - optional float med_salary;
+[2024-03-31T17:14:26.097+0000] {spark_submit.py:491} INFO - optional float min_salary;
+[2024-03-31T17:14:26.097+0000] {spark_submit.py:491} INFO - optional binary pay_period (STRING);
+[2024-03-31T17:14:26.097+0000] {spark_submit.py:491} INFO - optional binary formatted_work_type (STRING);
+[2024-03-31T17:14:26.097+0000] {spark_submit.py:491} INFO - optional binary location (STRING);
+[2024-03-31T17:14:26.098+0000] {spark_submit.py:491} INFO - optional int32 applies;
+[2024-03-31T17:14:26.098+0000] {spark_submit.py:491} INFO - optional int96 original_listed_time;
+[2024-03-31T17:14:26.098+0000] {spark_submit.py:491} INFO - optional binary remote_allowed (STRING);
+[2024-03-31T17:14:26.098+0000] {spark_submit.py:491} INFO - optional int32 views;
+[2024-03-31T17:14:26.099+0000] {spark_submit.py:491} INFO - optional binary job_posting_url (STRING);
+[2024-03-31T17:14:26.099+0000] {spark_submit.py:491} INFO - optional binary application_url (STRING);
+[2024-03-31T17:14:26.099+0000] {spark_submit.py:491} INFO - optional binary application_type (STRING);
+[2024-03-31T17:14:26.099+0000] {spark_submit.py:491} INFO - optional int96 expiry;
+[2024-03-31T17:14:26.099+0000] {spark_submit.py:491} INFO - optional int96 closed_time;
+[2024-03-31T17:14:26.100+0000] {spark_submit.py:491} INFO - optional binary formatted_experience_level (STRING);
+[2024-03-31T17:14:26.100+0000] {spark_submit.py:491} INFO - optional binary skills_desc (STRING);
+[2024-03-31T17:14:26.100+0000] {spark_submit.py:491} INFO - optional int96 listed_time;
+[2024-03-31T17:14:26.100+0000] {spark_submit.py:491} INFO - optional binary posting_domain (STRING);
+[2024-03-31T17:14:26.100+0000] {spark_submit.py:491} INFO - optional int32 sponsored;
+[2024-03-31T17:14:26.101+0000] {spark_submit.py:491} INFO - optional binary work_type (STRING);
+[2024-03-31T17:14:26.101+0000] {spark_submit.py:491} INFO - optional binary currency (STRING);
+[2024-03-31T17:14:26.101+0000] {spark_submit.py:491} INFO - optional binary compensation_type (STRING);
+[2024-03-31T17:14:26.101+0000] {spark_submit.py:491} INFO - optional int32 scraped;
+[2024-03-31T17:14:26.101+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:26.102+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:26.102+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:26.102+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+[2024-03-31T17:14:26.102+0000] {spark_submit.py:491} INFO - {
+[2024-03-31T17:14:26.102+0000] {spark_submit.py:491} INFO - "type" : "struct",
+[2024-03-31T17:14:26.103+0000] {spark_submit.py:491} INFO - "fields" : [ {
+[2024-03-31T17:14:26.103+0000] {spark_submit.py:491} INFO - "name" : "job_id",
+[2024-03-31T17:14:26.103+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.103+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.104+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.104+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.104+0000] {spark_submit.py:491} INFO - "name" : "company_id",
+[2024-03-31T17:14:26.104+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.104+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.105+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.105+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.105+0000] {spark_submit.py:491} INFO - "name" : "title",
+[2024-03-31T17:14:26.105+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.105+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.106+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.106+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.106+0000] {spark_submit.py:491} INFO - "name" : "description",
+[2024-03-31T17:14:26.106+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.106+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.107+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.107+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.107+0000] {spark_submit.py:491} INFO - "name" : "max_salary",
+[2024-03-31T17:14:26.107+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.107+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.108+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.108+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.108+0000] {spark_submit.py:491} INFO - "name" : "med_salary",
+[2024-03-31T17:14:26.108+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.108+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.109+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.109+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.109+0000] {spark_submit.py:491} INFO - "name" : "min_salary",
+[2024-03-31T17:14:26.109+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.109+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.110+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.110+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.110+0000] {spark_submit.py:491} INFO - "name" : "pay_period",
+[2024-03-31T17:14:26.110+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.111+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.111+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.111+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.111+0000] {spark_submit.py:491} INFO - "name" : "formatted_work_type",
+[2024-03-31T17:14:26.111+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.112+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.112+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.112+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.112+0000] {spark_submit.py:491} INFO - "name" : "location",
+[2024-03-31T17:14:26.112+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.112+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.113+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.113+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.113+0000] {spark_submit.py:491} INFO - "name" : "applies",
+[2024-03-31T17:14:26.114+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.114+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.114+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.114+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.115+0000] {spark_submit.py:491} INFO - "name" : "original_listed_time",
+[2024-03-31T17:14:26.115+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.115+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.115+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.115+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.116+0000] {spark_submit.py:491} INFO - "name" : "remote_allowed",
+[2024-03-31T17:14:26.116+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.116+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.116+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.117+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.117+0000] {spark_submit.py:491} INFO - "name" : "views",
+[2024-03-31T17:14:26.117+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.117+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.118+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.118+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.118+0000] {spark_submit.py:491} INFO - "name" : "job_posting_url",
+[2024-03-31T17:14:26.118+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.118+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.119+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.119+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.119+0000] {spark_submit.py:491} INFO - "name" : "application_url",
+[2024-03-31T17:14:26.119+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.120+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.120+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.120+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.120+0000] {spark_submit.py:491} INFO - "name" : "application_type",
+[2024-03-31T17:14:26.121+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.121+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.121+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.121+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.121+0000] {spark_submit.py:491} INFO - "name" : "expiry",
+[2024-03-31T17:14:26.122+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.122+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.122+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.123+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.123+0000] {spark_submit.py:491} INFO - "name" : "closed_time",
+[2024-03-31T17:14:26.124+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.124+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.124+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.124+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.125+0000] {spark_submit.py:491} INFO - "name" : "formatted_experience_level",
+[2024-03-31T17:14:26.125+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.125+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.125+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.126+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.126+0000] {spark_submit.py:491} INFO - "name" : "skills_desc",
+[2024-03-31T17:14:26.128+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.129+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.129+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.129+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.129+0000] {spark_submit.py:491} INFO - "name" : "listed_time",
+[2024-03-31T17:14:26.130+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.130+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.130+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.130+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.131+0000] {spark_submit.py:491} INFO - "name" : "posting_domain",
+[2024-03-31T17:14:26.131+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.131+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.131+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.132+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.132+0000] {spark_submit.py:491} INFO - "name" : "sponsored",
+[2024-03-31T17:14:26.132+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.133+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.133+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.133+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.133+0000] {spark_submit.py:491} INFO - "name" : "work_type",
+[2024-03-31T17:14:26.134+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.134+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.134+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.134+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.135+0000] {spark_submit.py:491} INFO - "name" : "currency",
+[2024-03-31T17:14:26.135+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.135+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.135+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.136+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.136+0000] {spark_submit.py:491} INFO - "name" : "compensation_type",
+[2024-03-31T17:14:26.136+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.136+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.136+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.137+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.137+0000] {spark_submit.py:491} INFO - "name" : "scraped",
+[2024-03-31T17:14:26.137+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.137+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.137+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.138+0000] {spark_submit.py:491} INFO - } ]
+[2024-03-31T17:14:26.138+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:26.138+0000] {spark_submit.py:491} INFO - and corresponding Parquet message type:
+[2024-03-31T17:14:26.138+0000] {spark_submit.py:491} INFO - message spark_schema {
+[2024-03-31T17:14:26.139+0000] {spark_submit.py:491} INFO - optional binary job_id (STRING);
+[2024-03-31T17:14:26.139+0000] {spark_submit.py:491} INFO - optional binary company_id (STRING);
+[2024-03-31T17:14:26.139+0000] {spark_submit.py:491} INFO - optional binary title (STRING);
+[2024-03-31T17:14:26.139+0000] {spark_submit.py:491} INFO - optional binary description (STRING);
+[2024-03-31T17:14:26.140+0000] {spark_submit.py:491} INFO - optional float max_salary;
+[2024-03-31T17:14:26.140+0000] {spark_submit.py:491} INFO - optional float med_salary;
+[2024-03-31T17:14:26.140+0000] {spark_submit.py:491} INFO - optional float min_salary;
+[2024-03-31T17:14:26.140+0000] {spark_submit.py:491} INFO - optional binary pay_period (STRING);
+[2024-03-31T17:14:26.140+0000] {spark_submit.py:491} INFO - optional binary formatted_work_type (STRING);
+[2024-03-31T17:14:26.141+0000] {spark_submit.py:491} INFO - optional binary location (STRING);
+[2024-03-31T17:14:26.141+0000] {spark_submit.py:491} INFO - optional int32 applies;
+[2024-03-31T17:14:26.141+0000] {spark_submit.py:491} INFO - optional int96 original_listed_time;
+[2024-03-31T17:14:26.141+0000] {spark_submit.py:491} INFO - optional binary remote_allowed (STRING);
+[2024-03-31T17:14:26.142+0000] {spark_submit.py:491} INFO - optional int32 views;
+[2024-03-31T17:14:26.142+0000] {spark_submit.py:491} INFO - optional binary job_posting_url (STRING);
+[2024-03-31T17:14:26.142+0000] {spark_submit.py:491} INFO - optional binary application_url (STRING);
+[2024-03-31T17:14:26.142+0000] {spark_submit.py:491} INFO - optional binary application_type (STRING);
+[2024-03-31T17:14:26.143+0000] {spark_submit.py:491} INFO - optional int96 expiry;
+[2024-03-31T17:14:26.143+0000] {spark_submit.py:491} INFO - optional int96 closed_time;
+[2024-03-31T17:14:26.143+0000] {spark_submit.py:491} INFO - optional binary formatted_experience_level (STRING);
+[2024-03-31T17:14:26.143+0000] {spark_submit.py:491} INFO - optional binary skills_desc (STRING);
+[2024-03-31T17:14:26.146+0000] {spark_submit.py:491} INFO - optional int96 listed_time;
+[2024-03-31T17:14:26.147+0000] {spark_submit.py:491} INFO - optional binary posting_domain (STRING);
+[2024-03-31T17:14:26.147+0000] {spark_submit.py:491} INFO - optional int32 sponsored;
+[2024-03-31T17:14:26.147+0000] {spark_submit.py:491} INFO - optional binary work_type (STRING);
+[2024-03-31T17:14:26.147+0000] {spark_submit.py:491} INFO - optional binary currency (STRING);
+[2024-03-31T17:14:26.148+0000] {spark_submit.py:491} INFO - optional binary compensation_type (STRING);
+[2024-03-31T17:14:26.148+0000] {spark_submit.py:491} INFO - optional int32 scraped;
+[2024-03-31T17:14:26.148+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:26.148+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:26.149+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:26.149+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ParquetOutputFormat: ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+[2024-03-31T17:14:26.149+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+[2024-03-31T17:14:26.149+0000] {spark_submit.py:491} INFO - {
+[2024-03-31T17:14:26.150+0000] {spark_submit.py:491} INFO - "type" : "struct",
+[2024-03-31T17:14:26.150+0000] {spark_submit.py:491} INFO - "fields" : [ {
+[2024-03-31T17:14:26.150+0000] {spark_submit.py:491} INFO - "name" : "job_id",
+[2024-03-31T17:14:26.150+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.151+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.151+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.151+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.151+0000] {spark_submit.py:491} INFO - "name" : "company_id",
+[2024-03-31T17:14:26.152+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.152+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.152+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.152+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.152+0000] {spark_submit.py:491} INFO - "name" : "title",
+[2024-03-31T17:14:26.153+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.153+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.153+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.153+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.154+0000] {spark_submit.py:491} INFO - "name" : "description",
+[2024-03-31T17:14:26.154+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.154+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.154+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.154+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.155+0000] {spark_submit.py:491} INFO - "name" : "max_salary",
+[2024-03-31T17:14:26.155+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.155+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.155+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.156+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.156+0000] {spark_submit.py:491} INFO - "name" : "med_salary",
+[2024-03-31T17:14:26.156+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.156+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.156+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.157+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.157+0000] {spark_submit.py:491} INFO - "name" : "min_salary",
+[2024-03-31T17:14:26.157+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.157+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.157+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.158+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.158+0000] {spark_submit.py:491} INFO - "name" : "pay_period",
+[2024-03-31T17:14:26.158+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.158+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.158+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.159+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.159+0000] {spark_submit.py:491} INFO - "name" : "formatted_work_type",
+[2024-03-31T17:14:26.159+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.159+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.160+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.160+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.160+0000] {spark_submit.py:491} INFO - "name" : "location",
+[2024-03-31T17:14:26.160+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.160+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.161+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.161+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.161+0000] {spark_submit.py:491} INFO - "name" : "applies",
+[2024-03-31T17:14:26.161+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.162+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.162+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.162+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.162+0000] {spark_submit.py:491} INFO - "name" : "original_listed_time",
+[2024-03-31T17:14:26.162+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.163+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.163+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.163+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.163+0000] {spark_submit.py:491} INFO - "name" : "remote_allowed",
+[2024-03-31T17:14:26.164+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.164+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.164+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.164+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.164+0000] {spark_submit.py:491} INFO - "name" : "views",
+[2024-03-31T17:14:26.165+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.165+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.165+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.165+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.166+0000] {spark_submit.py:491} INFO - "name" : "job_posting_url",
+[2024-03-31T17:14:26.169+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.169+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.170+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.170+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.170+0000] {spark_submit.py:491} INFO - "name" : "application_url",
+[2024-03-31T17:14:26.170+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.170+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.171+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.171+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.171+0000] {spark_submit.py:491} INFO - "name" : "application_type",
+[2024-03-31T17:14:26.171+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.172+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.172+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.172+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.172+0000] {spark_submit.py:491} INFO - "name" : "expiry",
+[2024-03-31T17:14:26.172+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.173+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.173+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.173+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.173+0000] {spark_submit.py:491} INFO - "name" : "closed_time",
+[2024-03-31T17:14:26.174+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.174+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.174+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.174+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.174+0000] {spark_submit.py:491} INFO - "name" : "formatted_experience_level",
+[2024-03-31T17:14:26.175+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.175+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.175+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.175+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.176+0000] {spark_submit.py:491} INFO - "name" : "skills_desc",
+[2024-03-31T17:14:26.176+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.176+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.176+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.176+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.177+0000] {spark_submit.py:491} INFO - "name" : "listed_time",
+[2024-03-31T17:14:26.177+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.177+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.177+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.178+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.178+0000] {spark_submit.py:491} INFO - "name" : "posting_domain",
+[2024-03-31T17:14:26.178+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.178+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.178+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.179+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.179+0000] {spark_submit.py:491} INFO - "name" : "sponsored",
+[2024-03-31T17:14:26.179+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.180+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.180+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.180+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.180+0000] {spark_submit.py:491} INFO - "name" : "work_type",
+[2024-03-31T17:14:26.180+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.181+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.181+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.181+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.181+0000] {spark_submit.py:491} INFO - "name" : "currency",
+[2024-03-31T17:14:26.181+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.182+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.182+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.182+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.182+0000] {spark_submit.py:491} INFO - "name" : "compensation_type",
+[2024-03-31T17:14:26.182+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.183+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.183+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.183+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.183+0000] {spark_submit.py:491} INFO - "name" : "scraped",
+[2024-03-31T17:14:26.184+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.184+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.184+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.184+0000] {spark_submit.py:491} INFO - } ]
+[2024-03-31T17:14:26.184+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:26.185+0000] {spark_submit.py:491} INFO - and corresponding Parquet message type:
+[2024-03-31T17:14:26.185+0000] {spark_submit.py:491} INFO - message spark_schema {
+[2024-03-31T17:14:26.185+0000] {spark_submit.py:491} INFO - optional binary job_id (STRING);
+[2024-03-31T17:14:26.185+0000] {spark_submit.py:491} INFO - optional binary company_id (STRING);
+[2024-03-31T17:14:26.185+0000] {spark_submit.py:491} INFO - optional binary title (STRING);
+[2024-03-31T17:14:26.186+0000] {spark_submit.py:491} INFO - optional binary description (STRING);
+[2024-03-31T17:14:26.186+0000] {spark_submit.py:491} INFO - optional float max_salary;
+[2024-03-31T17:14:26.186+0000] {spark_submit.py:491} INFO - optional float med_salary;
+[2024-03-31T17:14:26.186+0000] {spark_submit.py:491} INFO - optional float min_salary;
+[2024-03-31T17:14:26.187+0000] {spark_submit.py:491} INFO - optional binary pay_period (STRING);
+[2024-03-31T17:14:26.187+0000] {spark_submit.py:491} INFO - optional binary formatted_work_type (STRING);
+[2024-03-31T17:14:26.187+0000] {spark_submit.py:491} INFO - optional binary location (STRING);
+[2024-03-31T17:14:26.188+0000] {spark_submit.py:491} INFO - optional int32 applies;
+[2024-03-31T17:14:26.188+0000] {spark_submit.py:491} INFO - optional int96 original_listed_time;
+[2024-03-31T17:14:26.188+0000] {spark_submit.py:491} INFO - optional binary remote_allowed (STRING);
+[2024-03-31T17:14:26.189+0000] {spark_submit.py:491} INFO - optional int32 views;
+[2024-03-31T17:14:26.189+0000] {spark_submit.py:491} INFO - optional binary job_posting_url (STRING);
+[2024-03-31T17:14:26.189+0000] {spark_submit.py:491} INFO - optional binary application_url (STRING);
+[2024-03-31T17:14:26.189+0000] {spark_submit.py:491} INFO - optional binary application_type (STRING);
+[2024-03-31T17:14:26.189+0000] {spark_submit.py:491} INFO - optional int96 expiry;
+[2024-03-31T17:14:26.190+0000] {spark_submit.py:491} INFO - optional int96 closed_time;
+[2024-03-31T17:14:26.190+0000] {spark_submit.py:491} INFO - optional binary formatted_experience_level (STRING);
+[2024-03-31T17:14:26.190+0000] {spark_submit.py:491} INFO - optional binary skills_desc (STRING);
+[2024-03-31T17:14:26.190+0000] {spark_submit.py:491} INFO - optional int96 listed_time;
+[2024-03-31T17:14:26.190+0000] {spark_submit.py:491} INFO - optional binary posting_domain (STRING);
+[2024-03-31T17:14:26.193+0000] {spark_submit.py:491} INFO - optional int32 sponsored;
+[2024-03-31T17:14:26.193+0000] {spark_submit.py:491} INFO - optional binary work_type (STRING);
+[2024-03-31T17:14:26.193+0000] {spark_submit.py:491} INFO - optional binary currency (STRING);
+[2024-03-31T17:14:26.194+0000] {spark_submit.py:491} INFO - optional binary compensation_type (STRING);
+[2024-03-31T17:14:26.194+0000] {spark_submit.py:491} INFO - optional int32 scraped;
+[2024-03-31T17:14:26.197+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:26.198+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:26.198+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:26.727+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: Saved output of task 'attempt_202403311714234872998186149406800_0002_m_000005_6' to file:/usr/local/airflow/include/dataset/parquet/job_postings/_temporary/0/task_202403311714234872998186149406800_0002_m_000005
+[2024-03-31T17:14:26.727+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO SparkHadoopMapRedUtil: attempt_202403311714234872998186149406800_0002_m_000005_6: Committed. Elapsed time: 15 ms.
+[2024-03-31T17:14:26.727+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO Executor: Finished task 5.0 in stage 2.0 (TID 6). 4783 bytes result sent to driver
+[2024-03-31T17:14:26.728+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO TaskSetManager: Starting task 8.0 in stage 2.0 (TID 9) (d1dbed01df62, executor driver, partition 8, NODE_LOCAL, 7615 bytes)
+[2024-03-31T17:14:26.731+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO TaskSetManager: Finished task 5.0 in stage 2.0 (TID 6) in 869 ms on d1dbed01df62 (executor driver) (5/10)
+[2024-03-31T17:14:26.745+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO Executor: Running task 8.0 in stage 2.0 (TID 9)
+[2024-03-31T17:14:26.785+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: Saved output of task 'attempt_202403311714234872998186149406800_0002_m_000004_5' to file:/usr/local/airflow/include/dataset/parquet/job_postings/_temporary/0/task_202403311714234872998186149406800_0002_m_000004
+[2024-03-31T17:14:26.791+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO SparkHadoopMapRedUtil: attempt_202403311714234872998186149406800_0002_m_000004_5: Committed. Elapsed time: 6 ms.
+[2024-03-31T17:14:26.792+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: Saved output of task 'attempt_202403311714234872998186149406800_0002_m_000006_7' to file:/usr/local/airflow/include/dataset/parquet/job_postings/_temporary/0/task_202403311714234872998186149406800_0002_m_000006
+[2024-03-31T17:14:26.793+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO SparkHadoopMapRedUtil: attempt_202403311714234872998186149406800_0002_m_000006_7: Committed. Elapsed time: 6 ms.
+[2024-03-31T17:14:26.794+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO Executor: Finished task 4.0 in stage 2.0 (TID 5). 4783 bytes result sent to driver
+[2024-03-31T17:14:26.803+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO TaskSetManager: Starting task 9.0 in stage 2.0 (TID 10) (d1dbed01df62, executor driver, partition 9, NODE_LOCAL, 7615 bytes)
+[2024-03-31T17:14:26.804+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO Executor: Running task 9.0 in stage 2.0 (TID 10)
+[2024-03-31T17:14:26.805+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO Executor: Finished task 6.0 in stage 2.0 (TID 7). 4783 bytes result sent to driver
+[2024-03-31T17:14:26.806+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO TaskSetManager: Finished task 4.0 in stage 2.0 (TID 5) in 979 ms on d1dbed01df62 (executor driver) (6/10)
+[2024-03-31T17:14:26.813+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO TaskSetManager: Finished task 6.0 in stage 2.0 (TID 7) in 941 ms on d1dbed01df62 (executor driver) (7/10)
+[2024-03-31T17:14:26.828+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: Saved output of task 'attempt_202403311714234872998186149406800_0002_m_000007_8' to file:/usr/local/airflow/include/dataset/parquet/job_postings/_temporary/0/task_202403311714234872998186149406800_0002_m_000007
+[2024-03-31T17:14:26.829+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO SparkHadoopMapRedUtil: attempt_202403311714234872998186149406800_0002_m_000007_8: Committed. Elapsed time: 2 ms.
+[2024-03-31T17:14:26.833+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO Executor: Finished task 7.0 in stage 2.0 (TID 8). 4783 bytes result sent to driver
+[2024-03-31T17:14:26.836+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO TaskSetManager: Finished task 7.0 in stage 2.0 (TID 8) in 962 ms on d1dbed01df62 (executor driver) (8/10)
+[2024-03-31T17:14:26.839+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ShuffleBlockFetcherIterator: Getting 1 (7.8 MiB) non-empty blocks including 1 (7.8 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2024-03-31T17:14:26.839+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 8 ms
+[2024-03-31T17:14:26.843+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:26.843+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:26.845+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:26.845+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:26.846+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:26.847+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:26.848+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:26.848+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ShuffleBlockFetcherIterator: Getting 1 (8.6 MiB) non-empty blocks including 1 (8.6 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2024-03-31T17:14:26.849+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+[2024-03-31T17:14:26.850+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:26.851+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:26.851+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:26.852+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:26.852+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2024-03-31T17:14:26.852+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2024-03-31T17:14:26.853+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2024-03-31T17:14:26.854+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:26.854+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO CodecConfig: Compression: SNAPPY
+[2024-03-31T17:14:26.855+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ParquetOutputFormat: ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+[2024-03-31T17:14:26.857+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ParquetOutputFormat: ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+[2024-03-31T17:14:26.859+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+[2024-03-31T17:14:26.860+0000] {spark_submit.py:491} INFO - {
+[2024-03-31T17:14:26.860+0000] {spark_submit.py:491} INFO - "type" : "struct",
+[2024-03-31T17:14:26.860+0000] {spark_submit.py:491} INFO - "fields" : [ {
+[2024-03-31T17:14:26.860+0000] {spark_submit.py:491} INFO - "name" : "job_id",
+[2024-03-31T17:14:26.860+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.861+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.861+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.861+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.861+0000] {spark_submit.py:491} INFO - "name" : "company_id",
+[2024-03-31T17:14:26.861+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.862+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.862+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.862+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.862+0000] {spark_submit.py:491} INFO - "name" : "title",
+[2024-03-31T17:14:26.862+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.862+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.863+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.863+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.863+0000] {spark_submit.py:491} INFO - "name" : "description",
+[2024-03-31T17:14:26.863+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.863+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.864+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.864+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.864+0000] {spark_submit.py:491} INFO - "name" : "max_salary",
+[2024-03-31T17:14:26.864+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.864+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.864+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.865+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.865+0000] {spark_submit.py:491} INFO - "name" : "med_salary",
+[2024-03-31T17:14:26.865+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.865+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.865+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.866+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.866+0000] {spark_submit.py:491} INFO - "name" : "min_salary",
+[2024-03-31T17:14:26.866+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.866+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.866+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.866+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.867+0000] {spark_submit.py:491} INFO - "name" : "pay_period",
+[2024-03-31T17:14:26.867+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.867+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.867+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.867+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.868+0000] {spark_submit.py:491} INFO - "name" : "formatted_work_type",
+[2024-03-31T17:14:26.868+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.868+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.868+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.868+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.868+0000] {spark_submit.py:491} INFO - "name" : "location",
+[2024-03-31T17:14:26.869+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.869+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.869+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.869+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.869+0000] {spark_submit.py:491} INFO - "name" : "applies",
+[2024-03-31T17:14:26.870+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.870+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.870+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.870+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.870+0000] {spark_submit.py:491} INFO - "name" : "original_listed_time",
+[2024-03-31T17:14:26.870+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.871+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.871+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.871+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.871+0000] {spark_submit.py:491} INFO - "name" : "remote_allowed",
+[2024-03-31T17:14:26.871+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.871+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.872+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.872+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.872+0000] {spark_submit.py:491} INFO - "name" : "views",
+[2024-03-31T17:14:26.872+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.872+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.873+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.873+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.873+0000] {spark_submit.py:491} INFO - "name" : "job_posting_url",
+[2024-03-31T17:14:26.873+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.873+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.874+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.874+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.874+0000] {spark_submit.py:491} INFO - "name" : "application_url",
+[2024-03-31T17:14:26.874+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.874+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.874+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.875+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.875+0000] {spark_submit.py:491} INFO - "name" : "application_type",
+[2024-03-31T17:14:26.875+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.875+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.878+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.878+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.878+0000] {spark_submit.py:491} INFO - "name" : "expiry",
+[2024-03-31T17:14:26.878+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.879+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.879+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.879+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.879+0000] {spark_submit.py:491} INFO - "name" : "closed_time",
+[2024-03-31T17:14:26.879+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.879+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.880+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.880+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.880+0000] {spark_submit.py:491} INFO - "name" : "formatted_experience_level",
+[2024-03-31T17:14:26.880+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.880+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.881+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.881+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.881+0000] {spark_submit.py:491} INFO - "name" : "skills_desc",
+[2024-03-31T17:14:26.881+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.881+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.881+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.882+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.882+0000] {spark_submit.py:491} INFO - "name" : "listed_time",
+[2024-03-31T17:14:26.882+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.882+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.882+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.883+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.883+0000] {spark_submit.py:491} INFO - "name" : "posting_domain",
+[2024-03-31T17:14:26.883+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.883+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.883+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.884+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.884+0000] {spark_submit.py:491} INFO - "name" : "sponsored",
+[2024-03-31T17:14:26.884+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.884+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.884+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.885+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.885+0000] {spark_submit.py:491} INFO - "name" : "work_type",
+[2024-03-31T17:14:26.885+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.885+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.885+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.885+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.886+0000] {spark_submit.py:491} INFO - "name" : "currency",
+[2024-03-31T17:14:26.886+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.886+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.886+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.886+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.886+0000] {spark_submit.py:491} INFO - "name" : "compensation_type",
+[2024-03-31T17:14:26.887+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.887+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.887+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.887+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.889+0000] {spark_submit.py:491} INFO - "name" : "scraped",
+[2024-03-31T17:14:26.889+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.890+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.890+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.890+0000] {spark_submit.py:491} INFO - } ]
+[2024-03-31T17:14:26.890+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:26.890+0000] {spark_submit.py:491} INFO - and corresponding Parquet message type:
+[2024-03-31T17:14:26.891+0000] {spark_submit.py:491} INFO - message spark_schema {
+[2024-03-31T17:14:26.891+0000] {spark_submit.py:491} INFO - optional binary job_id (STRING);
+[2024-03-31T17:14:26.891+0000] {spark_submit.py:491} INFO - optional binary company_id (STRING);
+[2024-03-31T17:14:26.891+0000] {spark_submit.py:491} INFO - optional binary title (STRING);
+[2024-03-31T17:14:26.891+0000] {spark_submit.py:491} INFO - optional binary description (STRING);
+[2024-03-31T17:14:26.892+0000] {spark_submit.py:491} INFO - optional float max_salary;
+[2024-03-31T17:14:26.892+0000] {spark_submit.py:491} INFO - optional float med_salary;
+[2024-03-31T17:14:26.892+0000] {spark_submit.py:491} INFO - optional float min_salary;
+[2024-03-31T17:14:26.892+0000] {spark_submit.py:491} INFO - optional binary pay_period (STRING);
+[2024-03-31T17:14:26.892+0000] {spark_submit.py:491} INFO - optional binary formatted_work_type (STRING);
+[2024-03-31T17:14:26.893+0000] {spark_submit.py:491} INFO - optional binary location (STRING);
+[2024-03-31T17:14:26.893+0000] {spark_submit.py:491} INFO - optional int32 applies;
+[2024-03-31T17:14:26.893+0000] {spark_submit.py:491} INFO - optional int96 original_listed_time;
+[2024-03-31T17:14:26.893+0000] {spark_submit.py:491} INFO - optional binary remote_allowed (STRING);
+[2024-03-31T17:14:26.893+0000] {spark_submit.py:491} INFO - optional int32 views;
+[2024-03-31T17:14:26.893+0000] {spark_submit.py:491} INFO - optional binary job_posting_url (STRING);
+[2024-03-31T17:14:26.894+0000] {spark_submit.py:491} INFO - optional binary application_url (STRING);
+[2024-03-31T17:14:26.894+0000] {spark_submit.py:491} INFO - optional binary application_type (STRING);
+[2024-03-31T17:14:26.894+0000] {spark_submit.py:491} INFO - optional int96 expiry;
+[2024-03-31T17:14:26.895+0000] {spark_submit.py:491} INFO - optional int96 closed_time;
+[2024-03-31T17:14:26.895+0000] {spark_submit.py:491} INFO - optional binary formatted_experience_level (STRING);
+[2024-03-31T17:14:26.895+0000] {spark_submit.py:491} INFO - optional binary skills_desc (STRING);
+[2024-03-31T17:14:26.896+0000] {spark_submit.py:491} INFO - optional int96 listed_time;
+[2024-03-31T17:14:26.896+0000] {spark_submit.py:491} INFO - optional binary posting_domain (STRING);
+[2024-03-31T17:14:26.896+0000] {spark_submit.py:491} INFO - optional int32 sponsored;
+[2024-03-31T17:14:26.896+0000] {spark_submit.py:491} INFO - optional binary work_type (STRING);
+[2024-03-31T17:14:26.896+0000] {spark_submit.py:491} INFO - optional binary currency (STRING);
+[2024-03-31T17:14:26.897+0000] {spark_submit.py:491} INFO - optional binary compensation_type (STRING);
+[2024-03-31T17:14:26.897+0000] {spark_submit.py:491} INFO - optional int32 scraped;
+[2024-03-31T17:14:26.897+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:26.897+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:26.897+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:26.898+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:26 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+[2024-03-31T17:14:26.898+0000] {spark_submit.py:491} INFO - {
+[2024-03-31T17:14:26.898+0000] {spark_submit.py:491} INFO - "type" : "struct",
+[2024-03-31T17:14:26.899+0000] {spark_submit.py:491} INFO - "fields" : [ {
+[2024-03-31T17:14:26.899+0000] {spark_submit.py:491} INFO - "name" : "job_id",
+[2024-03-31T17:14:26.899+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.899+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.899+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.900+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.900+0000] {spark_submit.py:491} INFO - "name" : "company_id",
+[2024-03-31T17:14:26.900+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.900+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.900+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.901+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.901+0000] {spark_submit.py:491} INFO - "name" : "title",
+[2024-03-31T17:14:26.901+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.901+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.901+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.901+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.902+0000] {spark_submit.py:491} INFO - "name" : "description",
+[2024-03-31T17:14:26.902+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.902+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.902+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.902+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.902+0000] {spark_submit.py:491} INFO - "name" : "max_salary",
+[2024-03-31T17:14:26.903+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.903+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.903+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.903+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.903+0000] {spark_submit.py:491} INFO - "name" : "med_salary",
+[2024-03-31T17:14:26.904+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.904+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.904+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.904+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.904+0000] {spark_submit.py:491} INFO - "name" : "min_salary",
+[2024-03-31T17:14:26.905+0000] {spark_submit.py:491} INFO - "type" : "float",
+[2024-03-31T17:14:26.905+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.905+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.905+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.905+0000] {spark_submit.py:491} INFO - "name" : "pay_period",
+[2024-03-31T17:14:26.905+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.906+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.906+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.906+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.906+0000] {spark_submit.py:491} INFO - "name" : "formatted_work_type",
+[2024-03-31T17:14:26.906+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.907+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.907+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.907+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.907+0000] {spark_submit.py:491} INFO - "name" : "location",
+[2024-03-31T17:14:26.907+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.908+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.908+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.908+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.908+0000] {spark_submit.py:491} INFO - "name" : "applies",
+[2024-03-31T17:14:26.908+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.908+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.909+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.909+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.909+0000] {spark_submit.py:491} INFO - "name" : "original_listed_time",
+[2024-03-31T17:14:26.909+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.909+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.909+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.910+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.910+0000] {spark_submit.py:491} INFO - "name" : "remote_allowed",
+[2024-03-31T17:14:26.910+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.910+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.911+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.911+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.911+0000] {spark_submit.py:491} INFO - "name" : "views",
+[2024-03-31T17:14:26.912+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.912+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.912+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.912+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.913+0000] {spark_submit.py:491} INFO - "name" : "job_posting_url",
+[2024-03-31T17:14:26.913+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.913+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.913+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.913+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.914+0000] {spark_submit.py:491} INFO - "name" : "application_url",
+[2024-03-31T17:14:26.914+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.914+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.914+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.914+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.915+0000] {spark_submit.py:491} INFO - "name" : "application_type",
+[2024-03-31T17:14:26.915+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.915+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.915+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.915+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.916+0000] {spark_submit.py:491} INFO - "name" : "expiry",
+[2024-03-31T17:14:26.916+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.916+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.916+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.916+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.916+0000] {spark_submit.py:491} INFO - "name" : "closed_time",
+[2024-03-31T17:14:26.917+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.917+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.917+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.917+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.917+0000] {spark_submit.py:491} INFO - "name" : "formatted_experience_level",
+[2024-03-31T17:14:26.918+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.918+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.918+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.918+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.918+0000] {spark_submit.py:491} INFO - "name" : "skills_desc",
+[2024-03-31T17:14:26.918+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.919+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.919+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.919+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.919+0000] {spark_submit.py:491} INFO - "name" : "listed_time",
+[2024-03-31T17:14:26.919+0000] {spark_submit.py:491} INFO - "type" : "timestamp",
+[2024-03-31T17:14:26.920+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.921+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.921+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.921+0000] {spark_submit.py:491} INFO - "name" : "posting_domain",
+[2024-03-31T17:14:26.922+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.923+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.923+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.923+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.923+0000] {spark_submit.py:491} INFO - "name" : "sponsored",
+[2024-03-31T17:14:26.923+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.924+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.924+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.924+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.924+0000] {spark_submit.py:491} INFO - "name" : "work_type",
+[2024-03-31T17:14:26.924+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.924+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.925+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.925+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.925+0000] {spark_submit.py:491} INFO - "name" : "currency",
+[2024-03-31T17:14:26.925+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.926+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.926+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.926+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.926+0000] {spark_submit.py:491} INFO - "name" : "compensation_type",
+[2024-03-31T17:14:26.927+0000] {spark_submit.py:491} INFO - "type" : "string",
+[2024-03-31T17:14:26.927+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.927+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.927+0000] {spark_submit.py:491} INFO - }, {
+[2024-03-31T17:14:26.927+0000] {spark_submit.py:491} INFO - "name" : "scraped",
+[2024-03-31T17:14:26.927+0000] {spark_submit.py:491} INFO - "type" : "integer",
+[2024-03-31T17:14:26.928+0000] {spark_submit.py:491} INFO - "nullable" : true,
+[2024-03-31T17:14:26.928+0000] {spark_submit.py:491} INFO - "metadata" : { }
+[2024-03-31T17:14:26.928+0000] {spark_submit.py:491} INFO - } ]
+[2024-03-31T17:14:26.928+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:26.928+0000] {spark_submit.py:491} INFO - and corresponding Parquet message type:
+[2024-03-31T17:14:26.929+0000] {spark_submit.py:491} INFO - message spark_schema {
+[2024-03-31T17:14:26.929+0000] {spark_submit.py:491} INFO - optional binary job_id (STRING);
+[2024-03-31T17:14:26.930+0000] {spark_submit.py:491} INFO - optional binary company_id (STRING);
+[2024-03-31T17:14:26.930+0000] {spark_submit.py:491} INFO - optional binary title (STRING);
+[2024-03-31T17:14:26.930+0000] {spark_submit.py:491} INFO - optional binary description (STRING);
+[2024-03-31T17:14:26.930+0000] {spark_submit.py:491} INFO - optional float max_salary;
+[2024-03-31T17:14:26.931+0000] {spark_submit.py:491} INFO - optional float med_salary;
+[2024-03-31T17:14:26.931+0000] {spark_submit.py:491} INFO - optional float min_salary;
+[2024-03-31T17:14:26.931+0000] {spark_submit.py:491} INFO - optional binary pay_period (STRING);
+[2024-03-31T17:14:26.931+0000] {spark_submit.py:491} INFO - optional binary formatted_work_type (STRING);
+[2024-03-31T17:14:26.932+0000] {spark_submit.py:491} INFO - optional binary location (STRING);
+[2024-03-31T17:14:26.932+0000] {spark_submit.py:491} INFO - optional int32 applies;
+[2024-03-31T17:14:26.932+0000] {spark_submit.py:491} INFO - optional int96 original_listed_time;
+[2024-03-31T17:14:26.932+0000] {spark_submit.py:491} INFO - optional binary remote_allowed (STRING);
+[2024-03-31T17:14:26.932+0000] {spark_submit.py:491} INFO - optional int32 views;
+[2024-03-31T17:14:26.933+0000] {spark_submit.py:491} INFO - optional binary job_posting_url (STRING);
+[2024-03-31T17:14:26.933+0000] {spark_submit.py:491} INFO - optional binary application_url (STRING);
+[2024-03-31T17:14:26.933+0000] {spark_submit.py:491} INFO - optional binary application_type (STRING);
+[2024-03-31T17:14:26.933+0000] {spark_submit.py:491} INFO - optional int96 expiry;
+[2024-03-31T17:14:26.934+0000] {spark_submit.py:491} INFO - optional int96 closed_time;
+[2024-03-31T17:14:26.934+0000] {spark_submit.py:491} INFO - optional binary formatted_experience_level (STRING);
+[2024-03-31T17:14:26.934+0000] {spark_submit.py:491} INFO - optional binary skills_desc (STRING);
+[2024-03-31T17:14:26.934+0000] {spark_submit.py:491} INFO - optional int96 listed_time;
+[2024-03-31T17:14:26.934+0000] {spark_submit.py:491} INFO - optional binary posting_domain (STRING);
+[2024-03-31T17:14:26.935+0000] {spark_submit.py:491} INFO - optional int32 sponsored;
+[2024-03-31T17:14:26.935+0000] {spark_submit.py:491} INFO - optional binary work_type (STRING);
+[2024-03-31T17:14:26.935+0000] {spark_submit.py:491} INFO - optional binary currency (STRING);
+[2024-03-31T17:14:26.935+0000] {spark_submit.py:491} INFO - optional binary compensation_type (STRING);
+[2024-03-31T17:14:26.935+0000] {spark_submit.py:491} INFO - optional int32 scraped;
+[2024-03-31T17:14:26.935+0000] {spark_submit.py:491} INFO - }
+[2024-03-31T17:14:26.936+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:26.936+0000] {spark_submit.py:491} INFO - 
+[2024-03-31T17:14:27.285+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO FileOutputCommitter: Saved output of task 'attempt_202403311714234872998186149406800_0002_m_000008_9' to file:/usr/local/airflow/include/dataset/parquet/job_postings/_temporary/0/task_202403311714234872998186149406800_0002_m_000008
+[2024-03-31T17:14:27.286+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO SparkHadoopMapRedUtil: attempt_202403311714234872998186149406800_0002_m_000008_9: Committed. Elapsed time: 2 ms.
+[2024-03-31T17:14:27.290+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO Executor: Finished task 8.0 in stage 2.0 (TID 9). 4783 bytes result sent to driver
+[2024-03-31T17:14:27.293+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO TaskSetManager: Finished task 8.0 in stage 2.0 (TID 9) in 569 ms on d1dbed01df62 (executor driver) (9/10)
+[2024-03-31T17:14:27.313+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO FileOutputCommitter: Saved output of task 'attempt_202403311714234872998186149406800_0002_m_000009_10' to file:/usr/local/airflow/include/dataset/parquet/job_postings/_temporary/0/task_202403311714234872998186149406800_0002_m_000009
+[2024-03-31T17:14:27.313+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO SparkHadoopMapRedUtil: attempt_202403311714234872998186149406800_0002_m_000009_10: Committed. Elapsed time: 1 ms.
+[2024-03-31T17:14:27.318+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO Executor: Finished task 9.0 in stage 2.0 (TID 10). 4783 bytes result sent to driver
+[2024-03-31T17:14:27.329+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO TaskSetManager: Finished task 9.0 in stage 2.0 (TID 10) in 518 ms on d1dbed01df62 (executor driver) (10/10)
+[2024-03-31T17:14:27.331+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool
+[2024-03-31T17:14:27.331+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO DAGScheduler: ResultStage 2 (parquet at NativeMethodAccessorImpl.java:0) finished in 4.161 s
+[2024-03-31T17:14:27.336+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-03-31T17:14:27.336+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+[2024-03-31T17:14:27.341+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO DAGScheduler: Job 1 finished: parquet at NativeMethodAccessorImpl.java:0, took 4.203047 s
+[2024-03-31T17:14:27.344+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO FileFormatWriter: Start to commit write Job 44029707-d39d-4fd1-86e1-b959f857d289.
+[2024-03-31T17:14:27.427+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO FileFormatWriter: Write Job 44029707-d39d-4fd1-86e1-b959f857d289 committed. Elapsed time: 80 ms.
+[2024-03-31T17:14:27.436+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO FileFormatWriter: Finished processing stats for write job 44029707-d39d-4fd1-86e1-b959f857d289.
+[2024-03-31T17:14:27.465+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2024-03-31T17:14:27.498+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO SparkUI: Stopped Spark web UI at http://d1dbed01df62:4040
+[2024-03-31T17:14:27.540+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2024-03-31T17:14:27.582+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO MemoryStore: MemoryStore cleared
+[2024-03-31T17:14:27.582+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO BlockManager: BlockManager stopped
+[2024-03-31T17:14:27.587+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2024-03-31T17:14:27.590+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2024-03-31T17:14:27.599+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO SparkContext: Successfully stopped SparkContext
+[2024-03-31T17:14:27.782+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO ShutdownHookManager: Shutdown hook called
+[2024-03-31T17:14:27.784+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO ShutdownHookManager: Deleting directory /tmp/spark-80f0ea58-e76c-403b-abfa-6003401418d4/pyspark-607e8ce6-b39a-43a3-a2a0-e2e86cbdb171
+[2024-03-31T17:14:27.789+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO ShutdownHookManager: Deleting directory /tmp/spark-80f0ea58-e76c-403b-abfa-6003401418d4
+[2024-03-31T17:14:27.794+0000] {spark_submit.py:491} INFO - 24/03/31 17:14:27 INFO ShutdownHookManager: Deleting directory /tmp/spark-29257c6a-e646-453e-88d4-e321dabd24ed
+[2024-03-31T17:14:27.946+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=data_parquet_gcs, task_id=repartition_parquet, execution_date=20240331T171401, start_date=20240331T171402, end_date=20240331T171427
+[2024-03-31T17:14:28.004+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-31T17:14:28.038+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check
