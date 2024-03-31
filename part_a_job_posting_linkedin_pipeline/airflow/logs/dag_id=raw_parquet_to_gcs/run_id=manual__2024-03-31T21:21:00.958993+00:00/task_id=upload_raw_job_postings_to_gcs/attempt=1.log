@@ -1,0 +1,15 @@
+[2024-03-31T21:21:04.268+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_parquet_to_gcs.upload_raw_job_postings_to_gcs manual__2024-03-31T21:21:00.958993+00:00 [queued]>
+[2024-03-31T21:21:04.322+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_parquet_to_gcs.upload_raw_job_postings_to_gcs manual__2024-03-31T21:21:00.958993+00:00 [queued]>
+[2024-03-31T21:21:04.323+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-31T21:21:04.398+0000] {taskinstance.py:2217} INFO - Executing <Task(LocalFilesystemToGCSOperator): upload_raw_job_postings_to_gcs> on 2024-03-31 21:21:00.958993+00:00
+[2024-03-31T21:21:04.435+0000] {standard_task_runner.py:60} INFO - Started process 3433 to run task
+[2024-03-31T21:21:04.463+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_parquet_to_gcs', 'upload_raw_job_postings_to_gcs', 'manual__2024-03-31T21:21:00.958993+00:00', '--job-id', '130', '--raw', '--subdir', 'DAGS_FOLDER/data_ingest_gcs.py', '--cfg-path', '/tmp/tmpijg4b33n']
+[2024-03-31T21:21:04.476+0000] {standard_task_runner.py:88} INFO - Job 130: Subtask upload_raw_job_postings_to_gcs
+[2024-03-31T21:21:04.706+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_parquet_to_gcs.upload_raw_job_postings_to_gcs manual__2024-03-31T21:21:00.958993+00:00 [running]> on host b80f92e9e8b8
+[2024-03-31T21:21:05.203+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='raw_parquet_to_gcs' AIRFLOW_CTX_TASK_ID='upload_raw_job_postings_to_gcs' AIRFLOW_CTX_EXECUTION_DATE='2024-03-31T21:21:00.958993+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-31T21:21:00.958993+00:00'
+[2024-03-31T21:21:05.339+0000] {connection.py:269} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-03-31T21:21:05.354+0000] {base.py:83} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-03-31T21:21:07.958+0000] {gcs.py:555} INFO - File /usr/local/airflow/include/dataset/2024-03-31/raw/linkedin-job-postings/job_postings.csv uploaded to final_project/2024-03-31/raw/job_postings.csv in de-zoomcamp-xiangivyli bucket
+[2024-03-31T21:21:07.970+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=raw_parquet_to_gcs, task_id=upload_raw_job_postings_to_gcs, execution_date=20240331T212100, start_date=20240331T212104, end_date=20240331T212107
+[2024-03-31T21:21:08.000+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-31T21:21:08.032+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check
