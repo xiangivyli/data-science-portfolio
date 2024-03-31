@@ -26,6 +26,16 @@ Used Techniques are:
  - Containerization: Astro Cli
  - Data Orchestration: Airflow
 
- 
-
  ## Chapter 2 Data Extraction
+ 
+ With a jupyter notebook named [0_download_explore_data.ipynb](./0_download_explore_data.ipynb), I downloaded the raw data to my Airflow dataset (it is ignored in .gitignore considering space).
+
+ The strucuture is <p align = "center">
+  <img src="./image/1_tree.png">
+  </p>
+ The size information is <p align = "center">
+  <img src="./image/2_size.png">
+  </p>
+ The number of records information is <p align = "center">
+  <img src="./image/3_records.png">
+  </p>
