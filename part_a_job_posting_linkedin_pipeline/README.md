@@ -19,11 +19,12 @@ Used Techniques are:
  - Data Transformation: dbt
  - Data Loading: Airflow (Astro Cli)
  - Data Visualisation: Power BI
+ - Data Quality Testing: Soda
 
  - Data Lake: Google Cloud Storage
  - Data Warehouse: BigQuery
 
- - Containerization: Astro Cli
+ - Containerization: Astro Cli (Docker Compose)
  - Data Orchestration: Airflow
 
  ## Chapter 2 Data Extraction
@@ -38,4 +39,20 @@ Used Techniques are:
   </p>
  The number of records information is <p align = "center">
   <img src="./image/3_records.png">
+  </p>
+
+I also use Power BI to draw the relationship among these tables, the data modelling is <p align = "center">
+  <img src="./image/4_data_modelling.png">
+  </p>
+
+# Chapter 3 Data Preparation with Airflow
+Airflow controls the whole process for data preparation, it includes:
+- Backup raw files in Google Cloud Storage with GCSHook and PythonOperator
+- Repartition and convert raw to parquet files with SparkSubmitOperator
+- Upload parquet files to Google Cloud Storage with GCSHook and PythonOperator
+- Create an empty dataset in BigQuery with BigQueryCreateEmptyDatasetOperator
+- Import data from Google Cloud Storage to BigQuery with astro-sdk-python
+
+The Graph is <p align = "center">
+  <img src="./image/5_data_preparation.png">
   </p>
