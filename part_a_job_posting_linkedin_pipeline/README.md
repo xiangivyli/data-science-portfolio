@@ -58,3 +58,10 @@ The dag file is [in the airflow/dags subfolder](./airflow/dags/data_ingest_gcs.p
 The Graph is <p align = "center">
   <img src="./image/5_data_preparation.png">
   </p>
+
+# Chapter 4 Data Quality Check
+
+Use `soda-core-bigquery` package in Airflow, the configuration file is [here](./airflow/include/soda/checks/configuration.yml) to build a connection with BigQuery by Google Cloud Service Account Credentials and Soda Cloud API.
+
+Add `yml` file corresponding to each table in `soda/checks/sources` folder to execute the check
+
