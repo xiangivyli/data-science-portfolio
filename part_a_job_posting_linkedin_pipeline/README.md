@@ -53,6 +53,8 @@ Airflow controls the whole process for data preparation, it includes:
 - Create an empty dataset in BigQuery with BigQueryCreateEmptyDatasetOperator
 - Import data from Google Cloud Storage to BigQuery with astro-sdk-python
 
+The dag file is [in the airflow folder](./airflow/dags/data_ingest_gcs.py)
+
 The Graph is <p align = "center">
   <img src="./image/5_data_preparation.png">
   </p>
