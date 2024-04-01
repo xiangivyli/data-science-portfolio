@@ -61,7 +61,7 @@ The Graph is <p align = "center">
 
 # Chapter 4 Data Quality Check
 
-Use `soda-core-bigquery` package in Airflow, the configuration file is [here](./airflow/include/soda/checks/configuration.yml) to build a connection with BigQuery by Google Cloud Service Account Credentials and Soda Cloud API.
+Use `soda-core-bigquery` package in Airflow, the configuration file is [here](./airflow/include/soda/configuration.yml) to build a connection with BigQuery by Google Cloud Service Account Credentials and Soda Cloud API.
 
 Add `yml` file corresponding to each table in `soda/checks/sources` folder to execute the check
 
