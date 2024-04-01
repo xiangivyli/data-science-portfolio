@@ -8,6 +8,7 @@ from datetime import datetime
 from airflow.utils.dates import days_ago
 
 from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator
+from airflow.operators.python import PythonOperator
 
 from astro import sql as aql
 from astro.files import File
@@ -36,28 +37,6 @@ gcs_raw_folder = "final_project/2024-03-31/raw/"
 gcs_parquet_folder = "final_project/2024-03-31/parquet/"
 
 
-
-def load_parquet_folders_to_bigquery(bucket: str, gcs_parquet_folder: str, table_names: List[str], conn_id: str = "google_cloud_default"):
-    for table in table_names:
-        # Construct the full path to the parquet folder for each table
-        input_folder_path = f'gs://{bucket}/{gcs_parquet_folder}pq_{table}/'
-        
-        # Define the task to load data from GCS to BigQuery
-        load_task = aql.load_file(
-            task_id=f'load_{table}_to_bigquery',
-            input_file=File(
-                path=input_folder_path,
-                conn_id=conn_id,
-                filetype=FileType.PARQUET
-            ),
-            output_table=Table(
-                name=table,
-                conn_id=conn_id,
-                metadata=Metadata(schema='test'), 
-            ),
-            use_native_support=False, 
-        )
-
 @dag(
     start_date=days_ago(1),
     schedule=None,
@@ -65,12 +44,24 @@ def load_parquet_folders_to_bigquery(bucket: str, gcs_parquet_folder: str, table
     tags=["test"],
 )
 def test():
+        
+        input_folder_path = f'gs://{bucket}/{gcs_parquet_folder}pq_salaries/'
 
-    load_parquet_to_bigquery_task = load_parquet_folders_to_bigquery(
-        bucket=bucket, 
-        gcs_parquet_folder=gcs_parquet_folder,
-        table_names=table_names,  
-    )
+
+        aql.load_file(
+            task_id='load_salaries_to_bigquery',
+            input_file=File(
+                path=input_folder_path,
+                conn_id="google_cloud_default",
+                filetype=FileType.PARQUET,
+            ),
+            output_table=Table(
+                name='salaries',
+                conn_id="google_cloud_default",
+                metadata=Metadata(schema="job_postings_project"),
+            ),
+            use_native_support=False,
+        )
 
 test()
 

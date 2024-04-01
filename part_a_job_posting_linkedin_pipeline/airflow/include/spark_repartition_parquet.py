@@ -145,7 +145,7 @@ def repartition_parquet_convert():
         from_unixtime(col("time_recorded")).cast("timestamp")
     )
     
-    df_employee_counts.repartition(5).write.parquet(f"{local_parquet}pq_employee/", mode="overwrite")
+    df_employee_counts.repartition(5).write.parquet(f"{local_parquet}pq_employee_counts/", mode="overwrite")
     
     # 5. company_details/company_specialities.csv
     company_specialities_schema=StructType([

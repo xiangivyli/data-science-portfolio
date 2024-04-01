@@ -77,27 +77,6 @@ def upload_directory_to_gcs(bucket, local_folder, gcs_folder):
                             object_name=gcs_path, 
                             filename=str(local_file))
             
-# Define a function to import data to bigquery
-def load_parquet_folders_to_bigquery(bucket, gcs_parquet_folder, table_names: List[str], schema: str, conn_id: str = "google_cloud_default"):
-    for table in table_names:
-        # Construct the full path to the parquet folder for each table
-        input_folder_path = f'gs://{bucket}/{gcs_parquet_folder}pq_{table}/'
-        
-        # Define the task to load data from GCS to BigQuery
-        load_task = aql.load_file(
-            input_file=File(
-                path=input_folder_path,
-                conn_id=conn_id,
-                filetype=FileType.PARQUET
-            ),
-            output_table=Table(
-                name=table,
-                conn_id=conn_id,
-                metadata=Metadata(schema=schema), 
-            ),
-            use_native_support=False, 
-        )
-
 
 @dag(
     start_date=days_ago(1),
@@ -146,21 +125,34 @@ def raw_parquet_to_gcs():
     )
 
     # task5 import data from gcs to bigquery
-    load_parquet_to_bigquery_task = PythonOperator(
-        task_id="import_data_from_gcs_to_bigquery",
-        python_callable=load_parquet_folders_to_bigquery,
-        op_kwargs={'bucket': bucket, 
-                   'gcs_parquet_folder': gcs_parquet_folder,
-                   'table_names': table_names,  
-                   'schema': "job_postings_project"}
-    )
+    import_data_gcs_to_bigquery_tasks = []
+
+    for table in table_names:
+        input_folder_path = f'gs://{bucket}/{gcs_parquet_folder}pq_{table}/'
+
+        task = aql.load_file(
+            task_id=f'load_{table}_to_bigquery',
+            input_file=File(
+                path=input_folder_path,
+                conn_id="google_cloud_default",
+                filetype=FileType.PARQUET,
+            ),
+            output_table=Table(
+                name=table,
+                conn_id="google_cloud_default",
+                metadata=Metadata(schema="job_postings_project"),
+            ),
+            use_native_support=False,
+        )
+
+        import_data_gcs_to_bigquery_tasks.append(task)
 
     chain(
         upload_raw_tasks,
         repartition_parquet,
         upload_parquet_to_gcs_task,
         create_dataset_tasks,
-        load_parquet_to_bigquery_task,
+        import_data_gcs_to_bigquery_tasks
     )
 
 raw_parquet_to_gcs()
