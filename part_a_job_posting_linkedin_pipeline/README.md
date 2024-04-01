@@ -47,13 +47,13 @@ I also use Power BI to draw the relationship among these tables, the data modell
 
 # Chapter 3 Data Preparation with Airflow
 Airflow controls the whole process for data preparation, it includes:
-- Backup raw files in Google Cloud Storage with GCSHook and PythonOperator
-- Repartition and convert raw to parquet files with SparkSubmitOperator
-- Upload parquet files to Google Cloud Storage with GCSHook and PythonOperator
-- Create an empty dataset in BigQuery with BigQueryCreateEmptyDatasetOperator
-- Import data from Google Cloud Storage to BigQuery with astro-sdk-python
+1. Backup **raw** files in **Google Cloud Storage** with GCSHook and PythonOperator
+2. Repartition and convert raw to **parquet files** with SparkSubmitOperator and a [python script](./airflow/include/spark_repartition_parquet.py) file
+3. Upload **parquet** files to **Google Cloud Storage** with GCSHook and PythonOperator
+4. Create an **empty dataset** in **BigQuery** with BigQueryCreateEmptyDatasetOperator
+5. Import **parquet data from Google Cloud Storage to BigQuery** with astro-sdk-python
 
-The dag file is [in the airflow folder](./airflow/dags/data_ingest_gcs.py)
+The dag file is [in the airflow/dags subfolder](./airflow/dags/data_ingest_gcs.py), the spark script is [in the airflow/include subfolder](./airflow/include/spark_repartition_parquet.py)
 
 The Graph is <p align = "center">
   <img src="./image/5_data_preparation.png">
