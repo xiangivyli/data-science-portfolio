@@ -1,15 +1,22 @@
 import os
 import glob
 from pathlib import Path
+from typing import List
 
 from airflow.decorators import dag, task
 from datetime import datetime
 from airflow.utils.dates import days_ago
 
 from airflow.providers.google.cloud.hooks.gcs import GCSHook
+from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from airflow.operators.python import PythonOperator
 from airflow.operators.empty import EmptyOperator
+
+from astro import sql as aql
+from astro.files import File
+from astro.sql.table import Table, Metadata
+from astro.constants import FileType
 
 from airflow.models.baseoperator import chain
 """
@@ -69,6 +76,28 @@ def upload_directory_to_gcs(bucket, local_folder, gcs_folder):
             gcs_hook.upload(bucket_name=bucket, 
                             object_name=gcs_path, 
                             filename=str(local_file))
+            
+# Define a function to import data to bigquery
+def load_parquet_folders_to_bigquery(bucket: str, gcs_parquet_folder: str, table_names: List[str], schema: str, conn_id: str = "google_cloud_default"):
+    for table in table_names:
+        # Construct the full path to the parquet folder for each table
+        input_folder_path = f'gs://{bucket}/{gcs_parquet_folder}pq_{table}/'
+        
+        # Define the task to load data from GCS to BigQuery
+        load_task = aql.load_file(
+            task_id=f'load_{table}_to_bigquery',
+            input_file=File(
+                path=input_folder_path,
+                conn_id=conn_id,
+                filetype=FileType.PARQUET
+            ),
+            output_table=Table(
+                name=table,
+                conn_id=conn_id,
+                metadata=Metadata(schema=schema), 
+            ),
+            use_native_support=False, 
+        )
 
 
 @dag(
@@ -110,10 +139,27 @@ def raw_parquet_to_gcs():
                    'gcs_folder': gcs_parquet_folder}
     )
 
+    # task4 create an empty dataset in Bigquery
+    create_dataset_tasks = BigQueryCreateEmptyDatasetOperator(
+        task_id="create_dataset_bigquery",
+        dataset_id="job_postings_info",
+        gcp_conn_id="google_cloud_default",
+    )
+
+    # task5 import data from gcs to bigquery
+    load_parquet_to_bigquery_task = load_parquet_folders_to_bigquery(
+        bucket=bucket, 
+        gcs_parquet_folder=gcs_parquet_folder,
+        table_names=table_names,  
+        schema="job_postings_info"
+    )
+
     chain(
         upload_raw_tasks,
         repartition_parquet,
-        upload_parquet_to_gcs_task
+        upload_parquet_to_gcs_task,
+        create_dataset_tasks,
+        load_parquet_to_bigquery_task
     )
 
 raw_parquet_to_gcs()
