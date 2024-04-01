@@ -23560,3 +23560,5 @@ File Path                                       PID    Runtime      # DAGs    # 
 /usr/local/airflow/dags/data_ingest_gcs.py                               1           0  0.15s           2024-04-01T07:18:03
 /usr/local/airflow/dags/dataset_prepare_gcs.py                           1           0  0.12s           2024-04-01T07:17:44
 ================================================================================
+[2024-04-01T07:18:30.137+0000] {manager.py:738} INFO - Searching for files in /usr/local/airflow/dags
+[2024-04-01T07:18:30.140+0000] {manager.py:741} INFO - There are 2 files in /usr/local/airflow/dags
