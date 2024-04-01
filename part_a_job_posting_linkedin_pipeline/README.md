@@ -110,7 +110,7 @@ And the check passed
 <a id = "ch5"></a>
 # Chapter 5 Data Transformation with dbt
 
-The purpose is 
+Purposes are:
 1. **employee_count** removes duplicate records for same `company_id`
 2. join **skills_name** to **job_skills**: replace `skill_abr` with full name
 3. join **industry** to **job_industry**: replace `industry_id` with full name
