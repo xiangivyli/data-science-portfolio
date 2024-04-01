@@ -1,7 +1,14 @@
 # Job Posting on Linkedin DataSet Pipeline
 
 # Table of Contents
+1. [Chapter 1 - Project Overview](#ch1)
+2. [Chapter 2 - Data Extraction](#ch2)
+3. [Chapter 3 - Data Preparation with Airflow](#ch3)
+4. [Chapter 4 Data Quality Check](#ch4)
 
+
+
+<a id = "ch1"></a>
 ## Chapter 1 Project Overview
 
 The project is inspired by my interest: I would like to understand the job market, the whole process includes 
@@ -27,6 +34,7 @@ Used Techniques are:
  - Containerization: Astro Cli (Docker Compose)
  - Data Orchestration: [Airflow](https://airflow.apache.org/)
 
+<a id = "ch2"></a>
  ## Chapter 2 Data Extraction
  
  With a jupyter notebook named [0_download_explore_data.ipynb](./0_download_explore_data.ipynb), I downloaded the raw data to my Airflow dataset (it is ignored in .gitignore considering space).
@@ -45,7 +53,9 @@ I also use Power BI to draw the relationship among these tables, the data modell
   <img src="./image/4_data_modelling.png">
   </p>
 
+<a id = "ch3"></a>
 # Chapter 3 Data Preparation with Airflow
+
 Airflow controls the whole process for data preparation, it includes:
 1. Backup **raw** files in **Google Cloud Storage** with [GCSHook](https://airflow.apache.org/docs/apache-airflow-providers-google/stable/_api/airflow/providers/google/cloud/hooks/gcs/index.html) and [PythonOperator](https://airflow.apache.org/docs/apache-airflow/stable/howto/operator/python.html)
 2. Repartition and convert raw to **parquet files** with [SparkSubmitOperator](https://registry.astronomer.io/providers/apache-airflow-providers-apache-spark/versions/4.7.1/modules/SparkSubmitHook) and a [python script](./airflow/include/spark_repartition_parquet.py) file
@@ -59,9 +69,27 @@ The Graph is <p align = "center">
   <img src="./image/5_data_preparation.png">
   </p>
 
+<a id = "ch4"></a>
 # Chapter 4 Data Quality Check
 
 Use `soda-core-bigquery` package in Airflow, the configuration file is [here](./airflow/include/soda/configuration.yml) to build a connection with BigQuery by Google Cloud Service Account Credentials and Soda Cloud API.
 
 Add `yml` file corresponding to each table in `soda/checks/sources` folder to execute the check
+
+For example, I would like to make sure job_postings table has been imported, and holds columns that I need and data types are correct.
+
+`job_postings.yml` includes all checks, and run
+
+```bash
+soda scan -d job_postings_project -c include/soda/configuration.yml include/soda/checks/sources/job_postings.yml
+```
+
+And the check passed
+<p align = "center">
+  <img src="./image/6_data_quality_check.png">
+  </p>
+
+
+
+
 
