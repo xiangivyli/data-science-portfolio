@@ -23506,3 +23506,30 @@ File Path                                       PID    Runtime      # DAGs    # 
 /usr/local/airflow/dags/data_ingest_gcs.py                               1           0  0.14s           2024-04-01T07:15:01
 /usr/local/airflow/dags/dataset_prepare_gcs.py                           1           0  0.12s           2024-04-01T07:14:43
 ================================================================================
+[2024-04-01T07:15:41.577+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/usr/local/airflow/dags/dataset_prepare_gcs.py                           1           0  0.18s           2024-04-01T07:15:13
+/usr/local/airflow/dags/data_ingest_gcs.py                               1           0  0.16s           2024-04-01T07:15:31
+================================================================================
+[2024-04-01T07:16:11.851+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/usr/local/airflow/dags/data_ingest_gcs.py                               1           0  0.15s           2024-04-01T07:16:01
+/usr/local/airflow/dags/dataset_prepare_gcs.py                           1           0  0.14s           2024-04-01T07:15:43
+================================================================================
+[2024-04-01T07:16:42.114+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/usr/local/airflow/dags/data_ingest_gcs.py                               1           0  0.15s           2024-04-01T07:16:32
+/usr/local/airflow/dags/dataset_prepare_gcs.py                           1           0  0.13s           2024-04-01T07:16:13
+================================================================================
