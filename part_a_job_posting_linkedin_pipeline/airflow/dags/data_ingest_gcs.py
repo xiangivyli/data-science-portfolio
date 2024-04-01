@@ -6,7 +6,6 @@ from airflow.decorators import dag, task
 from datetime import datetime
 from airflow.utils.dates import days_ago
 
-from airflow.providers.google.cloud.transfers.local_to_gcs import LocalFilesystemToGCSOperator
 from airflow.providers.google.cloud.hooks.gcs import GCSHook
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from airflow.operators.python import PythonOperator

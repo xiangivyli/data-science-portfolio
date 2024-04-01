@@ -11400,3 +11400,24 @@ NameError: name 'upload_files_to_gcs' is not defined
 [2024-04-01T12:47:05.587+0000] {logging_mixin.py:188} INFO - [2024-04-01T12:47:05.587+0000] {dag.py:3047} INFO - Sync 1 DAGs
 [2024-04-01T12:47:05.606+0000] {logging_mixin.py:188} INFO - [2024-04-01T12:47:05.605+0000] {dag.py:3834} INFO - Setting next_dagrun for test to None, run_after=None
 [2024-04-01T12:47:05.629+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/dataset_prepare_gcs.py took 0.098 seconds
+[2024-04-01T12:47:35.818+0000] {processor.py:161} INFO - Started process (PID=25895) to work on /usr/local/airflow/dags/dataset_prepare_gcs.py
+[2024-04-01T12:47:35.821+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/dataset_prepare_gcs.py for tasks to queue
+[2024-04-01T12:47:35.822+0000] {logging_mixin.py:188} INFO - [2024-04-01T12:47:35.822+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/dataset_prepare_gcs.py
+[2024-04-01T12:47:35.832+0000] {processor.py:840} INFO - DAG(s) 'test' retrieved from /usr/local/airflow/dags/dataset_prepare_gcs.py
+[2024-04-01T12:47:35.869+0000] {logging_mixin.py:188} INFO - [2024-04-01T12:47:35.868+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T12:47:35.886+0000] {logging_mixin.py:188} INFO - [2024-04-01T12:47:35.886+0000] {dag.py:3834} INFO - Setting next_dagrun for test to None, run_after=None
+[2024-04-01T12:47:35.912+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/dataset_prepare_gcs.py took 0.099 seconds
+[2024-04-01T12:48:06.095+0000] {processor.py:161} INFO - Started process (PID=25905) to work on /usr/local/airflow/dags/dataset_prepare_gcs.py
+[2024-04-01T12:48:06.097+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/dataset_prepare_gcs.py for tasks to queue
+[2024-04-01T12:48:06.098+0000] {logging_mixin.py:188} INFO - [2024-04-01T12:48:06.098+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/dataset_prepare_gcs.py
+[2024-04-01T12:48:06.108+0000] {processor.py:840} INFO - DAG(s) 'test' retrieved from /usr/local/airflow/dags/dataset_prepare_gcs.py
+[2024-04-01T12:48:06.143+0000] {logging_mixin.py:188} INFO - [2024-04-01T12:48:06.143+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T12:48:06.160+0000] {logging_mixin.py:188} INFO - [2024-04-01T12:48:06.159+0000] {dag.py:3834} INFO - Setting next_dagrun for test to None, run_after=None
+[2024-04-01T12:48:06.182+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/dataset_prepare_gcs.py took 0.092 seconds
+[2024-04-01T12:48:36.368+0000] {processor.py:161} INFO - Started process (PID=25915) to work on /usr/local/airflow/dags/dataset_prepare_gcs.py
+[2024-04-01T12:48:36.370+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/dataset_prepare_gcs.py for tasks to queue
+[2024-04-01T12:48:36.371+0000] {logging_mixin.py:188} INFO - [2024-04-01T12:48:36.371+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/dataset_prepare_gcs.py
+[2024-04-01T12:48:36.381+0000] {processor.py:840} INFO - DAG(s) 'test' retrieved from /usr/local/airflow/dags/dataset_prepare_gcs.py
+[2024-04-01T12:48:36.417+0000] {logging_mixin.py:188} INFO - [2024-04-01T12:48:36.417+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T12:48:36.443+0000] {logging_mixin.py:188} INFO - [2024-04-01T12:48:36.442+0000] {dag.py:3834} INFO - Setting next_dagrun for test to None, run_after=None
+[2024-04-01T12:48:36.471+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/dataset_prepare_gcs.py took 0.111 seconds
