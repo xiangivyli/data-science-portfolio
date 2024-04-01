@@ -4,7 +4,9 @@
 1. [Chapter 1 - Project Overview](#ch1)
 2. [Chapter 2 - Data Extraction](#ch2)
 3. [Chapter 3 - Data Preparation with Airflow](#ch3)
-4. [Chapter 4 Data Quality Check](#ch4)
+4. [Chapter 4 - Data Quality Check](#ch4)
+5. [Chapter 5 - Data Transformation with dbt](#ch5)
+6. [Chapter 6 - Data Visualisation](#ch6)
 
 
 
@@ -78,7 +80,7 @@ Add `yml` file corresponding to each table in `soda/checks/sources` folder to ex
 
 For example, I would like to make sure job_postings table has been imported, and holds columns that I need and data types are correct.
 
-`job_postings.yml` includes all checks, and run
+`job_postings.yml` includes all checks ([reference](https://docs.soda.io/soda/quick-start-sodacl.html) comes from soda document), and run
 
 ```bash
 soda scan -d job_postings_project -c include/soda/configuration.yml include/soda/checks/sources/job_postings.yml
@@ -89,6 +91,24 @@ And the check passed
   <img src="./image/6_data_quality_check.png">
   </p>
 
+
+<a id = "ch5"></a>
+# Chapter 5 Data Transformation with dbt
+
+The purpose is 
+1. **employee_count** removes duplicate records for same `company_id`
+2. join **skills_name** to **job_skills**: replace `skill_abr` with full name
+3. join **industry** to **job_industry**: replace `industry_id` with full name
+4. join **employee_count** to **company**: add `employee_count` and `follower_count` information
+5. keep **job_postings** columns that need in the data visualisation
+6. put company_info, industry and skills to the fact table **job_postings**
+
+The lineage graph is <p align = "center">
+  <img src="./image/7_data_transformation.png">
+  </p>
+
+<a id = "ch6"></a>
+# Chapter 6 Data Visualisation
 
 
 

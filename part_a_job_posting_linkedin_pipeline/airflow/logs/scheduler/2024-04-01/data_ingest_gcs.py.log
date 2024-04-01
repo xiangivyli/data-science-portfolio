@@ -20485,3 +20485,346 @@ airflow.exceptions.DuplicateTaskIdFound: Task id 'load_salaries_to_bigquery' has
 [2024-04-01T20:31:42.523+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:31:42.522+0000] {dag.py:3047} INFO - Sync 1 DAGs
 [2024-04-01T20:31:42.539+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:31:42.539+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
 [2024-04-01T20:31:42.591+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.355 seconds
+[2024-04-01T20:32:12.762+0000] {processor.py:161} INFO - Started process (PID=2828) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:32:12.765+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:32:12.770+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:32:12.769+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:32:13.023+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:32:13.060+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:32:13.060+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:32:13.078+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:32:13.077+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:32:13.125+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.370 seconds
+[2024-04-01T20:32:43.293+0000] {processor.py:161} INFO - Started process (PID=2838) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:32:43.296+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:32:43.301+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:32:43.300+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:32:43.548+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:32:43.601+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:32:43.600+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:32:43.621+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:32:43.620+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:32:43.670+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.384 seconds
+[2024-04-01T20:33:13.836+0000] {processor.py:161} INFO - Started process (PID=2848) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:33:13.838+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:33:13.841+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:33:13.840+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:33:14.087+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:33:14.139+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:33:14.138+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:33:14.163+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:33:14.163+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:33:14.217+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.386 seconds
+[2024-04-01T20:33:44.391+0000] {processor.py:161} INFO - Started process (PID=2858) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:33:44.394+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:33:44.399+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:33:44.398+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:33:44.726+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:33:44.768+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:33:44.767+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:33:44.786+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:33:44.785+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:33:44.838+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.453 seconds
+[2024-04-01T20:34:15.012+0000] {processor.py:161} INFO - Started process (PID=2868) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:34:15.014+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:34:15.018+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:34:15.017+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:34:15.265+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:34:15.304+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:34:15.304+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:34:15.322+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:34:15.321+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:34:15.384+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.378 seconds
+[2024-04-01T20:34:45.544+0000] {processor.py:161} INFO - Started process (PID=2878) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:34:45.546+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:34:45.549+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:34:45.549+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:34:45.808+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:34:45.857+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:34:45.857+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:34:45.875+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:34:45.875+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:34:45.923+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.384 seconds
+[2024-04-01T20:35:16.097+0000] {processor.py:161} INFO - Started process (PID=2888) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:35:16.099+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:35:16.103+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:35:16.103+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:35:16.347+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:35:16.389+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:35:16.388+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:35:16.413+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:35:16.413+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:35:16.460+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.369 seconds
+[2024-04-01T20:35:46.628+0000] {processor.py:161} INFO - Started process (PID=2898) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:35:46.629+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:35:46.633+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:35:46.632+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:35:46.894+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:35:46.937+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:35:46.936+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:35:46.955+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:35:46.954+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:35:47.005+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.383 seconds
+[2024-04-01T20:36:17.202+0000] {processor.py:161} INFO - Started process (PID=2908) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:36:17.204+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:36:17.208+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:36:17.207+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:36:17.458+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:36:17.500+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:36:17.499+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:36:17.518+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:36:17.518+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:36:17.568+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.372 seconds
+[2024-04-01T20:36:47.740+0000] {processor.py:161} INFO - Started process (PID=2918) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:36:47.742+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:36:47.746+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:36:47.745+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:36:47.986+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:36:48.031+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:36:48.030+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:36:48.055+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:36:48.054+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:36:48.114+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.381 seconds
+[2024-04-01T20:37:18.305+0000] {processor.py:161} INFO - Started process (PID=2928) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:37:18.308+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:37:18.312+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:37:18.311+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:37:18.557+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:37:18.597+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:37:18.597+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:37:18.615+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:37:18.615+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:37:18.691+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.389 seconds
+[2024-04-01T20:37:48.856+0000] {processor.py:161} INFO - Started process (PID=2938) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:37:48.859+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:37:48.863+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:37:48.863+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:37:49.100+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:37:49.139+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:37:49.138+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:37:49.156+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:37:49.156+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:37:49.204+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.354 seconds
+[2024-04-01T20:38:19.377+0000] {processor.py:161} INFO - Started process (PID=2948) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:38:19.379+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:38:19.383+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:38:19.382+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:38:19.643+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:38:19.691+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:38:19.690+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:38:19.715+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:38:19.715+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:38:19.764+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.393 seconds
+[2024-04-01T20:38:49.930+0000] {processor.py:161} INFO - Started process (PID=2958) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:38:49.932+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:38:49.935+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:38:49.935+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:38:50.271+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:38:50.315+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:38:50.314+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:38:50.331+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:38:50.331+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:38:50.376+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.451 seconds
+[2024-04-01T20:39:20.544+0000] {processor.py:161} INFO - Started process (PID=2968) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:39:20.547+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:39:20.551+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:39:20.550+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:39:20.789+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:39:20.840+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:39:20.839+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:39:20.866+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:39:20.866+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:39:20.921+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.383 seconds
+[2024-04-01T20:39:51.085+0000] {processor.py:161} INFO - Started process (PID=2978) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:39:51.087+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:39:51.091+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:39:51.090+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:39:51.367+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:39:51.406+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:39:51.405+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:39:51.422+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:39:51.422+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:39:51.464+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.384 seconds
+[2024-04-01T20:40:21.641+0000] {processor.py:161} INFO - Started process (PID=2988) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:40:21.643+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:40:21.647+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:40:21.646+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:40:21.940+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:40:21.980+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:40:21.979+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:40:21.996+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:40:21.996+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:40:22.048+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.413 seconds
+[2024-04-01T20:40:52.207+0000] {processor.py:161} INFO - Started process (PID=2998) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:40:52.208+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:40:52.212+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:40:52.211+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:40:52.482+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:40:52.523+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:40:52.522+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:40:52.540+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:40:52.540+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:40:52.588+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.386 seconds
+[2024-04-01T20:41:22.782+0000] {processor.py:161} INFO - Started process (PID=3008) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:41:22.784+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:41:22.789+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:41:22.788+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:41:23.065+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:41:23.106+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:41:23.105+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:41:23.124+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:41:23.123+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:41:23.172+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.395 seconds
+[2024-04-01T20:41:53.328+0000] {processor.py:161} INFO - Started process (PID=3018) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:41:53.331+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:41:53.336+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:41:53.335+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:41:53.627+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:41:53.669+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:41:53.668+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:41:53.686+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:41:53.686+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:41:53.739+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.416 seconds
+[2024-04-01T20:42:23.911+0000] {processor.py:161} INFO - Started process (PID=3028) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:42:23.914+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:42:23.918+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:42:23.917+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:42:24.180+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:42:24.220+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:42:24.219+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:42:24.237+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:42:24.237+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:42:24.281+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.376 seconds
+[2024-04-01T20:42:54.451+0000] {processor.py:161} INFO - Started process (PID=3038) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:42:54.453+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:42:54.457+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:42:54.457+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:42:54.699+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:42:54.740+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:42:54.739+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:42:54.757+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:42:54.757+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:42:54.808+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.363 seconds
+[2024-04-01T20:43:24.980+0000] {processor.py:161} INFO - Started process (PID=3048) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:43:24.982+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:43:24.987+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:43:24.986+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:43:25.282+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:43:25.322+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:43:25.321+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:43:25.340+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:43:25.339+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:43:25.386+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.412 seconds
+[2024-04-01T20:43:55.550+0000] {processor.py:161} INFO - Started process (PID=3058) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:43:55.553+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:43:55.557+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:43:55.556+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:43:55.862+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:43:55.900+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:43:55.899+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:43:55.918+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:43:55.918+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:43:55.964+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.419 seconds
+[2024-04-01T20:44:26.129+0000] {processor.py:161} INFO - Started process (PID=3068) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:44:26.131+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:44:26.135+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:44:26.134+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:44:26.394+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:44:26.435+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:44:26.435+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:44:26.452+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:44:26.452+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:44:26.502+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.378 seconds
+[2024-04-01T20:44:56.679+0000] {processor.py:161} INFO - Started process (PID=3078) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:44:56.682+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:44:56.687+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:44:56.686+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:44:56.957+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:44:56.998+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:44:56.998+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:44:57.015+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:44:57.015+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:44:57.066+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.394 seconds
+[2024-04-01T20:45:27.240+0000] {processor.py:161} INFO - Started process (PID=3088) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:45:27.244+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:45:27.248+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:45:27.247+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:45:27.493+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:45:27.533+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:45:27.533+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:45:27.550+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:45:27.550+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:45:27.593+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.359 seconds
+[2024-04-01T20:45:57.758+0000] {processor.py:161} INFO - Started process (PID=3098) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:45:57.759+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:45:57.763+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:45:57.762+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:45:58.002+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:45:58.043+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:45:58.043+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:45:58.061+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:45:58.061+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:45:58.108+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.356 seconds
+[2024-04-01T20:46:28.304+0000] {processor.py:161} INFO - Started process (PID=3108) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:46:28.308+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:46:28.313+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:46:28.312+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:46:28.588+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:46:28.626+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:46:28.625+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:46:28.644+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:46:28.643+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:46:28.698+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.400 seconds
+[2024-04-01T20:46:58.864+0000] {processor.py:161} INFO - Started process (PID=3118) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:46:58.866+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:46:58.869+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:46:58.869+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:46:59.144+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:46:59.194+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:46:59.193+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:46:59.215+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:46:59.215+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:46:59.269+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.411 seconds
+[2024-04-01T20:47:29.449+0000] {processor.py:161} INFO - Started process (PID=3128) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:47:29.452+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:47:29.456+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:47:29.456+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:47:29.728+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:47:29.772+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:47:29.771+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:47:29.790+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:47:29.790+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:47:29.838+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.395 seconds
+[2024-04-01T20:48:00.010+0000] {processor.py:161} INFO - Started process (PID=3138) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:48:00.011+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:48:00.017+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:48:00.016+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:48:00.308+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:48:00.350+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:48:00.350+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:48:00.369+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:48:00.369+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:48:00.418+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.414 seconds
+[2024-04-01T20:48:30.584+0000] {processor.py:161} INFO - Started process (PID=3148) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:48:30.587+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:48:30.591+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:48:30.590+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:48:30.832+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:48:30.870+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:48:30.869+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:48:30.887+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:48:30.887+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:48:30.934+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.356 seconds
+[2024-04-01T20:49:01.109+0000] {processor.py:161} INFO - Started process (PID=3158) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:49:01.110+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:49:01.114+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:49:01.113+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:49:01.358+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:49:01.410+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:49:01.409+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:49:01.433+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:49:01.432+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:49:01.479+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.376 seconds
+[2024-04-01T20:49:31.648+0000] {processor.py:161} INFO - Started process (PID=3168) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:49:31.650+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:49:31.654+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:49:31.653+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:49:31.899+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:49:31.941+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:49:31.940+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:49:31.958+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:49:31.957+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:49:32.005+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.362 seconds
+[2024-04-01T20:50:02.171+0000] {processor.py:161} INFO - Started process (PID=3178) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:50:02.172+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:50:02.176+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:50:02.176+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:50:02.421+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:50:02.462+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:50:02.461+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:50:02.479+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:50:02.478+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:50:02.522+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.357 seconds
+[2024-04-01T20:50:32.690+0000] {processor.py:161} INFO - Started process (PID=3188) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:50:32.695+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:50:32.699+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:50:32.698+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:50:32.935+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:50:32.973+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:50:32.972+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:50:32.991+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:50:32.990+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:50:33.035+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.350 seconds
+[2024-04-01T20:51:03.215+0000] {processor.py:161} INFO - Started process (PID=3198) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:51:03.217+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:51:03.221+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:51:03.220+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:51:03.468+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:51:03.510+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:51:03.509+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:51:03.527+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:51:03.527+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:51:03.571+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.362 seconds
+[2024-04-01T20:51:33.765+0000] {processor.py:161} INFO - Started process (PID=3208) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:51:33.769+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:51:33.774+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:51:33.773+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:51:34.116+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:51:34.171+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:51:34.171+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:51:34.195+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:51:34.195+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:51:34.250+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.492 seconds
+[2024-04-01T20:52:04.305+0000] {processor.py:161} INFO - Started process (PID=3218) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:52:04.308+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:52:04.312+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:52:04.311+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:52:04.556+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:52:04.596+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:52:04.596+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:52:04.622+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:52:04.622+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:52:04.675+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.376 seconds
+[2024-04-01T20:52:34.839+0000] {processor.py:161} INFO - Started process (PID=3228) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:52:34.840+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:52:34.843+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:52:34.843+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:52:35.131+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:52:35.188+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:52:35.187+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:52:35.210+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:52:35.209+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:52:35.271+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.438 seconds
+[2024-04-01T20:53:05.458+0000] {processor.py:161} INFO - Started process (PID=3238) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:53:05.461+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:53:05.465+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:53:05.464+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:53:05.714+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:53:05.759+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:53:05.758+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:53:05.794+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:53:05.794+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:53:05.852+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.399 seconds
+[2024-04-01T20:53:36.008+0000] {processor.py:161} INFO - Started process (PID=3248) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:53:36.010+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:53:36.013+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:53:36.013+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:53:36.283+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:53:36.324+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:53:36.324+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:53:36.342+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:53:36.341+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:53:36.397+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.394 seconds
+[2024-04-01T20:54:06.554+0000] {processor.py:161} INFO - Started process (PID=3258) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:54:06.556+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:54:06.560+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:54:06.559+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:54:06.801+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:54:06.839+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:54:06.839+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:54:06.856+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:54:06.856+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:54:06.899+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.351 seconds
+[2024-04-01T20:54:37.068+0000] {processor.py:161} INFO - Started process (PID=3268) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:54:37.070+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:54:37.074+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:54:37.073+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:54:37.315+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:54:37.366+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:54:37.365+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:54:37.391+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:54:37.390+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:54:37.448+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.387 seconds
+[2024-04-01T20:55:07.611+0000] {processor.py:161} INFO - Started process (PID=3278) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:55:07.614+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:55:07.618+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:55:07.617+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:55:07.858+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:55:07.908+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:55:07.907+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:55:07.932+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:55:07.932+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:55:07.987+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.382 seconds
+[2024-04-01T20:55:38.161+0000] {processor.py:161} INFO - Started process (PID=3288) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:55:38.162+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:55:38.166+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:55:38.165+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:55:38.471+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:55:38.515+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:55:38.515+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:55:38.533+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:55:38.533+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:55:38.581+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.426 seconds
+[2024-04-01T20:56:08.780+0000] {processor.py:161} INFO - Started process (PID=3298) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:56:08.782+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:56:08.786+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:56:08.785+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:56:09.060+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:56:09.101+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:56:09.101+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:56:09.119+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:56:09.119+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:56:09.173+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.399 seconds
+[2024-04-01T20:56:39.332+0000] {processor.py:161} INFO - Started process (PID=3308) to work on /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:56:39.334+0000] {processor.py:830} INFO - Processing file /usr/local/airflow/dags/data_ingest_gcs.py for tasks to queue
+[2024-04-01T20:56:39.338+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:56:39.337+0000] {dagbag.py:540} INFO - Filling up the DagBag from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:56:39.602+0000] {processor.py:840} INFO - DAG(s) 'raw_parquet_to_gcs' retrieved from /usr/local/airflow/dags/data_ingest_gcs.py
+[2024-04-01T20:56:39.643+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:56:39.643+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-01T20:56:39.661+0000] {logging_mixin.py:188} INFO - [2024-04-01T20:56:39.660+0000] {dag.py:3834} INFO - Setting next_dagrun for raw_parquet_to_gcs to None, run_after=None
+[2024-04-01T20:56:39.715+0000] {processor.py:183} INFO - Processing /usr/local/airflow/dags/data_ingest_gcs.py took 0.389 seconds
