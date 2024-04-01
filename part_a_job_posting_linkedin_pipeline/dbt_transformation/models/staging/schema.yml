@@ -27,7 +27,7 @@ sources:
 
   - name: fact
     database: cedar-style-412618
-    schema: job_postings_linkedin 
+    schema: job_postings_project 
      
     tables:
        - name: job_postings
