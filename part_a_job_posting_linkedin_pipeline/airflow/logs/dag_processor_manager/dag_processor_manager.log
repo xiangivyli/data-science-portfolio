@@ -37219,3 +37219,12 @@ File Path                                   PID    Runtime      # DAGs    # Erro
 ================================================================================
 [2024-04-01T20:01:03.200+0000] {manager.py:738} INFO - Searching for files in /usr/local/airflow/dags
 [2024-04-01T20:01:03.203+0000] {manager.py:741} INFO - There are 2 files in /usr/local/airflow/dags
+[2024-04-01T20:01:07.232+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/usr/local/airflow/dags/data_ingest_gcs.py                           1           0  0.40s           2024-04-01T20:00:38
+/usr/local/airflow/dags/test.py                                      1           0  0.39s           2024-04-01T20:00:38
+================================================================================
