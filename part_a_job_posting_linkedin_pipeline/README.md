@@ -7,6 +7,7 @@
 4. [Chapter 4 - Data Quality Check](#ch4)
 5. [Chapter 5 - Data Transformation with dbt](#ch5)
 6. [Chapter 6 - Data Visualisation](#ch6)
+7. [Chapter 7 - Future Work](#ch7)
 
 
 
@@ -35,6 +36,13 @@ Used Techniques are:
 
  - Containerization: Astro Cli (Docker Compose)
  - Data Orchestration: [Airflow](https://airflow.apache.org/)
+
+
+The work flow is shown below:
+<p align = "center">
+  <img src="./image/tech_summary.png">
+  </p>
+
 
 <a id = "ch2"></a>
  ## Chapter 2 Data Extraction
@@ -108,8 +116,32 @@ The lineage graph is <p align = "center">
   </p>
 
 <a id = "ch6"></a>
+
+The result is <p align = "center">
+  <img src="./image/7_dbt_results.png">
+  </p>
+
+
+<a id = "ch6"></a>
 # Chapter 6 Data Visualisation
 
+Before the data visualisation even before the data engineering project, I want to answer several questions:
+1. Which industry has more job openings
+2. How about the salary range
+3. Which city has more opportunities
 
+Considering the dataset only 
+
+The data visualisation can answer my questions well:
+<p align = "center">
+  <img src="./image/8_data_viz.png">
+  </p>
+
+<a id = "ch7"></a>
+# Chapter 7 Future Work
+
+1. Write test functions
+2. Include dbt in the Airflow
+3. Add Terraform 
 
 
