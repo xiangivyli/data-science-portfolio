@@ -21,6 +21,7 @@ Data Source: [LinkedIn Job Postings - 2023](https://www.kaggle.com/datasets/arsh
 >This dataset contains a nearly comprehensive record of 33,000+ job postings listed over the course of 2 days, months apart. Each individual posting contains 27 valuable attributes, including the title, job description, salary, location, application URL, and work-types (remote, contract, etc), in addition to separate files containing the benefits, skills, and industries associated with each posting.
 
 The workflow is:
+
  0. Download csv data from Kaggle public dataset with opendatasets and Prepare dataset summary table for review (size, number of records)
  1. Upload raw data to Google Cloud Storage with **Airflow**
  2. Define schema and repartition to parquet file with **PySpark** and **Airflow**
