@@ -15,6 +15,8 @@
 ## Chapter 1 Project Overview
 
 The project is inspired by my interest: I would like to understand the job market, the whole process includes 
+
+Data Source: [LinkedIn Job Postings - 2023](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings/data)
  0. Download csv data from Kaggle public dataset with opendatasets and Prepare dataset summary table for review (size, number of records)
  1. Upload raw data to Google Cloud Storage with **Airflow**
  2. Define schema and repartition to parquet file with **PySpark** and **Airflow**
