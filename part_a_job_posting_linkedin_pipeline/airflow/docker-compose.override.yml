@@ -1,0 +1,13 @@
+version: '3'
+services:
+  webserver:
+    volumes:
+      - /home/xiangivyli/data-science-portfolio/part_a_job_posting_linkedin_pipeline/airflow/include/dataset:/usr/local/airflow/include/dataset
+      - /home/xiangivyli/data-science-portfolio/part_a_job_posting_linkedin_pipeline/airflow/logs:/usr/local/airflow/logs
+    environment:
+      - JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
+  scheduler:
+    volumes:
+      - /home/xiangivyli/data-science-portfolio/part_a_job_posting_linkedin_pipeline/airflow/logs:/usr/local/airflow/logs
+
