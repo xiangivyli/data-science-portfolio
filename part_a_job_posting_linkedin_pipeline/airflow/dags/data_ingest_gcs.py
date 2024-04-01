@@ -60,7 +60,7 @@ def raw_parquet_to_gcs():
     # task2 spark read and repartition to parquet files
     repartition_parquet = SparkSubmitOperator(
         task_id='repartition_parquet',
-        application='/usr/local/airflow/include/spark_repartition_parquet.py', 
+        application='/usr/local/airflow/include/spark_repartition_parquet_copy.py', 
         conn_id='spark_default',
         total_executor_cores='1',
         executor_memory='2g',
@@ -71,12 +71,10 @@ def raw_parquet_to_gcs():
     )
 
     # task3 upload parquet files to gcs for usage
-    upload_parquet_tasks=
 
     chain(
         upload_raw_tasks,
-        repartition_parquet,
-        upload_parquet_tasks
+        repartition_parquet
     )
 
 raw_parquet_to_gcs()
