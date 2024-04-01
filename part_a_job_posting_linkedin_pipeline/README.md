@@ -140,7 +140,7 @@ Before the data visualisation even before the data engineering project, I want t
 Considering the dataset mainly covered the US job market, it is meaningful to find some trends.
 
 The data visualisation can answer my questions well:
-1. IT is still popular
+1. Healthcare and IT are still popular
 2. Around 200K dollars
 3. New York is attractive
    
