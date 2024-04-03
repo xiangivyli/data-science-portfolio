@@ -8,6 +8,30 @@ Some projects may cover multiple technical aspects, like data dashboarding conta
 
 ## Part A Data Engineering
 
+### [Job Postings on Linkedin](https://github.com/xiangivyli/data-science-portfolio/tree/main/part_a_job_posting_linkedin_pipeline)
+
+Tool: Python with Jupyter Notebook
+
+      Data Transformation: dbt
+
+      Data Loading: Airflow (Astro Cli)
+
+      Data Visualisation: Power BI
+
+      Data Quality Testing: Soda
+
+      Data Lake: Google Cloud Storage
+
+      Data Warehouse: BigQuery
+
+      Data Orchestration: Airflow
+
+Objectives:
+   - extract raw data from Kaggle, process data for a read-to-use dataset
+   - reduce file size and identify schema by using parquet files
+   - achieve automation and monitorization with Airflow and dbt
+   - visualize data for insights with Power BI
+
 ### [Data Platform Design for Healthcare Research (Database)](https://xiangivyli.com/blog/data-platform-design-for-healthcare-research-mysql/)
  
 Tool: MySQL
