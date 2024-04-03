@@ -10,8 +10,8 @@ Some projects may cover multiple technical aspects, like data dashboarding conta
 
 ### [Job Postings on Linkedin](https://github.com/xiangivyli/data-science-portfolio/tree/main/part_a_job_posting_linkedin_pipeline)
 
-Tools: 
-    - Python with Jupyter Notebook
+Tools:
+ - Python with Jupyter Notebook
     - Data Transformation: dbt
     - Data Loading: Airflow (Astro Cli)
     - Data Visualisation: Power BI
