@@ -12,13 +12,13 @@ Some projects may cover multiple technical aspects, like data dashboarding conta
 
 Tools:
  - Python with Jupyter Notebook
-    - Data Transformation: dbt
-    - Data Loading: Airflow (Astro Cli)
-    - Data Visualisation: Power BI
-    - Data Quality Testing: Soda
-    - Data Lake: Google Cloud Storage
-    - Data Warehouse: BigQuery
-    - Data Orchestration: Airflow
+ - Data Transformation: dbt
+ - Data Loading: Airflow (Astro Cli)
+ - Data Visualisation: Power BI
+ - Data Quality Testing: Soda
+ - Data Lake: Google Cloud Storage
+ - Data Warehouse: BigQuery
+ - Data Orchestration: Airflow
 
 Objectives:
    - extract raw data from Kaggle, process data for a read-to-use dataset
