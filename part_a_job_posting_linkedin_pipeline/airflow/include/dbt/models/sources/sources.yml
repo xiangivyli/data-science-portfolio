@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: job_postings_project
+    database: cedar-style-412618
+
+    tables:
+       - name: companies
+       - name: employee_counts
+     
+       - name: job_industries
+       - name: industries
+     
+       - name: job_skills
+       - name: skills
+     
+       - name: job_postings
+    
+

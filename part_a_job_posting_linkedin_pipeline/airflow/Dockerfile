@@ -1,4 +1,4 @@
-FROM quay.io/astronomer/astro-runtime:10.6.0
+FROM quay.io/astronomer/astro-runtime:11.0.0
 
 # Set Spark version and installation directory
 ENV SPARK_VERSION=3.5.1
@@ -39,3 +39,6 @@ ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 # Switch back to the astro user for security
 USER astro
 
+# install dbt into a virtual environment
+RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \
+    pip install --no-cache-dir dbt-bigquery==1.7.7 && deactivate

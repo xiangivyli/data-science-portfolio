@@ -1,0 +1,469 @@
+[0m20:50:00.054674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f575d967fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f575ed42310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f575d966610>]}
+
+
+============================== 20:50:00.057656 | 9014d212-9252-4d0a-a8ad-45a7a86c4b18 ==============================
+[0m20:50:00.057656 [info ] [MainThread]: Running with dbt=1.7.11
+[0m20:50:00.058934 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'target_path': 'None', 'profiles_dir': '/usr/local/airflow/include/dbt', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'printer_width': '80', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'static_parser': 'True', 'warn_error': 'None', 'fail_fast': 'False', 'no_print': 'None', 'log_path': '/usr/local/airflow/include/dbt/logs', 'use_colors': 'True', 'debug': 'False', 'quiet': 'False', 'invocation_command': 'dbt deps', 'use_experimental_parser': 'False', 'introspect': 'True', 'indirect_selection': 'eager', 'version_check': 'True'}
+[0m20:50:00.197367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9014d212-9252-4d0a-a8ad-45a7a86c4b18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f575dfed0d0>]}
+[0m20:50:00.199379 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-qboprgnq'
+[0m20:50:00.200388 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m20:50:00.243896 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m20:50:00.247319 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m20:50:00.271582 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m20:50:00.287611 [info ] [MainThread]: Updating lock file in file path: /usr/local/airflow/include/dbt/package-lock.yml
+[0m20:50:00.292387 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-vnm4aw8j'
+[0m20:50:00.298459 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m20:50:00.519745 [info ] [MainThread]: Installed from version 1.1.1
+[0m20:50:00.520830 [info ] [MainThread]: Up to date!
+[0m20:50:00.522030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '9014d212-9252-4d0a-a8ad-45a7a86c4b18', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f575d899610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f575d898c50>]}
+[0m20:50:00.524474 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.5307352, "process_user_time": 3.036022, "process_kernel_time": 0.294942, "process_mem_max_rss": "101124", "process_in_blocks": "1352", "process_out_blocks": "2240"}
+[0m20:50:00.526046 [debug] [MainThread]: Command `dbt deps` succeeded at 20:50:00.525673 after 0.53 seconds
+[0m20:50:00.527016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f575d963a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f575f2443d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5761ef3390>]}
+[0m20:50:00.528021 [debug] [MainThread]: Flushing usage events
+[0m20:50:43.639617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07697bcbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07697bc350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07697e2a90>]}
+
+
+============================== 20:50:43.642604 | 9d236e35-b435-498f-b9f2-cb0e0c921a69 ==============================
+[0m20:50:43.642604 [info ] [MainThread]: Running with dbt=1.7.11
+[0m20:50:43.643931 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/usr/local/airflow/include/dbt/', 'fail_fast': 'False', 'invocation_command': 'dbt run --profiles-dir /usr/local/airflow/include/dbt/', 'warn_error': 'None', 'partial_parse': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'debug': 'False', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'no_print': 'None', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'log_cache_events': 'False', 'static_parser': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'use_colors': 'True'}
+[0m20:50:43.648136 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'default'
+[0m20:50:43.649981 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.06909489, "process_user_time": 2.830912, "process_kernel_time": 0.139771, "process_mem_max_rss": "98180", "process_out_blocks": "16", "command_success": false, "process_in_blocks": "0"}
+[0m20:50:43.651080 [debug] [MainThread]: Command `dbt run` failed at 20:50:43.650764 after 0.07 seconds
+[0m20:50:43.651803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07697f9b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07697f8890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f076dd4b290>]}
+[0m20:50:43.652518 [debug] [MainThread]: Flushing usage events
+[0m20:51:14.001641 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc38efddf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc38efdf290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc38f017490>]}
+
+
+============================== 20:51:14.004545 | 3d077948-d2a6-473a-9577-bbc4a70c9cc8 ==============================
+[0m20:51:14.004545 [info ] [MainThread]: Running with dbt=1.7.11
+[0m20:51:14.005834 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'log_path': '/usr/local/airflow/include/dbt/logs', 'version_check': 'True', 'quiet': 'False', 'use_colors': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --profiles-dir /usr/local/airflow/include/dbt/', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'debug': 'False', 'target_path': 'None', 'use_experimental_parser': 'False', 'static_parser': 'True', 'fail_fast': 'False', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'profiles_dir': '/usr/local/airflow/include/dbt/', 'partial_parse': 'True', 'write_json': 'True', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'log_cache_events': 'False'}
+[0m20:51:14.009795 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'job_posting_linkedin'
+[0m20:51:14.011657 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.068929106, "process_user_time": 2.804859, "process_kernel_time": 0.195725, "process_mem_max_rss": "98084", "process_out_blocks": "8", "command_success": false, "process_in_blocks": "0"}
+[0m20:51:14.012990 [debug] [MainThread]: Command `dbt run` failed at 20:51:14.012603 after 0.07 seconds
+[0m20:51:14.013744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc38f019ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc38f1c2510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc38f1c1710>]}
+[0m20:51:14.014480 [debug] [MainThread]: Flushing usage events
+[0m20:51:49.260134 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f33a94dbdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f33a952b2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f33a94d8bd0>]}
+
+
+============================== 20:51:49.263096 | cb01ad51-876e-4430-8723-770c10a9e162 ==============================
+[0m20:51:49.263096 [info ] [MainThread]: Running with dbt=1.7.11
+[0m20:51:49.264824 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'invocation_command': 'dbt run --profiles-dir /usr/local/airflow/include/dbt/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'log_format': 'default', 'target_path': 'None', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'warn_error': 'None', 'debug': 'False', 'log_cache_events': 'False', 'static_parser': 'True', 'cache_selected_only': 'False', 'use_colors': 'True', 'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'fail_fast': 'False', 'profiles_dir': '/usr/local/airflow/include/dbt/', 'log_path': '/usr/local/airflow/include/dbt/logs', 'version_check': 'True', 'quiet': 'False'}
+[0m20:51:50.881512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cb01ad51-876e-4430-8723-770c10a9e162', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f33917708d0>]}
+[0m20:51:51.007834 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cb01ad51-876e-4430-8723-770c10a9e162', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f339db5ab10>]}
+[0m20:51:51.009324 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m20:51:51.031198 [debug] [MainThread]: checksum: 1b58ec263fbd34ee8091684d6a2f6c1ad2902b1459e632a74eb63768af36ddb7, vars: {}, profile: , target: , version: 1.7.11
+[0m20:51:51.032396 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:51:51.033219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'cb01ad51-876e-4430-8723-770c10a9e162', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f339173a450>]}
+[0m20:51:52.716008 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.job_posting_linkedin.staging
+- models.job_posting_linkedin.marts
+[0m20:51:52.725266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cb01ad51-876e-4430-8723-770c10a9e162', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f33915e94d0>]}
+[0m20:51:52.749434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cb01ad51-876e-4430-8723-770c10a9e162', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3391421350>]}
+[0m20:51:52.750353 [info ] [MainThread]: Found 1 source, 0 exposures, 0 metrics, 568 macros, 0 groups, 0 semantic models
+[0m20:51:52.751098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cb01ad51-876e-4430-8723-770c10a9e162', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3391677c50>]}
+[0m20:51:52.753510 [info ] [MainThread]: 
+[0m20:51:52.754248 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:51:52.755307 [debug] [MainThread]: Command end result
+[0m20:51:52.773573 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.572748, "process_user_time": 6.267621, "process_kernel_time": 0.587923, "process_mem_max_rss": "211988", "process_in_blocks": "32", "process_out_blocks": "3408"}
+[0m20:51:52.774749 [debug] [MainThread]: Command `dbt run` succeeded at 20:51:52.774422 after 3.57 seconds
+[0m20:51:52.775601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f33a952be50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f33a9b7cdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3391597fd0>]}
+[0m20:51:52.776411 [debug] [MainThread]: Flushing usage events
+[0m21:01:02.169695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9edf427490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9edf3ef010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9edf5d1d10>]}
+
+
+============================== 21:01:02.172655 | 93414116-7606-4146-84e2-ee08eae1212d ==============================
+[0m21:01:02.172655 [info ] [MainThread]: Running with dbt=1.7.11
+[0m21:01:02.173712 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'static_parser': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'log_format': 'default', 'version_check': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'profiles_dir': '/usr/local/airflow/include/dbt/', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'quiet': 'False', 'no_print': 'None', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'warn_error': 'None', 'printer_width': '80', 'invocation_command': 'dbt run --profiles-dir /usr/local/airflow/include/dbt/', 'debug': 'False', 'use_experimental_parser': 'False', 'use_colors': 'True', 'partial_parse': 'True'}
+[0m21:01:03.750026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '93414116-7606-4146-84e2-ee08eae1212d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9edf44c810>]}
+[0m21:01:03.878012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '93414116-7606-4146-84e2-ee08eae1212d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9edfe7fa10>]}
+[0m21:01:03.879400 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m21:01:03.901028 [debug] [MainThread]: checksum: 1b58ec263fbd34ee8091684d6a2f6c1ad2902b1459e632a74eb63768af36ddb7, vars: {}, profile: , target: , version: 1.7.11
+[0m21:01:03.922081 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m21:01:03.923043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '93414116-7606-4146-84e2-ee08eae1212d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ec75d4e90>]}
+[0m21:01:05.579903 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.job_postings_project
+[0m21:01:05.589018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '93414116-7606-4146-84e2-ee08eae1212d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ec733b8d0>]}
+[0m21:01:05.612049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '93414116-7606-4146-84e2-ee08eae1212d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ec712d710>]}
+[0m21:01:05.613085 [info ] [MainThread]: Found 1 source, 0 exposures, 0 metrics, 568 macros, 0 groups, 0 semantic models
+[0m21:01:05.613963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '93414116-7606-4146-84e2-ee08eae1212d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ec72ed390>]}
+[0m21:01:05.616328 [info ] [MainThread]: 
+[0m21:01:05.617150 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:01:05.618182 [debug] [MainThread]: Command end result
+[0m21:01:05.635828 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.5289555, "process_user_time": 6.315242, "process_kernel_time": 0.513233, "process_mem_max_rss": "211588", "process_out_blocks": "3408", "process_in_blocks": "0"}
+[0m21:01:05.636926 [debug] [MainThread]: Command `dbt run` succeeded at 21:01:05.636592 after 3.53 seconds
+[0m21:01:05.637702 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9edf428450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ee398f210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9edf407e10>]}
+[0m21:01:05.638398 [debug] [MainThread]: Flushing usage events
+[0m21:04:21.228331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b59619690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b595ef4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b595eff10>]}
+
+
+============================== 21:04:21.231298 | 4790514c-5980-4625-b175-c8e59c5dbf20 ==============================
+[0m21:04:21.231298 [info ] [MainThread]: Running with dbt=1.7.11
+[0m21:04:21.232540 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'debug': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'log_cache_events': 'False', 'warn_error': 'None', 'static_parser': 'True', 'quiet': 'False', 'write_json': 'True', 'fail_fast': 'False', 'introspect': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'log_path': '/usr/local/airflow/include/dbt/logs', 'use_experimental_parser': 'False', 'printer_width': '80', 'profiles_dir': '/usr/local/airflow/include/dbt/', 'invocation_command': 'dbt run --profiles-dir /usr/local/airflow/include/dbt/', 'log_format': 'default'}
+[0m21:04:22.757123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4790514c-5980-4625-b175-c8e59c5dbf20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b4394c550>]}
+[0m21:04:22.896569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4790514c-5980-4625-b175-c8e59c5dbf20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b4dba0350>]}
+[0m21:04:22.898198 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m21:04:22.921056 [debug] [MainThread]: checksum: 1b58ec263fbd34ee8091684d6a2f6c1ad2902b1459e632a74eb63768af36ddb7, vars: {}, profile: , target: , version: 1.7.11
+[0m21:04:22.976239 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:04:22.977193 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:04:22.978018 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.job_postings_project
+[0m21:04:22.987698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4790514c-5980-4625-b175-c8e59c5dbf20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b418eb750>]}
+[0m21:04:23.013612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4790514c-5980-4625-b175-c8e59c5dbf20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b4166dd10>]}
+[0m21:04:23.014532 [info ] [MainThread]: Found 1 source, 0 exposures, 0 metrics, 568 macros, 0 groups, 0 semantic models
+[0m21:04:23.015225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4790514c-5980-4625-b175-c8e59c5dbf20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b5cd20b90>]}
+[0m21:04:23.017499 [info ] [MainThread]: 
+[0m21:04:23.018159 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:04:23.018998 [debug] [MainThread]: Command end result
+[0m21:04:23.035996 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.8674803, "process_user_time": 4.60276, "process_kernel_time": 0.614531, "process_mem_max_rss": "209416", "process_out_blocks": "2264", "process_in_blocks": "0"}
+[0m21:04:23.037178 [debug] [MainThread]: Command `dbt run` succeeded at 21:04:23.036854 after 1.87 seconds
+[0m21:04:23.037929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b59609e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b59643110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b5dc39090>]}
+[0m21:04:23.038662 [debug] [MainThread]: Flushing usage events
+[0m21:07:08.598845 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f693bdc9610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f693be1af50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f693be1a950>]}
+
+
+============================== 21:07:08.601985 | e0d7f91e-53b9-47d1-b3ce-604b85b59f90 ==============================
+[0m21:07:08.601985 [info ] [MainThread]: Running with dbt=1.7.11
+[0m21:07:08.603272 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'introspect': 'True', 'profiles_dir': '/usr/local/airflow/include/dbt/', 'log_path': '/usr/local/airflow/include/dbt/logs', 'cache_selected_only': 'False', 'printer_width': '80', 'log_cache_events': 'False', 'write_json': 'True', 'invocation_command': 'dbt run --profiles-dir /usr/local/airflow/include/dbt/', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'warn_error': 'None', 'no_print': 'None', 'debug': 'False', 'use_experimental_parser': 'False'}
+[0m21:07:10.120095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e0d7f91e-53b9-47d1-b3ce-604b85b59f90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6923fc7b90>]}
+[0m21:07:10.248307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e0d7f91e-53b9-47d1-b3ce-604b85b59f90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f693be40690>]}
+[0m21:07:10.249942 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m21:07:10.272610 [debug] [MainThread]: checksum: 1b58ec263fbd34ee8091684d6a2f6c1ad2902b1459e632a74eb63768af36ddb7, vars: {}, profile: , target: , version: 1.7.11
+[0m21:07:10.329008 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 4 files added, 0 files changed.
+[0m21:07:10.330342 [debug] [MainThread]: Partial parsing: added file: job_postings_project://models/transform/dim_company.sql
+[0m21:07:10.331631 [debug] [MainThread]: Partial parsing: added file: job_postings_project://models/transform/fact_job_posting.sql
+[0m21:07:10.332563 [debug] [MainThread]: Partial parsing: added file: job_postings_project://models/transform/dim_skill.sql
+[0m21:07:10.333471 [debug] [MainThread]: Partial parsing: added file: job_postings_project://models/transform/dim_industry.sql
+[0m21:07:10.538015 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.job_postings_project.dim_company' (models/transform/dim_company.sql) depends on a source named 'job_postings_project.employee_counts' which was not found
+[0m21:07:10.540169 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.9998075, "process_user_time": 4.657353, "process_kernel_time": 0.6, "process_mem_max_rss": "209272", "process_out_blocks": "16", "command_success": false, "process_in_blocks": "0"}
+[0m21:07:10.541652 [debug] [MainThread]: Command `dbt run` failed at 21:07:10.541256 after 2.00 seconds
+[0m21:07:10.542708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f693be1cb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f693be1d890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f694021b210>]}
+[0m21:07:10.543735 [debug] [MainThread]: Flushing usage events
+[0m21:10:52.478722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faaeeb04c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faaeeb04510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faaeeb070d0>]}
+
+
+============================== 21:10:52.481826 | f04dccf9-0480-41d4-b905-927db63cd657 ==============================
+[0m21:10:52.481826 [info ] [MainThread]: Running with dbt=1.7.11
+[0m21:10:52.483287 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'debug': 'False', 'partial_parse': 'True', 'invocation_command': 'dbt run --profiles-dir /usr/local/airflow/include/dbt/', 'target_path': 'None', 'introspect': 'True', 'log_format': 'default', 'profiles_dir': '/usr/local/airflow/include/dbt/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'write_json': 'True', 'printer_width': '80', 'indirect_selection': 'eager', 'no_print': 'None', 'fail_fast': 'False', 'log_path': '/usr/local/airflow/include/dbt/logs', 'static_parser': 'True', 'use_colors': 'True'}
+[0m21:10:53.960610 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f04dccf9-0480-41d4-b905-927db63cd657', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faaeead4e50>]}
+[0m21:10:54.087572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f04dccf9-0480-41d4-b905-927db63cd657', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faaeead4e50>]}
+[0m21:10:54.089128 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m21:10:54.110876 [debug] [MainThread]: checksum: 1b58ec263fbd34ee8091684d6a2f6c1ad2902b1459e632a74eb63768af36ddb7, vars: {}, profile: , target: , version: 1.7.11
+[0m21:10:54.162148 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 4 files added, 0 files changed.
+[0m21:10:54.163236 [debug] [MainThread]: Partial parsing: added file: job_postings_project://models/transform/dim_skill.sql
+[0m21:10:54.163988 [debug] [MainThread]: Partial parsing: added file: job_postings_project://models/transform/dim_company.sql
+[0m21:10:54.164667 [debug] [MainThread]: Partial parsing: added file: job_postings_project://models/transform/fact_job_posting.sql
+[0m21:10:54.165597 [debug] [MainThread]: Partial parsing: added file: job_postings_project://models/transform/dim_industry.sql
+[0m21:10:54.370232 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.job_postings_project.dim_skill' (models/transform/dim_skill.sql) depends on a source named 'job_postings_project.skills' which was not found
+[0m21:10:54.372132 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.9533125, "process_user_time": 4.609648, "process_kernel_time": 0.615282, "process_mem_max_rss": "209672", "process_out_blocks": "16", "command_success": false, "process_in_blocks": "0"}
+[0m21:10:54.373341 [debug] [MainThread]: Command `dbt run` failed at 21:10:54.373015 after 1.95 seconds
+[0m21:10:54.374167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faaeeaece10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faaeeaeef90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faaf307b150>]}
+[0m21:10:54.374909 [debug] [MainThread]: Flushing usage events
+[0m21:11:08.852281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e196b69d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e196fe890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e196b7610>]}
+
+
+============================== 21:11:08.855439 | eb40becb-5282-4117-947c-61349663596a ==============================
+[0m21:11:08.855439 [info ] [MainThread]: Running with dbt=1.7.11
+[0m21:11:08.856718 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'fail_fast': 'False', 'static_parser': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'debug': 'False', 'indirect_selection': 'eager', 'introspect': 'True', 'log_format': 'default', 'quiet': 'False', 'invocation_command': 'dbt run --profiles-dir /usr/local/airflow/include/dbt/', 'use_colors': 'True', 'partial_parse': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'version_check': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'profiles_dir': '/usr/local/airflow/include/dbt/', 'printer_width': '80', 'log_cache_events': 'False'}
+[0m21:11:10.377881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eb40becb-5282-4117-947c-61349663596a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e01994e50>]}
+[0m21:11:10.506761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'eb40becb-5282-4117-947c-61349663596a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e01954310>]}
+[0m21:11:10.508160 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m21:11:10.531741 [debug] [MainThread]: checksum: 1b58ec263fbd34ee8091684d6a2f6c1ad2902b1459e632a74eb63768af36ddb7, vars: {}, profile: , target: , version: 1.7.11
+[0m21:11:10.585244 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 4 files added, 0 files changed.
+[0m21:11:10.586289 [debug] [MainThread]: Partial parsing: added file: job_postings_project://models/transform/dim_industry.sql
+[0m21:11:10.587039 [debug] [MainThread]: Partial parsing: added file: job_postings_project://models/transform/fact_job_posting.sql
+[0m21:11:10.587657 [debug] [MainThread]: Partial parsing: added file: job_postings_project://models/transform/dim_company.sql
+[0m21:11:10.588260 [debug] [MainThread]: Partial parsing: added file: job_postings_project://models/transform/dim_skill.sql
+[0m21:11:10.798251 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.job_postings_project.dim_industry' (models/transform/dim_industry.sql) depends on a source named 'job_postings_project.industries' which was not found
+[0m21:11:10.800253 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.0097954, "process_user_time": 4.710768, "process_kernel_time": 0.547989, "process_mem_max_rss": "209228", "process_out_blocks": "16", "command_success": false, "process_in_blocks": "0"}
+[0m21:11:10.801304 [debug] [MainThread]: Command `dbt run` failed at 21:11:10.801009 after 2.01 seconds
+[0m21:11:10.802095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e196fe690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e196ffe50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e1dc5f0d0>]}
+[0m21:11:10.802848 [debug] [MainThread]: Flushing usage events
+[0m21:17:58.604238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff16ff84490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff16ff69350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff170c3c850>]}
+
+
+============================== 21:17:58.607243 | 05731b7f-3677-4752-898a-3f58d13aafe2 ==============================
+[0m21:17:58.607243 [info ] [MainThread]: Running with dbt=1.7.11
+[0m21:17:58.608463 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'quiet': 'False', 'use_colors': 'True', 'warn_error': 'None', 'write_json': 'True', 'profiles_dir': '/usr/local/airflow/include/dbt/', 'indirect_selection': 'eager', 'target_path': 'None', 'log_path': '/usr/local/airflow/include/dbt/logs', 'debug': 'False', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'version_check': 'True', 'invocation_command': 'dbt run --profiles-dir /usr/local/airflow/include/dbt/', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'static_parser': 'True', 'printer_width': '80'}
+[0m21:18:00.113695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '05731b7f-3677-4752-898a-3f58d13aafe2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff15c0b5c90>]}
+[0m21:18:00.245416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '05731b7f-3677-4752-898a-3f58d13aafe2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff15da64fd0>]}
+[0m21:18:00.247146 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m21:18:00.271086 [debug] [MainThread]: checksum: 1b58ec263fbd34ee8091684d6a2f6c1ad2902b1459e632a74eb63768af36ddb7, vars: {}, profile: , target: , version: 1.7.11
+[0m21:18:00.289826 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m21:18:00.290997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '05731b7f-3677-4752-898a-3f58d13aafe2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff15c149a50>]}
+[0m21:18:02.098354 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.job_postings_project.fact_job_posting' (models/transform/fact_job_posting.sql) depends on a node named 'dim_skills' which was not found
+[0m21:18:02.100424 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 3.556145, "process_user_time": 6.29771, "process_kernel_time": 0.587507, "process_mem_max_rss": "210248", "process_out_blocks": "8", "command_success": false, "process_in_blocks": "0"}
+[0m21:18:02.101582 [debug] [MainThread]: Command `dbt run` failed at 21:18:02.101280 after 3.56 seconds
+[0m21:18:02.102370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff16ffba5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff157ef5090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff157f41610>]}
+[0m21:18:02.103119 [debug] [MainThread]: Flushing usage events
+[0m21:20:24.351221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0981628c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0980fda390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0980fdbf50>]}
+
+
+============================== 21:20:24.354495 | e1a631e7-60ba-4267-bc27-f84f84bb11e3 ==============================
+[0m21:20:24.354495 [info ] [MainThread]: Running with dbt=1.7.11
+[0m21:20:24.356065 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'partial_parse': 'True', 'printer_width': '80', 'profiles_dir': '/usr/local/airflow/include/dbt/', 'debug': 'False', 'log_path': '/usr/local/airflow/include/dbt/logs', 'write_json': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'version_check': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'fail_fast': 'False', 'invocation_command': 'dbt run --profiles-dir /usr/local/airflow/include/dbt/', 'warn_error': 'None', 'log_cache_events': 'False', 'target_path': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True'}
+[0m21:20:25.880401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e1a631e7-60ba-4267-bc27-f84f84bb11e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0980f8ac50>]}
+[0m21:20:26.023941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e1a631e7-60ba-4267-bc27-f84f84bb11e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09690cc9d0>]}
+[0m21:20:26.026113 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m21:20:26.060868 [debug] [MainThread]: checksum: 1b58ec263fbd34ee8091684d6a2f6c1ad2902b1459e632a74eb63768af36ddb7, vars: {}, profile: , target: , version: 1.7.11
+[0m21:20:26.081493 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m21:20:26.083445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e1a631e7-60ba-4267-bc27-f84f84bb11e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f096928d850>]}
+[0m21:20:28.165081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e1a631e7-60ba-4267-bc27-f84f84bb11e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0968fd54d0>]}
+[0m21:20:28.190015 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e1a631e7-60ba-4267-bc27-f84f84bb11e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0968df3e10>]}
+[0m21:20:28.191246 [info ] [MainThread]: Found 4 models, 7 sources, 0 exposures, 0 metrics, 568 macros, 0 groups, 0 semantic models
+[0m21:20:28.192425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e1a631e7-60ba-4267-bc27-f84f84bb11e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09686da090>]}
+[0m21:20:28.195889 [info ] [MainThread]: 
+[0m21:20:28.198136 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:20:28.201560 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cedar-style-412618'
+[0m21:20:28.202583 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:20:28.604413 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cedar-style-412618_job_postings_project'
+[0m21:20:28.605813 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:20:29.056997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e1a631e7-60ba-4267-bc27-f84f84bb11e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09686d08d0>]}
+[0m21:20:29.058864 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:20:29.060327 [info ] [MainThread]: 
+[0m21:20:29.065849 [debug] [Thread-1 (]: Began running node model.job_postings_project.dim_company
+[0m21:20:29.067819 [info ] [Thread-1 (]: 1 of 4 START sql table model job_postings_project.dim_company .................. [RUN]
+[0m21:20:29.070481 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_cedar-style-412618_job_postings_project, now model.job_postings_project.dim_company)
+[0m21:20:29.071452 [debug] [Thread-1 (]: Began compiling node model.job_postings_project.dim_company
+[0m21:20:29.084897 [debug] [Thread-1 (]: Writing injected SQL for node "model.job_postings_project.dim_company"
+[0m21:20:29.086853 [debug] [Thread-1 (]: Timing info for model.job_postings_project.dim_company (compile): 21:20:29.072013 => 21:20:29.086260
+[0m21:20:29.087965 [debug] [Thread-1 (]: Began executing node model.job_postings_project.dim_company
+[0m21:20:29.153969 [debug] [Thread-1 (]: Writing runtime sql for node "model.job_postings_project.dim_company"
+[0m21:20:29.157248 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:20:29.160259 [debug] [Thread-1 (]: On model.job_postings_project.dim_company: /* {"app": "dbt", "dbt_version": "1.7.11", "profile_name": "job_postings_project", "target_name": "dev", "node_id": "model.job_postings_project.dim_company"} */
+
+  
+    
+
+    create or replace table `cedar-style-412618`.`job_postings_project`.`dim_company`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      with company as (
+    select *
+    from `cedar-style-412618`.`job_postings_project`.`companies`
+),
+
+employee as (
+    select *
+    from `cedar-style-412618`.`job_postings_project`.`employee_counts`
+)
+
+select company.*,
+        employee.employee_count,
+        employee.follower_count
+from company
+left join employee
+on company.company_id = employee.company_id
+    );
+  
+[0m21:20:29.895233 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cedar-style-412618&j=bq:US:f1730c76-1865-4fa7-b2b7-3a0b38ae9648&page=queryresults
+[0m21:20:33.030664 [debug] [Thread-1 (]: Timing info for model.job_postings_project.dim_company (execute): 21:20:29.088518 => 21:20:33.030206
+[0m21:20:33.032638 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1a631e7-60ba-4267-bc27-f84f84bb11e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09686d9e50>]}
+[0m21:20:33.034161 [info ] [Thread-1 (]: 1 of 4 OK created sql table model job_postings_project.dim_company ............. [[32mCREATE TABLE (14.3k rows, 10.9 MiB processed)[0m in 3.96s]
+[0m21:20:33.035752 [debug] [Thread-1 (]: Finished running node model.job_postings_project.dim_company
+[0m21:20:33.037046 [debug] [Thread-1 (]: Began running node model.job_postings_project.dim_industry
+[0m21:20:33.038203 [info ] [Thread-1 (]: 2 of 4 START sql table model job_postings_project.dim_industry ................. [RUN]
+[0m21:20:33.039823 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.job_postings_project.dim_company, now model.job_postings_project.dim_industry)
+[0m21:20:33.040572 [debug] [Thread-1 (]: Began compiling node model.job_postings_project.dim_industry
+[0m21:20:33.047219 [debug] [Thread-1 (]: Writing injected SQL for node "model.job_postings_project.dim_industry"
+[0m21:20:33.048585 [debug] [Thread-1 (]: Timing info for model.job_postings_project.dim_industry (compile): 21:20:33.041097 => 21:20:33.048115
+[0m21:20:33.049469 [debug] [Thread-1 (]: Began executing node model.job_postings_project.dim_industry
+[0m21:20:33.055970 [debug] [Thread-1 (]: Writing runtime sql for node "model.job_postings_project.dim_industry"
+[0m21:20:33.057250 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:20:33.059818 [debug] [Thread-1 (]: On model.job_postings_project.dim_industry: /* {"app": "dbt", "dbt_version": "1.7.11", "profile_name": "job_postings_project", "target_name": "dev", "node_id": "model.job_postings_project.dim_industry"} */
+
+  
+    
+
+    create or replace table `cedar-style-412618`.`job_postings_project`.`dim_industry`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      with job_industry as (
+    select *
+    from `cedar-style-412618`.`job_postings_project`.`job_industries`
+),
+
+industry as (
+    select CAST (industry_id AS STRING) AS industry_id,
+           industry_name
+    from `cedar-style-412618`.`job_postings_project`.`industries`
+
+)
+
+select job_industry.job_id,
+       industry.industry_name
+from job_industry
+left join industry
+on job_industry.industry_id = industry.industry_id
+    );
+  
+[0m21:20:33.706103 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cedar-style-412618&j=bq:US:8882e708-b450-4916-89fc-38f1fe2bfc86&page=queryresults
+[0m21:20:36.150450 [debug] [Thread-1 (]: Timing info for model.job_postings_project.dim_industry (execute): 21:20:33.049940 => 21:20:36.150038
+[0m21:20:36.152224 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1a631e7-60ba-4267-bc27-f84f84bb11e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09685b5b50>]}
+[0m21:20:36.153586 [info ] [Thread-1 (]: 2 of 4 OK created sql table model job_postings_project.dim_industry ............ [[32mCREATE TABLE (44.1k rows, 699.9 KiB processed)[0m in 3.11s]
+[0m21:20:36.155567 [debug] [Thread-1 (]: Finished running node model.job_postings_project.dim_industry
+[0m21:20:36.156887 [debug] [Thread-1 (]: Began running node model.job_postings_project.dim_skill
+[0m21:20:36.158129 [info ] [Thread-1 (]: 3 of 4 START sql table model job_postings_project.dim_skill .................... [RUN]
+[0m21:20:36.160088 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.job_postings_project.dim_industry, now model.job_postings_project.dim_skill)
+[0m21:20:36.161320 [debug] [Thread-1 (]: Began compiling node model.job_postings_project.dim_skill
+[0m21:20:36.167274 [debug] [Thread-1 (]: Writing injected SQL for node "model.job_postings_project.dim_skill"
+[0m21:20:36.168809 [debug] [Thread-1 (]: Timing info for model.job_postings_project.dim_skill (compile): 21:20:36.162000 => 21:20:36.168284
+[0m21:20:36.169820 [debug] [Thread-1 (]: Began executing node model.job_postings_project.dim_skill
+[0m21:20:36.176016 [debug] [Thread-1 (]: Writing runtime sql for node "model.job_postings_project.dim_skill"
+[0m21:20:36.178271 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:20:36.182785 [debug] [Thread-1 (]: On model.job_postings_project.dim_skill: /* {"app": "dbt", "dbt_version": "1.7.11", "profile_name": "job_postings_project", "target_name": "dev", "node_id": "model.job_postings_project.dim_skill"} */
+
+  
+    
+
+    create or replace table `cedar-style-412618`.`job_postings_project`.`dim_skill`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      with job_skills as (
+    select *
+    from `cedar-style-412618`.`job_postings_project`.`job_skills`
+),
+
+skills_name as (
+    select *
+    from `cedar-style-412618`.`job_postings_project`.`skills`
+
+)
+
+select job_skills.job_id,
+       skills_name.skill_name
+from job_skills
+left join skills_name 
+on job_skills.skill_abr = skills_name.skill_abr
+    );
+  
+[0m21:20:37.022228 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cedar-style-412618&j=bq:US:a7519915-0ab8-447a-9b72-c743d895822a&page=queryresults
+[0m21:20:39.297892 [debug] [Thread-1 (]: Timing info for model.job_postings_project.dim_skill (execute): 21:20:36.170475 => 21:20:39.297484
+[0m21:20:39.300184 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1a631e7-60ba-4267-bc27-f84f84bb11e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0968660250>]}
+[0m21:20:39.301724 [info ] [Thread-1 (]: 3 of 4 OK created sql table model job_postings_project.dim_skill ............... [[32mCREATE TABLE (56.6k rows, 960.0 KiB processed)[0m in 3.14s]
+[0m21:20:39.303394 [debug] [Thread-1 (]: Finished running node model.job_postings_project.dim_skill
+[0m21:20:39.305492 [debug] [Thread-1 (]: Began running node model.job_postings_project.fact_job_posting
+[0m21:20:39.306699 [info ] [Thread-1 (]: 4 of 4 START sql table model job_postings_project.fact_job_posting ............. [RUN]
+[0m21:20:39.308545 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.job_postings_project.dim_skill, now model.job_postings_project.fact_job_posting)
+[0m21:20:39.309370 [debug] [Thread-1 (]: Began compiling node model.job_postings_project.fact_job_posting
+[0m21:20:39.316534 [debug] [Thread-1 (]: Writing injected SQL for node "model.job_postings_project.fact_job_posting"
+[0m21:20:39.318160 [debug] [Thread-1 (]: Timing info for model.job_postings_project.fact_job_posting (compile): 21:20:39.309853 => 21:20:39.317644
+[0m21:20:39.319118 [debug] [Thread-1 (]: Began executing node model.job_postings_project.fact_job_posting
+[0m21:20:39.325257 [debug] [Thread-1 (]: Writing runtime sql for node "model.job_postings_project.fact_job_posting"
+[0m21:20:39.326474 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:20:39.329035 [debug] [Thread-1 (]: On model.job_postings_project.fact_job_posting: /* {"app": "dbt", "dbt_version": "1.7.11", "profile_name": "job_postings_project", "target_name": "dev", "node_id": "model.job_postings_project.fact_job_posting"} */
+
+  
+    
+
+    create or replace table `cedar-style-412618`.`job_postings_project`.`fact_job_posting`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      with job_posting as (
+    select 
+        job_id,
+        company_id,
+        title,
+        max_salary,
+        med_salary,
+        min_salary,
+        pay_period,
+        formatted_work_type,
+        location,
+        applies,
+        remote_allowed,
+        application_type,
+        expiry,
+        formatted_experience_level,
+        listed_time
+
+    from `cedar-style-412618`.`job_postings_project`.`job_postings`
+    where company_id IS NOT NULL
+),
+
+company_info as (
+    select *
+    from `cedar-style-412618`.`job_postings_project`.`dim_company`
+),
+
+industry as (
+    select job_id,
+           STRING_AGG(industry_name, ', ') AS industry
+    from `cedar-style-412618`.`job_postings_project`.`dim_industry`
+    group by job_id
+),
+
+skills as (
+    select job_id,
+           STRING_AGG(skill_name, ', ') AS skills_required
+    from `cedar-style-412618`.`job_postings_project`.`dim_skill`
+    group by job_id
+)
+
+SELECT job_posting.*,
+       skills.skills_required,
+       company_info.name,
+       company_info.company_size,
+       company_info.country,
+       company_info.city,
+       company_info.employee_count,
+       company_info.follower_count,
+       industry.industry
+FROM job_posting 
+LEFT JOIN company_info
+ON job_posting.company_id = company_info.company_id
+LEFT JOIN industry
+ON job_posting.job_id = industry.job_id
+LEFT JOIN skills
+ON job_posting.job_id = skills.job_id
+    );
+  
+[0m21:20:40.128048 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cedar-style-412618&j=bq:US:76c6d2d5-8e60-4095-843e-cd9381e5911c&page=queryresults
+[0m21:20:43.595843 [debug] [Thread-1 (]: Timing info for model.job_postings_project.fact_job_posting (execute): 21:20:39.319667 => 21:20:43.595258
+[0m21:20:43.598427 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1a631e7-60ba-4267-bc27-f84f84bb11e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09685a0e90>]}
+[0m21:20:43.600450 [info ] [Thread-1 (]: 4 of 4 OK created sql table model job_postings_project.fact_job_posting ........ [[32mCREATE TABLE (65.7k rows, 7.7 MiB processed)[0m in 4.29s]
+[0m21:20:43.602646 [debug] [Thread-1 (]: Finished running node model.job_postings_project.fact_job_posting
+[0m21:20:43.607475 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:20:43.608485 [debug] [MainThread]: Connection 'list_cedar-style-412618' was properly closed.
+[0m21:20:43.609503 [debug] [MainThread]: Connection 'model.job_postings_project.fact_job_posting' was properly closed.
+[0m21:20:43.610196 [info ] [MainThread]: 
+[0m21:20:43.611291 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 15.41 seconds (15.41s).
+[0m21:20:43.613984 [debug] [MainThread]: Command end result
+[0m21:20:43.636360 [info ] [MainThread]: 
+[0m21:20:43.637586 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:20:43.638544 [info ] [MainThread]: 
+[0m21:20:43.639529 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[0m21:20:43.641131 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 19.350819, "process_user_time": 7.406231, "process_kernel_time": 0.611755, "process_mem_max_rss": "226404", "process_out_blocks": "3624", "process_in_blocks": "0"}
+[0m21:20:43.642071 [debug] [MainThread]: Command `dbt run` succeeded at 21:20:43.641798 after 19.35 seconds
+[0m21:20:43.642858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0980fa3fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0980fdffd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09855c7110>]}
+[0m21:20:43.643613 [debug] [MainThread]: Flushing usage events

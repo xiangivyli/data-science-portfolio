@@ -1,0 +1,14 @@
+job_postings_project:
+ target: dev
+ outputs:
+  dev:
+    type: bigquery
+    method: service-account
+    keyfile: /usr/local/airflow/include/.gc/airflow_to_gcs_bigquery.json
+    project: cedar-style-412618
+    dataset: job_postings_project
+    threads: 1
+    timeout_seconds: 300
+    location: US
+
+    
