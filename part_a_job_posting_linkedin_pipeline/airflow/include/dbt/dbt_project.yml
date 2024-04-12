@@ -1,8 +1,0 @@
-name: 'job_postings_project'
-
-profile: 'job_postings_project'
-
-models:
-  job_postings_project:
-    materialized: table
- 
