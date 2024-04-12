@@ -1,9 +1,9 @@
 import os
 import glob
 from pathlib import Path
-from typing import List
 
-from airflow.decorators import dag, task
+from airflow import Dataset
+from airflow.decorators import dag
 from datetime import datetime
 from airflow.utils.dates import days_ago
 
@@ -37,6 +37,7 @@ local_parquet_folders = glob.glob(f"{local_parquet}pq_{table_names}/")
 bucket = "de-zoomcamp-xiangivyli"
 gcs_raw_folder = "final_project/2024-03-31/raw/"
 gcs_parquet_folder = "final_project/2024-03-31/parquet/"
+
 
 # Define a function to upload csv files
 def upload_csv_to_gcs(bucket, local_folder, gcs_folder):
@@ -77,6 +78,7 @@ def upload_directory_to_gcs(bucket, local_folder, gcs_folder):
                             object_name=gcs_path, 
                             filename=str(local_file))
             
+            
 
 @dag(
     start_date=days_ago(1),
@@ -84,7 +86,7 @@ def upload_directory_to_gcs(bucket, local_folder, gcs_folder):
     catchup=False,
     tags=["raw_parquet_spark_gcs"],
 )
-def raw_parquet_to_gcs():
+def raw_parquet_to_gcs_bigquery():
 
     # task1 upload raw files to gcs for backup
     upload_raw_tasks=PythonOperator(
@@ -128,6 +130,8 @@ def raw_parquet_to_gcs():
     import_data_gcs_to_bigquery_tasks = []
 
     for table in table_names:
+        dataset = Dataset(f"{table}_dataset")
+
         input_folder_path = f'gs://{bucket}/{gcs_parquet_folder}pq_{table}/'
 
         task = aql.load_file(
@@ -143,6 +147,7 @@ def raw_parquet_to_gcs():
                 metadata=Metadata(schema="job_postings_project"),
             ),
             use_native_support=False,
+            outlets=[dataset]
         )
 
         import_data_gcs_to_bigquery_tasks.append(task)
@@ -154,6 +159,7 @@ def raw_parquet_to_gcs():
         create_dataset_tasks,
         import_data_gcs_to_bigquery_tasks
     )
+    
 
-raw_parquet_to_gcs()
+raw_parquet_to_gcs_bigquery()
 
