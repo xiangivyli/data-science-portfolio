@@ -1,7 +1,7 @@
 from airflow.decorators import dag
 from datetime import datetime
 from airflow.utils.dates import days_ago
-from airflow.models import Dataset
+from airflow.datasets import Dataset
 
 from include.dbt.cosmos_config import DBT_PROJECT_CONFIG, DBT_CONFIG
 from cosmos.airflow.task_group import DbtTaskGroup
@@ -51,8 +51,6 @@ def transform_data_in_bigquery():
             select=['path:models/report']
         )
     )
-
-
     chain(transform, report)  
 
 transform_data_in_bigquery()
