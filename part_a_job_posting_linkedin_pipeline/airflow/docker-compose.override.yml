@@ -10,4 +10,9 @@ services:
   scheduler:
     volumes:
       - /home/xiangivyli/data-science-portfolio/part_a_job_posting_linkedin_pipeline/airflow/logs:/usr/local/airflow/logs
+  
+
+
+
+
 
