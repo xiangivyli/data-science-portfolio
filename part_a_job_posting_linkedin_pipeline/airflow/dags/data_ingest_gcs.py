@@ -4,14 +4,12 @@ from pathlib import Path
 
 from airflow import Dataset
 from airflow.decorators import dag
-from datetime import datetime
 from airflow.utils.dates import days_ago
 
 from airflow.providers.google.cloud.hooks.gcs import GCSHook
 from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from airflow.operators.python import PythonOperator
-from airflow.operators.empty import EmptyOperator
 
 from astro import sql as aql
 from astro.files import File

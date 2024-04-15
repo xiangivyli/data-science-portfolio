@@ -1,15 +1,11 @@
-import os
 from pathlib import Path
 
-from airflow.decorators import dag
-from datetime import datetime
 from airflow.utils.dates import days_ago
 from airflow.datasets import Dataset
 
-from cosmos import DbtDag, ProjectConfig, ProfileConfig, ExecutionConfig
+from cosmos import DbtDag
+from cosmos.config import ExecutionConfig, ProfileConfig, ProjectConfig, RenderConfig
 
-
-from airflow.models.baseoperator import chain
 
 job_postings_dataset = Dataset("job_postings_dataset")
 
@@ -32,17 +28,18 @@ my_cosmos_dag = DbtDag(
     ),
     profile_config=profile_config,
     execution_config=ExecutionConfig(
-        dbt_executable_path=f"{os.environ['AIRFLOW_HOME']}/dbt_venv/bin/dbt",
-),
+        dbt_executable_path=f"/usr/local/airflow/dbt_venv/bin/dbt",
+    ),
+    operator_args={
+        "install_deps": True,
+    },
 
     # dag settings
-    start_date=days_ago(1),
+    start_date=days_ago(1), 
     schedule=(job_postings_dataset | (companies_dataset) & (salaries_dataset) 
               | (job_skills_dataset) & (skills_dataset)),
     catchup=False,
     dag_id="dbt_transform_in_bigquery",
     tags=["dbt_transform_data_in_bigquery"],
-    default_args={"retries": 2},
 )
-
 
