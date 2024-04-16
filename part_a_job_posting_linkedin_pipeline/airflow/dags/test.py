@@ -33,18 +33,18 @@ profile_config = ProfileConfig(
 )
 def test():
 
-    transform = DbtTaskGroup(
+    dim_company = DbtTaskGroup(
         group_id="transform",
         project_config=ProjectConfig(
             dbt_project_path='/usr/local/airflow/dags/dbt/'
         ),
         profile_config=profile_config,
         execution_config=ExecutionConfig(
-            execution_mode=ExecutionMode.VIRTUALENV,
+            dbt_executable_path=f"/usr/local/airflow/dbt_venv/bin/dbt",
         ),
         render_config=RenderConfig(
             load_method=LoadMode.DBT_LS,
-            select=["path:models/transform"]),
+            select=["path:models/transform/dim_company.sql"]),
         operator_args={
             "install_deps": True,
         },
