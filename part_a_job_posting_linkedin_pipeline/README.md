@@ -167,7 +167,6 @@ The data visualisation can answer my questions well:
 # Chapter 7 Future Work
 
 1. Write test functions
-2. Include dbt in the Airflow
 3. Add Terraform 
 
 
