@@ -47,7 +47,7 @@ Used Techniques are:
 
 The work flow is shown below:
 <p align = "center">
-  <img src="./image/tech_summary.png">
+  <img src="./image/technology_summary.png">
   </p>
 
 
