@@ -111,22 +111,37 @@ And the check passed
 # Chapter 5 Data Transformation with dbt
 
 Purposes are:
-1. **employee_count** removes duplicate records for same `company_id`
-2. join **skills_name** to **job_skills**: replace `skill_abr` with full name
-3. join **industry** to **job_industry**: replace `industry_id` with full name
-4. join **employee_count** to **company**: add `employee_count` and `follower_count` information
-5. keep **job_postings** columns that need in the data visualisation
-6. put company_info, industry and skills to the fact table **job_postings**
+dim_company model:
+  - **employee_count** removes duplicate records for same `company_id`
+  - join **employee_count** to **company**: add `employee_count` and `follower_count` information
+
+dim_skill model:
+  - join **skills_name** to **job_skills**: replace `skill_abr` with full name
+
+dim_industry model:
+  - join **industry** to **job_industry**: replace `industry_id` with full name
+
+fact_job_posting model:
+ - keep **job_postings** columns that need in the data visualisation
+
+aggre_job_posting_model:
+ - put company_info, industry and skills to the fact table **job_postings**
+
+The method is to use [cosmos](https://www.astronomer.io/cosmos/) combine dbt in the airflow, the dags are connected by dataset, once the upstream dag (i.e., load data in the bigquery), the updated dataset triggers this dag.
+
+The dag dependencies is <p align = "center">
+  <img src="./image/7_dags_dependencies.png">
+  </p>
+
+The dataset trigger label is <p align = "center">
+  <img src="./image/7_dataset_trigger.png">
+  </p>
+
 
 The lineage graph is <p align = "center">
-  <img src="./image/7_data_transformation.png">
+  <img src="./image/7_dag2_dbt_transform_bigquery.png">
   </p>
 
-<a id = "ch6"></a>
-
-The result is <p align = "center">
-  <img src="./image/7_dbt_results.png">
-  </p>
 
 
 <a id = "ch6"></a>
