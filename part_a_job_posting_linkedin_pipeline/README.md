@@ -130,7 +130,7 @@ aggre_job_posting_model:
 The method is to use [cosmos](https://www.astronomer.io/cosmos/) combine dbt in the airflow, the dags are connected by dataset, once the upstream dag (i.e., load data in the bigquery), the updated dataset triggers this dag.
 
 The dag dependencies is <p align = "center">
-  <img src="./image/7_dags_dependencies.png">
+  <img src="./image/7_dag_dependencies.png">
   </p>
 
 The dataset trigger label is <p align = "center">
