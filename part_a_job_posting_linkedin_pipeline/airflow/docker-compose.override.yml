@@ -4,19 +4,13 @@ services:
     volumes:
       - /home/xiangivyli/data-science-portfolio/part_a_job_posting_linkedin_pipeline/airflow/include/dataset:/usr/local/airflow/include/dataset
       - /home/xiangivyli/data-science-portfolio/part_a_job_posting_linkedin_pipeline/airflow/logs:/usr/local/airflow/logs
-    environment:
-      - JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-      - AIRFLOW__CELERY__WORKER_CONCURRENCY = 6
-      - AIRFLOW__CELERY__WORKER_AUTOSCALE = 6,6
 
 
   scheduler:
     volumes:
       - /home/xiangivyli/data-science-portfolio/part_a_job_posting_linkedin_pipeline/airflow/logs:/usr/local/airflow/logs
       - /home/xiangivyli/data-science-portfolio/part_a_job_posting_linkedin_pipeline/airflow/dags/dbt:/usr/local/airflow/dags/dbt
-    environment:
-      - AIRFLOW__CELERY__WORKER_CONCURRENCY = 6
-      - AIRFLOW__CELERY__WORKER_AUTOSCALE = 6,6
+ 
 
     
       
