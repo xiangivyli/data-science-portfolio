@@ -3,9 +3,10 @@ import glob
 from pathlib import Path
 
 from airflow import Dataset
-from airflow.decorators import dag
+from airflow.decorators import dag, task_group
 from airflow.utils.dates import days_ago
 
+from airflow.operators.empty import EmptyOperator
 from airflow.providers.google.cloud.hooks.gcs import GCSHook
 from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
@@ -16,11 +17,19 @@ from astro.files import File
 from astro.sql.table import Table, Metadata
 from astro.constants import FileType
 
+from airflow.providers.common.sql.operators.sql import (
+    SQLColumnCheckOperator,
+    SQLTableCheckOperator,
+    SQLCheckOperator,
+)
+
 from airflow.models.baseoperator import chain
 """
 Prepare all paths
 """
 CURRENT_DIR = os.getcwd()
+
+DB_CONN = "google_cloud_default"
 
 #Downloaded and Converted Datasets
 local_raw = f"{CURRENT_DIR}/include/dataset/2024-03-31/raw/linkedin-job-postings/"
@@ -83,8 +92,12 @@ def upload_directory_to_gcs(bucket, local_folder, gcs_folder):
     schedule=None,
     catchup=False,
     tags=["raw_parquet_spark_gcs"],
+    default_args={"conn_id": DB_CONN},
 )
 def raw_parquet_to_gcs_bigquery():
+
+    start = EmptyOperator(task_id="start")
+    end = EmptyOperator(task_id="end")
 
     # task1 upload raw files to gcs for backup
     upload_raw_tasks=PythonOperator(
@@ -125,37 +138,76 @@ def raw_parquet_to_gcs_bigquery():
     )
 
     # task5 import data from gcs to bigquery
-    import_data_gcs_to_bigquery_tasks = []
+    @task_group(group_id="import_tables")
+    def import_data_gcs_to_bigquery_tasks():
+    
+        import_data_gcs_to_bigquery_tasks = []
 
-    for table in table_names:
-        dataset = Dataset(f"{table}_dataset")
+        for table in table_names:
+            dataset = Dataset(f"{table}_dataset")
 
-        input_folder_path = f'gs://{bucket}/{gcs_parquet_folder}pq_{table}/'
+            input_folder_path = f'gs://{bucket}/{gcs_parquet_folder}pq_{table}/'
 
-        task = aql.load_file(
-            task_id=f'load_{table}_to_bigquery',
-            input_file=File(
-                path=input_folder_path,
-                conn_id="google_cloud_default",
-                filetype=FileType.PARQUET,
-            ),
-            output_table=Table(
-                name=table,
-                conn_id="google_cloud_default",
-                metadata=Metadata(schema="job_postings_project"),
-            ),
-            use_native_support=False,
-            outlets=[dataset]
-        )
+            task = aql.load_file(
+                task_id=f'load_{table}_to_bigquery',
+                input_file=File(
+                    path=input_folder_path,
+                    conn_id="google_cloud_default",
+                    filetype=FileType.PARQUET,
+                ),
+                output_table=Table(
+                    name=table,
+                    conn_id="google_cloud_default",
+                    metadata=Metadata(schema="job_postings_project"),
+                ),
+                use_native_support=False,
+                outlets=[dataset]
+            )
 
-        import_data_gcs_to_bigquery_tasks.append(task)
+            import_data_gcs_to_bigquery_tasks.append(task)
+
+    # task6 make sure the records keep the same with raw file
+    @task_group(group_id="tables_check")
+    def number_of_records_check():
+        
+        number_of_records_check = []
+
+        count_dic = {
+            "job_postings" : 33246,
+            "skills" : 35,
+            "industries" : 229,
+            "employee_counts" : 14275,
+            "companies" : 11361,
+            "company_specialities" : 78405,
+            "company_industries" : 12601,
+            "job_industries" : 44091,
+            "job_skills":56591,
+            "benefits":29325,
+            "salaries": 13352
+        }
+
+        for table, expected_count in count_dic.items():
+            check_statement = f"COUNT(*) == {expected_count}"
+            task = SQLTableCheckOperator(
+                task_id=f'{table}_table_check_bigquery',
+                table=table,
+                checks={
+                    "my_row_count_check": {"check_statement": check_statement}
+                }
+            )
+
+            number_of_records_check.append(task)
+
 
     chain(
+        start,
         upload_raw_tasks,
         repartition_parquet,
         upload_parquet_to_gcs_task,
         create_dataset_tasks,
-        import_data_gcs_to_bigquery_tasks
+        import_data_gcs_to_bigquery_tasks(),
+        number_of_records_check(),
+        end,
     )
     
 
