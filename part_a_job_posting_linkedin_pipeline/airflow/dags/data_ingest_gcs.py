@@ -92,7 +92,6 @@ def upload_directory_to_gcs(bucket, local_folder, gcs_folder):
     schedule=None,
     catchup=False,
     tags=["raw_parquet_spark_gcs"],
-    default_args={"conn_id": DB_CONN}
     default_args={"conn_id": DB_CONN},
 )
 def raw_parquet_to_gcs_bigquery():
@@ -211,7 +210,7 @@ def raw_parquet_to_gcs_bigquery():
         number_of_records_check(),
         end,
     )
-    
+
 
 raw_parquet_to_gcs_bigquery()
 
