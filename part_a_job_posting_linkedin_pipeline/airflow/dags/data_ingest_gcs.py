@@ -142,7 +142,7 @@ def raw_parquet_to_gcs_bigquery():
     @task_group(group_id="import_tables")
     def import_data_gcs_to_bigquery_tasks():
     
-        import_data_gcs_to_bigquery_tasks = []
+        import_tasks = []
 
         for table in table_names:
             dataset = Dataset(f"{table}_dataset")
@@ -165,13 +165,14 @@ def raw_parquet_to_gcs_bigquery():
                 outlets=[dataset]
             )
 
-            import_data_gcs_to_bigquery_tasks.append(task)
+            import_tasks.append(task)
+        return import_tasks
 
     # task6 make sure the records keep the same with raw file
     @task_group(group_id="tables_check")
     def number_of_records_check():
         
-        number_of_records_check = []
+        table_check_tasks = []
 
         count_dic = {
             "job_postings" : 33246,
@@ -197,7 +198,8 @@ def raw_parquet_to_gcs_bigquery():
                 }
             )
 
-            number_of_records_check.append(task)
+            table_check_tasks.append(task)
+        return table_check_tasks
 
 
     chain(
