@@ -36,7 +36,7 @@ Used Techniques are:
  - Data Transformation: [dbt](https://www.getdbt.com/product/what-is-dbt)
  - Data Loading: Airflow ([Astro Cli](https://docs.astronomer.io/astro/cli/overview))
  - Data Visualisation: [Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi)
- - Data Quality Testing: [Soda](https://www.soda.io/?utm_term=soda%20data%20quality&utm_campaign=&utm_source=adwords&utm_medium=ppc&hsa_acc=9734402249&hsa_cam=19663086904&hsa_grp=151658181571&hsa_ad=659050502295&hsa_src=g&hsa_tgt=kwd-793572416606&hsa_kw=soda%20data%20quality&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAjwtqmwBhBVEiwAL-WAYdyrcpcGT1nQalZtOU7g9myUQfOzV84V_oNOLQbUgTHvgCLxo_U_qBoCu5gQAvD_BwE)
+ - Data Quality Testing: [Great Expectations](https://greatexpectations.io/)
 
  - Data Lake: [Google Cloud Storage](https://cloud.google.com/storage?hl=en)
  - Data Warehouse: [BigQuery](https://cloud.google.com/bigquery/docs/introduction)
@@ -87,24 +87,21 @@ The Graph is <p align = "center">
   </p>
 
 <a id = "ch4"></a>
-# Chapter 4 Data Quality Check
+# Chapter 4 Data Quality Check with Great Expectation
 
-Use `soda-core-bigquery` package in Airflow, the configuration file is [here](./airflow/include/soda/configuration.yml) to build a connection with BigQuery by Google Cloud Service Account Credentials and Soda Cloud API.
+## Pre-requisites
+`requirements.txt` file: `airflow-provider-great-expectations==0.2.7`
+`packages.txt` file: `libgeos-c1v5`
 
-Add `yml` file corresponding to each table in `soda/checks/sources` folder to execute the check
+## Run test in DAG
 
-For example, I would like to make sure job_postings table has been imported, and holds columns that I need and data types are correct.
+Use `airflow-provider-great-expectations` package in Airflow.
 
-`job_postings.yml` includes all checks ([reference](https://docs.soda.io/soda/quick-start-sodacl.html) comes from soda document), and run
+Add `json` file corresponding to each table in `include/gx/expectations` folder to list desired checks
 
-```bash
-soda scan -d job_postings_project -c include/soda/configuration.yml include/soda/checks/sources/job_postings.yml
-```
+The test focus before transformation are the correct total account, the schema
 
-And the check passed
-<p align = "center">
-  <img src="./image/6_data_quality_check.png">
-  </p>
+And the check passed as shown below
 
 
 <a id = "ch5"></a>

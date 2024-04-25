@@ -40,7 +40,6 @@ ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 # 10. Switch back to the astro user for security
 USER astro
 
-
 # to run dbt in airflows
 # install dbt into a virtual environment
 RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \

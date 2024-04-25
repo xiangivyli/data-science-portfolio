@@ -3,7 +3,7 @@ import glob
 from pathlib import Path
 
 from airflow import Dataset
-from airflow.decorators import dag, task_group
+from airflow.decorators import dag
 from airflow.utils.dates import days_ago
 
 from airflow.operators.empty import EmptyOperator
@@ -17,6 +17,9 @@ from astro.files import File
 from astro.sql.table import Table, Metadata
 from astro.constants import FileType
 
+from great_expectations_provider.operators.great_expectations import (
+    GreatExpectationsOperator,
+)
 
 from airflow.models.baseoperator import chain
 """
@@ -25,6 +28,9 @@ Prepare all paths
 CURRENT_DIR = os.getcwd()
 
 DB_CONN = "google_cloud_default"
+BQ_CONN = "bigquery_default"
+MY_GX_DATA_CONTEXT = "include/gx"
+MY_BQ_SCHEMA = "bigquery://cedar-style-412618/job_postings_project"
 
 #Downloaded and Converted Datasets
 local_raw = f"{CURRENT_DIR}/include/dataset/2024-03-31/raw/linkedin-job-postings/"
@@ -157,6 +163,18 @@ def raw_parquet_to_gcs_bigquery():
         import_data_gcs_to_bigquery_tasks.append(task)
 
 
+    # check the data quality
+    gx_validate = GreatExpectationsOperator(
+        task_id="gx_validate_pg",
+        conn_id=BQ_CONN,
+        data_context_root_dir=MY_GX_DATA_CONTEXT,
+        schema=MY_BQ_SCHEMA,
+        data_asset_name="job_postings",
+        expectation_suite_name="job_postings_suite",
+        return_json_dict=True,
+    )
+
+
     chain(
         start,
         upload_raw_tasks,
@@ -164,6 +182,7 @@ def raw_parquet_to_gcs_bigquery():
         upload_parquet_to_gcs_task,
         create_dataset_tasks,
         import_data_gcs_to_bigquery_tasks,
+        gx_validate,
         end,
     )
 
