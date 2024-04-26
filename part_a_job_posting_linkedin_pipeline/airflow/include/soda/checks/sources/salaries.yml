@@ -1,0 +1,10 @@
+checks for salaries:
+  - schema:
+      name: Any schema changes
+      fail:
+        when required column missing: [salary_id, job_id, max_salary, med_salary, min_salary, pay_period, currency, compensation_type]
+        when wrong column type:
+          salary_id: string
+          job_id: string
+          max_salary: float64
+  - row_count = 13352

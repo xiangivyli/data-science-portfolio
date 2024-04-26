@@ -1,0 +1,9 @@
+checks for job_skills:
+  - schema:
+      name: Any schema changes
+      fail:
+        when required column missing: [job_id, skill_abr]
+        when wrong column type:
+          job_id: string
+          skill_abr: string
+  - row_count = 56591

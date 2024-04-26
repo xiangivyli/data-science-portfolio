@@ -1,0 +1,9 @@
+checks for job_industries:
+  - schema:
+      name: Any schema changes
+      fail:
+        when required column missing: [job_id, industry_id]
+        when wrong column type:
+          job_id: string
+          industry_id: string
+  - row_count = 44091

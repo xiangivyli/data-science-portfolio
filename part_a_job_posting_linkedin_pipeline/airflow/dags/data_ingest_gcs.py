@@ -3,23 +3,19 @@ import glob
 from pathlib import Path
 
 from airflow import Dataset
-from airflow.decorators import dag
+from airflow.decorators import dag, task
 from airflow.utils.dates import days_ago
 
 from airflow.operators.empty import EmptyOperator
 from airflow.providers.google.cloud.hooks.gcs import GCSHook
 from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
-from airflow.operators.python import PythonOperator
+from airflow.operators.python import PythonOperator, ExternalPythonOperator
 
 from astro import sql as aql
 from astro.files import File
 from astro.sql.table import Table, Metadata
 from astro.constants import FileType
-
-from great_expectations_provider.operators.great_expectations import (
-    GreatExpectationsOperator,
-)
 
 from airflow.models.baseoperator import chain
 """
@@ -28,7 +24,6 @@ Prepare all paths
 CURRENT_DIR = os.getcwd()
 
 DB_CONN = "google_cloud_default"
-BQ_CONN = "bigquery_default"
 MY_GX_DATA_CONTEXT = "include/gx"
 MY_BQ_SCHEMA = "bigquery://cedar-style-412618/job_postings_project"
 
@@ -163,15 +158,16 @@ def raw_parquet_to_gcs_bigquery():
         import_data_gcs_to_bigquery_tasks.append(task)
 
 
-    # check the data quality
-    gx_validate = GreatExpectationsOperator(
-        task_id="gx_validate_pg",
-        conn_id=BQ_CONN,
-        data_context_root_dir=MY_GX_DATA_CONTEXT,
-        schema=MY_BQ_SCHEMA,
-        data_asset_name="job_postings",
-        expectation_suite_name="job_postings_suite",
-        return_json_dict=True,
+    # check the data quality before transformation
+    def check_load(scan_name='check_load', checks_subpath='sources'):
+        from include.soda.check_function import check
+
+        return check(scan_name, checks_subpath)
+
+    check_load_task = ExternalPythonOperator(
+        task_id="check_load",
+        python_callable=check_load,
+        python='/usr/local/airflow/soda_venv/bin/python',
     )
 
 
@@ -182,7 +178,7 @@ def raw_parquet_to_gcs_bigquery():
         upload_parquet_to_gcs_task,
         create_dataset_tasks,
         import_data_gcs_to_bigquery_tasks,
-        gx_validate,
+        check_load_task,
         end,
     )
 

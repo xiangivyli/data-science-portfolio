@@ -1,0 +1,9 @@
+checks for skills:
+  - schema:
+      name: Any schema changes
+      fail:
+        when required column missing: [skill_abr, skill_name]
+        when wrong column type:
+          skill_abr: string
+          skill_name: string
+  - row_count = 35

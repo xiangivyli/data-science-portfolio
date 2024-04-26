@@ -1,0 +1,10 @@
+checks for job_postings:
+  - schema:
+      name: Any schema changes
+      fail:
+        when required column missing: [job_id, company_id, title]
+        when wrong column type:
+          job_id: string
+          company_id: string
+          original_listed_time: datetime
+  - row_count = 33246

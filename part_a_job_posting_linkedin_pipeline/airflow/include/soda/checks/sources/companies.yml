@@ -1,0 +1,12 @@
+checks for companies:
+  - schema:
+      name: Any schema changes
+      fail:
+        when required column missing: [company_id, name, company_size, state, country, city, zip_code, address, url]
+        when wrong column type:
+          company_id: string
+          name: string
+          company_size: float64
+          country: string
+          city: string
+  - row_count = 11361

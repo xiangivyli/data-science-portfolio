@@ -1,0 +1,10 @@
+checks for benefits:
+  - schema:
+      name: Any schema changes
+      fail:
+        when required column missing: [job_id, inferred, type]
+        when wrong column type:
+          job_id: string
+          inferred: string
+          type: string
+  - row_count = 29325

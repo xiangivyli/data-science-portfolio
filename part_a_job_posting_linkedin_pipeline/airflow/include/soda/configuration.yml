@@ -1,0 +1,14 @@
+data_source job_postings_project:
+  type: bigquery
+  connection:
+    account_info_json_path: /usr/local/airflow/include/.gc/airflow_to_gcs_bigquery.json
+    auth_scopes:
+    - https://www.googleapis.com/auth/bigquery
+    - https://www.googleapis.com/auth/cloud-platform
+    - https://www.googleapis.com/auth/drive
+    project_id: 'cedar-style-412618'
+    dataset: job_postings_project
+  soda_cloud:
+    host: cloud.soda.io
+    api_key_id: 21441d45-e250-47ae-af8f-999e2b2e4d51
+    api_key_secret: lAsaiTpRfdZlm7iCW5fYGwW_GRygaI4-PA-U6Lr9kjXtnQKBzTH8Yw

@@ -4,8 +4,14 @@ with company as (
 ),
 
 employee as (
-    select *
+    select
+        company_id,
+        employee_count,
+        follower_count,
+        time_recorded,
+        ROW_NUMBER() OVER (PARTITION BY company_id ORDER BY time_recorded DESC) as rank
     from {{ source('job_postings_project', 'employee_counts') }}
+    where rank = 1
 )
 
 select company.*,

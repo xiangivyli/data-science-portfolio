@@ -1,0 +1,9 @@
+checks for company_specialities:
+  - schema:
+      name: Any schema changes
+      fail:
+        when required column missing: [company_id, speciality]
+        when wrong column type:
+          company_id: string
+          speciality: string
+  - row_count = 78405

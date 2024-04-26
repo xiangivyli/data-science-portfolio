@@ -40,7 +40,13 @@ ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 # 10. Switch back to the astro user for security
 USER astro
 
-# to run dbt in airflows
+# to run soda in airflow
+# install soda into a virtual environment
+RUN python -m venv soda_venv && source soda_venv/bin/activate && \
+    pip install --no-cache-dir soda-core-bigquery==3.3.2 &&\
+    pip install --no-cache-dir soda-core-scientific==3.3.2 && deactivate
+
+# to run dbt in airflow
 # install dbt into a virtual environment
 RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \
     pip install --no-cache-dir dbt-bigquery==1.7.7 && deactivate
