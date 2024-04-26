@@ -1,0 +1,11 @@
+checks for employee_counts:
+  - schema:
+      name: Any schema changes
+      fail:
+        when required column missing: [company_id, employee_count, follower_count, time_recorded]
+        when wrong column type:
+          company_id: string
+          employee_count: integer
+          follower_count: integer
+          time_recorded: datetime
+  - row_count = 14275
