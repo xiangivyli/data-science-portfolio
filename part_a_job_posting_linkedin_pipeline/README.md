@@ -36,7 +36,7 @@ Used Techniques are:
  - Data Transformation: [dbt](https://www.getdbt.com/product/what-is-dbt)
  - Data Loading: Airflow ([Astro Cli](https://docs.astronomer.io/astro/cli/overview))
  - Data Visualisation: [Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi)
- - Data Quality Testing: [Great Expectations](https://greatexpectations.io/)
+ - Data Quality Testing: [Soda](https://docs.soda.io/)
 
  - Data Lake: [Google Cloud Storage](https://cloud.google.com/storage?hl=en)
  - Data Warehouse: [BigQuery](https://cloud.google.com/bigquery/docs/introduction)
@@ -87,21 +87,24 @@ The Graph is <p align = "center">
   </p>
 
 <a id = "ch4"></a>
-# Chapter 4 Data Quality Check with Great Expectation
+# Chapter 4 Data Quality Check with Soda
 
-## Pre-requisites
-`requirements.txt` file: `airflow-provider-great-expectations==0.2.7`
-`packages.txt` file: `libgeos-c1v5`
+Data quality check is a must in the data pipeline, the foucs before transformation and after transformation are different
 
-## Run test in DAG
+## Data quality check before transformation
+
+Timepoint: after parquet files were imported into the BiQuery from Google Cloud Storage
+Check List:
+ - Each table still keeps the same number of records (to avoid data loss or repetition)
+ - Each column still keeps the same datatype (especially TIMESTAMP)
 
 Use `airflow-provider-great-expectations` package in Airflow.
 
-Add `json` file corresponding to each table in `include/gx/expectations` folder to list desired checks
+## Data quality check after transformation
 
-The test focus before transformation are the correct total account, the schema
-
-And the check passed as shown below
+Timepoint: after dbt transformed data and aggregated the reporting data
+Check List:
+ - The `job_id` is unique
 
 
 <a id = "ch5"></a>
