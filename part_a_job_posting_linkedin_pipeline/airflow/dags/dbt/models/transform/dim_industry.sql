@@ -11,7 +11,8 @@ industry as (
 )
 
 select job_industry.job_id,
-       industry.industry_name
+       STRING_AGG(industry.industry_name, ', ') AS industry
 from job_industry
 left join industry
 on job_industry.industry_id = industry.industry_id
+group by job_industry.job_id

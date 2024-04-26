@@ -3,7 +3,7 @@ with company as (
     from {{ source('job_postings_project', 'companies') }}
 ),
 
-employee as (
+employee_counts as (
     select
         company_id,
         employee_count,
@@ -11,12 +11,12 @@ employee as (
         time_recorded,
         ROW_NUMBER() OVER (PARTITION BY company_id ORDER BY time_recorded DESC) as rank
     from {{ source('job_postings_project', 'employee_counts') }}
-    where rank = 1
 )
 
 select company.*,
-        employee.employee_count,
-        employee.follower_count
+        employee_counts.employee_count,
+        employee_counts.follower_count
 from company
-left join employee
-on company.company_id = employee.company_id
+left join employee_counts
+on company.company_id = employee_counts.company_id
+where employee_counts.rank = 1

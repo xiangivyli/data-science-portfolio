@@ -3,7 +3,7 @@ import glob
 from pathlib import Path
 
 from airflow import Dataset
-from airflow.decorators import dag, task
+from airflow.decorators import dag
 from airflow.utils.dates import days_ago
 
 from airflow.operators.empty import EmptyOperator
@@ -24,8 +24,6 @@ Prepare all paths
 CURRENT_DIR = os.getcwd()
 
 DB_CONN = "google_cloud_default"
-MY_GX_DATA_CONTEXT = "include/gx"
-MY_BQ_SCHEMA = "bigquery://cedar-style-412618/job_postings_project"
 
 #Downloaded and Converted Datasets
 local_raw = f"{CURRENT_DIR}/include/dataset/2024-03-31/raw/linkedin-job-postings/"

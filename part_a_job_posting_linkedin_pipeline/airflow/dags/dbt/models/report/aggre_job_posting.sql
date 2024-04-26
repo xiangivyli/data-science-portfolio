@@ -10,16 +10,14 @@ company_info as (
 
 industry as (
     select job_id,
-           STRING_AGG(industry_name, ', ') AS industry
+           industry
     from {{ ref('dim_industry') }}
-    group by job_id
 ),
 
 skills as (
     select job_id,
-           STRING_AGG(skill_name, ', ') AS skills_required
+           skills_required
     from {{ ref('dim_skill') }}
-    group by job_id
 )
 
 SELECT job_posting.*,

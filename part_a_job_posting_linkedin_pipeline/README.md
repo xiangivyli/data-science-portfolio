@@ -87,7 +87,7 @@ The Graph is <p align = "center">
   </p>
 
 <a id = "ch4"></a>
-# Chapter 4 Data Quality Check with Soda
+# Chapter 4 Data Quality Check with Soda and dbt test
 
 Data quality check is a must in the data pipeline, the foucs before transformation and after transformation are different
 
@@ -96,15 +96,28 @@ Data quality check is a must in the data pipeline, the foucs before transformati
 Timepoint: after parquet files were imported into the BiQuery from Google Cloud Storage
 Check List:
  - Each table still keeps the same number of records (to avoid data loss or repetition)
+ - Each table still keeps the columns that will be used in the transformation and report
  - Each column still keeps the same datatype (especially TIMESTAMP)
 
-Use `airflow-provider-great-expectations` package in Airflow.
+Soda can create 1 yaml file corresponding to 1 table in BigQuery, and return the check results in logs
+
+The position of soda check in the pipeline is <p align = "center">
+  <img src="./image/6_soda_position.png">
+  </p>
+
+The result of soda check is  <p align = "center">
+  <img src="./image/6_soda_result.png">
+  </p>
 
 ## Data quality check after transformation
 
-Timepoint: after dbt transformed data and aggregated the reporting data
+Timepoint: during dbt transformation, for staging data and report data
 Check List:
- - The `job_id` is unique
+ - The `job_id`and `company_id` are unique and not null (put industry name and skills in one row if id is duplicated)
+
+ The result of dbt test is   <p align = "center">
+  <img src="./image/6_dbt_test.png">
+  </p>
 
 
 <a id = "ch5"></a>
@@ -112,17 +125,20 @@ Check List:
 
 Purposes are:
 dim_company model:
-  - **employee_count** removes duplicate records for same `company_id`
+  - **employee_count** removes duplicate records for same `company_id` (choose the newest record)
   - join **employee_count** to **company**: add `employee_count` and `follower_count` information
 
 dim_skill model:
   - join **skills_name** to **job_skills**: replace `skill_abr` with full name
+  - put multiple skills in one row for one `job_id`
 
 dim_industry model:
   - join **industry** to **job_industry**: replace `industry_id` with full name
+  - put multiple industry names in one row for one `job_id`
 
 fact_job_posting model:
  - keep **job_postings** columns that need in the data visualisation
+ - remove records in which the `company_id` is NULL
 
 aggre_job_posting_model:
  - put company_info, industry and skills to the fact table **job_postings**
@@ -139,7 +155,7 @@ The dataset trigger label is <p align = "center">
 
 
 The lineage graph is <p align = "center">
-  <img src="./image/7_dag2_dbt_transform_bigquery.png">
+  <img src="./image/7_dag2_dbt_trans_test_bigquery.png">
   </p>
 
 
@@ -166,7 +182,7 @@ The data visualisation can answer my questions well:
 <a id = "ch7"></a>
 # Chapter 7 Future Work
 
-1. Write test functions
-3. Add Terraform 
+1. Add Terraform 
+2. CI/CD
 
 

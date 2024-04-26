@@ -10,7 +10,8 @@ skills_name as (
 )
 
 select job_skills.job_id,
-       skills_name.skill_name
+       STRING_AGG(skills_name.skill_name, ', ') AS skills_required
 from job_skills
 left join skills_name 
 on job_skills.skill_abr = skills_name.skill_abr
+group by job_skills.job_id

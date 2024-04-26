@@ -1,0 +1,75 @@
+version: 2
+
+sources:
+  - name: transform
+    database: cedar-style-412618
+    schema: job_postings_project
+
+
+    tables:
+       - name: companies
+       - name: employee_counts
+     
+       - name: job_industries
+       - name: industries
+     
+       - name: job_skills
+       - name: skills
+     
+       - name: job_postings
+
+models:
+  - name: dim_company
+    description: "choose the latest recorded employee and follower count and add information to company"
+    columns:
+      - name: company_id
+        data_type: string
+        description: "each row represents one company"
+        tests:
+          - unique:
+             severity: warn
+          - not_null:
+             severity: warn
+
+  - name: dim_industry
+    description: "attach industry name to job id"
+    columns:
+      - name: job_id
+        data_type: string
+        description: "each row represents one job"
+        tests:
+          - unique:
+             severity: warn
+          - not_null:
+             severity: warn
+
+  - name: dim_skill
+    description: "attach skill name to job id"
+    columns:
+      - name: job_id
+        data_type: string
+        description: "each row represents one job"
+        tests:
+          - unique:
+             severity: warn
+          - not_null:
+             severity: warn
+
+  - name: fact_job_posting
+    description: "select needed columns and check if job id is unique"
+    columns:
+      - name: job_id
+        data_type: string
+        description: "each row represents one job"
+        tests:
+          - unique:
+             severity: warn
+          - not_null:
+             severity: warn
+
+      - name: company_id
+        data_type: string
+        description: "only keep job which has company id"
+        tests:
+          - not_null:
+             severity: warn

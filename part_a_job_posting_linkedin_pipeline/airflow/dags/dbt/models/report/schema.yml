@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: aggre_job_posting
+    description: "a comprehensive table for reporting"
+    columns:
+      - name: job_id
+        data_type: string
+        description: "each row represents one job"
+        tests:
+          - unique:
+             severity: warn
+          - not_null:
+             severity: warn
