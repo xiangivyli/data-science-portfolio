@@ -1,10 +1,10 @@
 ### Virtual Machine, GCP (Optional)
-Step 1: Generate SSH key [docs](https://cloud.google.com/compute/docs/connect/create-ssh-keys) 
-Step 2: Add public key to Metadata in Compute Engine
-Step 3: Create Instance, choose vCPU, memory, Boot disk, etc
-Step 4: Create **config** file, **Host**, **HostName** (External IP), **User**, **IndentityFile** (PATH/TO/PRIVATEKEY FILE)
-Step 5: `ssh` + *the host name* to log in 
-Step 6: VS code adds **Remote - SSH** to control the remote VM
+ - Step 1: Generate SSH key [docs](https://cloud.google.com/compute/docs/connect/create-ssh-keys) 
+ - Step 2: Add public key to Metadata in Compute Engine
+ - Step 3: Create Instance, choose vCPU, memory, Boot disk, etc
+ - Step 4: Create **config** file, **Host**, **HostName** (External IP), **User**, **IndentityFile** (PATH/TO/PRIVATEKEY FILE)
+ - Step 5: `ssh` + *the host name* to log in 
+ - Step 6: VS code adds **Remote - SSH** to control the remote VM
 
 ### Prerequisites
 1. **Anaconda** [site](https://www.anaconda.com/download)
@@ -26,4 +26,3 @@ Step 6: VS code adds **Remote - SSH** to control the remote VM
 5. **Astro Cli** [site](https://docs.astronomer.io/astro/cli/install-cli)
  - `curl -sSL install.astronomer.io | sudo bash -s`
 
- 

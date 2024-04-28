@@ -24,7 +24,7 @@ Data Source: [LinkedIn Job Postings - 2023](https://www.kaggle.com/datasets/arsh
 The workflow is:
 
  0. Download csv data from Kaggle public dataset with opendatasets and Prepare dataset summary table for review (size, number of records)
- 1. Terraform creates bucket with subfolders and dataset in BigQuery
+ 1. **Terraform** creates bucket with subfolders and dataset in BigQuery
  2. Upload raw data to Google Cloud Storage with **Airflow**
  3. Define schema and repartition to parquet file with **PySpark** and **Airflow**
  4. Upload parquet data to Google Cloud Storage with **Airflow**
@@ -61,6 +61,8 @@ The work flow is shown below:
 <p align = "center">
   <img src="./image/technology_summary.png">
   </p>
+
+### Environment in [how_to_run.md](./how_to_run.md)
 
 
 <a id = "ch2"></a>
