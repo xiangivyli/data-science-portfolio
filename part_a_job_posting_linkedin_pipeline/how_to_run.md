@@ -15,6 +15,7 @@
 2. **Docker** (install with *apt-get* under Linux)
   - `sudo apt-get update`
   - `sudo apt-get install docker.io`
+
   get permission, [reference](https://github.com/sindresorhus/guides/blob/main/docker-without-sudo.md)
   - `sudo groupadd docker`
   - `sudo gpasswd -a $USER docker`
