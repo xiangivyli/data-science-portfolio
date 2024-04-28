@@ -8,9 +8,18 @@
 
 ### Prerequisites
 1. **Anaconda** [site](https://www.anaconda.com/download)
+  - `wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh`
+  - `bash Anaconda3-2024.02-1-Linux-x86_64.sh`
+  - `yes` 
+
 2. **Docker** (install with *apt-get* under Linux)
   - `sudo apt-get update`
   - `sudo apt-get install docker.io`
+  get permission, [reference](https://github.com/sindresorhus/guides/blob/main/docker-without-sudo.md)
+  - `sudo groupadd docker`
+  - `sudo gpasswd -a $USER docker`
+  - log in and log back
+  - `sudo service docker restart`
 3. **Docker Compose** [site](https://github.com/docker/compose/releases)
   - `mkdir bin`
   - `cd bin/`
@@ -21,8 +30,11 @@
   - `source .bashrc`
 4. **Terraform** [site](https://releases.hashicorp.com/terraform)
   - `wget https://releases.hashicorp.com/terraform/1.8.2/terraform_1.8.2_linux_amd64.zip`
+  - `sudo apt-get install unzip`
   - `unzip terraform_1.8.2_linux_amd64.zip`
   - `rm terraform_1.8.2_linux_amd64.zip` #remove zip file
 5. **Astro Cli** [site](https://docs.astronomer.io/astro/cli/install-cli)
  - `curl -sSL install.astronomer.io | sudo bash -s`
+
+
 

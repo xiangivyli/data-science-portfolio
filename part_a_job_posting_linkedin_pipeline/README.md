@@ -3,7 +3,7 @@
 # Table of Contents
 1. [Chapter 1 - Project Overview](#ch1)
 2. [Chapter 2 - Data Extraction](#ch2)
-3. [Chapter 3 - Terraform manages bucket and BigQuery](#ch3)
+3. [Chapter 3 - Terraform manages bucket](#ch3)
 4. [Chapter 4 - Data Preparation with Airflow](#ch4)
 5. [Chapter 5 - Data Quality Check](#ch5)
 6. [Chapter 6 - Data Transformation with dbt](#ch6)
@@ -13,7 +13,7 @@
 
 
 <a id = "ch1"></a>
-## Chapter 1 Project Overview
+# Chapter 1 Project Overview
 
 The project is inspired by my interest: I would like to understand the job market, the whole process includes 
 
@@ -32,7 +32,7 @@ The workflow is:
  6. Transform and aggregate data with **dbt**
  7. Visualise data with **PowerBI**
 
-#### Infrastructure
+## Infrastructure
 Used Techniques are:
 
 **Get data from Kaggle**
@@ -62,11 +62,11 @@ The work flow is shown below:
   <img src="./image/technology_summary.png">
   </p>
 
-### Environment in [how_to_run.md](./how_to_run.md)
+## Environment Settings in [how_to_run.md](./how_to_run.md)
 
 
 <a id = "ch2"></a>
- ## Chapter 2 Data Extraction
+ # Chapter 2 Data Extraction
  
  With a jupyter notebook named [0_download_explore_data.ipynb](./0_download_explore_data.ipynb), I downloaded the raw data to my Airflow dataset (it is ignored in .gitignore considering space).
 
@@ -86,10 +86,15 @@ I also use Power BI to draw the relationship among these tables, the data modell
 
 
 <a id = "ch3"></a>
-# Chapter 3 Terraform manages bucket and Bigquery
+# Chapter 3 Terraform manages bucket 
 
-Before managing data in the cloud, it is a great practice to use **Terraform** to create bucket and BigQuery dataset
+Before managing data in the cloud, it is a great practice to use **Terraform** to create bucket, the setting file is [main.tf](./main.tf)
 
+## Google Cloud Storage
+The structure of the bucket is 
+ - 2024-03-31
+   - raw
+   - parquet
 
 
 <a id = "ch4"></a>

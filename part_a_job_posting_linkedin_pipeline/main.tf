@@ -14,7 +14,7 @@ provider "google" {
 }
 
 resource "google_storage_bucket" "zoomcamp_bucket" {
-  name          = "final-project-job-postings-project"
+  name          = "de-zoomcamp-xiangivyli"
   location      = "US"
   force_destroy = true
 
@@ -58,4 +58,5 @@ resource "google_storage_bucket_object" "folder_raw" {
   content = "placeholder"
   content_type = "application/x-directory"
 }
+
 
