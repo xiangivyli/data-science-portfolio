@@ -39,24 +39,26 @@ resource "google_storage_bucket" "zoomcamp_bucket" {
 
 
 resource "google_storage_bucket_object" "folder_2024_03_31" {
-  name   = "2024-03-31/"
+  name   = "final_project/2024-03-31/"
   bucket = google_storage_bucket.zoomcamp_bucket.name
   content = "placeholder"
   content_type = "application/x-directory"
 }
 
 resource "google_storage_bucket_object" "folder_parquet" {
-  name   = "2024-03-31/parquet/"
+  name   = "final_project/2024-03-31/parquet/"
   bucket = google_storage_bucket.zoomcamp_bucket.name
   content = "placeholder"
   content_type = "application/x-directory"
 }
 
 resource "google_storage_bucket_object" "folder_raw" {
-  name   = "2024-03-31/raw/"
+  name   = "final_project/2024-03-31/raw/"
   bucket = google_storage_bucket.zoomcamp_bucket.name
   content = "placeholder"
   content_type = "application/x-directory"
 }
+
+
 
 
