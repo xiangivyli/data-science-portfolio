@@ -3,11 +3,12 @@
 # Table of Contents
 1. [Chapter 1 - Project Overview](#ch1)
 2. [Chapter 2 - Data Extraction](#ch2)
-3. [Chapter 3 - Data Preparation with Airflow](#ch3)
-4. [Chapter 4 - Data Quality Check](#ch4)
-5. [Chapter 5 - Data Transformation with dbt](#ch5)
-6. [Chapter 6 - Data Visualisation](#ch6)
-7. [Chapter 7 - Future Work](#ch7)
+3. [Chapter 3 - Terraform manages bucket and BigQuery](#ch3)
+4. [Chapter 4 - Data Preparation with Airflow](#ch4)
+5. [Chapter 5 - Data Quality Check](#ch5)
+6. [Chapter 6 - Data Transformation with dbt](#ch6)
+7. [Chapter 7 - Data Visualisation](#ch7)
+8. [Chapter 8 - Future Work](#ch8)
 
 
 
@@ -23,26 +24,37 @@ Data Source: [LinkedIn Job Postings - 2023](https://www.kaggle.com/datasets/arsh
 The workflow is:
 
  0. Download csv data from Kaggle public dataset with opendatasets and Prepare dataset summary table for review (size, number of records)
- 1. Upload raw data to Google Cloud Storage with **Airflow**
- 2. Define schema and repartition to parquet file with **PySpark** and **Airflow**
- 3. Upload parquet data to Google Cloud Storage with **Airflow**
- 4. Create tables in **BigQuery**
- 5. Transform and aggregate data with **dbt**
- 6. Visualise data with **PowerBI**
+ 1. Terraform creates bucket with subfolders and dataset in BigQuery
+ 2. Upload raw data to Google Cloud Storage with **Airflow**
+ 3. Define schema and repartition to parquet file with **PySpark** and **Airflow**
+ 4. Upload parquet data to Google Cloud Storage with **Airflow**
+ 5. Create tables in **BigQuery**
+ 6. Transform and aggregate data with **dbt**
+ 7. Visualise data with **PowerBI**
 
 #### Infrastructure
 Used Techniques are:
- - Data Extraction: Python with [Jupyter notebook](https://jupyter.org/)
- - Data Transformation: [dbt](https://www.getdbt.com/product/what-is-dbt)
- - Data Loading: Airflow ([Astro Cli](https://docs.astronomer.io/astro/cli/overview))
- - Data Visualisation: [Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi)
- - Data Quality Testing: [Soda](https://docs.soda.io/)
 
+**Get data from Kaggle**
+ - Data Extraction: Python with [Jupyter notebook](https://jupyter.org/)
+
+**Create Resources on GCP**
+ - Infrastructure as Code: [Terraform](https://www.terraform.io/)
  - Data Lake: [Google Cloud Storage](https://cloud.google.com/storage?hl=en)
  - Data Warehouse: [BigQuery](https://cloud.google.com/bigquery/docs/introduction)
 
+
+**Data Pipeline building**
+ - Data Orchestration: [Astro Cli](https://docs.astronomer.io/astro/cli/overview)
+ - Data Repartition: [Spark](https://spark.apache.org/)
+ - Data Quality Testing before transformation: [Soda](https://docs.soda.io/)
+ - Data Transformation: [dbt](https://www.getdbt.com/product/what-is-dbt)
+ - Data Quality Testing after transformation: [dbt test](https://docs.getdbt.com/docs/build/data-tests)
+
  - Containerization: Astro Cli (Docker Compose)
- - Data Orchestration: [Airflow](https://airflow.apache.org/)
+
+**Data Reporting**
+ - Data Visualisation: [Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi)
 
 
 The work flow is shown below:
@@ -70,8 +82,16 @@ I also use Power BI to draw the relationship among these tables, the data modell
   <img src="./image/4_data_modelling.png">
   </p>
 
+
 <a id = "ch3"></a>
-# Chapter 3 Data Preparation with Airflow
+# Chapter 3 Terraform manages bucket and Bigquery
+
+Before managing data in the cloud, it is a great practice to use **Terraform** to create bucket and BigQuery dataset
+
+
+
+<a id = "ch4"></a>
+# Chapter 4 Data Preparation with Airflow
 
 Airflow controls the whole process for data preparation, it includes:
 1. Backup **raw** files in **Google Cloud Storage** with [GCSHook](https://airflow.apache.org/docs/apache-airflow-providers-google/stable/_api/airflow/providers/google/cloud/hooks/gcs/index.html) and [PythonOperator](https://airflow.apache.org/docs/apache-airflow/stable/howto/operator/python.html)
@@ -86,8 +106,8 @@ The Graph is <p align = "center">
   <img src="./image/5_data_preparation.png">
   </p>
 
-<a id = "ch4"></a>
-# Chapter 4 Data Quality Check with Soda and dbt test
+<a id = "ch5"></a>
+# Chapter 5 Data Quality Check with Soda and dbt test
 
 Data quality check is a must in the data pipeline, the foucs before transformation and after transformation are different
 
@@ -120,8 +140,8 @@ Check List:
   </p>
 
 
-<a id = "ch5"></a>
-# Chapter 5 Data Transformation with dbt
+<a id = "ch6"></a>
+# Chapter 6 Data Transformation with dbt
 
 Purposes are:
 dim_company model:
@@ -160,8 +180,8 @@ The lineage graph is <p align = "center">
 
 
 
-<a id = "ch6"></a>
-# Chapter 6 Data Visualisation
+<a id = "ch7"></a>
+# Chapter 7 Data Visualisation
 
 Before the data visualisation even before the data engineering project, I want to answer several questions:
 1. Which industry has more job openings
@@ -179,10 +199,10 @@ The data visualisation can answer my questions well:
   <img src="./image/8_data_viz.png">
   </p>
 
-<a id = "ch7"></a>
-# Chapter 7 Future Work
+<a id = "ch8"></a>
+# Chapter 8 Future Work
 
-1. Add Terraform 
-2. CI/CD
+1. CI/CD
+2. make file
 
 
