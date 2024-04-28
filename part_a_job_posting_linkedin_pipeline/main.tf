@@ -8,14 +8,15 @@ terraform {
 }
 
 provider "google" {
-  credentials = "./airflow/include/.gc/airflow_to_gcs_bigquery.json"
-  project     = "cedar-style-412618"
-  region      = "us-central1"
+  credentials = var.credentials
+  project     = var.project
+  region      = var.region
 }
 
 resource "google_storage_bucket" "zoomcamp_bucket" {
-  name          = "de-zoomcamp-xiangivyli"
-  location      = "US"
+  name          = var.gcs_bucket_name
+  location      = var.location
+
   force_destroy = true
 
   lifecycle_rule {
