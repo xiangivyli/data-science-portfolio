@@ -10,7 +10,7 @@ variable "region" {
 
 
 variable "credentials" {
-    description = "Path to credentials"
+    description = " GCP credentials"
     default = "./airflow/include/.gc/airflow_to_gcs_bigquery.json"
 }
 
