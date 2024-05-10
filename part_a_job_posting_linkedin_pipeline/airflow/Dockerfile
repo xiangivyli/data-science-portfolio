@@ -46,7 +46,14 @@ RUN python -m venv soda_venv && source soda_venv/bin/activate && \
     pip install --no-cache-dir soda-core-bigquery==3.3.2 &&\
     pip install --no-cache-dir soda-core-scientific==3.3.2 && deactivate
 
+ENV PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+
 # to run dbt in airflow
 # install dbt into a virtual environment
 RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \
     pip install --no-cache-dir dbt-bigquery==1.7.7 && deactivate
+
+# dbt models need more time, 4*default timeout
+ENV  AIRFLOW__CORE__DAGBAG_IMPORT_TIMEOUT=120.0 
+ENV  AIRFLOW__CORE__DAG_FILE_PROCESSOR_TIMEOUT=200 
+ENV  AIRFLOW__SCHEDULER__TASK_QUEUED_TIMEOUT=2400.0 
