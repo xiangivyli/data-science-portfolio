@@ -23,14 +23,16 @@ Data Source: [LinkedIn Job Postings - 2023](https://www.kaggle.com/datasets/arsh
 
 The workflow is:
 
- 0. Download csv data from Kaggle public dataset with opendatasets and Prepare dataset summary table for review (size, number of records)
- 1. **Terraform** creates bucket with subfolders and dataset in BigQuery
- 2. Upload raw data to Google Cloud Storage with **Airflow**
- 3. Define schema and repartition to parquet file with **PySpark** and **Airflow**
- 4. Upload parquet data to Google Cloud Storage with **Airflow**
- 5. Create tables in **BigQuery**
- 6. Transform and aggregate data with **dbt**
- 7. Visualise data with **PowerBI**
+1. 𝐃𝐚𝐭𝐚 𝐀𝐜𝐪𝐮𝐢𝐬𝐢𝐭𝐢𝐨𝐧: Get an online job posting information dataset from Kaggle with **Jupyter Notebook**
+2. 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞 𝐚𝐬 𝐜𝐨𝐝𝐞: **Terraform** creates resources on Google Cloud Storage
+3. 𝐃𝐚𝐭𝐚 𝐁𝐚𝐜𝐤𝐮𝐩 Upload raw data with **GCSHook**
+4. 𝐃𝐚𝐭𝐚 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠: Convert raw data to repartitioned parquet files with **PySpark**
+5. 𝐃𝐚𝐭𝐚 𝐒𝐭𝐨𝐫𝐚𝐠𝐞: Upload parquet files to Google Cloud Storage
+6. 𝐃𝐚𝐭𝐚 𝐋𝐨𝐚𝐝𝐢𝐧𝐠: Import data to **Bigquery**
+7. 𝐃𝐚𝐭𝐚 𝐕𝐚𝐥𝐢𝐝𝐚𝐭𝐢𝐨𝐧: **Soda** validates the data and the schema keeps the same
+8. 𝐃𝐚𝐭𝐚 𝐓𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧: **dbt** transforms data to create dim, fact and aggregated tables
+9. 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐀𝐬𝐬𝐮𝐫𝐚𝐧𝐜𝐞: dbt test validates the required data met the requirements, like removing null value, and aggregate values for the same id
+10. 𝐃𝐚𝐭𝐚 𝐑𝐞𝐩𝐨𝐫𝐭𝐢𝐧𝐠: Power BI visualises the report-ready data and delivers insights
 
 ## Infrastructure
 Used Techniques are:
