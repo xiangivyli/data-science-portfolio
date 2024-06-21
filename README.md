@@ -74,7 +74,7 @@ Objectives:
 
 ## Part C Data Visualization and Dashboarding
 
-### [Lloyds Bank Customer Profiling (Business Intelligence)](https://github.com/xiangivyli/Data-Science-Porfolio/tree/main/Lloyds%20Bank%20Customer%20Profiling%20(Business%20Intelligence))
+### [Lloyds Bank Customer Profiling (Business Intelligence)](https://github.com/xiangivyli/data-science-portfolio/tree/main/part_c_lloyds_bank_customer_profiling)
  
 Tool: Power BI
 
