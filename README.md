@@ -33,7 +33,7 @@ Tools:
  - Data Orchestration: **Airflow**
  - Database: **DuckDB**
  - Data Reporting： **Streamlit**
- - Containerization: **Docker Compose**
+ - Containerization: **Docker** and **Docker Compose**
 
 Objectives:
    - Ingest pm2.5 data into DuckDB daily
