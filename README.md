@@ -2,7 +2,7 @@
 
 This portfolio holds the below projects. 
 
-Each project has an individual folder for data, codes, and key takeaways. 
+Each project has a **folder** in this repository or **another repository** (for easy execution) for data, codes, and key takeaways. 
 Some projects may cover multiple technical aspects, like data dashboarding containing the data engineering process.
 # Table of Contents
 
@@ -21,10 +21,24 @@ Tools:
  - Data Orchestration: Airflow
 
 Objectives:
-   - extract raw data from Kaggle, process data for a read-to-use dataset
+   - extract raw data from Kaggle, and process data for a read-to-use dataset
    - reduce file size and identify schema by using parquet files
    - achieve automation and monitorization with Airflow and dbt
    - visualize data for insights with Power BI
+
+### [PM2.5-Monitoring](https://github.com/xiangivyli/pm25_monitoring)
+
+Tools:
+ - Data Extraction, Transformation, Validation: API, Python
+ - Data Orchestration: **Airflow**
+ - Database: **DuckDB**
+ - Data Reporting： **Streamlit**
+ - Containerization: **Docker Compose**
+
+Objectives:
+   - Ingest pm2.5 data into DuckDB daily
+   - Transformation is triggered by data ingestion in Airflow
+   - Streamlit container keeps running and monitors the pm2.5 data in real-time 
 
 ### [Data Platform Design for Healthcare Research (Database)](https://xiangivyli.com/blog/data-platform-design-for-healthcare-research-mysql/)
  
