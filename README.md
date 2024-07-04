@@ -78,7 +78,7 @@ Objectives:
 
 ### [Revenue increase strategy analysis for Google merchandise store (Business Intelligence)](https://xiangivyli.com/blog/revenue-google-store/)
 
-Tool: Google Analytics
+Tool: Google Analytics and Looker
 
 Objectives:
   - map the persona of customers
